@@ -1,0 +1,7 @@
+/* CSS Document */
+
+/*ÕÐÄ¼ÁÐ±í*/
+.zhanmu_list { width:978px; overflow:hidden; float:left; margin-top:10px; display:inline; padding-bottom:20px; border:1px #ececec solid; background-color:#FFFFFF;}
+	.zhaomu_logo { width:223px; height:80px; overflow:hidden; float:left;}
+	.zhanmu_list ul { width:964px; overflow:hidden; float:left; margin-left:14px; display:inline;}
+	.zhanmu_list ul li { width:468px; height:278px; overflow:hidden; float:left; border:1px #dedede solid; margin:0 10px 10px 0; display:inline;}

@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>美达美女榜——大连超级美女榜</title>
+<link href="version_2/styles/end.css" rel="stylesheet" type="text/css" />
+<link href="version_2/styles/reset.css" rel="stylesheet" type="text/css"  />
+<link href="version_2/styles/headfooter/bighead.css" rel="stylesheet" type="text/css" />
+<link href="version_2/styles/headfooter/footer.css" rel="stylesheet" type="text/css" />
+<link href="version_2/styles/beautylist/beautylist.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="box">
+<?php require(APP_DIR . '/version_2/index_header.html'); ?>
+    <div id="main">
+    	<ul class="beauty_list">
+        	<li>
+            	<div class="bl_info">
+                	<div class="list_logo">
+                    	<img src="version_2/images/beautylist/beautylistlogo3.jpg" />
+                    </div>
+                    <div class="list_info">
+                    	<?php foreach($rowset3 as $data){?>
+	<?php $ShowList=$tableModaRankShow->getTopGirlShowById($data['rank_id']); foreach($ShowList as $sldat){ $showDat = $tableModaShow->getShowByShowIdNoLimit($sldat['show_id']); ?>
+                    	<span class="l_beautyinfo3">
+                            <a href="?Controller=ShowIndex&action=ShowDetail&user_id=<?php echo $sldat['user_id'] ;?>&show_id=<?php echo $showDat['show_id'] ;?>">
+                                <img src="<?php echo $showDat['show_img']?>" />
+                                <b><?php echo $sldat['title']?></b>
+                            </a>
+                        	<em><i><?php echo $showDat['views']?></strong></i>&nbsp;次浏览&nbsp;/&nbsp;<i><?php echo $showDat['discuss_count']?></i>&nbsp;评论</em>
+                        </span>
+                        <?php }}?>
+                    </div>
+                </div>
+            </li>
+            <li>
+            	<div class="bl_info">
+                	<div class="list_logo">
+                    	<img src="version_2/images/beautylist/beautylistlogo2.jpg" />
+                    </div>
+                    <div class="list_info">
+                    	<?php foreach($rowset2 as $data){?>
+	<?php $ShowList=$tableModaRankShow->getTopGirlShowById($data['rank_id']); foreach($ShowList as $sldat){ $showDat = $tableModaShow->getShowByShowIdNoLimit($sldat['show_id']); ?>
+                    	<span class="l_beautyinfo2">
+                            <a href="?Controller=ShowIndex&action=ShowDetail&user_id=<?php echo $sldat['user_id'] ;?>&show_id=<?php echo $showDat['show_id'] ;?>">
+                                <img src="<?php echo $showDat['show_img']?>" />
+                                <b><?php echo $sldat['title']?></b>
+                            </a>
+                        	<em><i><?php echo $showDat['views']?></strong></i>&nbsp;次浏览&nbsp;/&nbsp;<i><?php echo $showDat['discuss_count']?></i>&nbsp;评论</em>
+                        </span>
+                        <?php }}?>
+                    </div>
+                </div>
+            </li>
+            <li>
+            	<div class="bl_info">
+                	<div class="list_logo">
+                    	<img src="version_2/images/beautylist/beautylistlogo1.jpg" />
+                    </div>
+                    <div class="list_info">
+                    	<?php foreach($rowset as $data){?>
+	<?php $ShowList=$tableModaRankShow->getTopGirlShowById($data['rank_id']); foreach($ShowList as $sldat){ $showDat = $tableModaShow->getShowByShowIdNoLimit($sldat['show_id']); ?>
+                    	<span class="l_beautyinfo">
+                            <a href="?Controller=ShowIndex&action=ShowDetail&user_id=<?php echo $sldat['user_id'] ;?>&show_id=<?php echo $showDat['show_id'] ;?>">
+                                <img src="<?php echo $showDat['show_img']?>" />
+                                <b><?php echo $sldat['title']?></b>
+                            </a>
+                        	<em><i><?php echo $showDat['views']?></strong></i>&nbsp;次浏览&nbsp;/&nbsp;<i><?php echo $showDat['discuss_count']?></i>&nbsp;评论</em>
+                        </span>
+                        <?php }}?>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    
+   	<?php require(APP_DIR . '/version_2/index_footer.html'); ?>
+</div>
+</body>
+</html>

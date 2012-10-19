@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<link rel="stylesheet" href="css/common.css" type="text/css" />
+<title>管理区域</title>
+<style type="text/css">
+<!--
+.STYLE1 {
+	color: #3333FF;
+	font-size: 14px;
+	font-weight: bold;
+}
+.STYLE2 {font-size: 14px}
+.STYLE3 {font-weight: bold}
+-->
+</style>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+	function deletDec(news_id)
+	{	
+			if(confirm('真的要删除吗？删除后将无法恢复！'))
+			{
+				var url = "?Controller=Admin&action=TalkDel&news_id="+news_id+"";
+
+				location=url;
+			}
+			
+
+	}
+</script>
+
+
+</head>
+
+<body>
+<div id="man_zone">
+  <table width="99%" border="0" align="center"  cellpadding="3" cellspacing="1" class="table_style">
+    <tr>
+      <td width="5%" class="left_title_1">        <div align="center">id</div></td>  
+	  <td width="5%" class="left_title_1"><div align="center">访谈标题</div></td>
+	  <td width="5%" class="left_title_1"><div align="center">访谈期数</div></td>
+	  <td width="5%" class="left_title_1"><div align="center">访谈图片</div></td>
+      <td width="25%" class="left_title_1"><div align="center">访谈内容</div></td>
+	  
+       <td width="5%" class="left_title_1"><div align="center">创建时间</div></td>
+
+      <td width="5%" class="left_title_1"><div align="center"><span class="left-title">操作 </span></div></td>
+    </tr>
+</table>
+</div>  	
+	
+<?php foreach($rowset as $val){?>
+<div id="man_zone">
+  <table width="99%" border="0" align="center"  cellpadding="3" cellspacing="1" class="table_style">
+    <tr>
+     <td width="5%"><div align="center"><? echo $val['news_id'] ?></div></td>
+	  <td width="5%"><div align="center"><? echo $val['news_title'] ?></div></td>
+	  <td width="5%"><div align="center"><? echo $val['news_st'] ?></div></td>
+	  <td width="5%"><div align="center"><img style="width:100px; height:100px" src="<? echo $val['img_url'] ?>"></div></td>
+      <td width="25%"><div align="center"><? echo $val['news_content'] ?></div></td>
+	  
+       <td width="5%"><div align="center"><? echo $val['created_on'] ?></div></td>
+
+      <td width="5%">
+
+	  	<div align="center">
+		[<a href="index.php?controller=Admin&action=EditNews&id=<?php echo $val["news_id"];?>">修 改</a>]
+	  	[<input type="button" id="DeCSt" onclick="deletDec(<?php echo $val["news_id"];?>)" value="删除" class="showDeletIt"/>]
+		</div>
+	  </td>
+
+    </tr>  
+	</table>
+</div>
+	<?php }?>
+
+
+  <p><?php echo $page->pageHtml;?></p>
+
+
+</body>
+</html>

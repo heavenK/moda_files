@@ -1,0 +1,115 @@
+
+<style>
+body{ background: #1b141c url(../images/grzs_01.jpg) no-repeat top; font: "宋体", "黑体"; font-size:12px;}
+*{ padding:0px; border:0px; margin:0px;}
+	#input_FileDFS{ width:950px; height:28px; overflow:hidden; float:left; color:#ebc4bd; margin-bottom:10px; background-image:url(./images/bbb.jpg);
+	}
+		.www_DSF{ width:70px; height:24px; overflow:hidden; float:left; margin-top:6px;
+		}
+		#fileDF{  width:430px; height:128px; overflow:hidden; float:left; 
+		}
+			#input_Area{ width:410px; height:26px;  overflow:hidden; float:left;
+			}
+				.input_Area{width:333px; height:25px;  float:left; background-color:#291425; padding-top:5px; color:#CCCCCC; background-color:#291425; border:1px solid #724a6c;display:block;
+				}
+				#bot_File{ width:70px; height:28px; float:left; margin-left:2px; background-image:url(./images/zsfb_ll.jpg);display:block;
+				}
+		#bot_SUB{ width:70px; height:28px; overflow:hidden; float:left;
+		}
+			.bot_SUB{ width:70px; height:28px; overflow:hidden; float:left; background-image:url(./images/zsfb_tj.jpg)
+			}
+
+
+.fileww { margin-left:0px !important; margin-left:-410px;  position:absolute; filter:alpha(opacity=0);opacity:0 ; height:23px; float:left;display:none; }
+.file { margin-left:0px !important; margin-left:-410px;  position:absolute; filter:alpha(opacity=0);opacity:0 ; height:23px; float:left;display:none; }
+</style>
+	<script type="text/javascript">
+			function fun()
+{
+			//正确判断大小
+			//alert("sdfsdf");
+			var oImg=new Image();
+			
+			
+			var Browser_Agent=navigator.userAgent;   
+			if(Browser_Agent.indexOf("Firefox")!=-1){
+				document.form1.submit();
+				//alert('暂不支持火狐浏览器');
+			}
+			
+			
+			
+			 oImg.src=document.form1.file.value;
+			 
+			 CheckProperty(oImg);
+			
+				
+			
+				//alert(oImg.width);
+//				alert(oImg.height);
+				//if(oImg.width<500&&oImg.height<500 && oImg.height>0 && oImg.width>0  ){
+//					document.form1.submit();
+//				}else{
+//					alert("预览图片小于500*500");
+//				
+//				}
+				
+
+}
+			
+
+				function CheckProperty(obj)        //检测图像属性  
+				{  
+				  FileObj=obj;  
+				 
+				  if(obj.readyState!="complete")    //如果图像是未加载完成进行循环检测  
+				  {  
+					setTimeout("CheckProperty(FileObj)",500);  
+					return false;  
+				  }  
+				  
+				  //ImgFileSize=Math.round(ImgObj.fileSize/1024*100)/100;//取得图片文件的大小  
+				  ImgWidth=obj.width            //取得图片的宽度  
+				  ImgHeight=obj.height;        //取得图片的高度  
+				  //alert(ImgWidth +"|" +ImgHeight);
+					if(ImgWidth<580&&ImgHeight<300){
+						document.form1.submit();
+					}else{
+						alert("预览图片小于580*300");
+					
+					} 
+				 }
+		
+		</script>
+
+
+
+
+<?php echo $jsstr;?>
+
+	<div id="input_FileDFS" ><!--浏览框-->
+		<div class="input_FileDFS">
+						<span class="www_DSF">创建封面：</span>
+						
+				<FORM ACTION="?Controller=ShowIndex&action=UploadPic" name="form1" METHOD=POST enctype="multipart/form-data">
+						<input type="hidden" name="show_id" id="show_id" value="<?php echo $show_id ;?>"  />
+						<div id="fileDF">
+							<div id="input_Area">
+								<input type="text" class="input_Area" id="viewfile" name="viewfile"  readonly=""/>
+								<img src="./images/zsfb_ll.jpg" for="unload" onmouseover="document.getElementById('upload').style.display='block';"  name="img_sum" id="img_sum"/>
+							</div>
+							
+							<input type="file" class="file" onchange="document.getElementById('viewfile').value=this.value;this.style.display='none';"  name="upload" id="upload"  size="47"/>
+							<!--<div id="bot_File">
+							</div>-->
+						</div>
+						
+						<div id="bot_SUB">
+							<input type="submit" name="button" class="bot_SUB" value=""  />
+						</div>
+						<input name="upload" type="hidden" id="upload" value="upload" /><input type="hidden" name="MAX_FILE_SIZE" value="3000000" />
+				</FORM>
+			</div>
+			<div id="sub_Bti">
+			</div>
+		</div>

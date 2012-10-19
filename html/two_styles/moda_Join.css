@@ -1,0 +1,9 @@
+@charset "gb2312";
+/* CSS Document */
+
+/*合作机构*/
+#moda_Join			{ width:964px; margin:10px 0 0 0; display:inline; padding:10px 0 49px 14px; background:#311f34; border:#3d3f96 1px solid; overflow:hidden; float:left;}
+#moda_Join li				{ width:468px; height:278px; margin:0 10px 10px 0; display:inline; background:#221425; border:#59375c 1px solid; overflow:hidden; float:left;}
+
+/*美达招募内页*/
+#moda_Recruit_in	{ width:978px; margin:10px 0 0 0; display:inline; padding:20px 0; text-align:center; background:#311f34; border:#3d3f96 1px solid; overflow:hidden; float:left;}

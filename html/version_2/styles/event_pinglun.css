@@ -1,0 +1,163 @@
+@charset "gb2312";
+/* CSS Document */
+
+
+
+
+#content							{ width:980px; margin:0 auto;}
+#head								{ width:980px;float:left;}
+#head .biglogo						{ background:url(../images/modamember/big_logo.jpg) no-repeat; float:left; margin-left:180px;_margin-left:100px;width:646px; height:81px;}	
+#head .m_link						{ float:right; margin-top:4px; }
+#head .m_link a						{ color:#777677; float:left;}
+#head .m_link a:hover				{ text-decoration:none;}
+#head .m_link span					{ float:left;width:20px;}
+#head .m_link em					{ color:#777677; margin:0 5px; float:left;}
+
+#head .m_navigate					{  float:left;}
+#head .m_navigate li				{  height:36px;float:left; margin-left:0px; border:0px solid #F00;}
+#head .m_navigate h1 a,#head .m_navigate h2 a,#head .m_navigate h3 a,#head .m_navigate h4 a,#head .m_navigate h5 a,#head .m_navigate h6 a,#head .m_navigate em a,#head .m_navigate b a									{ background:url(../images/modamember/navi.jpg) no-repeat; height:36px; background-color:#3a3a3a;float:left;}
+#head .m_navigate li h1 a			{ width:130px; background-position:0 0;}
+#head .m_navigate li h1 a:hover		{ background-position:0 -36px;}
+#head .m_navigate li h1 a.current	{ background-position:0 0px;}
+#head .m_navigate li h2 a			{ width:118px;background-position:-129px 0;}
+#head .m_navigate li h2 a:hover		{ background-position:-129px -36px;}
+#head .m_navigate li h2 a.current	{ background-position:-129px -36px;}
+#head .m_navigate li h3 a			{ width:126px; background-position:-247px -36px;}
+#head .m_navigate li h3 a:hover		{ background-position:-247px -36px;}
+#head .m_navigate li h3 a.current	{ background-position:-247px -36px;}
+#head .m_navigate li h4 a			{ width:118px; background-position:-373px 0;}
+#head .m_navigate li h4 a:hover		{ background-position:-373px -36px;}
+#head .m_navigate li h4 a.current	{ background-position:-373px -36px;}
+#head .m_navigate li h5 a			{ width:110px; background-position:-491px 0;}
+#head .m_navigate li h5 a:hover		{ background-position:-491px -36px;}
+#head .m_navigate li h5 a.current	{ background-position:-491px -36px;}
+#head .m_navigate li h6 a			{ width:140px; background-position:-602px 0;}
+#head .m_navigate li h6 a:hover		{ background-position:-602px -36px;}
+#head .m_navigate li h6 a.current	{ background-position:-602px -36px;}
+#head .m_navigate li em a			{ width:122px; background-position:-742px 0;}
+#head .m_navigate li em a:hover		{ background-position:-742px -36px;}
+#head .m_navigate li em a.current	{ background-position:-742px -36px;}
+#head .m_navigate li b a			{ width:116px; background-position:-865px 0;}
+#head .m_navigate li b a:hover		{ background-position:-865px -36px;}
+#head .m_navigate li b a.current	{ background-position:-865px -36px;}
+
+.moda_lianxi											{width:978px; height:106px; overflow:hidden; float:left; border:1px solid #dfdfdf; margin-top:10px; display:inline; background:url(../images/moda_lianxibg.jpg) no-repeat;}	
+	.moda_lianxi_bianji									{width:203px; height:106px; overflow:hidden; float:left; margin-left:265px; display:inline;}
+	.moda_lianxi_bianji b								{width:203px; height:42px; overflow:hidden; float:left; line-height:42px; color:#666666;}	
+	.moda_lianxi_bianji span							{width:203px; height:16px; overflow:hidden; float:left; line-height:16px;}
+	.moda_lianxi_qihua									{width:203px; height:106px; overflow:hidden; float:left; margin-left:30px; display:inline;}
+	.moda_lianxi_qihua b								{width:203px; height:42px; overflow:hidden; float:left; line-height:42px; color:#666666;}	
+	.moda_lianxi_qihua span								{width:203px; height:16px; overflow:hidden; float:left; line-height:16px;}
+	.moda_lianxi_weibo									{width:203px; height:106px; overflow:hidden; float:left; margin-left:30px; display:inline;}
+	.moda_lianxi_weibo b								{width:203px; height:42px; overflow:hidden; float:left; line-height:42px; color:#666666;}	
+	.moda_lianxi_weibo span								{width:203px; height:16px; overflow:hidden; float:left; line-height:16px;}
+	.moda_lianxi_weibo tt								{width:68px; font-size-adjust:23px; overflow:hidden; float:left; margin-top:11px; display:inline;}
+	
+	
+	
+/*主体*/	
+
+@charset "gb2312";
+/* CSS Document */
+
+/*通用背景*/
+.moda_Show_button span a,
+.moda_Show_button em a,
+.moda_Show_button i a,
+.moda_Show_button b a,
+.moda_Show_button p a,
+#moda_Show_VCR span,
+#moda_Show_Photo dl dt			{ background:url(../two_images/Show_bg_all.gif) no-repeat;}
+
+/*个人资料*/
+#moda_Show_Data		{ width:978px; padding:0 0 20px 0;   overflow:hidden; float:left; border-left:1px #ececec solid; border-right:1px #ececec solid;; border-top:1px #ececec solid;}
+
+	/*按钮*/
+	.moda_Show_button				{ width:968px; height:65px; padding:9px 0px 0 11px; position:relative; overflow:hidden; float:left;}
+	#moda_Show_button_admin			{ color:#f0037f; position:absolute; top:55px; right:20px; overflow:hidden;}
+	#moda_Show_button_admin a		{ color:#f0037f;}
+	
+	.moda_Show_button span			{ width:102px; height:28px; overflow:hidden; float:right; margin-right:13px; margin-top:23px; display:inline;}
+	.moda_Show_button span a		{ width:102px; height:28px; background-image:url(../images/guanli.jpg); overflow:hidden; float:left;}
+	.moda_Show_button span a:hover	{}
+	.moda_Show_button em			{ width:123px; height:30px; overflow:hidden; float:right; margin-right:48px; margin-top:22px; display:inline;}
+	.moda_Show_button em a			{ width:123px; height:30px; background-image:url(../images/canyutaolun.jpg); overflow:hidden; float:left;}
+	.moda_Show_button em a:hover	{ }
+	.moda_Show_button i				{ width:102px; height:28px; overflow:hidden; float:right; margin-right:7px; margin-top:23px; display:inline;}
+	.moda_Show_button i a			{ width:102px; height:28px; background-image:url(../images/pinglun.jpg); overflow:hidden; float:left;}
+	.moda_Show_button i a:hover		{}
+	.moda_Show_button b				{ width:71px; height:28px; overflow:hidden; float:right; margin-right:7px; margin-top:23px; display:inline;}
+	.moda_Show_button b a			{ width:71px; height:28px; background-image:url(../images/next.jpg); overflow:hidden; float:left;}
+	.moda_Show_button b a:hover		{}
+	.moda_Show_button h1				{ width:71px; height:28px; overflow:hidden; float:right; margin-right:7px; margin-top:23px; display:inline;}
+	.moda_Show_button h1 a			{ width:71px; height:28px; background-image:url(../images/pre.jpg); overflow:hidden; float:left;}
+	.moda_Show_button h1 a:hover		{}
+
+.geren               { width:165px; height:56px; float:left; overflow:hidden;}
+
+
+.guanli_top                      { width:273px; float:left; overflow:hidden; margin-top:5px; margin-left:530px; display:inline;}
+.guanli_top a                      { color:#ff0183;}
+.moda_Show_VCR_logo                      { width:580px; height:51px; float:left; overflow:hidden; margin-top:19px; margin-left:386px; display:inline;}
+
+
+
+	
+#moda_Show_Data pre					{ width:978px; height:169px;  overflow:hidden; float:left;}
+#moda_Show_Data dl					{ width:643px; height:182px;  border:#dedede 1px solid; overflow:hidden; float:left; background-color:#f7f7f7;}
+#moda_Show_Data dl dt				{ width:622px; height:81px; margin:0 0 0 10px; display:inline; border-bottom:#5b3041 1px dashed; text-align:center; overflow:hidden; float:left;}
+#moda_Show_Data dl dt b				{ width:622px; height:16px; padding:11px 0 0 0; font-size:14px; color:#ff5b00; overflow:hidden; float:left;}
+#moda_Show_Data dl dt em			{ width:622px; height:14px; padding:8px 0 0 0; font-style:normal; color:#333333; float:left;}
+#moda_Show_Data dl dt i				{ width:622px; height:14px; padding:8px 0 0 0; font-style:normal; color:#666666; display:inline-block;}
+#moda_Show_Data dl dt i span		{ color:#f0037f;}
+#moda_Show_Data dl dd				{ width:595px; height:68px; padding:14px 0 0 12px; color:#ff0183; line-height:22px; overflow:hidden; float:left;}
+
+
+
+
+
+/*评论显示*/
+.pinglun                 { width:978px; float:left; overflow:hidden; border-left:1px #ececec solid; border-right:1px #ececec solid;}
+.pinglun ul                   { width:948px; float:left; overflow:hidden; border-top:1px #cccccc dashed; margin-left:15px; display:inline; padding-top:20px;}
+.pinglun ul li                  { width:946px; float:left; overflow:hidden; background-color:#e9e9e9; border:1px #e0e0e0 solid; margin-bottom:10px; display:inline;}
+.pinglun_touxiang                {  width:144px; height:182px; float:left; overflow:hidden; margin-top:9px; margin-left:10px; display:inline; }
+.touxiagn                 { width:138px; height:138px; float:left; overflow:hidden; border-top:1px #c4c4c4 solid; border-left:1px #c4c4c4 solid;}
+.right              { width:5px; height:139px; float:left; overflow:hidden; background:url(../images/right.jpg) no-repeat; }
+.bottom              { width:144px; height:6px; float:left; overflow:hidden; background:url(../images/bottom.jpg) no-repeat;}
+.nic            { width:144px; height:18px; float:left; overflow:hidden; text-align:center; padding-top:2px; color:#666666;} 
+.nic b               { color:#e4007f; }
+.pinglun_touxiang pre         { width:144px; height:19px; float:left; overflow:hidden; text-align:center; color:#666666;}
+.pinglun_touxiang p         { width:144px; height:19px; float:left; overflow:hidden; text-align:center; color:#ff0060;}
+
+
+
+
+.pinglun_con               { width:679px; float:left; overflow:hidden; border:1px #cacaca solid; background-color:#ffffff; margin-top:9px; margin-left:26px;  display:inline; padding:25px 35px 70px 35px;  z-index:0;}
+.pinglun_bottom                     { width:26px; height:29px;  overflow:hidden; background-image:url(../images/arrows.jpg) !important; background-repeat: no-repeat;
+ position: absolute; top:19px; left:1px; z-index:1;
+ }
+.pinglun_con1               { width:777px; float:left; overflow:hidden; position:relative; }
+
+
+.pinglun_time                   { width:765px; height:21px; float:left;  overflow:hidden; margin-top:11px; margin-left:27px; display:inline; color:#999999;}
+
+
+
+
+
+
+
+
+
+/*评论*/
+.fabiao_pinglun                       { width:978px; height:263px; float:left; overflow:hidden; border-bottom:1px #ececec solid; border-left:1px #ececec solid; border-right:1px #ececec solid;;}
+.fabiao_pinglun1                 { width:946px; height:231px; float:left; overflow:hidden; background-color:#e9e9e9; border:1px #e0e0e0 solid; margin-top:10px; margin-left:15px; display:inline; }
+.fabiao_pinglun2                       { width:926px; height:23px; float:left; overflow:hidden; margin-top:11px; margin-left:11px; display:inline; }
+.fabiao_pinglun2 span                { float:left; overflow:hidden; color:#e4007f;}
+.fabiao_pinglun2 font               { float:left; overflow:hidden; margin-left:217px; display:inline; color:#999999; font-size:12px;}
+
+.shuru                    { width:926px; height:148px; float:left; margin-left:9px; display:inline; border:1px #cacaca solid;}
+.text2                        { width:926px; height:148px; float:left; overflow:hidden;}
+
+.anniou1                 { width:61px; height:18px; float:left; overflow:hidden; background-color:#00b4ff;color:#ffffff; margin-top:8px; display:inline;}
+.anniou2                  { width:81px; height:19px; float:left; overflow:hidden; background-color:#e4007f; margin-top:8px; margin-left:335px; display:inline; color:#FFF;}

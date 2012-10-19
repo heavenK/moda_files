@@ -1,0 +1,145 @@
+@charset "gb2312";
+/* CSS Document */
+
+
+
+
+
+.moda_nav ul li b a,
+.moda_nav ul li span a,
+.moda_nav ul li h1 a,
+.moda_nav ul li tt a,
+.moda_nav ul li i a,
+.moda_nav ul li em a									{ background:url(../images/moda_geren_navbg.jpg) no-repeat;}
+
+
+
+
+.moda_grzs_title										{width:980px; height:99px; overflow:hidden; float:left;}
+	.moda_title											{width:498px; height:99px; overflow:hidden; float:left;}
+	.moda_daohang										{width:482px; height:24px; overflow:hidden; float:left;}
+	.moda_daohang em									{height:24px; line-height:24px; overflow:hidden; float:right; margin:0 10px 0 10px; display:inline;}
+	.moda_daohang em a									{color:#777677;}
+	.moda_daohang tt									{height:24px; line-height:24px; overflow:hidden; float:right; color:#777677;}
+	.moda_youmei										{width:482px; height:39px; overflow:hidden; float:left;}
+	.moda_nav											{width:482px; height:36px; overflow:hidden; float:left;}
+	.moda_nav ul										{width:482px; height:36px; overflow:hidden; float:left; background-color:#ededed;}
+	.moda_nav ul li										{width:79px; height:36px; overflow:hidden; float:left; margin-left:1px; display:inline;}
+	.moda_nav ul li em a								{width:79px; height:36px; overflow:hidden; float:left; background-position:0 0;}
+	.moda_nav ul li i a									{width:79px; height:36px; overflow:hidden; float:left; background-position:-80px 0;}
+	.moda_nav ul li tt a								{width:79px; height:36px; overflow:hidden; float:left; background-position:-160px 0;}
+	.moda_nav ul li tt a:hover							{width:79px; height:36px; overflow:hidden; float:left; background-position:-160px -36px;}
+	.moda_nav ul li h1 a								{width:79px; height:36px; overflow:hidden; float:left; background-position:-240px -36px;}
+	.moda_nav ul li h1 a:hover							{width:79px; height:36px; overflow:hidden; float:left; background-position:-240px -36px;}
+	.moda_nav ul li span a								{width:79px; height:36px; overflow:hidden; float:left; background-position:-320px 0;}
+	.moda_nav ul li b a									{width:79px; height:36px; overflow:hidden; float:left; background-position:-400px 0;}
+	
+
+
+
+
+
+.moda_lianxi											{width:978px; height:106px; overflow:hidden; float:left; border:1px solid #dfdfdf; margin-top:10px; display:inline; background:url(../images/moda_lianxibg.jpg) no-repeat;}	
+	.moda_lianxi_bianji									{width:203px; height:106px; overflow:hidden; float:left; margin-left:265px; display:inline;}
+	.moda_lianxi_bianji b								{width:203px; height:42px; overflow:hidden; float:left; line-height:42px; color:#666666;}	
+	.moda_lianxi_bianji span							{width:203px; height:16px; overflow:hidden; float:left; line-height:16px;}
+	.moda_lianxi_qihua									{width:203px; height:106px; overflow:hidden; float:left; margin-left:30px; display:inline;}
+	.moda_lianxi_qihua b								{width:203px; height:42px; overflow:hidden; float:left; line-height:42px; color:#666666;}	
+	.moda_lianxi_qihua span								{width:203px; height:16px; overflow:hidden; float:left; line-height:16px;}
+	.moda_lianxi_weibo									{width:203px; height:106px; overflow:hidden; float:left; margin-left:30px; display:inline;}
+	.moda_lianxi_weibo b								{width:203px; height:42px; overflow:hidden; float:left; line-height:42px; color:#666666;}	
+	.moda_lianxi_weibo span								{width:203px; height:16px; overflow:hidden; float:left; line-height:16px;}
+	.moda_lianxi_weibo tt								{width:68px; font-size-adjust:23px; overflow:hidden; float:left; margin-top:11px; display:inline;}
+	
+	
+	
+/*主体*/	
+	
+.main                           { width:980px; float:left; overflow:hidden;}	
+.main_left						{ width:325px; float:left; overflow:hidden; margin-top:10px; display:inline;}
+.aboutme                       { width:323px; float:left; overflow:hidden; border:1px #dfdfdf solid; background-color:#f0f0f0;}	
+.aboutme_logo                         { width:314px; height:70px; float:left; overflow:hidden; margin-top:8px; margin-left:9px; display:inline; }
+	
+.aboutme_pic                      { width:314px; height:155px; float:left; overflow:hidden; margin-left:9px; display:inline; color:#333333;}
+.aboutme_pic font                   { width:154px; height:155px; float:left; overflow:hidden;}	
+.aboutme_pic font img                 { border:1px #ffffff solid;}
+.aboutme_pic ul                       {width:160px; height:136px; float:left; overflow:hidden; margin-top:3px; display:inline;}
+.aboutme_pic ul li                   { width:160px; height:13px; float:left; overflow:hidden; font-size:12px;}
+	
+.aboutme_jiyu	                 { width:286px; float:left; overflow:hidden; margin-left:10px; margin-right:26px; display:inline; color:#666666; margin-bottom:15px;}
+.aboutme_jiyu pre                    { width:60px; float:left; overflow:hidden; color:#ff6d00; }	
+.aboutme_jiyu span                 { width:287px; float:left; overflow:hidden; line-height:20px;}	
+	
+.aboutme_all                      { width:130px; height:32px; float:left ; overflow:hidden; margin-left:196px; display:inline; }	
+.aboutme_all a              {color:#ff0183; text-decoration:underline; }
+
+.aboutme_renqi                            { width:304px; height:105px; float:left; overflow:hidden; border-top:1px #999999 dashed; margin-left:8px; display:inline;}
+.aboutme_renqi1                     { width:314px; height:23px; float:left; overflow:hidden; margin-top:15px; display:inline;}
+.aboutme_renqi1 img                      { width:25px; height:23px; float:left; overflow:hidden; } 
+.aboutme_renqi1 font                      { width:73px; height:23px; float:left; overflow:hidden; font-size:22px; font-family:"黑体"; margin-left:8px; display:inline;}
+.aboutme_renqi1 b                 { width:150px; height:23px; float:left; overflow:hidden; padding-top:8px; font-weight:400;}
+
+
+.aboutme_renqi ul                     { width:304px; height:56px; float:left; overflow:hidden; margin-top:11px; display:inline;}
+.aboutme_renqi ul li                     { width:304px; height:25px; float:left; overflow:hidden;}
+.aboutme_renqi ul li pre                  { width:43px; height:25px; float:left; overflow:hidden; color:#034afa; padding-top:2px;}
+.aboutme_renqi ul li span                   { width:190px; height:16px; float:left; overflow:hidden; background-color:#cdcccc;}
+.aboutme_renqi ul li span i                   { float:right; color:#fe2079; padding-top:2px;}
+.aboutme_renqi ul li p                   { width:100px; height:16px; float:left; overflow:hidden; background-color:#cdcccc;}
+.aboutme_renqi ul li p i                   { float:right; color:#fe2079; padding-top:2px;}
+
+.join                { width:303px; height:101px; float:left; overflow:hidden; border-top:1px #999999 dashed; margin-left:10px; display:inline;}
+.join img                    { width:238px; height:67px; float:left; overflow:hidden; margin-top:22px; margin-left:36px; display:inline;}
+
+
+
+/*美达VCR*/
+.vcr                          { width:323px; float:left; overflow:hidden; margin-top:10px; display:inline; border:1px #dfdfdf solid; background-color:#f0f0f0;}
+.vcr_logo                            { width:303px; height:54px; float:left; overflow:hidden; margin-top:9px; margin-left:10px; display:inline;}
+.vcr_logo img                              { float:left; margin-right:71px; display:inline;}
+.vcr_logo font                      { width:82px; height:16px; float:left; overflow:hidden; background-color:#ff0183; color:#ffffff; font-size:12px; padding-top:4px; padding-left:5px;}
+.vcr_logo font a                         { color:#ffffff;}
+
+
+.video                           { width:302px; height:240px; float:left; overflow:hidden; background-color:#ffffff; margin-top:7px; margin-left:11px; display:inline;}
+.video font                     { width:296px; height:178px; float:left; overflow:hidden; border:1px #f1f2f2 solid; margin-top:2px; margin-left:2px; display:inline;}
+.video span                      { width:291px; height:22px; float:left; overflow:hidden; margin-top:5px; margin-left:8px; display:inline; color:#ff0183; font-size:14px;}
+.video pre                     { width:213px; height:17px; float:left; overflow:hidden; font-size:14px; color:#666666; margin-left:8px; display:inline;}
+.video i                      { width:79px; height:16px; overflow:hidden; color:#666666;}
+.teyue                            { width:236px; height:34px; float:left; overflow:hidden; margin-top:14px; margin-left:87px; display:inline; color:#666666;}
+
+
+/*美达贴吧*/
+.tieba                            { width:323px; float:left; overflow:hidden; border:1px #dfdfdf solid; margin-top:10px; display:inline; background-color:#f0f0f0;}
+.tieba_logo 						{ width:314px; height:79px; float:left; overflow:hidden; margin-top:9px; margin-left:9px; display:inline;}
+.tieba_logo img                     { width:146px; height:36px; float:left; overflow:hidden; margin-right:169px; display:inline;}
+.tieba_logo span                    { width:314px; height:35px; float:left; overflow:hidden; margin-top:8px; display:inline; color:#ff9900; font-size:14px; font-weight:bold;}
+.tieba ul                   { width:313px; height:189px; float:left; overflow:hidden; margin-left:10px; display:inline;}
+.tieba ul li                  { width:313px; height:26px; float:left; overflow:hidden;}
+.tieba ul li i                     { width:71px; height:26px; float:left; overflow:hidden; font-size:12px;}
+.tieba ul li i a                   { color:#ff0183;}
+.tieba ul li pre                      { width:240px; height:24px; float:left; overflow:hidden;}
+.tieba ul li pre a                    { color:#333333;}
+
+.more                     { width:95px; height:31px; float:left; overflow:hidden; margin-left:228px; display:inline; color:#ff0183;}
+.more a                      { color:#ff0183; text-decoration:underline;}
+
+/*最新个人展示*/
+.main_right                        { width:643px; float:left; overflow:hidden; border:1px #ececec solid; margin-left:10px; margin-top:10px; display:inline;}
+.myshow_logo                       { width:632px; height:62px; float:left; overflow:hidden;}
+.myshow_logo img                         { width:220px; height:52px; float:left; overflow:hidden; margin-top:10px; margin-left:11px; display:inline;}
+.myshow_logo font                  { width:138px; height:28px; float:left; overflow:hidden; margin-top:10px; margin-left:263px; display:inline; font-size:16px; font-weight:bold; }
+.myshow_logo font a               { color:#ff9900; text-decoration:underline;}
+.main_right ul                      { width:643px; float:left; overflow:hidden;}
+.main_right ul li                     { width:298px; height:247px; float:left; overflow:hidden; border:1px #ececec solid;  position: relative; margin-top:10px; margin-left:11px; margin-right:10px; display:inline;}
+.shotitle                         { width:298px; height:48px; float:left; overflow:hidden; background-image:url(../images/yellow.png); position: absolute; top:198px; left:0px; filter:alpha(opacity=90); border-top:1px #ececec solid;}
+.shotitle font                    { width:298px; height:21px; float:left; overflow:hidden; text-align:center; margin-top:7px; display:inline; font-weight:bolder;}
+.shotitle font a             { color: #034afa;}
+.shotitle span {color: #034afa;float: left;font-style: normal;height: 13px;overflow: hidden;text-align: center;width: 298px;}
+.shotitle span b {color: #333333;font-weight: normal;}
+
+
+
+.show_all                 { width:643px; height:143px; float:left; overflow:hidden; }
+.show_all span                { width:160px; height:21px; float:left; overflow:hidden; background-color:#ff0183; margin-top:36px; margin-left:242px; display:inline;font-size:14px; font-weight:bolder; padding-top:6px; text-align:center;color:#ffffff;}
+.show_all span a                     {  color:#ffffff; text-decoration:underline; }

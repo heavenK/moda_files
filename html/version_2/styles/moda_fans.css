@@ -1,0 +1,81 @@
+/* CSS Document */
+
+
+/*通用调图*/
+.moda_nav ul li b a,
+.moda_nav ul li span a,
+.moda_nav ul li h1 a,
+.moda_nav ul li tt a,
+.moda_nav ul li i a,
+.moda_nav ul li em a									{ background:url(../images/moda_geren_navbg.jpg) no-repeat;}
+
+
+
+/*顶部导航*/
+.moda_grzs_title										{width:980px; height:99px; overflow:hidden; float:left;}
+	.moda_title											{width:498px; height:99px; overflow:hidden; float:left;}
+	.moda_daohang										{width:482px; height:24px; overflow:hidden; float:left;}
+	.moda_daohang em									{height:24px; line-height:24px; overflow:hidden; float:right; margin:0 10px 0 10px; display:inline;}
+	.moda_daohang em a									{color:#777677;}
+	.moda_daohang tt									{height:24px; line-height:24px; overflow:hidden; float:right; color:#777677;}
+	.moda_youmei										{width:482px; height:39px; overflow:hidden; float:left;}
+	.moda_nav											{width:482px; height:36px; overflow:hidden; float:left;}
+	.moda_nav ul										{width:482px; height:36px; overflow:hidden; float:left; background-color:#ededed;}
+	.moda_nav ul li										{width:79px; height:36px; overflow:hidden; float:left; margin-left:1px; display:inline;}
+	.moda_nav ul li em a								{width:79px; height:36px; overflow:hidden; float:left; background-position:0 0;}
+	.moda_nav ul li em a:hover							{width:79px; height:36px; overflow:hidden; float:left; background-position:0 -36px;}
+	.moda_nav ul li i a									{width:79px; height:36px; overflow:hidden; float:left; background-position:-80px 0;}
+	.moda_nav ul li i a:hover							{width:79px; height:36px; overflow:hidden; float:left; background-position:-80px -36px;}
+	.moda_nav ul li tt a								{width:79px; height:36px; overflow:hidden; float:left; background-position:-160px 0;}
+	.moda_nav ul li tt a:hover							{width:79px; height:36px; overflow:hidden; float:left; background-position:-160px -36px;}
+	.moda_nav ul li h1 a								{width:79px; height:36px; overflow:hidden; float:left; background-position:-240px 0;}
+	.moda_nav ul li h1 a:hover							{width:79px; height:36px; overflow:hidden; float:left; background-position:-240px -36px;}
+	.moda_nav ul li span a								{width:79px; height:36px; overflow:hidden; float:left; background-position:-320px -36px;}
+	.moda_nav ul li b a									{width:79px; height:36px; overflow:hidden; float:left; background-position:-400px 0;}
+	.moda_nav ul li b a:hover							{width:79px; height:36px; overflow:hidden; float:left; background-position:-400px -36px;}
+
+/*粉丝列表*/
+.fans_list { width:978px; height:714px; overflow:hidden; float:left; border:1px #ececec solid; background-color:#FFFFFF;}
+	.fans_logo { width:230px; height:64px; overflow:hidden; float:left;}
+	.fans_list ul { width:925px; height:530px; overflow:hidden; float:left; margin:30px 0 0 38px; display:inline;}
+	.fans_list ul li { width:140px; height:163px; margin-right:10px; display:inline; margin-bottom:10px; overflow:hidden; float:left; border:1px #dfdfdf solid; background-color:#f2f2f2;}
+	.fans_list ul li:hover { width:140px; height:163px; border:1px #ff048a solid; background-color:#e6e6e6;}
+	.fans_list ul li b { width:120px; height:120px; overflow:hidden; float:left; margin:10px 0 8px 10px; display:inline;}
+	.fans_list ul li span { width:120px; height:16px; margin-left:10px; display:inline; font-size:14px; text-align:center; overflow:hidden; float:left; }
+	.fans_list ul li span a { color:#333333;}
+	.fans_list ul li span a:hover { color:#cc0000;}
+
+/*页码*/
+#list_pg {
+    color: #0156A9;
+    float: left;
+    font-size: 14px;
+    height: 27px;
+    overflow: hidden;
+    padding: 10px 0;
+    text-align: center;
+    width: 980px;
+	margin-top:20px;
+	display:inline;
+}
+	#list_pg li {
+    display: inline;
+    margin: 0 3px;
+}
+	#list_pg li a {
+    background-color: #f7f7f7;
+    color: #f1037d;
+    padding: 3px 7px;
+	border:1px solid #dfdfdf;
+}
+#list_pg li a:hover {
+    background-color: #f1037d;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+	
+#list_pg li.thisclass a {
+     background-color: #f1037d;
+    color: #FFFFFF;
+    text-decoration: none;
+}	

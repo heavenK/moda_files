@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>美达</title>
+<link href="css/css10-3.css" rel="stylesheet" type="text/css" />
+
+
+<script type="text/javascript" src="js/json2.js"></script>
+<script type="text/javascript" src="js/swfobject.js"></script>
+<script type="text/javascript">
+swfobject.embedSWF(
+"open-flash-chart.swf", "my_chart",
+"550", "200", "9.0.0", "expressInstall.swf",
+{"data-file":"test.php"} );
+</script>
+
+<script type="text/javascript">
+
+function ofc_ready()
+{
+	//alert('ofc_ready');
+}
+
+function open_flash_chart_data()
+{
+	//alert( 'reading data' );
+	return JSON.stringify(data);
+}
+
+function findSWF(movieName) {
+  if (navigator.appName.indexOf("Microsoft")!= -1) {
+    return window[movieName];
+  } else {
+    return document[movieName];
+  }
+}
+
+
+/*var data =	<?php echo $chart->toPrettyString(); ?>;	*/
+/*var data = {
+  "elements": [
+    {
+      "type": "bar_sketch",
+      "values": [
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1
+      ]
+    }
+  ],
+  "title": {
+    "text": "中文不行啊"
+  }
+};*/
+
+/*var data = {
+  "elements": [
+    {
+      "type": "bar_sketch",
+      "colour": "#81AC00",
+      "outline-colour": "#567300",
+      "offset": 5,
+      "values": [
+        0,
+        {
+          "top": 3,
+          "tip": "Hello<br>#val#"
+        },
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        {
+          "top": 3,
+          "tip": "Hello<br>#val#"
+        },
+        9,
+        10,
+        {
+          "top": 3,
+          "tip": "Hello<br>#val#"
+        }
+      ]
+    }
+  ],
+  "title": {
+    "text": "Wed Jun 17 2009",
+    "style": "{color: #567300; font-size: 14px}"
+  }
+}*/;
+
+</script>
+
+
+
+</head>
+
+<body>
+<div id="ModaBox"><!---->
+	<div id="ModaFlash"><!--flash-->
+	  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="1100" height="515">
+        <param name="movie" value="images/modaflashbanner.swf" />
+        <param name="quality" value="high" />
+        <embed src="images/modaflashbanner.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="1100" height="515"></embed>
+      </object>
+	</div>
+	<div id="ModaHeader"><!---->
+		<div id="ModaNav"><a href="http://moda.we54.com"><img src="images/moda002.jpg" alt="ҳ" width="253" height="51" border="0" /></a><a href="http://www.we54.com/dlgril/"><img src="images/moda003.jpg" width="194" height="51" border="0" alt="" /></a><a href="about.html"><img src="images/moda004.jpg" width="189" height="51" border="0" alt="" /></a></div>
+		<div id="ModaPicA"><img src="images/moda005.jpg" width="253" height="94" border="0" /><img src="images/moda006.jpg" width="194" height="94" border="0" /><img src="images/moda007.jpg" width="189" height="94" border="0" /></div>
+		<div id="ModaPicB"><img src="images/moda012.jpg" width="980" height="18" border="0" /></div>
+	</div>
+	<div id="ModaContFlash"><!--ͶƱ-->
+		<div id="my_chart" ></div>
+ 	</div>
+	<div><img src="images/moda010.jpg" width="980" height="38" border="0" /></div>
+	<div id="ModaBottom"><img src="images/md010.jpg" width="188" height="40" border="0" class="ModaBottomA" /><span class="ModaBottomB">ȨУ<a href="#"> www.we54.com</a> 2009 copyright</span></div>
+</div>
+</body>
+</html>

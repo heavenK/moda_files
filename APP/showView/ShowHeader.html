@@ -1,0 +1,63 @@
+<link href="two_styles/moda_personal_reset.css" rel="stylesheet" type="text/css" />
+<link href="two_styles/moda_personal_header.css" rel="stylesheet" type="text/css" />
+<link href="two_styles/moda_footer.css" rel="stylesheet" type="text/css" />
+
+<style>
+body{ background:none; font-family:"宋体"; font-size:12px;}
+#cont{ width:978px; height:auto; float:left; overflow:hidden; background-position:-1px -1px; background-color:#29242b; border:#3d3e95 1px solid; margin-bottom:10px;}
+</style>
+
+	<div id="moda_header"><!--头部-->
+        <a href="/" id="logo_transparent" target="_blank"></a>
+    	<strong><a href="/"><img src="two_images/header_logo.png"  border="0" /></a></strong>
+        <i><b><a href="http://www.we54.com/">新青年网首页</a>:</b> <a href="http://news.we54.com//">大连你好</a> | <a href="http://blog.we54.com/">博客</a> | <a href="http://bbs.we54.com/">社区</a> | <a href="http://54class.we54.com/">五年四班</a> |  <a href="http://pic.we54.com/">图片</a> | <a href="http://house.we54.com/">房产</a> | <a href="http://moda.we54.com/">美达</a> | <a href="http://lichi.we54.com/">荔枝先生</a></i>
+        
+        <?php if(FI_TestSysUser($_SESSION["Zend_Auth"]['storage']->username,'',1,0)){?>
+        
+                <em><?php echo $_SESSION["Zend_Auth"]['storage']->nickname ?> 欢迎你! | <a href="?Controller=ModaIndex&action=Person" >我的首页</a> | <a href="http://passport.we54.com/index/logout" >安全退出</a>      
+                
+        <?php }else{ ?>
+                <?php if($_SESSION["Zend_Auth"]['storage']->username!=''){ ?>
+                
+                    <em><?php echo $_SESSION["Zend_Auth"]['storage']->nickname ?> 欢迎你! | <a href="?Controller=Index3&action=Register" target="_blank">申请加入</a> | <a href="http://passport.we54.com/index/logout" >安全退出</a>
+                    
+                <?php }else{?>	
+                
+                    <em><a href="http://passport.we54.com/Index/login?forward=<?php echo urlencode("http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);?>" target="_blank">登录</a> | <a href="http://passport.we54.com/Index/register" target="_blank">注册</a>
+                    
+                <?php }?>	
+        <?php }?>
+        
+        
+         | <a href="?Controller=ModaIndex&action=ModaAbout" target="_blank">关于美达</a> | <a href="#" target="_blank">搜索美达</a> | <a href="?Controller=ShowIndex&action=ModaHelp" target="_blank">美达帮助</a></em>
+        
+        <?php if($result['pass'] == 11){?>
+        <span><?php echo stripslashes($result['truename'])?></span>
+        <?php }?>
+        
+        <?php if($result['pass'] == 1){?>
+        <span>MODA HOT GIRL - <?php echo stripslashes($result['truename'])?></span>
+        <?php }?>
+        
+		<?php if($this->_getUserAmin($visitUser_id)){ ?>
+			
+        <ul>
+            <li><a href="/" target="_blank">美 达</a></li>
+        	<li><a href="?Controller=ModaIndex&action=Person" >我的首页</a></li>
+            <li><a href="?Controller=ModaIndex&action=GeRenZiLiao&id=<?php echo $this->_GetSessionUserId();?>" >档 案</a></li>
+            <li><a href="?Controller=ShowIndex&action=ShowPosts&user_id=<?php echo $this->_GetSessionUserId();?>" >展 示</a></li>
+            <li><a href="?Controller=ShowIndex&action=Fans&user_id=<?php echo $this->_GetSessionUserId();?>" >粉 丝</a></li>
+            <li><a href="?Controller=ShowIndex&action=ModaClub&user_id=<?php echo $this->_GetSessionUserId();?>" >贴 吧</a></li>
+        </ul>
+		<?php }else{ ?>
+        <ul>
+            <li><a href="/" target="_blank">美 达</a></li>        
+        	<li><a href="?Controller=ModaIndex&action=Person&id=<?php echo $visitUser_id;?>" >首 页</a></li>
+            <li><a href="?Controller=ModaIndex&action=GeRenZiLiao&id=<?php echo $visitUser_id;?>" >档 案</a></li>
+            <li><a href="?Controller=ShowIndex&action=ShowPosts&user_id=<?php echo $visitUser_id;?>" >展 示</a></li>
+            <li><a href="?Controller=ShowIndex&action=Fans&user_id=<?php echo $visitUser_id;?>" >粉 丝</a></li>
+            <li><a href="?Controller=ShowIndex&action=ModaClub&user_id=<?php echo $visitUser_id;?>" >贴 吧</a></li>
+        </ul>
+        <?php }?>
+    </div>
+    

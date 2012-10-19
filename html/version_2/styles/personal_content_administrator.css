@@ -1,0 +1,61 @@
+@charset "gb2312";
+/* CSS Document */
+
+
+
+
+
+.moda_nav ul li b a,
+.moda_nav ul li span a,
+.moda_nav ul li h1 a,
+.moda_nav ul li tt a,
+.moda_nav ul li i a,
+.moda_nav ul li em a									{ background:url(../images/moda_geren_navbg.jpg) no-repeat;}
+
+
+
+
+.moda_grzs_title										{width:980px; height:99px; overflow:hidden; float:left;}
+	.moda_title											{width:498px; height:99px; overflow:hidden; float:left;}
+	.moda_daohang										{width:482px; height:24px; overflow:hidden; float:left;}
+	.moda_daohang em									{height:24px; line-height:24px; overflow:hidden; float:right; margin:0 10px 0 10px; display:inline;}
+	.moda_daohang em a									{color:#777677;}
+	.moda_daohang tt									{height:24px; line-height:24px; overflow:hidden; float:right; color:#777677;}
+	.moda_youmei										{width:482px; height:39px; overflow:hidden; float:left;}
+	.moda_nav											{width:482px; height:36px; overflow:hidden; float:left;}
+	.moda_nav ul										{width:482px; height:36px; overflow:hidden; float:left; background-color:#ededed;}
+	.moda_nav ul li										{width:79px; height:36px; overflow:hidden; float:left; margin-left:1px; display:inline;}
+	.moda_nav ul li em a								{width:79px; height:36px; overflow:hidden; float:left; background-position:0 0;}
+	.moda_nav ul li em a:hover							{width:79px; height:36px; overflow:hidden; float:left; background-position:0 -36px;}
+	.moda_nav ul li i a									{width:79px; height:36px; overflow:hidden; float:left; background-position:-80px 0;}
+	.moda_nav ul li i a:hover							{width:79px; height:36px; overflow:hidden; float:left; background-position:-80px -36px;}
+	.moda_nav ul li tt a								{width:79px; height:36px; overflow:hidden; float:left; background-position:-160px 0px;}
+	.moda_nav ul li tt a:hover							{width:79px; height:36px; overflow:hidden; float:left; background-position:-160px -36px;}
+	.moda_nav ul li h1 a								{width:79px; height:36px; overflow:hidden; float:left; background-position:-240px -36px;}
+	.moda_nav ul li h1 a:hover							{width:79px; height:36px; overflow:hidden; float:left; background-position:-240px -36px;}
+	.moda_nav ul li span a								{width:79px; height:36px; overflow:hidden; float:left; background-position:-320px 0;}
+	.moda_nav ul li span a:hover						{width:79px; height:36px; overflow:hidden; float:left; background-position:-320px -36px;}
+	.moda_nav ul li b a									{width:79px; height:36px; overflow:hidden; float:left; background-position:-400px 0;}
+	.moda_nav ul li b a:hover							{width:79px; height:36px; overflow:hidden; float:left; background-position:-400px -36px;}
+	
+
+
+
+
+
+.moda_lianxi											{width:978px; height:106px; overflow:hidden; float:left; border:1px solid #dfdfdf; margin-top:10px; display:inline; background:url(../images/moda_lianxibg.jpg) no-repeat;}	
+	.moda_lianxi_bianji									{width:203px; height:106px; overflow:hidden; float:left; margin-left:265px; display:inline;}
+	.moda_lianxi_bianji b								{width:203px; height:42px; overflow:hidden; float:left; line-height:42px; color:#666666;}	
+	.moda_lianxi_bianji span							{width:203px; height:16px; overflow:hidden; float:left; line-height:16px;}
+	.moda_lianxi_qihua									{width:203px; height:106px; overflow:hidden; float:left; margin-left:30px; display:inline;}
+	.moda_lianxi_qihua b								{width:203px; height:42px; overflow:hidden; float:left; line-height:42px; color:#666666;}	
+	.moda_lianxi_qihua span								{width:203px; height:16px; overflow:hidden; float:left; line-height:16px;}
+	.moda_lianxi_weibo									{width:203px; height:106px; overflow:hidden; float:left; margin-left:30px; display:inline;}
+	.moda_lianxi_weibo b								{width:203px; height:42px; overflow:hidden; float:left; line-height:42px; color:#666666;}	
+	.moda_lianxi_weibo span								{width:203px; height:16px; overflow:hidden; float:left; line-height:16px;}
+	.moda_lianxi_weibo tt								{width:68px; font-size-adjust:23px; overflow:hidden; float:left; margin-top:11px; display:inline;}
+	
+	
+	
+/*Ö÷Ìå*/	
+	

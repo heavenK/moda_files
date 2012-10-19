@@ -1,0 +1,57 @@
+
+
+body{ background: #1b141c url(../images/grzs_01.jpg) no-repeat top; font: "宋体"; font-size:12px;}
+*{ padding:0px; border:0px; margin:0px;}
+li{ list-style-type:none;}
+a:hover { text-decoration: underline; }
+h1{ font: 12px normal; color:#f0037f; display:inline; }
+h2{ font-size:12px; color:#fdb979; display:inline;}
+h3{ font:12px normal; color:#fe89d3; display:inline;}
+h4{ font-size:20px; color:#fe89d3; display:inline;}
+#full{ margin:0px auto; width:980px; height:1140px;}
+
+
+#top{ height:123px; width:980px; float:left;}
+	#top_a{ height:20px; width:980px; float:left; overflow:hidden; color:#878787; text-align:right; padding-top:10px;}
+	#top_b{ height:93px; width:980px; float:left; overflow:hidden;}
+		#top_b_a{ height:93px; width:301px; float:left; overflow:hidden;}
+		#top_b_b{ height:93px; width:679px; float:left; overflow:hidden;}
+			#top_b_b_a{ height:53px; width:679px; float:left; overflow:hidden;}
+				#top_b_b_a_a{ width:676px; height:14px; float:left; color:#eac6be; text-align:right; padding-top:8px; padding-right:3px;}
+				#top_b_b_a_a a{ font-size:12px; color:#eac6be; text-decoration:none;}
+				#top_b_b_a_b{ width:679px; height:31px; float:left; color:#eac6be;}
+			#top_b_b_b{ height:40px; width:165px; float:left; overflow:hidden; background:url(../images/grzs_06.jpg) no-repeat;}
+			#top_b_b_c{ height:40px; width:514px; float:left; overflow:hidden;}
+				#button_a{ height:40px; width:102px; float:left; overflow:hidden;}
+				#button_b{ height:40px; width:103px; float:left; overflow:hidden;}
+				#button_c{ height:40px; width:103px; float:left; overflow:hidden;}
+				#button_d{ height:40px; width:104px; float:left; overflow:hidden;}
+				#button_e{ height:40px; width:102px; float:left; overflow:hidden;}
+				
+				
+#cont{ width:980px; height:825px; float:left; overflow:hidden; background-color:#29242b; background-image:url(../images/jlb_01.jpg); background-repeat:no-repeat;}
+	.cont_a{ width:15px; height:825px; float:left; overflow:hidden;}
+	.cont_b{ width:950px; height:825px; float:left; overflow:hidden;}
+		#cont_b_a{ width:950px; height:34px; float:left; overflow:hidden;}
+		#cont_b_b{ width:950px; height:51px; float:left; overflow:hidden;}
+			#cont_b_b_a{ width:582px; height:28px; float:left; overflow:hidden; font-size:12px; color:#bc5b31; padding-left:239px; padding-top:23px;}
+			#cont_b_b_b{ width:129px; height:51px; float:left; overflow:hidden;}
+		#cont_b_c{ width:950px; height:676px; float:left; overflow:hidden;}
+			.list{ width:932px; height:656px; float:left; overflow:hidden; margin-left:18px; margin-bottom:20px;}
+				.list_a{ width:932px; height:28px; float:left; overflow:hidden;}
+					.list_a_a{ width:657px; height:19px; float:left; overflow:hidden; padding-top:9px; font-size:12px; font-weight:bold; color:#fe89d3;}
+					.list_a_b{ width:90px; height:19px; float:left; overflow:hidden; padding-top:9px; font-size:12px; font-weight:bold; color:#fe89d3;}
+					.list_a_c{ width:88px; height:19px; float:left; overflow:hidden; padding-top:9px; font-size:12px; font-weight:bold; color:#fe89d3;}
+					.list_a_d{ width:97px; height:19px; float:left; overflow:hidden; padding-top:9px; font-size:12px; font-weight:bold; color:#fe89d3;}
+				.list_b{ width:932px; height:30px; float:left; overflow:hidden;}
+					.list_b_a{ width:655px; height:16px; float:left; overflow:hidden; padding-top:14px; font-size:14px; color:#eec4bc; padding-left:2px;}
+					.list_b_b{ width:81px; height:16px; float:left; overflow:hidden; padding-top:14px; font-size:14px; color:#eec4bc; padding-left:9px;}
+					.list_b_c{ width:79px; height:16px; float:left; overflow:hidden; padding-top:14px; font-size:14px; color:#eec4bc; padding-left:9px;}
+					.list_b_d{ width:88px; height:16px; float:left; overflow:hidden; padding-top:14px; font-size:14px; color:#eec4bc; padding-left:9px;}
+		#cont_b_d{ width:950px; height:64px; float:left; overflow:hidden;}
+			#cont_b_d_a{ width:950px; height:28px; float:left; overflow:hidden;}
+			#cont_b_d_b{ width:950px; height:20px; float:left; overflow:hidden; text-align:center;}
+				#page{ width:350px; height:20px; overflow:hidden;}
+			#cont_b_d_c{ width:950px; height:16px; float:left; overflow:hidden;}	
+
+

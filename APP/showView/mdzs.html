@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GB2312" />
+
+
+<title>美达展示-美达&middot;大连超级美女榜-大连新青年</title>
+<meta name="keywords" content="大连，大连新闻，大连论坛，大连资讯，大连滚子游戏，大连生活，五年四班，大连博客，大连话，大连图片，大连视频，大连交友，大连问吧，大连知道，大连人物，大连团购,大连旅游，大连餐饮，大连教育，大连房产，大连汽车，大连娱乐，大连购物，大连摄影，美达美女，美女，美达，美女榜，美达美女榜，大连美女，moda，dalian，daliannews" /> 
+<meta name="description" content="大连新青年网是大连生活资讯信息最丰富的网络媒体，是大连本土化互动、娱乐网络平台，美达美女榜，大连地区拥有广大受众的美女展示平台。"/> 
+
+<link href="style/mdzs.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="css/indexgeneral.css" type="text/css"/>
+<script src="js/indexpopup.js" type/"text/javascript"></script>
+<script src="js/jquery.js" type="text/javascript"></script>
+<link href="two_styles/moda_reset.css" rel="stylesheet" type="text/css" />
+<link href="two_styles/moda_header.css" rel="stylesheet" type="text/css" />
+<link href="two_styles/moda_footer.css" rel="stylesheet" type="text/css" />
+
+<style>
+body{ background:none; font-family:"宋体"; font-size:12px;}
+#cont{ width:978px; height:auto; float:left; overflow:hidden; background-position:-1px -1px; background-color:#29242b; border:#3d3e95 1px solid; margin-bottom:10px; border-top:none;}
+</style>
+
+</head>
+<body>
+
+
+<div id="full">
+
+    <?php  require(APP_DIR . '/tow_view/header_page.html'); ?> 
+	
+	
+	
+
+	<div id="cont">
+		<div id="cont_a"><a href="?Controller=ShowIndex&action=ModaHelp"><h1>如何参加排行榜</h1></a>？</div>
+		
+		<div id="cont_b">
+			<span id="cont_b_a"><img src="images/mdzs_04.gif" />&nbsp;<a href="?Controller=ShowIndex&action=ModaShows&sort=1"><h3>时间排序</h3></a></span>
+			<span id="cont_b_b"><img src="images/mdzs_04.gif" />&nbsp;<a href="?Controller=ShowIndex&action=ModaShows&sort=2"><h3>点击最多</h3></a></span>
+			<span id="cont_b_c"><img src="images/mdzs_04.gif" />&nbsp;<a href="?Controller=ShowIndex&action=ModaShows&sort=3"><h3>评论最多</h3></a></span>
+		</div>
+		
+		<div id="cont_c" style="height:1040px;">
+			<ul>
+			
+				<?php foreach($rowset as $data){?>
+			
+			
+				<li>
+					<span class="box_a"><a href="?Controller=ShowIndex&action=ShowDetail&user_id=<?php echo $data['user_id'] ;?>&show_id=<?php echo $data['show_id'] ;?>"><img src="<?php echo $data['show_img']; ?>" width="148" height="110" /></a></span>
+					<span class="box_b" style="overflow:hidden">
+					<a href="?Controller=ShowIndex&action=ShowDetail&user_id=<?php echo $data['user_id'] ;?>&show_id=<?php echo $data['show_id'] ;?>">
+						<h4>
+						<?php echo $data['nickname']; ?>-<?php echo stripslashes($data['title']); ?>
+						</h4>
+					</a>
+					</span>
+					<span class="box_c"><?php echo $data['views']; ?> <h5>次浏览 </h5><h4>/ </h4><?php echo $data['discuss_count']; ?> <h5>评论</h5></span>
+				</li>
+				
+				<?php }?>
+
+			</ul>
+		</div>
+		
+		<div id="cont_d" style=" height:18px; margin-bottom:20px;"><?php echo $page->pageHtml;?></div>
+	</div>
+	
+	
+     
+     
+
+    <?php  require(APP_DIR . '/tow_view/footer.html'); ?> 
+  
+</div>
+</body>
+</html>

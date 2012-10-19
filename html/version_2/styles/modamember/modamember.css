@@ -1,0 +1,16 @@
+@charset "gb2312";
+/* CSS Document */
+
+#main								{ border:1px solid #ececec; margin-top:12px; width:980px; float:left;}
+#main .m_memberinfo					{ width:953px;margin-left:15px;_margin:0; float:left;}
+#main .m_memberinfo .m_memberlogo	{ margin-left:-2px;_margin-left:16px;}
+.m_sort								{ width:100%;_margin-left:8px;_margin-bottom:10px; border:1px solid #ebebeb; background-color:#f6f6f6; float:left;}
+.m_sort span						{ margin:10px 100px 9px 19px; float:left}
+.m_sort span em						{ background:url(../../images/modamember/triangle.jpg) no-repeat; width:5px;height:8px; margin-top:3px; margin-right:8px; float:left;}
+.m_sort span a						{ color:#e4007f}
+
+#main .m_memberinfo	.m_infolist		{ width:972px; height:858px;_height:850px; margin-left:-16px;_margin:0; float:left; overflow:hidden;}
+#main .m_memberinfo	.m_infolist a.m_info{ width:146px; height:194px; color:#797979;background:url(../../images/modamember/m_bg2.jpg) no-repeat; margin:17px 0 0 16px; float:left;}
+#main .m_memberinfo	.m_infolist a:hover.m_info { text-decoration:none; background:url(../../images/modamember/m_bg.jpg) no-repeat; color:#ff0182}
+#main .m_memberinfo	.m_infolist a.m_info img{ margin:24px 4px 0 4px;}
+#main .m_memberinfo	.m_infolist a.m_info b{ width:146px; margin:12px 0 0 0; overflow:hidden; text-align:center; font-size:16px; float:left;}

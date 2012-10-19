@@ -1,0 +1,16 @@
+@charset "gb2312";
+/* CSS Document */
+
+/*ÃÀ´ï·ÛË¿*/
+#moda_Fans	{ width:978px; padding:0 0 20px 0; background:#352331 url(../two_images/moda_Fans_bg.gif) no-repeat left top; border:#3d3f95 1px solid; overflow:hidden; float:left;}
+#moda_Fans em			{ width:915px; padding:91px 0 50px 38px; overflow:hidden; float:left;}
+#moda_Fans em a			{ width:120px; height:143px; margin:10px 10px 0 0; display:inline; padding:10px; background:#302a32; border:#663a49 1px solid; text-align:center; overflow:hidden; float:left;}
+#moda_Fans em a:hover	{ background:#332029; border:#913157 1px solid;}
+#moda_Fans em a b		{ width:120px; height:120px; overflow:hidden; float:left;}
+#moda_Fans em a span	{ width:120px; height:15px; padding:8px 0 0 0; font-size:14px; font-style:normal; color:#FFF; overflow:hidden; float:left;}
+
+/*Ò³Âë*/
+#page			{ width:978px; height:20px; text-align:center; line-height:19px; overflow:hidden; float:left;}
+		#page span a		{ height:18px; padding:0 6px; background:url(../two_images/page.png) repeat-x; background-position:0 -18px; border:#7e3f52 1px solid; font-size:14px; color:#FFFFFF; display:inline-block; overflow:hidden;}
+		#page span a:hover	{ background:url(../two_images/page.png) repeat-x; background-position:0 0; border:#6f0f96 1px solid; text-decoration:none;}
+		.thisclass			{ height:18px; padding:0 6px; background:url(../two_images/page.png) repeat-x; background-position:0 0; border:#6f0f96 1px solid; font-size:14px; display:inline-block; color:#FFFFFF; overflow:hidden;}

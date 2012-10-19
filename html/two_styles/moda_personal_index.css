@@ -1,0 +1,56 @@
+@charset "gb2312";
+/* CSS Document */
+
+/*通用背景*/
+#personal_index_Data_button a		{ background:url(../two_images/personal_index_bg_all.gif) no-repeat;}
+
+/*焦点大图*/
+#personal_index_Focus	{ width:980px; height:360px; background:url(../two_images/box_border.gif) no-repeat left bottom; border-top:#3d3f96 1px solid; float:left;}
+#personal_index_Focus em					{ width:978px; height:360px; padding:0 1px; background:url(../two_images/box_border.gif) no-repeat right bottom; position:relative; overflow:hidden; float:left;}
+
+/*左半部分*/
+#personal_index_left	{ width:300px; margin:10px 0 0 0; display:inline; background:url(../two_images/personal_index_Data_bg.gif) no-repeat; overflow:hidden; float:left;}
+
+	/*个人资料*/
+	#personal_index_Data					{ width:300px; background:url(../two_images/box_border.gif) no-repeat left bottom; overflow:hidden; float:left;}
+	#personal_index_Data span				{ width:298px; padding:0 1px; background:url(../two_images/box_border.gif) no-repeat right bottom; overflow:hidden; float:left;}
+		#personal_index_Data_Data					{ width:298px; height:346px; overflow:hidden; float:left;}
+		#personal_index_Data_Data dl				{ width:280px; height:140px; margin:83px 0 0 10px; display:inline; overflow:hidden; float:left;}
+		#personal_index_Data_Data dl dt				{ width:138px; height:138px; border:#763b4f 1px solid; overflow:hidden; float:left;}
+		#personal_index_Data_Data dl dd				{ width:130px; height:140px; padding:0 0 0 10px; overflow:hidden; float:left;}
+		#personal_index_Data_Data dl dd h3			{ width:130px; height:18px; margin:0 0 7px 0; display:inline; overflow:hidden; float:left;}
+		#personal_index_Data_Data dl dd h3 a		{ font-size:16px; color:#e8047c;}
+		#personal_index_Data_Data dl dd strong		{ width:129px; height:14px; padding:10px 0 0 1px; font-weight:normal; color:#FFF; overflow:hidden; float:left;}
+		#personal_index_Data_Data em				{ width:280px; height:57px; padding:16px 0 0 10px; font-style:normal; color:#fdb979; line-height:20px; overflow:hidden; float:left;}
+		#personal_index_Data_Data em i				{ font-style:normal; color:#999999;}
+		#personal_index_Data_Data b					{ width:278px; padding:18px 20px 0 0; text-align:right; font-weight:normal; color:#ffbbe6; overflow:hidden; float:left;}
+		#personal_index_Data_Data b a				{ color:#fe89d3; text-decoration:underline;}
+		#personal_index_Data_Data b a:hover			{ text-decoration:none;}
+	#personal_index_Data ul					{ width:298px; background:#311f34; overflow:hidden; float:left;}
+		#personal_index_Data_Hits					{ width:275px; height:83px; margin:0 0 20px 6px; display:inline; padding:9px 0 0 10px; background:#301c33; border:#4d3251 1px solid; overflow:hidden; float:left;}
+		#personal_index_Data_Hits b					{ width:266px; height:16px; margin:0 0 8px 0; display:inline; font-weight:normal; color:#bbb0bc; overflow:hidden; float:left;}
+		#personal_index_Data_Hits b a				{ font-size:14px; font-weight:bold; color:#e8047c;}
+		#personal_index_Data_Hits dl				{ width:266px; height:52px; overflow:hidden; float:left;}
+		#personal_index_Data_Hits dl dt				{ width:266px; height:26px; color:#eec4bc; overflow:hidden; float:left;}
+		#personal_index_Data_Hits dl dt i			{ font-style:normal; line-height:20px; overflow:hidden; float:left;}
+		#personal_index_Data_Hits dl dt strong		{ height:22px; position:relative; overflow:hidden; float:left;}
+		#personal_index_Data_Hits dl dt strong pre	{ font-weight:normal; position:absolute; top:3px; right:6px;}
+		#personal_index_Data_button					{ width:298px; height:93px; padding:0 0 0 32px; overflow:hidden; float:left;}
+		#personal_index_Data_button a				{ width:235px; height:63px; background-position:0 -40px; overflow:hidden; float:left;}
+		#personal_index_Data_button a:hover			{ background-position:-235px -40px;}
+		
+	/*最新个人展示*/
+	#personal_index_Show					{ width:668px; margin:10px 0 0 0; display:inline; padding:0 0 20px 0; background:#311f34 url(../two_images/personal_index_Show_bg.jpg) no-repeat -1px -1px; border:#3d3e95 1px solid; overflow:hidden; float:right;}
+	#personal_index_Show span				{ width:668px; overflow:hidden; float:left;}
+	#personal_index_Show span a				{ margin:11px 6px 0 0; display:inline; font-size:14px; font-weight:bold; color:#f28533; overflow:hidden; float:right;}
+	#personal_index_Show p					{ width:668px; overflow:hidden;}
+	#personal_index_Show p a				{ width:185px; height:30px; margin:0 0 0 242px; display:inline; background:#3d3f96; text-align:center; font-size:14px; font-weight:bold; color:#FFF; line-height:30px; overflow:hidden; float:left;}
+	#personal_index_Show p a:hover			{ background:#FFF; color:#6869c8; text-decoration:none;}
+	#personal_index_Show ul					{ width:648px; margin:76px 0 0 23px; display:inline; overflow:hidden; float:left;}
+	#personal_index_Show ul li				{ width:298px; height:247px; margin:0 24px 20px 0; display:inline; background:#261826; border:#9c0052 1px solid; overflow:hidden; float:left;}
+	#personal_index_Show ul li em			{ width:298px; height:198px; border-bottom:#9c0052 1px solid; overflow:hidden; float:left;}
+	#personal_index_Show ul li h3			{ width:298px; height:16px; padding:7px 0 0 0; text-align:center; overflow:hidden; float:left;}
+	#personal_index_Show ul li h3 a			{ font-size:14px; color:#eec4bc;}
+	#personal_index_Show ul li i			{ width:298px; height:13px; padding:4px 0 0 0; text-align:center; font-style:normal; color:#eec4bc; overflow:hidden; float:left;}
+	#personal_index_Show ul li i b			{ font-weight:normal; color:#f0037f;}
+

@@ -1,0 +1,33 @@
+
+
+body{ background: #1b141c url(../images/grzs_01.jpg) no-repeat top; font-family:"ËÎÌו"; font-size:12px;}
+*{ padding:0px; border:0px; margin:0px; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src="tran.png");  
+background:none;}
+li{ list-style-type:none;}
+a:link{ text-decoration:none;}
+a:hover{ text-decoration:none;}
+a:visited{ text-decoration:none;}
+a:active{ hide-focus: expression(this.hideFocus=true); outline: none;}
+#full{ margin:0px auto; width:980px; height:auto;}
+
+
+#top{ height:123px; width:980px; float:left;}
+	#top_a{ height:20px; width:980px; color:#878787; float:left; overflow:hidden; text-align:right; padding-top:10px;}
+	#top_a a{ font-size:12px; color:#878787; text-decoration:none;}
+	#top_b{ height:93px; width:980px; float:left; overflow:hidden;}
+		#top_b_a{ width:404px; height:93px; float:left; overflow:hidden;}
+		#top_b_b{ width:571px; height:93px; float:left; overflow:hidden; padding-left:5px;}
+			#top_b_b_a{ width:558px; height:18px; float:left; overflow:hidden; color:#eec4bc; text-align:right; padding-top:8px; padding-right:13px;}
+			#top_b_b_a a{ font-size:12px; color:#eec4bc; text-decoration:none;}
+			#top_b_b_b{ width:571px; height:67px; float:left;}
+					
+			
+			
+			
+#cont{ width:978px; height:auto; float:left; overflow:hidden; background:url(../images/hdlb_01.jpg) no-repeat top; background-color:#29242b; border:#7e3f52 1px solid; margin-bottom:10px;}
+	#cont_a{ width:978px; height:71px; float:left; overflow:hidden;}
+	#cont_b{ width:943px; height:auto; float:left; overflow:hidden; padding-left:17px; padding-right:18px;}
+		.box{ width:943px; height:220px; float:left; overflow:hidden; margin-bottom:10px;}
+		#box_space{ width:943px; height:1px; float:left; overflow:hidden;}
+	
+	

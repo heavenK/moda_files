@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<link rel="stylesheet" href="css/common.css" type="text/css" />
+<title>管理区域</title>
+<style type="text/css">
+<!--
+.STYLE1 {
+	color: #3333FF;
+	font-size: 14px;
+	font-weight: bold;
+}
+.STYLE2 {font-size: 14px}
+.STYLE3 {font-weight: bold}
+-->
+</style>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+	function deletDec(event_id)
+	{	
+			if(confirm('真的要删除吗？删除后将无法恢复！'))
+			{
+				var url = "?Controller=Admin&action=EventDel&event_id="+event_id+"";
+
+				location=url;
+			}
+			
+
+	}
+</script>
+
+
+</head>
+
+<body>
+<div id="man_zone">
+  <table width="99%" border="0" align="center"  cellpadding="3" cellspacing="1" class="table_style">
+    <tr>
+      <td width="5%" class="left_title_1"><div align="center">id</div></td>  
+	  <td width="15%" class="left_title_1"><div align="center">活动标题</div></td>
+	  <td width="15%" class="left_title_1"><div align="center">修改时间</div></td>
+
+	  <td width="15%" class="left_title_1"><div align="center">首页图片</div></td>
+      <td width="15%" class="left_title_1"><div align="center">列表图片</div></td>
+	  
+       <td width="15%" class="left_title_1"><div align="center">页面头图片</div></td>
+
+      <td width="15%" class="left_title_1"><div align="center"><span class="left-title">操作 </span></div></td>
+    </tr>
+</table>
+</div>  	
+	
+<?php foreach($rowset as $val){?>
+<div id="man_zone">
+  <table width="99%" border="0" align="center"  cellpadding="3" cellspacing="1" class="table_style">
+    <tr>
+     <td width="5%"><div align="center"><? echo $val['event_id'] ?></div></td>
+	  <td width="15%"><div align="center"><? echo $val['title'] ?></div></td>
+	  <td width="15%"><div align="center"><? echo $val['dateline'] ?></div></td>
+	  <td width="15%"><div align="center"><img style="width:100px; height:100px" src="<? echo $val['home_img'] ?>"></div></td>
+	  <td width="15%"><div align="center"><img style="width:100px; height:100px" src="<? echo $val['index_img'] ?>"></div></td>
+	  <td width="15%"><div align="center"><img style="width:100px; height:100px" src="<? echo $val['header_img'] ?>"></div></td>
+
+
+      <td width="15%">
+
+	  	<div align="center">
+		[<a href="index.php?controller=Admin&action=EventEditView&id=<?php echo $val["event_id"];?>">修 改</a>]
+	  	[<input type="button" id="DeCSt" onclick="deletDec(<?php echo $val["event_id"];?>)" value="删除" class="showDeletIt"/>]
+		</div>
+	  </td>
+
+    </tr>  
+	</table>
+</div>
+	<?php }?>
+
+
+  <p><?php echo $page->pageHtml;?></p>
+
+
+</body>
+</html>

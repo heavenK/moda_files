@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<link rel="stylesheet" href="css/common.css" type="text/css" />
+<title>管理区域</title>
+<style type="text/css">
+<!--
+.STYLE1 {
+	color: #3333FF;
+	font-size: 14px;
+	font-weight: bold;
+}
+.STYLE2 {font-size: 14px}
+.STYLE3 {font-weight: bold}
+-->
+</style>
+</head>
+
+<body>
+<div id="man_zone">
+  <table width="99%" border="0" align="center"  cellpadding="3" cellspacing="1" class="table_style">
+    <tr>
+		<td width="5%" class="left_title_1"><div align="center">注册时间</div></td>  
+      <td width="5%" class="left_title_1"><div align="center">用户名</div></td>  
+	  <td width="5%" class="left_title_1"><div align="center">昵称</div></td>
+      <td width="5%" class="left_title_1"><div align="center">真实姓名</div></td>
+       <td width="5%" class="left_title_1"><div align="center">出生年月</div></td>
+	   <td width="5%" class="left_title_1"><div align="center">电    话</div></td>
+	   <td width="5%" class="left_title_1"><div align="center">qq 号 码</div></td>
+	   <td width="5%" class="left_title_1"><div align="center">身    高</div></td>
+		<td width="5%" class="left_title_1"><div align="center">体   重</div></td>
+	   <td width="5%" class="left_title_1"><div align="center">上传图片1</div></td>
+	   <td width="5%" class="left_title_1"><div align="center">上传图片2</div></td>
+	   <td width="5%" class="left_title_1"><div align="center">上传图片3</div></td>
+	   <td width="5%" class="left_title_1"><div align="center">上传图片4</div></td>
+      <td width="11%" class="left_title_1"><div align="center"><span class="left-title">操作 </span></div></td>
+    </tr>
+	  </table>
+</div> 	
+
+<?php foreach($rowset as $val){?>
+	<div id="man_zone">
+  	<table width="99%" border="0" align="center"  cellpadding="3" cellspacing="1" class="table_style">	
+    <tr>
+		<td width="5%"><div align="center"><? echo date('Y-m-d',$val['restime'])?></div></td>
+     <td width="5%"><div align="center"><? echo $val['username'] ?></div></td>
+	  <td width="5%"><div align="center"><? echo $val['nickname'] ?></div></td>
+      <td width="5%"><div align="center"><? echo $val['truename'] ?></div></td>
+       <td width="5%"><div align="center"><? echo $val['birthdate'] ?></div></td>
+	  <td width="5%"><div align="center"><? echo $val['mobile'] ?></div></td>
+	  <td width="5%"><div align="center"><? echo $val['qq'] ?></div></td>
+	   <td width="5%"><div align="center"><? echo $val['height'] ?></div></td>
+	    <td width="5%"> <div align="center"><? echo $val['weight'] ?></div></td>
+	  
+      <td width="5%"><div align="center"><img src="<? echo $val['img1'] ?> " height="100" width="100" /></div></td>
+	   <td width="5%"><div align="center"><img src="<? echo $val['img2'] ?>" height="100" width="100" /></div></td>
+	  <td width="5%"><div align="center"><img src="<? echo $val['img3'] ?>" height="100" width="100" /></div></td>
+      <td width="5%"><div align="center"><img src="<? echo $val['img4'] ?>" height="100" width="100" /></div></td>
+	  
+      <td width="11%"><div align="center">
+	  [<a href="index.php?controller=Admin&action=XiangTu&id=<?php echo $val["user_id"];?>">详图</a>]
+	  [<a href="index.php?controller=Admin&action=Agree&id=<?php echo $val["user_id"];?>">审核通过</a>]
+      [<a href="index.php?controller=Admin&action=NoAgree&id=<?php echo $val["user_id"];?>">待审核</a>]
+	   </div></td>
+	   
+	   
+    </tr>
+
+  </table>
+  </div>  
+<?php }?>
+  <p><?php echo $page->pageHtml;?></p>
+
+
+
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<link rel="stylesheet" href="css/common.css" type="text/css" />
+
+	<script type="text/javascript" src="js/date.js"></script>
+	
+	<script type="text/javascript" src="js/jquery.datePicker.js"></script>
+
+
+<title>管理区域</title>
+<style type="text/css">
+<!--
+.STYLE1 {
+	color: #3333FF;
+	font-size: 14px;
+	font-weight: bold;
+}
+.STYLE2 {font-size: 14px}
+.STYLE3 {font-weight: bold}
+.banzhurenul{ 
+	width:600px;
+	line-height:14px;
+	height:20px;
+}
+.banzhurenul li {
+	width:120px;
+	float:left;
+}
+-->
+</style>
+
+
+
+<script language="javascript" type="text/javascript" >
+
+	function checkABC()
+	{	
+		
+	
+		title = document.form1.rank_title.value;
+
+
+			if(!title)
+			{
+				alert("标题不能为空");
+				return false;
+			}
+			
+		return true;
+	}
+
+
+</script>
+
+
+
+	
+<script language="javascript" type="text/javascript" >
+
+            Date.format = 'yyyy-mm-dd';
+
+            $(function()
+            {
+				$('#bdate').attr("readonly", true);
+				$('#bdate').datePicker({startDate:'1908-01-01'});
+            });
+			
+			
+</script>
+
+
+</head>
+
+<body>
+
+
+
+
+  <div id="man_zone">
+    <table width="99%" border="0" align="center"  cellpadding="3" cellspacing="1" class="table_style">
+      <tr>
+        <td width="14%" class="left_title_1"><center>
+         
+		   	添加排行榜
+		
+        </center>
+        </td>
+        <td width="86%" class="left_title_1"><span class="left-title">
+          <center>
+          </center>
+        </span></td>
+      </tr>
+      <tr>
+        <td class="left_title_2"><div align="center">排行榜ID</div></td>
+        <td><label><!-- <input name="nianjimingcheng" type="hidden" id="nianjimingcheng" value="" />-->
+<?php echo $ranSDat['rank_id']?>
+        </label></td>
+      </tr>
+	   <tr>
+        <td class="left_title_2"><div align="center">排行榜名</div></td>
+        <td><label><!-- <input name="nianjimingcheng" type="hidden" id="nianjimingcheng" value="" />-->
+<?php echo $ranSDat['rank_title']?>
+        </label></td>
+      </tr>
+	  <tr>
+        <td class="left_title_2"><div align="center">用户ID</div></td>
+        <td><label><!-- <input name="nianjimingcheng" type="hidden" id="nianjimingcheng" value="" />-->
+<?php echo $ranSDat['user_id']?>
+        </label></td>
+      </tr>
+	  <tr>
+        <td class="left_title_2"><div align="center">展示ID</div></td>
+        <td><label><!-- <input name="nianjimingcheng" type="hidden" id="nianjimingcheng" value="" />-->
+<?php echo $ranSDat['show_id']?>
+        </label></td>
+      </tr>
+	 
+	  
+	  <tr>
+        <td class="left_title_2"><div align="center">排名</div></td>
+        <td><label><!-- <input name="nianjimingcheng" type="hidden" id="nianjimingcheng" value="" />-->
+<?php echo $ranSDat['mingci']?>
+        </label></td>
+      </tr>
+	  
+	  
+	  <form action="" method="post" enctype="multipart/form-data" name="form1" id="form1">
+	  
+	   <tr>
+        <td class="left_title_2"><div align="center">展示别名</div></td>
+        <td><label><!-- <input name="nianjimingcheng" type="hidden" id="nianjimingcheng" value="" />-->
+            <input type="text" name="title" value="<?php echo $ranSDat['title']?>" />
+        </label></td>
+      </tr>
+	   <tr>
+        <td class="left_title_2"><div align="center">浏览量</div></td>
+        <td><label><!-- <input name="nianjimingcheng" type="hidden" id="nianjimingcheng" value="" />-->
+            <input type="text" name="views" value="<?php echo $showDats['views']?>" />
+        </label></td>
+      </tr>
+	  <tr>
+        <td class="left_title_2"><div align="center">票数</div></td>
+        <td><label><!-- <input name="nianjimingcheng" type="hidden" id="nianjimingcheng" value="" />-->
+            <input type="text" name="ticket" value="<?php echo $ranSDat['ticket']?>" />
+        </label></td>
+      </tr>
+	 
+      <tr>
+        <td class="left_title_2"><div align="center"></div></td>
+        <td><label>
+        <input  type="submit" id="提交" value="提交" onclick="return checkABC()"/>
+        </label>
+</td>
+      </tr>
+    </table>
+    <p>
+      <label></label>
+    </p>
+  </div>
+</form>
+</p>
+
+</body>
+
+</html>

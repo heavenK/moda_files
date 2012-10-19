@@ -1,0 +1,36 @@
+@charset "gb2312";
+/* CSS Document */
+
+/*通用背景*/
+#moda_TopGirl ul li em a			{ background:url(../two_images/TopGirl_bg_all.gif) no-repeat;}
+
+/*美达大连超级美女榜*/
+#moda_TopGirl	{ width:978px; margin:10px 0 0 0; display:inline; background:#311f34; border:#3d3f96 1px solid; overflow:hidden; float:left;}
+#moda_TopGirl p						{ width:551px; height:121px; margin:11px 0 0 230px; display:inline; overflow:hidden; float:left;}
+#moda_TopGirl ul					{ width:963px; padding:38px 0 20px 15px; display:inline; overflow:hidden; float:left;}
+#moda_TopGirl ul li					{ width:150px; height:189px; margin:0 10px 0 0; display:inline; overflow:hidden; float:left;}
+#moda_TopGirl ul li em				{ width:150px; overflow:hidden; float:left;}
+#moda_TopGirl ul li em a			{ width:144px; height:107px; padding:24px 3px 3px 3px; background-position:0 0; overflow:hidden; float:left;}
+#moda_TopGirl ul li em a:hover		{ background-position:-150px 0;}
+#moda_TopGirl ul li b				{ width:150px; height:15px; padding:6px 0 0 0; overflow:hidden; float:left;}
+#moda_TopGirl ul li b a				{ font-size:14px; color:#eec4bc;}
+#moda_TopGirl ul li i				{ width:150px; height:17px; font-style:normal; color:#eec4bc; line-height:24px; overflow:hidden;}
+#moda_TopGirl ul li i strong		{ font-weight:normal; color:#f0037f;}
+
+
+/*通用背景*/
+#moda_TopGirl_2 ul li em a			{ background:url(../two_images/TopGirl_bg_all_2.gif) no-repeat;}
+
+/*美达大连超级美女榜*/
+#moda_TopGirl_2	{ width:978px; margin:10px 0 0 0; display:inline; background:#311f34; border:#3d3f96 1px solid; overflow:hidden; float:left;}
+#moda_TopGirl_2 p						{ width:551px; height:121px; margin:11px 0 0 230px; display:inline; overflow:hidden; float:left;}
+#moda_TopGirl_2 ul					{ width:963px; padding:38px 0 20px 15px; display:inline; overflow:hidden; float:left;}
+#moda_TopGirl_2 ul li					{ width:150px; height:189px; margin:0 10px 0 0; display:inline; overflow:hidden; float:left;}
+#moda_TopGirl_2 ul li em				{ width:150px; overflow:hidden; float:left;}
+#moda_TopGirl_2 ul li em a			{ width:144px; height:107px; padding:24px 3px 3px 3px; background-position:0 0; overflow:hidden; float:left;}
+#moda_TopGirl_2 ul li em a:hover		{ background-position:-150px 0;}
+#moda_TopGirl_2 ul li b				{ width:150px; height:15px; padding:6px 0 0 0; overflow:hidden; float:left;}
+#moda_TopGirl_2 ul li b a				{ font-size:14px; color:#eec4bc;}
+#moda_TopGirl_2 ul li i				{ width:150px; height:17px; font-style:normal; color:#eec4bc; line-height:24px; overflow:hidden;}
+#moda_TopGirl_2 ul li i strong		{ font-weight:normal; color:#f0037f;}
+

@@ -1,0 +1,57 @@
+/* CSS Document */
+
+#head								{ width:980px;float:left;}
+#head .biglogo						{ background:url(../images/big_logo.jpg) no-repeat; float:left; margin-right:20px; margin-left:180px; _margin-left:90px;width:646px; height:81px;}	
+#head .m_link						{ float:right; margin-top:4px; }
+#head .m_link a						{ color:#777677; float:left;}
+#head .m_link a:hover				{ text-decoration:none;}
+#head .m_link span					{ float:left;width:20px;}
+#head .m_link em					{ color:#777677; margin:0 5px; float:left;}
+
+
+#head .m_navigate					{ margin-top:10px; display:inline; float:left;}
+#head .m_navigate li				{  height:36px;float:left; margin-left:0px; border:0px solid #F00;}
+#head .m_navigate h1 a,#head .m_navigate h2 a,#head .m_navigate h3 a,#head .m_navigate h4 a,#head .m_navigate h5 a,#head .m_navigate h6 a,#head .m_navigate em a,#head .m_navigate b a									{ background:url(../images/navi.jpg) no-repeat; height:36px; background-color:#3a3a3a;float:left;}
+#head .m_navigate li h1 a			{ width:130px; background-position:0 0;}
+#head .m_navigate li h1 a:hover		{ background-position:0 -36px;}
+#head .m_navigate li h1 a.current	{ background-position:0 -36px;;}
+#head .m_navigate li h2 a			{ width:118px;background-position:-129px 0;}
+#head .m_navigate li h2 a:hover		{ background-position:-129px -36px;}
+#head .m_navigate li h2 a.current	{ background-position:-129px -36px;}
+#head .m_navigate li h3 a			{ width:126px; background-position:-247px 0;}
+#head .m_navigate li h3 a:hover		{ background-position:-247px -36px;}
+#head .m_navigate li h3 a.current	{ background-position:-247px -36px;}
+#head .m_navigate li h4 a			{ width:118px; background-position:-373px 0;}
+#head .m_navigate li h4 a:hover		{ background-position:-373px -36px;}
+#head .m_navigate li h4 a.current	{ background-position:-373px -36px;}
+#head .m_navigate li h5 a			{ width:110px; background-position:-491px 0;}
+#head .m_navigate li h5 a:hover		{ background-position:-491px -36px;}
+#head .m_navigate li h5 a.current	{ background-position:-491px -36px;}
+#head .m_navigate li h6 a			{ width:140px; background-position:-602px 0;}
+#head .m_navigate li h6 a:hover		{ background-position:-602px -36px;}
+#head .m_navigate li h6 a.current	{ background-position:-602px -36px;}
+#head .m_navigate li em a			{ width:122px; background-position:-742px 0;}
+#head .m_navigate li em a:hover		{ background-position:-742px -36px;}
+#head .m_navigate li em a.current	{ background-position:-742px -36px;}
+#head .m_navigate li b a			{ width:116px; background-position:-865px 0;}
+#head .m_navigate li b a:hover		{ background-position:-865px -36px;}
+#head .m_navigate li b a.current	{ background-position:-865px -36px;}
+
+/*ÕÐÄ¼ÁÐ±í*/
+.zhanmu_list { width:978px; overflow:hidden; float:left; margin-top:10px; display:inline; padding-bottom:20px; border:1px #ececec solid; background-color:#FFFFFF;}
+	.zhaomu_logo { width:978px; height:70px; margin-bottom:50px; display:inline; overflow:hidden; float:left;}
+	.zhaomu_logo b { width:187px; height:70px; overflow:hidden; float:left; margin-right:456px; display:inline;}
+	#cont_a_b_a{ width:593px; height:51px; float:left;}
+	.cont_a_b_b{ width:101px; height:27px; float:left; margin-right:8px; margin-top:17px;}
+	.cont_a_b_b a{width:101px; height:27px;float:left;background:url(../images/join_01.jpg) no-repeat;}
+	.cont_a_b_b a:hover{ background:url(../images/join_02.jpg) no-repeat;}
+	.cont_a_b_f{ width:101px; height:27px; float:left; margin-right:8px; margin-top:17px;}
+	.cont_a_b_f a{width:101px; height:27px; float:left; background:url(../images/shiyong_01.jpg) no-repeat;}
+	.cont_a_b_f a:hover{background:url(../images/shiyong_02.jpg) no-repeat;}
+	#cont_a_b_d{ width:101px; height:27px; float:left; margin-right:8px; margin-top:17px;}
+	#cont_a_b_d a{width:101px; height:27px; float:left; background:url(../images/yinsi_01.jpg) no-repeat;}
+	#cont_a_b_d a:hover{background:url(../images/yinsi_02.jpg) no-repeat;}
+	.web_cont { width:948px; overflow:hidden; float:left; padding-left:30px;}
+	.web_cont b { overflow:hidden; float:left;}
+	.zhanmu_list ul { width:964px; overflow:hidden; float:left; margin-left:14px; display:inline;}
+	.zhanmu_list ul li { width:468px; height:277px; overflow:hidden; float:left; border:1px #dedede solid; margin:0 10px 10px 0; display:inline;}

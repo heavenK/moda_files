@@ -1,0 +1,13 @@
+@charset "gb2312";
+/* CSS Document */
+
+/*µ×²¿*/
+#moda_footer	{ width:980px; margin:10px 0 0 0; display:inline; overflow:hidden; float:left;}
+#moda_footer dl				{ width:978px; height:118px; background:#302330; border:#563256 1px solid; overflow:hidden; float:left;}
+#moda_footer dl dt			{ width:156px; height:71px; margin:23px 0 0 13px; display:inline; background:url(../two_images/footer_pic.png) no-repeat; overflow:hidden; float:left;}
+#moda_footer dl dd			{ width:763px; height:88px; overflow:hidden; float:right;}
+#moda_footer dl dd span		{ width:700px; margin:5px 5px 0 0; display:inline; text-align:right; color:#ad5c7c; overflow:hidden; float:right;}
+#moda_footer dl dd i		{ width:160px; height:60px; margin:11px 30px 0 0; display:inline; overflow:hidden; float:left;}
+#moda_footer p				{ width:980px; height:30px; margin:10px 0 0 0; display:inline; background:#302330; text-align:center; line-height:29px; overflow:hidden; float:left;}
+#moda_footer p a			{ margin:0 18px; display:inline; color:#bbb0bc;}
+#moda_footer em				{ width:980px; height:76px; padding:19px 0 0 0; text-align:center; font-style:normal; color:#bbb0bc; line-height:16px; overflow:hidden; float:left;}

@@ -1,0 +1,113 @@
+@charset "gb2312";
+/* CSS Document */
+
+#content							{ width:980px; margin:0 auto;}
+#head								{ width:980px;float:left;}
+#head .biglogo						{ background:url(../images/big_logo.jpg) no-repeat; float:left; margin-left:180px;_margin-left:90px;width:646px; height:81px; margin-right:20px;}	
+#head .m_link						{ float:right; margin-top:4px; }
+#head .m_link a						{ color:#777677; float:left;}
+#head .m_link a:hover				{ text-decoration:none;}
+#head .m_link span					{ float:left;width:20px;}
+#head .m_link em					{ color:#777677; margin:0 5px; float:left;}
+
+#head .m_navigate					{  float:left;}
+#head .m_navigate li				{  height:36px;float:left; margin-left:0px; border:0px solid #F00;}
+#head .m_navigate h1 a,
+#head .m_navigate h2 a,
+#head .m_navigate h3 a,
+#head .m_navigate h4 a,
+#head .m_navigate h5 a,
+#head .m_navigate h6 a,
+#head .m_navigate em a,
+#head .m_navigate b a									{ background:url(../images/navi.jpg) no-repeat; height:36px; background-color:#3a3a3a;float:left;}
+
+
+
+#head .m_navigate li h1 a			{ width:130px; background-position:0 0;}
+#head .m_navigate li h1 a:hover		{ background-position:0 -36px;}
+
+#head .m_navigate li h2 a			{ width:118px;background-position:-129px -36px;}
+#head .m_navigate li h2 a:hover		{ background-position:-129px -36px;}
+#head .m_navigate li h2 a.current	{ background-position:-129px -36px;}
+
+#head .m_navigate li h3 a			{ width:126px; background-position:-247px 0;}
+#head .m_navigate li h3 a:hover		{ background-position:-247px -36px;}
+#head .m_navigate li h3 a.current	{ background-position:-247px -36px;}
+#head .m_navigate li h4 a			{ width:118px; background-position:-373px 0;}
+#head .m_navigate li h4 a:hover		{ background-position:-373px -36px;}
+#head .m_navigate li h4 a.current	{ background-position:-373px -36px;}
+#head .m_navigate li h5 a			{ width:110px; background-position:-491px 0;}
+#head .m_navigate li h5 a:hover		{ background-position:-491px -36px;}
+#head .m_navigate li h5 a.current	{ background-position:-491px -36px;}
+#head .m_navigate li h6 a			{ width:140px; background-position:-602px 0;}
+#head .m_navigate li h6 a:hover		{ background-position:-602px -36px;}
+#head .m_navigate li h6 a.current	{ background-position:-602px -36px;}
+#head .m_navigate li em a			{ width:122px; background-position:-742px 0;}
+#head .m_navigate li em a:hover		{ background-position:-742px -36px;}
+#head .m_navigate li em a.current	{ background-position:-742px -36px;}
+#head .m_navigate li b a			{ width:116px; background-position:-865px 0;}
+#head .m_navigate li b a:hover		{ background-position:-865px -36px;}
+#head .m_navigate li b a.current	{ background-position:-865px -36px;}
+
+.moda_vcr												{ border:1px solid #ececec; margin-top:12px; width:978px; float:left; height:1787px;}
+	.moda_vcr_title										{width:978px; height:80px; overflow:hidden; float:left;}
+	.moda_vcr_list										{width:948px; height:1624px; overflow:hidden; float:left; margin-left:15px; display:inline;}
+	.moda_vcr_list ul									{width:948px; height:1624px; overflow:hidden; float:left;}
+	.moda_vcr_list ul li								{width:946px; height:104px; overflow:hidden; float:left; border:1px solid #ebebeb; margin-bottom:10px; display:inline; background-color:#f6f6f6;}
+	.moda_vcr_list ul li h1								{width:121px; height:88px; overflow:hidden; float:left; border:1px solid #ebebeb; margin:7px 17px 0 10px; display:inline; background:url(../images/moda_vcr_listbg.jpg) no-repeat;}
+	.moda_vcr_list ul li h1 a							{width:117px; height:73px; overflow:hidden; float:left; margin:2px; display:inline;}
+	.moda_vcr_list ul li span							{width:649px; height:41px; overflow:hidden; float:left; line-height:44px;}
+	.moda_vcr_list ul li span a							{font-size:14px; color:#ff6600; font-weight:bold;}
+	.moda_vcr_list ul li tt								{width:140px; height:41px; overflow:hidden; float:left; line-height:44px;}
+	.moda_vcr_list ul li tt a							{color:#e4007f; text-decoration:underline;}
+	.moda_vcr_list ul li tt a:hover						{text-decoration:none;}
+	.moda_vcr_list ul li tt i							{margin-left:10px; display:inline;}
+	.moda_vcr_list ul li em								{width:789px; height:48px; overflow:hidden; float:left; border-top:1px dashed #cccccc; padding-top:8px; line-height:20px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#list_pg 											{color: #0156A9; float: left; font-size: 14px; height: 27px; overflow: hidden; padding: 10px 0; text-align: center; width: 980px; margin-top:20px; display:inline;}
+#list_pg li 										{color:#f1037d; display: inline; margin: 0 3px;}
+#list_pg li a 										{background-color: #f7f7f7; color: #f1037d; padding: 3px 7px; border:1px solid #dfdfdf;}
+#list_pg li a:hover 								{background-color: #f1037d; color: #FFFFFF; text-decoration: none;}
+#list_pg li.thisclass a 							{background-color: #f1037d; color: #FFFFFF; text-decoration: none;}
+

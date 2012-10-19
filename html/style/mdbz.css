@@ -1,0 +1,61 @@
+
+
+body{ background: #1b141c url(../images/grzs_01.jpg) no-repeat top; font-family:"ËÎÌו"; font-size:12px;}
+*{ padding:0px; border:0px; margin:0px;}
+li{ list-style-type:none;}
+a:link{ text-decoration:none;}
+a:hover{ text-decoration:none;}
+a:visited{ text-decoration:none;}
+a:active{ hide-focus: expression(this.hideFocus=true); outline: none;}
+h1{ font-size:12px; color:#e80579; display:inline;}
+h2{ font-size:14px; color:#eb027f; display:inline;}
+h3{ font-size:12px; color:#ffffff; display:inline;}
+h4{ font-size:12px; font-weight:normal; color:#8c8c8c; display:inline;}
+#full{ margin:0px auto; width:980px; height:auto;}
+
+
+#top{ height:123px; width:980px; float:left;}
+	#top_a{ height:20px; width:980px; color:#878787; float:left; overflow:hidden; text-align:right; padding-top:10px;}
+	#top_a a{ font-size:12px; color:#878787; text-decoration:none;}
+	#top_b{ height:93px; width:980px; float:left; overflow:hidden;}
+		#top_b_a{ width:404px; height:93px; float:left; overflow:hidden;}
+		#top_b_b{ width:571px; height:93px; float:left; overflow:hidden; padding-left:5px;}
+			#top_b_b_a{ width:558px; height:18px; float:left; overflow:hidden; color:#eec4bc; text-align:right; padding-top:8px; padding-right:13px;}
+			#top_b_b_a a{ font-size:12px; color:#eec4bc; text-decoration:none;}
+			#top_b_b_b{ width:571px; height:67px; float:left;}
+					
+		
+		
+		
+#cont{ width:980px; height:auto; float:left; margin-bottom:10px; line-height:30px;}
+	#cont_a{ width:980px; height:883px; float:left; background:url(../images/mdbz_01.jpg) no-repeat; background-position:-1px -1px;}
+		#cont_a_a{ width:980px; height:87px; float:left;}
+		#cont_a_b{ width:980px; height:51px; float:left;}
+			#cont_a_b_a{ width:593px; height:51px; float:left;}
+			.cont_a_b_b{ width:107px; height:29px; float:left; border:#502e49 1px solid; background-color:#1e1b22; margin-right:17px; margin-bottom:20px; text-align:center;}
+			#cont_a_b_d{ width:107px; height:29px; float:left; border:#502e49 1px solid; background-color:#1e1b22; margin-right:26px; margin-bottom:20px; text-align:center;}
+		#cont_a_c{ width:943px; height:243px; float:left; padding-left:37px;}
+		#cont_a_d{ width:943px; height:502px; float:left; text-align:left; padding-left:37px;}
+		
+		
+	#cont_b{ width:941px; height:auto; float:left; background-color:#29242b; padding-left:37px;}
+		#cont_b_a{ width:941px; height:75px; float:left; padding-top:28px; text-align:left;}
+		#cont_b_b{ width:941px; height:675px; float:left; text-align:left;}
+		#cont_b_c{ width:941px; height:49px; float:left; text-align:left;}
+		#cont_b_d{ width:941px; height:131px; float:left; text-align:left;}
+		#cont_b_e{ width:941px; height:111px; float:left; text-align:left;}
+		#cont_b_f{ width:941px; height:163px; float:left; text-align:left;}
+		#cont_b_g{ width:941px; height:557px; float:left; text-align:left;}
+		#cont_b_h{ width:941px; height:99px; float:left; text-align:left;}
+		#cont_b_i{ width:941px; height:471px; float:left; text-align:left;}
+		#cont_b_j{ width:941px; height:161px; float:left; text-align:left;}
+		#cont_b_k{ width:941px; height:409px; float:left; text-align:left;}
+		#cont_b_l{ width:941px; height:90px; float:left; text-align:left;}
+		#cont_b_m{ width:941px; height:113px; float:left; text-align:left;}
+		#cont_b_n{ width:941px; height:123px; float:left; text-align:left;}
+	#cont_c{ width:975px; height:33px; float:left; background:#29242b; text-align:right; padding-right:5px;}
+		
+		
+		
+		
+	

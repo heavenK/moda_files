@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>美达会员——大连超级美女榜</title>
+<link href="version_2/styles/end.css" rel="stylesheet" type="text/css" />
+<link href="version_2/styles/reset.css" rel="stylesheet" type="text/css"  />
+<link href="version_2/styles/headfooter/bighead.css" rel="stylesheet" type="text/css" />
+<link href="version_2/styles/headfooter/footer.css" rel="stylesheet" type="text/css" />
+<link href="version_2/styles/modamember/modamember.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="box">
+<?php require(APP_DIR . '/version_2/index_header.html'); ?>
+	<div id="main">
+        <div class="m_memberinfo">
+        	<div class="m_memberlogo">
+            	<img src="version_2/images/modamember/member_logo.jpg" />
+            </div>
+            <div class="m_sort">
+            	<span><em></em><a href="?controller=ModaIndex&action=NewAdd">最新加入</a></span><span><em></em><a href="?controller=ModaIndex&action=LiuLanMore">点击最多</a></span><span><em></em><a href="?controller=ModaIndex&action=ShowMore">展示最多</a></span>
+            </div>
+            <div class="m_infolist">
+            	<?php foreach($rowset as $r){?>
+                <a href="?controller=ModaIndex&action=Person&id=<?php echo $r['user_id']?>" class="m_info">
+                    <img src="<?php echo $r['head_img'] ?>" />
+                    <b><?php echo $r['truename']?></b>
+                </a>
+                <?php }?>
+            </div>
+            <ol id="list_pg"><!--页码-->
+              <?php echo $page->pageHtml;?>
+            </ol>
+        </div>
+    </div>
+    
+    <?php require(APP_DIR . '/version_2/index_footer.html'); ?> 
+</div>
+</body>
+</html>

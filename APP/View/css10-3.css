@@ -1,0 +1,36 @@
+/* CSS Document */
+
+*			{ margin:0; padding:0;}
+ul,li		{ list-style-type:none;}
+body		{ background:url(img/moda008.jpg) repeat-x #f6f6f6; font-size:12px; line-height:24px;}
+
+#ModaBox	{ width:980px; margin:0 auto;}
+	#ModaFlash,#ModaHeader,#ModaNav,#ModaPicA,#ModaPicB,#ModaCont	{ width:980px; float:left; }
+	#ModaCont	{ width:980px; background:url(img/moda011.jpg) repeat-y;}
+
+
+		#ModaCont ul	{ width:900px; padding:31px 0 0 64px; float:left;}
+		#ModaCont ul li	{ width:154px; padding:0 20px 30px 0; float:left;}
+		.MDContZ img	{ border:#bfbfbf 1px solid; float:left;}
+		.MDContA	{ width:154px; height:22px; color:#989898; background:url(img/md003.jpg) no-repeat; background-position:0 3px; line-height:22px; float:left;}
+		.MDContB	{ width:36px; padding:0 0 0 21px; overflow:hidden; float:left;}
+		.MDContC	{ width:30px; padding:0 0 0 18px; overflow:hidden; float:left;}
+		.MDContD	{ width:18px; height:12px; padding:4px 10px 0 0; float:left;}
+		.MDContE	{ width:15px; height:12px; padding:4px 0 0 0; float:left;}
+			/* 投票选项样式 A */
+			.radioButton			{ padding:0 0 0 60px; width:94px; overflow:hidden; background:url(img/md003.gif) no-repeat; background-position:39px 4px; cursor:pointer; line-height:24px; color:#fb0197; font-weight:bold;  float:left;}
+			.radioButton_checked	{ padding:0 0 0 60px; width:94px; overflow:hidden; background:url(img/md003_1.gif) no-repeat; background-position:39px 4px;  cursor:pointer; line-height:24px; color:#fb0197; font-weight:bold;  float:left;}
+			.checkbox input,.checkbox_checked input,.radioButton input,.radioButton_checked input	{ display:none;}
+			/* 投票选项样式 B */
+		#MDContJG	{ width:958px; text-align:center; float:left;}
+		.MDContJGA	{ width:93px; border:0; height:30px; margin:0 48px 15px 0; background:url(img/md007.jpg);}
+		.MDContJGB	{ width:93px; border:0; height:30px; margin:0 0 15px 0; background:url(img/md008.jpg);}
+
+#ModaBottom	{ width:958px; height:80px; background:url(img/md006.jpg) repeat-x; float:left;}
+	#ModaBottom a	{ color:#000000; text-decoration:none;}
+	.ModaBottomA	{ padding:10px; float:left;}
+	.ModaBottomB	{ padding:10px; float:right;}
+	
+	
+	
+#ModaContNei	{ padding:0 60px; float:left;}

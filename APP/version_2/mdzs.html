@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="keywords" content="大连，大连新闻，大连论坛，大连资讯，大连滚子游戏，大连生活，五年四班，大连博客，大连话，大连图片，大连视频，大连交友，大连问吧，大连知道，大连人物，大连团购,大连旅游，大连餐饮，大连教育，大连房产，大连汽车，大连娱乐，大连购物，大连摄影，美达美女，美女，美达，美女榜，美达美女榜，大连美女，moda，dalian，daliannews" /> 
+<meta name="description" content="大连新青年网是大连生活资讯信息最丰富的网络媒体，是大连本土化互动、娱乐网络平台，美达美女榜，大连地区拥有广大受众的美女展示平台。"/> 
+<title>美达展示——大连超级美女榜</title>
+<link href="version_2/styles/end.css" rel="stylesheet" type="text/css" />
+<link href="version_2/styles/reset.css" rel="stylesheet" type="text/css"  />
+<link href="version_2/styles/headfooter/bighead.css" rel="stylesheet" type="text/css" />
+<link href="version_2/styles/headfooter/footer.css" rel="stylesheet" type="text/css" />
+<link href="version_2/styles/modashowgirl/showgirl.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="mdzs">
+<div id="box">
+<?php require(APP_DIR . '/version_2/index_header.html'); ?>
+    <div id="main">
+    	<div class="m_showinfo">
+            <div class="m_showlogo">
+                <img src="version_2/images/showgirl/show_logo.jpg" />
+                <span><a href="?Controller=ShowIndex&action=ModaHelp">如何加入美达？</a></span>
+            </div>
+            <div class="m_sort">
+                    <span><em></em><a href="?Controller=ShowIndex&action=ModaShows&sort=1">时间排序</a></span><span><em></em><a href="?Controller=ShowIndex&action=ModaShows&sort=2">点击最多</a></span><span><em></em><a href="?Controller=ShowIndex&action=ModaShows&sort=3">评论最多</a></span>
+                </div>
+            <div class="m_showlist">
+            	<?php foreach($rowset as $data){?>
+            	<span class="m_girlinfo">
+                    <a href="?Controller=ShowIndex&action=ShowDetail&user_id=<?php echo $data['user_id'] ;?>&show_id=<?php echo $data['show_id'] ;?>">
+                        <img src="<?php echo $data['show_img']; ?>" width="148" height="110" />
+                        <b style=" width:150px; height:14px; margin-left:0; text-align:center; overflow:hidden;"><?php echo $data['nickname']; ?> - <?php echo stripslashes($data['title']); ?></b>
+                    </a>
+                	<em style=" width:150px; height:14px; margin-left:0; text-align:center; overflow:hidden;"><i><?php echo $data['views']; ?></i>&nbsp;次浏览&nbsp;/&nbsp;<i><?php echo $data['discuss_count']; ?></i>&nbsp;评论</em>
+                </span>
+                <?php }?>
+            </div>
+            <ol id="list_pg"><!--页码-->
+                  <?php echo $page->pageHtml;?>
+             </ol>
+        </div>
+    	
+    </div>
+   
+	<?php require(APP_DIR . '/version_2/index_footer.html'); ?>
+</div>
+</body>
+</html>

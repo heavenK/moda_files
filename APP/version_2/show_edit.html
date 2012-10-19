@@ -1,0 +1,467 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="keywords" content="大连,大连新闻,大连你好,大连论坛,大连资讯,大连滚子游戏,大连生活,五年四班,大连博客,大连话,大连图片,大连视频,大连交友,大连问吧,大连知道,大连人物,大连团购,大连旅游,大连餐饮,大连教育,大连房产,大连汽车,大连娱乐,大连购物,大连摄影,news,dalian,daliannews" />
+<title>美达展示-个人发布——大连超级美女榜</title>
+<link href="version_2/styles/end.css" rel="stylesheet" type="text/css"/>
+<link href="version_2/styles/reset.css" rel="stylesheet" type="text/css"/>
+<link href="version_2/styles/headfooter/smallhead.css" rel="stylesheet" type="text/css" />
+<link href="version_2/styles/headfooter/footer.css" rel="stylesheet" type="text/css" />
+<link href="version_2/styles/personal_release.css" rel="stylesheet" type="text/css"/>
+
+<script src="js/jquery-1.2.6.min.js" type="text/javascript"></script>
+<script src="js/showPopup.js" type="text/javascript"></script>
+
+<script type="text/javascript"> 
+var Url = document.URL; 
+  function copyUrl() 
+  {  
+  window.clipboardData.setData("Text",Url ); 
+  alert("复制成功，请粘贴到你的QQ/MSN上推荐给你的好友！\r\n\r\n内容如下：\r\n" + Url); 
+  } 
+</script>
+<script src="two_js/jquery-1.4.2.js" type="text/javascript"></script>
+<LINK media=screen href="style/jquery.wysiwyg.css" type=text/css rel=stylesheet>
+<SCRIPT src="js/jquery-1.2.3.pack.js" type=text/javascript></SCRIPT>
+<SCRIPT language=JavaScript>
+jQuery(function($){
+	$("#moda_Show_button_control").click( function () { 
+			if(typeof($(this).attr("flag_X"))=="undefined"){
+				$(this).attr("flag_X",0); 
+			}else{
+				if(	$(this).attr("flag_X")==0)
+					$(this).attr("flag_X",1); 
+				else
+					$(this).attr("flag_X",0); 
+			}
+			if($(this).attr("flag_X") == 0)
+			{
+				$("#moda_Show_button_admin").show();
+				$(this).attr("flag_X") = 1;
+			 }
+			 else
+			 {
+
+			 	$("#moda_Show_button_admin").hide();
+				$(this).attr("flag_X") = 0;
+			 }
+		});
+	}
+	);
+
+
+function deletDec(show_id,visitUser_id)
+{	
+			var visitUser_id = <?php echo $visitUser_id?>;
+
+			if(confirm('真的要删除吗？删除后将无法恢复！'))
+			{
+				var url = "?Controller=ShowIndex&action=ShowDelete&user_id="+visitUser_id+"&show_id="+show_id+"";
+
+				location=url;
+			}
+			
+
+}
+
+ jQuery(function($) {
+	$("#cont_f_b_a").click( function () { 
+		if(typeof($(this).attr("flag"))=="undefined")
+			$(this).attr("flag",0); 
+		else{
+			if(	$(this).attr("flag")==0)
+				$(this).attr("flag",1); 
+			else
+				$(this).attr("flag",0); 
+		}
+		if($(this).attr("flag") == 0)
+		{
+			$("#cont_f_c").show();
+			$(this).attr("flag") = 1;
+		 }
+		 else
+		 {
+			$("#cont_f_c").hide();
+			$(this).attr("flag") = 0;
+		 }
+	});
+});
+
+
+function popAlert()
+{
+	var tt = document.formX.textShow.value.length;
+	if(tt<4)
+		{
+			alert("不能少于4个字");
+			return false;
+		}
+	else
+		document.formX.submit();
+		return true;	
+}
+
+function popAlertImg()
+{
+	var tt = document.formX.upload.value;
+	//alert(tt);
+	if(!tt)
+		{
+			alert("请上传图片");
+			return false;
+		}
+	else
+		document.formX.submit();
+		return true;	
+}
+
+function setTypeMark(type)
+{
+	  if(type>0)
+	  {
+		  //alert(type);
+		  document.formX.type_mark.value=type;
+		  }
+	  if(type<0)
+	  {
+		  document.formX.mark.value=type;
+		  }
+}	
+
+</script>
+<SCRIPT src="js/jquery.wysiwyg.js" type=text/javascript></SCRIPT>
+<SCRIPT type=text/javascript>
+
+  $(function()
+  {
+     $('#editor').wysiwyg();
+	<?php for($iii=0;$iii<=count($AttachmentsData);$iii++){?>
+      $('#textShow<?php echo $iii;?>').wysiwyg();
+	  <?php }?>
+  });
+
+</SCRIPT>
+<script language="javascript">
+//图片按比例缩放
+var flag=false;
+function DrawImage(ImgD,iwidth,iheight){
+    //参数(图片,允许的宽度,允许的高度)
+    var image=new Image();
+
+    image.src=ImgD.src;
+    if(image.width>0 && image.height>0){
+		flag=true;
+	//	if(image.width>198){
+			if(image.width/image.height>=iwidth/iheight){
+				if(image.width>iwidth){ 
+				ImgD.width=iwidth;
+				ImgD.height=(image.height*iwidth)/image.width;
+				}else{
+				ImgD.width=image.width; 
+				ImgD.height=image.height;
+				}
+			   // ImgD.alt=image.width+"×"+image.height;
+				}
+			else{
+				if(image.height>iheight){ 
+				ImgD.height=iheight;
+				ImgD.width=(image.width*iheight)/image.height;        
+				}else{
+				ImgD.width=image.width; 
+				ImgD.height=image.height;
+				}
+				//ImgD.alt=image.width+"×"+image.height;
+				}
+	//	}else{
+			
+	//	}
+    }
+}
+
+function swapImage(src)
+{
+var immm=document.getElementById("pimg");
+immm.setAttribute("src",src);
+}
+function uswapImage(usrc)
+{
+var immm=document.getElementById("pimg");
+immm.setAttribute("src",usrc);
+}
+
+</script>
+<style type="text/css">
+.video									{width: 959px;float: left;overflow: hidden;border-top: 1px #999 dashed;margin-left: 10px;display: inline;}
+
+.l_a_t									{width: 959px;float: left;overflow: hidden;border-bottom: 1px #999 dashed;padding-bottom: 10px;}
+
+.l_a_t em								{float: left;overflow: hidden;margin-top: 10px;margin-left: 5px;display: inline;border: 1px #E0E0E0 solid;}
+
+.text11									{width: 347px;height: 26px;float: left;overflow: hidden;margin-bottom: 6px;}
+
+#popupContactAAA						{display:none;position:fixed;_position:absolute; /* hack for internet explorer 6*/height:261px;width:784px;background:#ff0183;z-index:2;padding:12px;font-size:13px;}
+#popupContactAAA h1						{text-align:left;color:#6FA5FD;font-size:22px;font-weight:700;border-bottom:1px dotted #D3D3D3;padding-bottom:2px;margin-bottom:20px;}
+
+.popupContactClose_st					{font-size:14px;line-height:14px;right:6px;top:4px;position:absolute;color:#6fa5fd;font-weight:700;display:block;float:right;background-image:url(version_2/images/modapersonal/popclose.jpg); cursor:pointer; width:16px; height:15px; overflow:hidden; margin-top:20px;margin-right:20px;
+}
+
+#tc_f{ width:789px; height:300px; float:left; overflow:hidden;}
+	#tc_f_a{ width:200px; height:39px; font-size:32px; color:#FFF; font-family: "微软雅黑","黑体"; float:left; overflow:hidden;}
+	#tc_c_b{ width:771px; height:13px; float:left; overflow:hidden; font-size:12px; color:#d2d2d2; text-align:right; padding-right:13px;}
+	#tc_f_b{ width:789px; height:200px; color:#fff; float:left; overflow:hidden; }
+		#tc_f_b_a{ width:46px; height:138px; margin-top:20px; font-size:14px; font-weight:bold;float:left; overflow:hidden;}
+		#tc_f_b_b{ width:732px; height:245px; float:left; overflow:hidden; padding-left:8px; color:#ff0183; }
+				#tc_f_b_b_a{ width:100%; height:16px; float:left; overflow:hidden; font-size:14px; color:#fff; line-height:10px;}
+					#tc_f_b_b_a_c{ float:left; width:100%; height:16px; text-align:right;}
+				#tc_f_b_b_b{ width:100%; height:245px; float:left; overflow:hidden;}
+					#tc_f_b_b_b_a{ width:100%; height:240px; float:left; overflow:hidden; background:url(version_2/images/modapersonal/poptextbg.jpg) no-repeat;margin-right:11px; color:#ff0183;}
+		#tc_f_c{ width:100%; float:left; text-align:center;}
+#popupContactClose{ background-color:#FF0000;}
+.sub_WER{ width:124px; height:32px;}
+
+#popupContactBBB						{display:none;position:fixed;_position:absolute; /* hack for internet explorer 6*/height:241px;width:784px;background:#ff0183;z-index:2;padding:12px;font-size:13px;}
+#popupContactBBB h1						{text-align:left;color:#6FA5FD;font-size:22px;font-weight:700;border-bottom:1px dotted #D3D3D3;padding-bottom:2px;margin-bottom:20px;}
+#tc_d{ width: 784px;height: 245px;float: left;overflow: hidden;}
+	#tc_d_a{ width:240px; height:39px; font-size:32px; color:#FFF; font-family: "微软雅黑","黑体"; float:left; overflow:hidden;}
+	#tc_d_b{ width: 784px;height: 143px;float: left;overflow: hidden;margin-bottom: 15px;}
+		#tc_d_b_a{width: 70px;height: 143px;float: left;overflow: hidden;font-size: 14px;color: #fff;line-height: 32px;padding-left: 13px;}
+		#tc_d_b_b{ width: 701px;height: 143px;float: left;overflow: hidden;}
+					#tc_d_b_b_a{ width: 701px;height: 38px;float: left;overflow: hidden;}
+						#tc_d_b_b_a_a{ width: 333px;height: 26px;color: white;float: left;overflow: hidden;border: #fff 1px solid;margin-right: 3px;margin-bottom: 10px;}
+						#tc_d_b_b_a_b{width: 215px;color: white;height: 38px;float: left;overflow: hidden;}
+						#tc_d_b_b_a_c{width: 128px;height: 19px;float: left;overflow: hidden;font-size: 12px;color: #fff;padding-top: 19px;}
+				#tc_d_b_b_b{ width: 701px;height: 105px;float: left;overflow: hidden;}
+					#tc_d_b_b_b_a{ width:100%; height:240px; float:left; overflow:hidden; background:url(version_2/images/modapersonal/poptextbg.jpg) no-repeat;margin-right:11px;}
+		#tc_d_c{ width: 784px;height: 40px;float: left;overflow: hidden;text-align: center;}
+#ImgContent{color: #ff0183;font-size: 14px;width: 713px;height: 108px;}
+
+#popupContactCCC						{display:none;position:fixed;_position:absolute; /* hack for internet explorer 6*/height:241px;width:784px;background:#ff0183;z-index:2;padding:12px;font-size:13px;}
+#popupContactCCC h1						{text-align:left;color:#6FA5FD;font-size:22px;font-weight:700;border-bottom:1px dotted #D3D3D3;padding-bottom:2px;margin-bottom:20px;}
+#tc_e{ width: 784px;height: 245px;float: left;overflow: hidden;}
+	#tc_e_a{ width:240px; height:39px; font-size:32px; color:#FFF; font-family: "微软雅黑","黑体"; float:left; overflow:hidden;}
+	#tc_e_b{ width: 784px;height: 143px;float: left;overflow: hidden;margin-bottom: 15px;}
+		#tc_e_b_a{width: 70px;height: 143px;float: left;overflow: hidden;font-size: 14px;color: #fff;line-height: 32px;padding-left: 2px;}
+		#tc_e_b_b{ width: 701px;height: 143px;float: left;overflow: hidden;}
+					#tc_e_b_b_a{ width: 701px;height: 58px;float: left;overflow: hidden;}
+						.tc_e_b_b_a_a{width: 686px;height: 26px;float: left;color: #ff0183;overflow: hidden;border: #fff 1px solid;margin-right: 228px;margin-bottom: 10px;}
+						#tc_e_b_b_a_c{width: 128px;height: 19px;float: right;overflow: hidden;font-size: 12px;color: #ff0183;}
+					#tc_e_b_b_b{width: 701px;height: 105px;float: left;overflow: hidden;}
+		#tc_e_c{ width: 784px;height: 40px;float: left;overflow: hidden;text-align: center;}
+		.VID_DS{background-image:url(version_2/images/popbtn3.jpg);width: 119px;height: 28px;overflow: hidden;background-color: black;}
+</style>
+</head>
+
+<body>
+<div id="box">   
+	<?php require(APP_DIR . '/version_2/moda_header.html'); ?>
+   <div class="main"><!--主体-->
+        		
+                <div id="moda_Show_Data"><!--个人资料-->
+                    <div class="moda_Show_button"><!--按钮-->
+                    		<div class="geren"><img src="version_2/images/gerenzhanshi.jpg" width="165" height="56"/></div>
+                           <?php if($this->_getUserAmin()){?> 
+                           <div class="guanli_top" id="moda_Show_button_admin" style=" display:none;"><a href="?Controller=ShowIndex&action=ShowFaceEidt&user_id=<?php echo $visitUser_id?>&show_id=<?php echo $shows['show_id'] ;?>">修改封面</a> | <a href="?Controller=ShowIndex&action=showsEidt&user_id=<?php echo $visitUser_id?>&show_id=<?php echo $shows['show_id'] ;?>">修改展示</a> | <a href="?Controller=ShowIndex&action=ManageShows&user_id=<?php echo $visitUser_id?>&show_id=<?php echo $shows['show_id'] ;?>&do=0">非公开</a> | <a href="?Controller=ShowIndex&action=ManageShows&user_id=<?php echo $visitUser_id?>&show_id=<?php echo $shows['show_id'] ;?>&do=1">公开 </a>|<a href="#" onclick="deletDec(<?php echo $show_id ;?>)">删除！</a></div>
+                           <span><a id="moda_Show_button_control"></a></span>
+                           <?php }?>
+                            <em><a href="?Controller=ShowIndex&action=ShowPosts&user_id=<?php echo $visitUser_id?>"></a></em>
+                            <i><a href="?Controller=ShowIndex&action=showDiscuss&user_id=<?php echo $visitUser_id?>&show_id=<?php echo $shows['show_id'] ;?>"></a></i>
+                            <b><a href="?Controller=ShowIndex&action=ShowDetail&user_id=<?php echo $visitUser_id;?>&show_id=<?php echo $show_id;?>&set=2"></a></b>
+                            <h1><a href="?Controller=ShowIndex&action=ShowDetail&user_id=<?php echo $visitUser_id;?>&show_id=<?php echo $show_id;?>&set=1"></a></h1>
+                    </div>
+                    <pre><a href="?Controller=ShowIndex&action=ShowDetail&user_id=<?php echo $visitUser_id?>&show_id=<?php echo $shows['show_id']?>" target="_blank"><img src="<?php echo $shows['show_img']?>" width="298" height="198" border="0"></a></pre>
+                    <dl>
+                        <dt>
+                            <b><?php echo stripslashes($shows['title'])?></b>
+                            <em><?php echo $shows['created_on']?></em>
+                            <i><span><?php echo $shows['views']?></span> 次浏览  / <span><?php echo $shows['discuss_count']?></span> 条评论</i>
+                        </dt>
+                        <dd><p><?php echo $shows['text']?></p>
+            </dd>
+                    </dl>
+                    <div id="moda_Show_Reprint"><!--转载-->
+                        <span>把<b><?php echo $result['truename']?></b>的美达展示分享给朋友：</span>
+                        <i><img src="version_2/images/ico_renren.gif" width="16" height="16" border="0"><a href="http://share.renren.com/share/buttonshare.do?link=http://moda.we54.com/list-<?php echo $result['user_id']?>-<?php echo $shows['show_id']?>.html" target="_blank">人人网</a></i>
+                        <i><img src="version_2/images/ico_Qzone.gif" width="16" height="16" border="0"><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://moda.we54.com/list-<?php echo $result['user_id']?>-<?php echo $shows['show_id']?>.html" target="_blank">QQ空间</a></i>
+                        <i><img src="version_2/images/ico_kaixin.gif" width="16" height="16" border="0"><a href="http://www.kaixin001.com/repaste/share.php?rurl=http://moda.we54.com/list-<?php echo $result['user_id']?>-<?php echo $shows['show_id']?>.html&rcontent=http://moda.we54.com/list-<?php echo $result['user_id']?>-<?php echo $shows['show_id']?>.html&rtitle=<?php echo stripslashes($result['truename'])?>的MODA-美达&middot;大连超级美女榜-大连新青年网" target="_blank">开心网</a></i>
+                        <i><img src="version_2/images/ico_sina.gif" width="16" height="16" border="0"><a href="http://v.t.sina.com.cn/share/share.php?c=spr_web_bd_youku_weibo&url=http://moda.we54.com/list-<?php echo $result['user_id']?>-<?php echo $shows['show_id']?>.html&title=<?php echo stripslashes($result['truename'])?>的MODA-美达&middot;大连超级美女榜-大连新青年网" target="_blank">新浪微博</a></i>
+                        <i><img src="version_2/images/ico_msn.gif" width="16" height="16" border="0"><a href="copyUrl();" target="_blank">MSN/QQ</a></i>
+                    </div>
+                    
+                    <div  style="width:930px;">
+                    		<a id="cont_f_b_a" class="charu" style="float:left;cursor:pointer;">&gt;&gt;&nbsp;插入模块</a>
+                            <div id="cont_f_c" style="display:none; float:left; width:700px;">
+                                <span id="popone" class="charu" style="text-align:center; padding-left:8px; cursor:pointer;" ><a>图片</a></span>
+                                <span id="popAAA" class="charu" style="text-align:center;padding-left:8px;cursor:pointer;" ><a>文字</a></span>
+                                <span id="poptow" class="charu" style="text-align:center;padding-left:8px;cursor:pointer;"><a>视频</a></span>
+                            </div>
+                    </div>
+                    
+                </div>
+                
+                <div class="mokuai"><!--视频模块-->
+                		<ul class="video">
+                        <?php $temp=0; foreach($AttachmentsData as $data){?>
+							<?php if((int)$data['atc_type'] == 1) {?>
+                        		<li class="l_a_t">
+                                		<em><img src="version_2/images/bjzs_001.jpg" width="198" height="151" /></em>
+                                        <form id="form<?php echo $temp?>" name="form<?php echo $temp?>" method="post"  enctype="multipart/form-data" action="?Controller=ShowIndex&action=showsEidt"  class="shuru">
+                                        <input type="hidden" name="show_id" id="show_id" value="<?php echo $show_id;?>"  />
+                                        <input type="hidden" name="attach_id" id="attach_id" value="<?php echo $data['attach_id'];?>"  />
+                                        <input type="hidden" name="atc_type" id="atc_type" value="<?php echo $data['atc_type'];?>"  />
+                                        <input type="hidden" name="user_id" id="user_id" value="<?php echo $visitUser_id;?>"  />
+                                                    <!--<input name="" type="text" class="text1" /> -->
+                                                    <span class="text11"></span>
+                                                    <span class="anniou1"><input id="sub" name="sub" type="submit" value=" " class="anniou1_a"/></span>
+                                                    <span class="anniou2"><input name="" type="button" onclick="window.location.href='?Controller=ShowIndex&action=AttachDelete&user_id=<?php echo $visitUser_id ;?>&show_id=<?php echo $show_id ;?>&attach_id=<?php echo $data['attach_id'] ;?>'" class="anniou2_a"/></span>
+                                                    <span class="text2"><textarea id="textShow<?php echo $temp?>" name="textShow" cols="100" rows="11" class="text2_a"><?php echo stripslashes($data['content'])?></textarea></span>
+                                           
+                                        </form>		
+                                </li>
+                              <?php }?>
+                              <?php if((int)$data['atc_type'] == 2) {?>
+                                <li  class="l_a_t">
+                                		<div style="float:left;width:198px;">
+                                		<em><img src="<?php echo $data['img_url'];?>" onload="javascript:DrawImage(this,198,this.height)"/></em>
+                                        </div>
+                                        <form id="form<?php echo $temp?>" name="form<?php echo $temp?>" method="post"  enctype="multipart/form-data" action="?Controller=ShowIndex&action=showsEidt"  class="shuru">	
+                                            <input type="hidden" name="show_id" id="show_id" value="<?php echo $show_id;?>"  />
+                                            <input type="hidden" name="attach_id" id="attach_id" value="<?php echo $data['attach_id'];?>"  />
+                                            <input type="hidden" name="atc_type" id="atc_type" value="<?php echo $data['atc_type'];?>"  />
+                                            <input type="hidden" name="user_id" id="user_id" value="<?php echo $visitUser_id;?>"  />
+                                            <span class="text11"><input type="file" name="upload<?php echo $temp?>" id="upload<?php echo $temp?>"  size="47" style=" margin-top:4px; float:left; width:410px;"/></span>
+                                           	<span class="anniou1"><input id="sub" name="sub" type="submit" value=" " class="anniou1_a"/></span>
+                                            <span class="anniou2"><input name="" type="button" onclick="window.location.href='?Controller=ShowIndex&action=AttachDelete&user_id=<?php echo $visitUser_id ;?>&show_id=<?php echo $show_id ;?>&attach_id=<?php echo $data['attach_id'] ;?>'" class="anniou2_a"/></span>
+                                            <span class="text2"><textarea name="ImgContent" cols="60" rows="10" id="" class="text2_a"><?php echo $data['content']?></textarea></span>
+                                                    <input type="hidden" name="upload_name"  value='<?php echo "upload".$temp."";?>'  />
+                                        </form>		
+                                </li>
+                                <?php }?>
+                                
+                                <?php if((int)$data['atc_type'] == 3) {?>
+                                <li class="l_a_t">
+                                		<em><img src="version_2/images/bjzs_002.jpg" width="198" height="151" /></em>
+                                        <form id="form<?php echo $temp?>" name="form<?php echo $temp?>" method="post"  enctype="multipart/form-data" action="?Controller=ShowIndex&action=showsEidt"  class="shuru">	
+                                        	<input type="hidden" name="show_id" id="show_id" value="<?php echo $show_id;?>"  />
+                                            <input type="hidden" name="attach_id" id="attach_id" value="<?php echo $data['attach_id'];?>"  />
+                                            <input type="hidden" name="atc_type" id="atc_type" value="<?php echo $data['atc_type'];?>"  />
+                                            <input type="hidden" name="user_id" id="user_id" value="<?php echo $visitUser_id;?>"  />
+                                                    <span class="text11"><input name="mediaContent" id="mediaContent" type="text" class="text1" value="<?php echo $this->_UbbCover(stripslashes($data['img_url']));?>" /></span>
+                                                    <span class="anniou1"><input id="sub" name="sub" type="submit" value=" " class="anniou1_a" /></span>
+                                                    <span class="anniou2"><input name="" type="button" class="anniou2" onclick="window.location.href='?Controller=ShowIndex&action=AttachDelete&user_id=<?php echo $visitUser_id ;?>&show_id=<?php echo $show_id ;?>&attach_id=<?php echo $data['attach_id'] ;?>'"/></span>
+                                                    <span class="text2"><textarea name="someword" cols="60" rows="10" id="someword" class="text2"><?php echo $data['content']?></textarea></span>
+                                                    
+                                        </form>		
+                                </li>
+                            <?php }?>
+							<?php $temp++; }?>
+                        </ul>
+                        <div class="moda_Show_button"><!--按钮-->
+                                                    <em><a href="?Controller=ShowIndex&action=ShowPosts&user_id=<?php echo $visitUser_id?>"></a></em>
+                                                    <i><a href="?Controller=ShowIndex&action=showDiscuss&user_id=<?php echo $visitUser_id?>&show_id=<?php echo $shows['show_id'] ;?>"></a></i>
+                                                    <b><a href="?Controller=ShowIndex&action=ShowDetail&user_id=<?php echo $visitUser_id;?>&show_id=<?php echo $show_id;?>&set=2"></a></b>
+                                                    <h1><a href="?Controller=ShowIndex&action=ShowDetail&user_id=<?php echo $visitUser_id;?>&show_id=<?php echo $show_id;?>&set=1"></a></h1>
+                         </div>
+                </div>
+        </div>
+	<?php require(APP_DIR . '/version_2/index_footer.html'); ?>
+</div>
+
+<form id="formX" name="formX" method="post"  enctype="multipart/form-data" action="?Controller=ShowIndex&action=InsertModule">	
+		
+				<input type="hidden" name="type_mark" id="type_mark" value="0"  />
+				<!--<input type="hidden" name="mark" id="mark" value="0"  />-->
+				<input type="hidden" name="show_id" id="show_id" value="<?php echo $show_id ;?>"  />
+				<input type="hidden" name="user_id" id="user_id" value="<?php echo $visitUser_id ;?>"  />
+<div id="popupContactAAA" >	
+<span id="popupContactClose" class="popupContactClose_st"></span>
+				
+			
+				<div id="tc_f">
+						<div id="tc_f_a">插入文本</div>
+						<div id="tc_f_b">
+									<div id="tc_f_b_a">内容：
+									</div>
+									<div id="tc_f_b_b">
+												<div id="tc_f_b_b_a">
+													<!--<span id="tc_f_b_b_a_a"></span> -->
+													<span id="tc_f_b_b_a_c"><?php echo date("Y-m-d H:i:s")?></span>
+												</div>
+												<div id="tc_f_b_b_b">
+													<span id="tc_f_b_b_b_a"><textarea name="editor" class="tc_f_b_b_b_a" cols="100" rows="5" id="editor"></textarea></span>
+												</div>
+									</div>
+						</div>
+						<div id="tc_f_c">
+								<input type="submit"  value=""  class="sub_WER" style=" background-image:url(version_2/images/popbtn1.jpg); background-color:#000000" onclick="setTypeMark(1);return popAlert();"/>
+						
+						</div>
+                       
+				</div>
+
+</div> 
+
+<div id="popupContactBBB" style=" background-color:#FF0183;display:none;">	
+<span id="popupContactCloseBBB" class="popupContactClose_st"></span>
+        <p id="contactArea">  
+
+		<div id="tc_d">
+		<div id="tc_d_a">插入图片模块：</div>
+		<div id="tc_d_b">
+			<div id="tc_d_b_a">浏览图片：图片注释：</div>
+			<div id="tc_d_b_b">
+				<div id="tc_d_b_b_a">
+					<span id="tc_d_b_b_a_a">
+					<input type="file"  name="upload" id="upload" style=" height:22px;float:left" />
+                    </span>
+					<span id="tc_d_b_b_a_b">
+                    </span>
+					<span id="tc_d_b_b_a_c"><?php echo date("Y-m-d H:i:s")?></span>
+				</div>
+				<div id="tc_d_b_b_b">
+					<span id="tc_d_b_b_b_a"><textarea name="ImgContent" class="tc_d_b_b_b_a" cols="100" rows="2" id="ImgContent"></textarea>	</span>
+				</div>
+			</div>
+		</div>
+		<div id="tc_d_c"><a href="#" hidefocus="true" onclick="setTypeMark(2); return popAlertImg()"><img src="version_2/images/popbtn2.jpg" width="119" height="28" /></a></div>
+	</div>
+
+
+
+	
+  		</p>  
+</div>
+
+<div id="popupContactCCC" style=" background-color:#FF0183;display:none;">	
+<span id="popupContactCloseCCC" class="popupContactClose_st" ></span>
+				<div id="tc_e">
+						<div id="tc_e_a">插入视频模块：</div>
+						<div id="tc_e_b">
+								<div id="tc_e_b_a">视频地址：视频注释：
+								</div>
+								<div id="tc_e_b_b">
+										<div id="tc_e_b_b_a"><input type="text" name="mediaContent" class="tc_e_b_b_a_a" cols="100" rows="5" id="mediaContent" ></textarea>
+												<span id="tc_e_b_b_a_a"></span>
+												<span id="tc_e_b_b_a_c"><?php echo date("Y-m-d H:i:s")?></span>
+										</div>
+										<div id="tc_e_b_b_b">
+											<span id="tc_d_b_b_b_a">
+											<textarea name="someword"  cols="100" rows="5" id="someword" class="SDG_jish" style="color:#ff0183" ></textarea>
+											</span>
+										</div>
+								</div>
+						</div>
+						<div id="tc_e_c">
+						
+						<input type="submit"  value="" class="VID_DS"  onclick="setTypeMark(3)"/>	
+						
+						</div>
+				</div>
+
+
+</div>
+
+</form>
+<div id="backgroundPopup"></div>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="keywords" content="大连,大连新闻,大连你好,大连论坛,大连资讯,大连滚子游戏,大连生活,五年四班,大连博客,大连话,大连图片,大连视频,大连交友,大连问吧,大连知道,大连人物,大连团购,大连旅游,大连餐饮,大连教育,大连房产,大连汽车,大连娱乐,大连购物,大连摄影,news,dalian,daliannews" />
+<title><?php echo stripslashes($result['truename'])?>的个人展示——大连超级美女榜</title>
+<link href="version_2/styles/end.css" rel="stylesheet" type="text/css"/>
+<link href="version_2/styles/reset.css" rel="stylesheet" type="text/css"/>
+<link href="version_2/styles/headfooter/smallhead.css" rel="stylesheet" type="text/css" />
+<link href="version_2/styles/headfooter/footer.css" rel="stylesheet" type="text/css" />
+<link href="version_2/styles/personal_content_administrator.css" rel="stylesheet" type="text/css"/>
+<link href="version_2/styles/moda_Show.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript"> 
+var Url = document.URL; 
+  function copyUrl() 
+  {  
+  window.clipboardData.setData("Text",Url ); 
+  alert("复制成功，请粘贴到你的QQ/MSN上推荐给你的好友！\r\n\r\n内容如下：\r\n" + Url); 
+  } 
+</script> 
+<script src="two_js/jquery-1.4.2.js" type="text/javascript"></script>
+
+<SCRIPT language=JavaScript>
+jQuery(function($){
+	$("#moda_Show_button_control").click( function () { 
+			if(typeof($(this).attr("flag_X"))=="undefined"){
+				$(this).attr("flag_X",0); 
+			}else{
+				if(	$(this).attr("flag_X")==0)
+					$(this).attr("flag_X",1); 
+				else
+					$(this).attr("flag_X",0); 
+			}
+			if($(this).attr("flag_X") == 0)
+			{
+				$("#moda_Show_button_admin").show();
+				$(this).attr("flag_X") = 1;
+			 }
+			 else
+			 {
+
+			 	$("#moda_Show_button_admin").hide();
+				$(this).attr("flag_X") = 0;
+			 }
+		});
+	}
+	);
+
+
+function deletDec(show_id,visitUser_id)
+{	
+			var visitUser_id = <?php echo $visitUser_id?>;
+
+			if(confirm('真的要删除吗？删除后将无法恢复！'))
+			{
+				var url = "?Controller=ShowIndex&action=ShowDelete&user_id="+visitUser_id+"&show_id="+show_id+"";
+
+				location=url;
+			}
+			
+
+}
+
+</script>
+</head>
+
+<body>
+<div id="box">   
+ <?php require(APP_DIR . '/version_2/moda_header.html'); ?>
+        <div class="main"><!--主体-->
+        		
+                <div id="moda_Show_Data"><!--个人资料-->
+                    <div class="moda_Show_button"><!--按钮-->
+                    		<div class="geren"><img src="version_2/images/gerenzhanshi.jpg" width="165" height="56"/></div>
+                            <?php if(FI_CheckCommonRight($visitUser_id,0)){ ?>
+                            	<span><a id="moda_Show_button_control"></a></span>
+                            <?php }?>
+                            <em><a href="?Controller=ShowIndex&action=ShowPosts&user_id=<?php echo $visitUser_id?>"></a></em>
+                            <i><a href="?Controller=ShowIndex&action=showDiscuss&user_id=<?php echo $visitUser_id?>&show_id=<?php echo $shows['show_id'] ;?>"></a></i>
+                            <b><a href="?Controller=ShowIndex&action=ShowDetail&user_id=<?php echo $visitUser_id;?>&show_id=<?php echo $show_id;?>&set=2"></a></b>
+                            <h1><a href="?Controller=ShowIndex&action=ShowDetail&user_id=<?php echo $visitUser_id;?>&show_id=<?php echo $show_id;?>&set=1"></a></h1>
+                    <div class="guanli_top" id="moda_Show_button_admin" style=" display:none;"><a href="?Controller=ShowIndex&action=ShowFaceEidt&user_id=<?php echo $visitUser_id?>&show_id=<?php echo $shows['show_id'] ;?>">修改封面</a> | <a href="?Controller=ShowIndex&action=showsEidt&user_id=<?php echo $visitUser_id?>&show_id=<?php echo $shows['show_id'] ;?>">修改展示</a> | <a href="?Controller=ShowIndex&action=ManageShows&user_id=<?php echo $visitUser_id?>&show_id=<?php echo $shows['show_id'] ;?>&do=0">非公开</a> | <a href="?Controller=ShowIndex&action=ManageShows&user_id=<?php echo $visitUser_id?>&show_id=<?php echo $shows['show_id'] ;?>&do=1">公开 </a>|<a href="#" onclick="deletDec(<?php echo $show_id ;?>)">删除！</a></div>
+                        
+                                
+                    
+                        
+                    </div>
+                    <pre><a href="#" target="_blank"><img src="<?php echo $shows['show_img']?>" width="298" height="198" border="0"></a></pre>
+                    <dl>
+                        <dt>
+                            <b><?php echo stripslashes($shows['title'])?></b>
+                            <em><?php echo $shows['created_on']?></em>
+                            <i><span><?php echo $shows['views']?></span> 次浏览  / <span><?php echo $shows['discuss_count']?></span> 条评论</i>
+                        </dt>
+                        <dd><p><?php echo $shows['text']?></p>
+            </dd>
+                    </dl>
+                    <div id="moda_Show_Reprint"><!--转载-->
+                        <span>把<b><?php echo $result['truename']?></b>的美达展示分享给朋友：</span>
+                        <i><img src="version_2/images/ico_renren.gif" width="16" height="16" border="0"><a href="http://share.renren.com/share/buttonshare.do?link=http://moda.we54.com/list-<?php echo $result['user_id']?>-<?php echo $shows['show_id']?>.html" target="_blank">人人网</a></i>
+                        <i><img src="version_2/images/ico_Qzone.gif" width="16" height="16" border="0"><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://moda.we54.com/list-<?php echo $result['user_id']?>-<?php echo $shows['show_id']?>.html" target="_blank">QQ空间</a></i>
+                        <i><img src="version_2/images/ico_kaixin.gif" width="16" height="16" border="0"><a href="http://www.kaixin001.com/repaste/share.php?rurl=http://moda.we54.com/list-<?php echo $result['user_id']?>-<?php echo $shows['show_id']?>.html&rcontent=http://moda.we54.com/list-<?php echo $result['user_id']?>-<?php echo $shows['show_id']?>.html&rtitle=<?php echo stripslashes($result['truename'])?>的MODA-美达&middot;大连超级美女榜-大连新青年网" target="_blank">开心网</a></i>
+                        <i><img src="version_2/images/ico_sina.gif" width="16" height="16" border="0"><a href="http://v.t.sina.com.cn/share/share.php?c=spr_web_bd_youku_weibo&url=http://moda.we54.com/list-<?php echo $result['user_id']?>-<?php echo $shows['show_id']?>.html&title=<?php echo stripslashes($result['truename'])?>的MODA-美达&middot;大连超级美女榜-大连新青年网" target="_blank">新浪微博</a></i>
+                        <i><img src="version_2/images/ico_msn.gif" width="16" height="16" border="0"><a href="copyUrl();" target="_blank">MSN/QQ</a></i>
+                    </div>
+                    
+                    
+                </div>
+               <div id="moda_Show_Photo"><!--图片展示-->
+                                        <!--<dl>
+                                            <dt></dt>
+                                            <dd>[<a href="http://moda.we54.com/?Controller=Index3&action=Register" target="_blank">加入美达</a>]</dd>
+                                        </dl> -->
+                                        <?php $tmp = 0; foreach($AttachmentsData as $data){$tmp++;?>
+                                        	<?php if((int)$data['atc_type'] == 2) {?> 
+                                              <p><img src="<?php echo $data['img_url']?>" title="beautifulgirl" border="0"><em><?php echo stripslashes($data['content'])?></em></p>
+                                            <?php }?>
+                                            <?php if((int)$data['atc_type'] == 1) {?>
+                                               <p><?php echo $this->_UbbCover(stripslashes($data['content']));?></p>
+                                             <?php }?>
+        
+										<?php }?>
+                                        
+                                        <div class="moda_Show_button"><!--按钮-->
+                                            <em><a href="?Controller=ShowIndex&action=ShowPosts&user_id=<?php echo $visitUser_id?>"></a></em>
+                                            <i><a href="?Controller=ShowIndex&action=showDiscuss&user_id=<?php echo $visitUser_id?>&show_id=<?php echo $shows['show_id'] ;?>"></a></i>
+                                            <b><a href="?Controller=ShowIndex&action=ShowDetail&user_id=<?php echo $visitUser_id;?>&show_id=<?php echo $show_id;?>&set=2"></a></b>
+                                            <h1><a href="?Controller=ShowIndex&action=ShowDetail&user_id=<?php echo $visitUser_id;?>&show_id=<?php echo $show_id;?>&set=1"></a></h1>
+                                        </div>
+                                    </div>
+        </div>
+ <?php require(APP_DIR . '/version_2/index_footer.html'); ?>     
+</div>
+</body>
+</html>

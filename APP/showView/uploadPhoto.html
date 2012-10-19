@@ -1,0 +1,71 @@
+		<script type="text/javascript">
+			function fun()
+{
+			//正确判断大小
+			//alert("sdfsdf");
+			var oImg=new Image();
+			
+			
+			var Browser_Agent=navigator.userAgent;   
+			if(Browser_Agent.indexOf("Firefox")!=-1){
+				document.form1.submit();
+				//alert('暂不支持火狐浏览器');
+			}
+			 
+			
+			 oImg.src=document.form1.file.value;
+			 
+			 CheckProperty(oImg);
+			
+				
+			
+				//alert(oImg.width);
+//				alert(oImg.height);
+				//if(oImg.width<500&&oImg.height<500 && oImg.height>0 && oImg.width>0  ){
+//					document.form1.submit();
+//				}else{
+//					alert("预览图片小于500*500");
+//				
+//				}
+				
+
+}
+			
+
+				function CheckProperty(obj)        //检测图像属性  
+				{  
+				  FileObj=obj;  
+				  
+				  if(obj.readyState!="complete")    //如果图像是未加载完成进行循环检测  
+				  {  
+					setTimeout("CheckProperty(FileObj)",500);  
+					return false;  
+				  }  
+				  
+				  //ImgFileSize=Math.round(ImgObj.fileSize/1024*100)/100;//取得图片文件的大小  
+				  ImgWidth=obj.width            //取得图片的宽度  
+				  ImgHeight=obj.height;        //取得图片的高度  
+				  //alert(ImgWidth +"|" +ImgHeight);
+					if(ImgWidth<500&&ImgHeight<500){
+						document.form1.submit();
+					}else{
+						alert("预览图片小于500*500");
+					
+					} 
+				 }
+		
+		</script>
+<?php echo $jsstr;?>
+
+<div style="margin:0px;font-size:12px;">
+<FORM ACTION="?Controller=ShowIndex&action=UploadPic" name="form1" METHOD=POST enctype="multipart/form-data">
+	
+	<input type="hidden" name="show_id" id="show_id" value="<?php echo $show_id ;?>"  />
+
+	<input type="file" name="file" id="file" />
+	
+  <input type="button"  onclick="fun()"  name="button" id="button" value="提交" />
+
+  <input name="upload" type="hidden" id="upload" value="upload" /><input type="hidden" name="MAX_FILE_SIZE" value="3000000" />
+</FORM>
+</div>

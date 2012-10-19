@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>MODA美达|MODA|美达|大连美女榜|大连美女</title>
+<link href="css/css10-3.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript" src="js/js.js"></script>
+
+<script type="text/javascript">
+function checkbox(obj){
+	var o=obj.getElementsByTagName("input")[0];
+	var   objs=document.getElementsByName( "poll_id[]") 
+	var   j=0; 
+	for(var   i=0;i <objs.length;i++){ 
+		  if(objs[i].checked) 
+			j++; 
+	} 
+	
+	if(parseInt(j)> 0 && !o.checked) 	{ 
+		  alert("选票不能超过1个");
+		  return false;
+	}
+
+    
+    if(o.checked==""||!o.checked){
+        o.checked=true;
+        o.parentNode.className="checkbox_checked";
+    }else{
+        o.checked=false;
+        o.parentNode.className="checkbox"
+    }
+	
+	
+	
+	
+}
+function radio(elem,obj){
+    var oo=obj.getElementsByTagName("input")[0];
+    if(oo.checked) oo.checked=false;
+    else oo.checked=true;
+    var o=(document.getElementsByName(elem));
+    var n=o.length;
+    for (var i=0;i<n;i++){
+        var oo=o[i];
+        if(oo.checked==""||!oo.checked){
+            oo.parentNode.className="radioButton";
+        }else{
+            oo.parentNode.className="radioButton_checked";
+        }
+    }
+}
+
+function mysubmit(){
+	//var o=obj.getElementsByTagName("input")[0];
+	var   objs=document.getElementsByName( "poll_id[]") 
+	var   j=0; 
+	for(var   i=0;i <objs.length;i++){ 
+		  if(objs[i].checked) 
+			j++; 
+	} 
+	
+	if(parseInt(j)> 1 ) 	{ 
+		  alert("选票不能超过1个！选票必须为1名选手"+parseInt(j));
+		  return false;
+	}
+	if(parseInt(j)< 1 ) 	{ 
+		  alert("选票少于1个！选票必须为1名选手");
+		  return false;
+	}
+	document.form1.submit();
+}
+</script>
+
+</head>
+
+<body>
+<div id="ModaBox"><!--容器-->
+	<div id="ModaFlash"><!--flash-->
+	  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="1100" height="515">
+        <param name="movie" value="images/modaflashbanner.swf" />
+        <param name="quality" value="high" />
+        <embed src="images/modaflashbanner.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="1100" height="515"></embed>
+      </object>
+	</div>
+	<div id="ModaHeader"><!--导航-->
+		<div id="ModaNav"><a href="http://moda.we54.com"><img src="images/moda002.jpg" alt="返回首页" width="253" height="51" border="0" /></a><a href="http://www.we54.com/dlgril/" target="_blank"><img src="images/moda003.jpg" width="194" height="51" border="0" alt="活动介绍" /></a><a href="about.html"  target="_blank"><img src="images/moda004.jpg" width="189" height="51" border="0" alt="关于美达" /></a></div>
+		<div id="ModaPicA"><img src="images/moda005.jpg" width="253" height="94" border="0" /><img src="images/moda006.jpg" width="194" height="94" border="0" /><img src="images/moda007.jpg" width="189" height="94" border="0" /></div>
+		<div id="ModaPicB"><img src="images/moda009.jpg" width="980" height="444" border="0" /></div>
+	</div>
+	<form id="form1" name="form1" method="post" action="">
+	<div id="ModaCont"><!--投票-->
+		<ul>
+			<?php foreach($rowset as $val){?>
+			<li><a href="?Controller=Index2&action=Content&id=<?php echo $val['poll_id'];?>" class="MDContZ" target="_blank"><img src="<?php echo $val['thumbimg'];?>" width="152" height="163" border="0" /></a>
+				<span class="radioButton" onclick="checkbox(this)"><input type="checkbox" name="poll_id[]" value="<?php echo  $val['poll_id'];?>" />				
+				<?php echo $val['title'];?></span>
+				<span class="MDContA">
+					<span class="MDContB" title="点击率"><?php echo $val['views'];?></span>
+					<span class="MDContC" title="选手票数"><?php echo $val['votes'];?></span>
+					<a href="?Controller=Index2&action=Content&id=<?php echo $val['poll_id'];?>"  target="_blank"><img src="images/md004.jpg" width="18" height="12" border="0" class="MDContD" alt="观看视频" /></a>
+					<a href="<?php echo $val['relateurl'];?>" target="_blank" ><img src="images/md005.jpg" width="15" height="12" border="0" class="MDContE" alt="美达展示" /></a>				</span>			
+			</li>
+		<?php }?>
+			
+		</ul>
+		<div id="MDContJG">
+			<div style=" width:500px; float:left; text-align:right;"><IMG id=safecode style="vertical-align:middle; margin:0 0 3px;" 
+onclick="reloadcode()" src="?Controller=Index2&action=AuthCode" border=0><INPUT id=validate size=8 name=validate style=" width:77px; padding:0 0 0 3px; height:23px; line-height:23px; border:#000000 1px solid; vertical-align:middle; margin:0 0 3px 6px;" value="输入验证码" onfocus="this.value=''"></div>
+			<div style=" width:400px; text-align:left; float:left;"><input type="button" value="" class="MDContJGA" onClick="mysubmit();" /></div>
+		</div>
+      <!--<div id="MDContJG">
+        </div>-->
+	</div>
+	</form>
+	<div><img src="images/moda010.jpg" width="980" height="38" border="0" /></div>
+	<div id="ModaBottom"><img src="images/md010.jpg" width="188" height="40" border="0" class="ModaBottomA" /><span class="ModaBottomB">版权所有：<a href="#">大连方佰信息技术有限公司 www.we54.com</a> 2009 copyright</span></div>
+</div>
+</body>
+</html>

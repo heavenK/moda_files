@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GB2312" />
+<title>朋友列表</title>
+<link href="style/pylb.css" rel="stylesheet" type="text/css" />
+
+<script src="js/jquery.pack.js"></script>
+
+<script type="text/javascript">
+
+	
+function deletDec(user_id)
+{	
+	
+	
+			if(confirm('真的要删除吗？删除后将无法恢复！'))
+			{
+
+				var url = "?Controller=ShowIndex&action=FriendDelete&user_id="+user_id+"";
+
+				location=url;
+			}
+			
+
+}
+
+
+</script>
+
+
+<script language="javascript" type="text/javascript" > 
+$(document).ready( 
+
+	function(){
+	
+		//if($.browser.msie){ 
+			$("input[@type='text']").focus(
+				
+				function() {$(this).css({border:"#990099 1px solid"});}
+				
+				/*function() {$(this).css({border:"#990000 1px solid"});}*/
+			) ;
+			$("input[@type='text']").blur(
+				
+				function() {$(this).css({border:""});}
+				
+				/*function() {$(this).css({border:"#990000 1px solid"});}*/
+			) ;
+		//}
+	}
+
+	
+	
+); 
+</script> 
+
+
+
+
+
+<style>
+#cont{ width:980px; height:825px; float:left; overflow:hidden; background-color:#29242b; margin-bottom:10px;}
+	#cont_a{ width:980px; height:82px; float:left; overflow:hidden; background:url(../images/pylb_01.jpg) no-repeat;}
+	#cont_b{ width:980px; height:700px; float:left; overflow:hidden; background:url(../images/pylb_02.jpg) no-repeat;}
+		#cont_b_a{ width:17px; height:700px; float:left; overflow:hidden;}
+		.cont_b_b{ width:957px; height:700px; float:left; overflow:hidden;}
+			.box_b{ width:307px; height:88px; float:left; overflow:hidden; margin-right:10px; margin-bottom:10px; border:#663a49 1px solid; background-color:#302a32; text-decoration:none;}
+			.box_b:hover{ border:#913157 1px solid; background-color:#332029; text-decoration:none;}
+			
+				.box_a_a{ width:307px; height:15px; float:left; overflow:hidden;}
+				.box_a_b{ width:307px; height:58px; float:left; overflow:hidden;}
+					.box_a_b_a{ width:15px; height:58px; float:left; overflow:hidden;}
+					.box_a_b_b{ width:53px; height:56px; float:left; overflow:hidden; border:#bfbfbf 1px solid;}
+					.box_a_b_c{ width:229px; height:56px; float:left; overflow:hidden; padding-left:8px;}
+						.box_a_b_c_a{ width:229px; height:20px; float:left; overflow:hidden; padding-top:3px; font-size:14px; color:#FFFFFF;}
+						.box_a_b_c_c{ width:229px; height:6px; float:left; overflow:hidden; padding-top:2px; font-size:12px; color:#f28533;}
+						.box_a_b_c_d{ width:229px; height:24px; float:left; overflow:hidden; padding-top:3px; font-size:12px; color:#666666;}
+						
+						
+.notSSD{ background:#302a32;font-size:12px; color:#f28533}						
+	
+#frend_infoSDDF{ background-color:#231e25; width:945px; height:41px; overflow:hidden; border:1px solid #913157; margin-bottom:20px; float:left;
+}	
+	.sprea_Ds{ width:945px; height:15px; overflow:hidden; float:left;
+	}					
+	.frend_infoSss{ width:470px; height:20px; overflow:hidden; float:left;
+	}
+	
+	
+#frend_infoCVW{	background-color:#231e25; width:945px; border:1px solid #913157; margin-bottom:20px; float:left;
+}	
+	#sprea_Ds{ width:945px; height:8px; overflow:hidden; float:left;
+	}
+	
+</style>
+
+
+</head>
+<body>
+
+<!--整体-->
+<div id="full">
+
+<? 			require(APP_DIR . '/showView/ShowHeader.html');		?>
+        
+    <!--中部-->
+    <div id="cont">
+    	<div id="cont_a"></div>
+		
+		
+		
+        <div id="cont_b">
+        	<div id="cont_b_a"></div>
+            <div class="cont_b_b">
+			
+<style>
+	.GSDD{ color:#FFFFFF
+	
+	}
+</style>
+				
+			<div ><!--添加美达会员-->
+			<span class="GSDD">请输入要添加的用户名</span>
+				<form action="" method="post" name="form1">
+				<input type="text" name="modaer" name="u_name"  /> <input type="submit" value="添加" />
+				</form>
+				
+			</div>	
+				
+            </div>
+            <div id="cont_b_c"></div>
+        </div>
+        <div id="cont_c">
+        	<div id="cont_c_a"></div>
+            <div id="cont_c_b">
+            	<span class="page"></span>
+            </div>
+            <div id="cont_c_c"></div>
+        </div>    
+    </div>  
+        
+        
+        
+        
+        
+    <!--尾部-->
+    <div id="battom">
+    	<div id="battom_a"></div>
+        <div id="battom_b">
+        	<li id="battom_b_a"></li>
+            <li id="battom_b_b"><a href="#"><img src="images/grsy_21.jpg" /></a></li>
+            <li id="battom_b_c"><a href="#"><img src="images/grsy_22.jpg" /></a></li>
+            <li id="battom_b_d"><a href="#"><img src="images/grsy_23.jpg" /></a></li>
+            <li id="battom_b_e"><a href="#"><img src="images/grsy_24.jpg" /></a></li>
+            <li id="battom_b_f"><a href="#"><img src="images/grsy_25.jpg" /></a></li>
+            <li id="battom_b_g"><a href="#"><img src="images/grsy_26.jpg" /></a></li>
+            <li id="battom_b_h"><a href="#"><img src="images/grsy_27.jpg" /></a></li>
+            <li id="battom_b_i"></li>
+        </div>
+        <div id="battom_c">Copyright C 2007-2009 WE54.COM INC. All RIGHTS RESERVED.<br> 大连方佰信息技术有限公司 版权所有</div>     
+    </div>
+  
+</div>
+</body>
+</html>

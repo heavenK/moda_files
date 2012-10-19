@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GB2312" />
+<title>美达访谈-美达&middot;大连超级美女榜-大连新青年</title>
+<meta name="keywords" content="大连，大连新闻，大连论坛，大连资讯，大连滚子游戏，大连生活，五年四班，大连博客，大连话，大连图片，大连视频，大连交友，大连问吧，大连知道，大连人物，大连团购,大连旅游，大连餐饮，大连教育，大连房产，大连汽车，大连娱乐，大连购物，大连摄影，美达美女，美女，美达，美女榜，美达美女榜，大连美女，moda，dalian，daliannews" /> 
+<meta name="description" content="大连新青年网是大连生活资讯信息最丰富的网络媒体，是大连本土化互动、娱乐网络平台，美达美女榜，大连地区拥有广大受众的美女展示平台。"/> 
+
+<link href="css/mdft.css" rel="stylesheet" type="text/css" />
+
+
+<link rel="stylesheet" href="css/indexgeneral.css" type="text/css"/>
+
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="js/indexpopup.js" type/"text/javascript"></script>
+<script language="javascript" type="text/javascript" >
+
+	$(document).ready(function() {
+		
+		
+		$("#searchimg1").click(function (){
+			//alert($("#nickname").val());
+			//uriencode
+			window.location.href	=	"?Controller=ModaIndex&action=SearchModa&nickname="+$("#tc_j_b_b").val();	
+		
+		});
+		
+	});
+	
+	
+	
+</script>
+
+<script language="javascript" src="js/swfobject.js"></script>
+<script language="javascript" src="js/viodedo.js"></script>
+
+</head>
+<body>
+
+
+<div id="full">
+
+
+	<div id="top">
+    	<div id="top_a"><? require_once(APP_DIR."/View/header.html")?></div>
+        <div id="top_b">
+        	<div id="top_b_a"><a href="?controller=ModaIndex"><img src="images/images/mnph_01.jpg" width="404" height="93" /></a></div>
+            <div id="top_b_b">
+			<?php if($_SESSION["Zend_Auth"]['storage']->username==""){?>
+            	<div id="top_b_b_a"><a href="http://passport.we54.com/Index/login?forward=<?php echo urlencode("http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);?>">登录</a> | <a href="http://passport.we54.com/Index/register">注册</a> | <a href="#">关于美达</a> | <a href="#" id="buttonyy">美达搜索</a></div>
+			<?php }else{ ?>
+				<?php if($result){?>
+				<div id="top_b_b_a"><a href="?controller=ModaIndex&action=Person">我的首页</a> | <a href="http://passport.we54.com/index/logout">安全退出</a> | <a href="#">关于美达</a> | <a href="#" id="buttonyy">美达搜索</a></div>
+				<?php }else{?>	
+				<div id="top_b_b_a"><a href="http://passport.we54.com/index/logout">安全退出</a> | <a href="#">关于美达</a> | <a href="#" id="buttonyy">美达搜索</a></div>
+				<?php }?>
+			<?php } ?>	
+				
+                <div id="top_b_b_b">
+					<div class="button">
+						<a href="?controller=ModaIndex" class="button_a"></a>
+						<a href="#" class="button_b"></a>
+						<a href="?Controller=ShowIndex&action=ModaShows" class="button_c"></a>
+						<a href="?Controller=ModaIndex&action=NewAdd" class="button_d"></a>
+						<a href="?controller=ModaIndex&action=AllNews" class="button_e"></a>
+						<a href="?controller=ModaIndex&action=ModaLank" class="button_f"></a>
+					</div>
+				</div>
+            </div>
+        </div>
+    </div>
+	
+	
+
+	<div id="cont">
+		<div id="cont_a">
+			<div id="cont_a_a"></div>
+			<div id="cont_a_b">
+				<ul class="cont_a_b_a">
+					<li class="cont_a_b_a_a"><img src="<? echo $news['url']?>" width="923" height="69" /></li>
+						<li class="cont_a_b_a_b"><?php echo $news['news_content']?></li>
+				</ul>
+			</div>
+				
+			<div id="cont_a_c">
+				<div id="video"><img src="images/images/mdft_04.jpg" width="400" height="300" /></div>
+			</div>
+		</div>
+		
+		
+		<div id="cont_b">
+			<div class="text"><?php echo $news['content'] ?></div>
+		</div>
+		
+		
+		<div id="cont_c">
+			<ul class="cont_c_a">
+				<?php foreach($allnews as $an){?>
+				<li><a href="?controller=ModaIndex&action=ModaNews&id=<?php echo $an['news_id']?>"><?php echo $an['news_title'] ?></a><h4>-<?php echo $an['news_st']?></h4></li>
+				<?php }?>
+			</ul>
+		</div>
+	</div>
+	
+	
+     
+     
+
+<? 			require(APP_DIR . '/showView/Widbottom.html');		?>
+</div>
+<style>
+#tc_j{ width:784px; height:196px; float:left; overflow:hidden; background:url(../images/tc_17.jpg) no-repeat; border:#403842 1px solid;}
+	#tc_j_a{ width:784px; height:63px; float:left; overflow:hidden;}
+	#tc_j_b{ width:784px; height:28px; float:left; overflow:hidden; margin-bottom:5px;}
+		#tc_j_b_a{ width:188px; height:22px; float:left; overflow:hidden; text-align:right; font-size:14px; color:#ecc4ba; padding-top:6px;}
+		#tc_j_b_b{ width:347px; color:#ecc4ba; height:26px; float:left; overflow:hidden; margin-right:11px; border:#724a6c 1px solid; background-color:#291425;}
+		#tc_j_b_c{ width:236px; height:28px; float:left; overflow:hidden; text-align:left;}
+	#tc_j_c{ width:596px; height:100px; float:left; overflow:hidden; font-size:12px; color:#6e6e6e; text-align:left; padding-left:188px;}
+</style>
+<div id="popupContactyy">
+				<div id="tc_j">
+					<div id="tc_j_a"></div>
+					<div id="tc_j_b">
+						<span id="tc_j_b_a">搜索美达：</span>
+						<input id="tc_j_b_b" style=" line-height:24px;"  type="text" name="nickname"   />
+						<span id="tc_j_b_c"><img id="searchimg1" src="images/tc_18.gif" width="119" height="28" style="cursor:pointer" /></span>
+					</div>
+					<div id="tc_j_c">请输入用户昵称进行搜索</div>
+				</div>			
+		</div>
+		<div id="backgroundPopupyy"></div>
+</body>
+</html>

@@ -1,0 +1,124 @@
+/* CSS Document */
+/* 全局设定 */
+
+*		{ margin:0px; border:0px; padding:0px; }
+ul,li	{ list-style-type:none;}
+img{ background-repeat:no-repeat;
+}
+*{ background-repeat:no-repeat; 
+}
+body{background-color:#1b141c; font: "宋体", "黑体"; font-size:12px;
+}
+	.navSSS a{ color:#888888; text-decoration:none;
+	}
+
+				.top1_2 {margin:0 10px 0 10px;color:#888888}
+
+
+#ContPage{ width:1400px; height:1544px;margin:0 auto; background:#1b141c; overflow:hidden;
+}
+	#Nav { width:1400px; height:30px; float:left; overflow:hidden; font-size:13px;
+	}
+		#leftSide{ width:210px; height:30px; overflow:hidden; float:left;
+		}
+		#ContNav{ width:980px; height:30px; overflow:hidden; float:left;
+		}
+			#NavLink{ margin-top:10px;
+			}
+				.navChar{ color:#878787 ;text-decoration:none; float:right;
+				}
+		#rightSide{ width:210px; height:30px; overflow:hidden; float:left;
+		}
+	#modaNav{ width: 1400px; height:93px; overflow:hidden; float:left; background-image:url(/imgs/modaNav.jpg);
+	}
+		#loginLink{ width: 1190px; height:18px; float:left; overflow:hidden; text-align:right; font-size:13px; margin-top:10px;
+		}
+			.modaNavChar{ color:#eec3bc ;text-decoration:none; float:right;
+				}
+		#modaNavLink{width: 1190px; height:18px; float:left; overflow:hidden; text-align:right; font-size:14px; margin-top:30px; 
+		}
+			.modaNavLink{ color:#FFFFFF ;text-decoration:none; float:right;
+			}
+	#modaTopGirl{width: 1400px; height:1144px; float:left; overflow:hidden; background-image:url(/imgs/Top.jpg);
+	}
+		#leftSideA{ width:210px; height:1144px; overflow:hidden; float:left;
+		}
+		#modaShowCont{ width:980px; height:1144px;  overflow:hidden; float:left; background-color:#29242b; background-image:url(/imgs/modaShowCont.jpg);
+		}
+			#modaShowNav{ width:980px; height:91px; overflow:hidden; float:left; background-image:url(/imgs/modaShowNav.jpg); 
+			}
+				#showNavInfo{width:980px; height:24px; overflow:hidden; float:left; color:#FFFFFF; text-align:right; margin-top:5px; margin-top:10px;
+				}
+					.showNavInfo{color:#FFFFFF; text-decoration:none; font-size:14px;
+					}
+				#showNavIndex{ width:980px; height:18px; overflow:hidden; float:left; color:#FFFFFF; margin-top:38px;
+				}
+					.spreSNI{ width:43px; height:18px; overflow:hidden; float:left; 
+					}
+					.showNavIndex{    width:215px; height:18px; overflow:hidden; float:left; 
+					}
+						.sortLink{color:#FFFFFF;text-decoration:none;font-size:12px;
+						}
+			#modaShowBody{ width:978px; height:980px; overflow:hidden; float:left; margin-top:15px; border-top:none;
+			}
+				#spreA{ width:15px; height:980px; overflow:hidden; float:left; 
+				}
+				#showList{ width:963px; height:980px; overflow:hidden; float:left;
+				}
+					#showListOne{ width:150px; height:146px; overflow:hidden; float:left;  margin-right:10px; margin-bottom:18px;
+					}
+						#showOneImg{ width:148px; height:110px; overflow:hidden; float:left;  border:#764f52 solid 1px;
+						}
+						#showOneWords{width:150px; height:34px; overflow:hidden; float:left; 
+						}
+							#SOWTitle{ width:150px; height:15px; overflow:hidden; float:left;  margin-bottom:2px; margin-top:2px; text-align:center; font-size:12px; 
+							}
+								.SOWTitle{color:#FFFFFF; text-decoration:none;
+								}
+							#SOWInfo{ width:150px; height:15px; overflow:hidden; float:left;  font-size:12px; text-align:center;
+							}
+								.SOWInfo{color:#FFFFFF; text-decoration:none;
+								}
+									.SOWInfoW{ color:#e9047b;
+									}
+				#modaShowBot{ width:980px; height:21px;  overflow:hidden; float:left; margin-top:25px;
+				}
+					.spreSDF{ width:380px; height:21px; overflow:hidden; float:left; 
+					}
+					.modaShowBot{ width:360px; height:21px;  overflow:hidden;  background-color:#29242b; margin:0 auto;
+					}				
+		#rightSideB{
+		}
+	#Bot{ width:1400px; height:275px; overflow:hidden; float:left; margin-top:10px;
+	}	
+		#leftSideE{ width:210px; height:191px; overflow:hidden; float:left;
+		}
+		#modaThx{ width:980px; height:191px; overflow:hidden; float:left; background-image:url(/imgs/modaThx.jpg);
+		}
+			#CPInfo{ width:980px; height:36px;overflow:hidden; float:left; margin-top:150px;
+			}
+				.CPInfoA{ width:980px; height:18px; font-size:12px; text-align:center; float:left;
+				}
+				.CPInfoB{ width:980px; height:18px; font-size:12px; text-align:center; float:left;
+				}
+		#rightSideF{
+		}
+		#BotSpace{ width:1400px; height:84px; overflow:hidden; float:left;
+		}
+		
+		#top_b_b_b{ width:576px; height:53px; float:left; overflow:hidden;}
+		.button{ width:576px; height:53px; float:left; overflow:hidden; margin:11px 0 0 313px;}
+					.button_a{ width:77px; height:53px; float:left; overflow:hidden; background:url(../images/mnph_05.jpg) no-repeat;}
+					.button_a:hover{ background:url(../images/mnph_11.jpg) no-repeat; display:block;}
+					.button_b{ width:98px; height:53px; float:left; overflow:hidden; background:url(../images/mnph_06.jpg) no-repeat;}
+					.button_b:hover{ background:url(../images/mnph_12.jpg) no-repeat; display:block;}
+					.button_c{ width:98px; height:53px; float:left; overflow:hidden; background:url(../images/mnph_07.jpg) no-repeat;}
+					.button_c:hover{ background:url(../images/mnph_13.jpg) no-repeat; display:block;}
+					.button_d{ width:98px; height:53px; float:left; overflow:hidden; background:url(../images/mnph_08.jpg) no-repeat;}
+					.button_d:hover{ background:url(../images/mnph_14.jpg) no-repeat; display:block;}
+					.button_e{ width:98px; height:53px; float:left; overflow:hidden; background:url(../images/mnph_09.jpg) no-repeat;}
+					.button_e:hover{ background:url(../images/mnph_15.jpg) no-repeat; display:block;}
+					.button_f{ width:106px; height:53px; float:left; overflow:hidden; background:url(../images/mnph_10.jpg) no-repeat;}
+					.button_f:hover{ background:url(../images/mnph_16.jpg) no-repeat; display:block;}
+		
+		

@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GB2312" />
+
+
+<title><?php echo stripslashes($result['truename'])?>的朋友列表-美达&middot;大连超级美女榜-大连新青年</title>
+<meta name="keywords" content="大连，大连新闻，大连论坛，大连资讯，大连滚子游戏，大连生活，五年四班，大连博客，大连话，大连图片，大连视频，大连交友，大连问吧，大连知道，大连人物，大连团购,大连旅游，大连餐饮，大连教育，大连房产，大连汽车，大连娱乐，大连购物，大连摄影，美达美女，美女，美达，美女榜，美达美女榜，大连美女，moda，dalian，daliannews,<?php echo $result['truename']?>" /> 
+<meta name="description" content="大连新青年网是大连生活资讯信息最丰富的网络媒体，是大连本土化互动、娱乐网络平台，美达美女榜，大连地区拥有广大受众的美女展示平台。"/> 
+<link href="style/pylb.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery.pack.js"></script>
+	<script type="text/javascript" src="./js/gp.js"></script>	
+<script type="text/javascript">
+
+	
+function deletDec(user_id)
+{	
+	
+	
+			if(confirm('真的要删除吗？删除后将无法恢复！'))
+			{
+
+				var url = "?Controller=ShowIndex&action=FriendDelete&user_id="+user_id+"";
+
+				location=url;
+			}
+			
+
+}
+
+
+</script>
+
+<script language="javascript" type="text/javascript" > 
+$(document).ready( 
+
+	function(){
+	
+		//if($.browser.msie){ 
+			$("input[@type='text']").focus(
+				
+				function() {$(this).css({border:"#990099 1px solid"});}
+				
+				/*function() {$(this).css({border:"#990000 1px solid"});}*/
+			) ;
+			$("input[@type='text']").blur(
+				
+				function() {$(this).css({border:""});}
+				
+				/*function() {$(this).css({border:"#990000 1px solid"});}*/
+			) ;
+		//}
+	}
+
+	
+	
+); 
+</script>
+
+
+
+<style>
+	.notSSD{ background:#302a32;font-size:12px; color:#f28533; height:22px;}						
+	
+#frend_infoSDDF{ background-color:#231e25; width:945px; height:41px; overflow:hidden; border:1px solid #913157; margin-bottom:20px; float:left;
+}	
+	.sprea_Ds{ width:945px; height:15px; overflow:hidden; float:left;
+	}					
+	.frend_infoSss{ width:470px; height:20px; overflow:hidden; float:left;
+	}
+	
+	
+#frend_infoCVW{	background-color:#231e25; width:945px; border:1px solid #913157; margin-bottom:20px; float:left;
+}	
+	#sprea_Ds{ width:945px; height:8px; overflow:hidden; float:left;
+	}
+
+#modaShowBot{ width:280px; height:21px;   float:left
+}	
+	#spreSDF{ width:360px; float:left; overflow:hidden
+	}
+
+</style>
+
+
+
+
+</head>
+<body>
+
+
+<div id="full">
+
+
+<? 			require(APP_DIR . '/showView/ShowHeader.html');		?>
+        
+
+    <div id="cont">
+    	<div id="cont_a"></div>
+        <div id="cont_b">
+        	<div id="cont_b_a"></div>
+            <div class="cont_b_b">
+			
+			
+								<?php if($this->_getUserAmin($visitUser_id)){ ?>
+				<div id="frend_infoCVW">
+				
+					<div class="sprea_Ds">
+					</div>
+					
+					<?php if($applyData){?>
+					
+							<?php foreach($applyData as $data){?>
+								
+								
+								
+								<div class="frend_infoSss">
+									<span style="color:#ef0381">&nbsp;&nbsp;&nbsp;>&nbsp;</span>
+									
+									<span style="color:#fbba7a"><? echo $data['nickname']?></span><span style="color:#999798">&nbsp;&nbsp;想成为你的朋友，是否同意</span>
+									<a style="color:#fbba7a" href="?Controller=ShowIndex&action=FriendDo&user_id=<? echo $data['uid']?>&do=1">同意</a>
+									<a style="color:#fbba7a" href="?Controller=ShowIndex&action=FriendDo&user_id=<? echo $data['uid']?>&do=0">忽略</a>
+									
+									</span>
+								</div>
+								
+								
+							<?php }?>
+					<?php }else{?>
+						
+								<div class="frend_infoSss">
+									<span style="color:#ef0381">&nbsp;&nbsp;&nbsp;>&nbsp;</span> <span style="color:#999798">您暂时没有任何好友请求</span>
+								</div>
+						
+					<?php }?>
+					
+					
+					
+					<div id="sprea_Ds">
+					</div>
+				</div>
+				<?php }?>
+			
+			
+			<?php foreach($rowset as $data){ if($data){ ?>
+				
+				<li class="box_b">
+                	<div class="box_a_a"></div>
+                    <div class="box_a_b">
+                    	<div class="box_a_b_a"></div>
+                        <div class="box_a_b_b">
+							<a href="?controller=ModaIndex&action=Person&id=<? echo $data['fuid']?>">
+							<img src="<? echo $data['head_img']?>" width="53" height="56" />
+							</a>
+						</div>
+                        <div class="box_a_b_c">
+                        	<span class="box_a_b_c_a"><? echo $data['nickname']?>&nbsp;</span>
+                            <span class="box_a_b_c_c">
+							</span>
+							
+							
+							
+							
+						<form id="form<?php echo $tmp?>" name="form<?php echo $tmp?>" method="post" action="?Controller=ShowIndex&action=ModaFriend">	
+                            <span class="box_a_b_c_d" style=" color:#f28533">
+								
+								<input type="hidden" name="user_id" id="user_id" value="<?php echo $visitUser_id ;?>"  />
+								<input type="hidden" name="fuid" id="fuid" value="<?php echo $data['fuid'] ;?>"  />
+
+								
+							<?php if($this->_getUserAmin($visitUser_id)){ ?>
+								<input type="text"  class="notSSD"   name="note" value="<? echo $data['note']?>"/>
+								<input type="submit"  value="修改" id="sub" name="sub" style="border:#000000 1px solid" />
+								
+						
+								<input type="button" onclick=" return deletDec( <?php echo $data['fuid'] ;?> )" value="删除" />
+							</span>
+							<?php }else{?>
+								<? echo $data['note']?></span>
+							<?}?>
+						</form>	
+						
+						
+                        </div>
+                    </div>
+                    <div class="box_a_a"></div>
+                </li>
+					
+				<?}}?>
+			
+
+            </div>
+            <div id="cont_b_c"></div>
+        </div>
+        <div id="cont_c">
+        	<div id="cont_c_a"></div>
+            <div id="cont_c_b">
+				
+            	<span class="page"><?php echo $page->pageHtml;?></span>
+            </div>
+            <div id="cont_c_c"></div>
+        </div>    
+    </div>  
+        
+        
+        
+
+<? 			require(APP_DIR . '/showView/Widbottom.html');		?>
+  
+</div>
+</body>
+</html>

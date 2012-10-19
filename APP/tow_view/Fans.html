@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="keywords" content="大连,大连新闻,大连你好,大连论坛,大连资讯,大连滚子游戏,大连生活,五年四班,大连博客,大连话,大连图片,大连视频,大连交友,大连问吧,大连知道,大连人物,大连团购,大连旅游,大连餐饮,大连教育,大连房产,大连汽车,大连娱乐,大连购物,大连摄影,news,dalian,daliannews" />
+<title>美达粉丝——大连超级美女榜</title>
+<link href="two_styles/moda_personal_reset.css" rel="stylesheet" type="text/css" />
+<link href="two_styles/moda_personal_header.css" rel="stylesheet" type="text/css" />
+<link href="two_styles/moda_footer.css" rel="stylesheet" type="text/css" />
+<link href="two_styles/moda_Fans.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<div id="full"><!--整体-->
+
+    <?php  require(APP_DIR . '/tow_view/header_lite.html'); ?> 
+    
+    <div id="moda_Fans"><!--美达粉丝-->
+    	<em>
+        
+        	<?php foreach($rowset as $dat){?>
+                <a>
+                    <b><img src="<?php echo $dat['head_img']?>" width="120" height="120" border="0" /></b>
+                    <span><?php echo $dat['fnickname']?></span>
+                </a>
+            <?php }?>
+            
+        </em>
+        <div id="page" style="height:30px;"><!--页码-->
+			<?php echo $page->pageHtml;?>
+        </div>
+    </div>
+    
+    <?php  require(APP_DIR . '/tow_view/footer.html'); ?> 
+
+</div>
+
+</body>
+</html>

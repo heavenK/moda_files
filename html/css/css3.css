@@ -1,0 +1,74 @@
+/* CSS Document */
+
+*			{ margin:0; padding:0;}
+ul,li		{ list-style-type:none;}
+body		{ background:url(../images/moda008.jpg) repeat-x #f6f6f6 0 24px; font-size:12px; line-height:24px;}
+#ModaBox	{ width:980px; margin:0 auto;}
+a	{ text-decoration:none;}
+
+/* 冠军页面 */
+#ModaLogin	{ width:970px; height:24px; overflow:hidden; padding:0 10px 0 0 ; text-align:right; color:#666666; float:left;}
+	#ModaLogin a	{ color:#666;}
+	#ModaLogin a:hover{ color:#666; text-decoration:underline;}
+#ModaFlash	{ width:980px; overflow:hidden; margin-left:-60px; float:left; }
+#ModaHeader,#ModaNav,#ModaPicA,#ModaPicB,#ModaCont	{ width:980px; float:left; }
+	.ModaPicA_a	{ float:left;}
+	#ModaPicB img	{ float:left; background:#006699; }
+	.ModaPicA_b	{ padding:25px 0 0 0; float:right;}
+	.ModaPicA_C	{ padding:62px 0 0 0; float:right;}
+
+#Moda_10jin7	{/*10进7选手*/ width:980px; height:327px; background:#ff0066; margin:20px 0 0 0; float:left;}
+	.Moda_10jin7_Img	{ padding:0 0 0 238px; float:left;}
+	#Moda_10jin7 ul	{ width:974px; padding:0 0 0 6px; float:left;}
+		#Moda_10jin7 ul	img	{ float:left;}
+		#Moda_10jin7 ul li	{ width:150px; padding:0 0 0 10px; float:left;}
+			.Moda_10jin7_1of3	{ padding:0 10px; color:#FFFFFF; font-weight:bold; float:left;}
+			.Moda_10jin7_2of3	{ padding:5px 5px; float:left;}
+			.Moda_10jin7_3of3	{ padding:5px 5px; float:left;}
+			
+#Moda_30jin10	{/*30强选手*/ width:978px; background:#FFFFFF; border:#e7e7e7 1px solid; margin:10px 0 0 0; float:left;}
+	.Moda_30jin10_Img	{ padding:0 0 0 223px; float:left;}
+	#Moda_30jin10 ul	{ width:963px; padding:0 0 0 15px; float:left;}
+		#Moda_30jin10 ul img{ float:left;}
+		#Moda_30jin10 ul li	{ width:154px; height:208px; padding:0 0 0 30px; float:left;}
+			.Moda_30jin10_A	{ border:#bfbfbf 1px solid;}
+			.Moda_30jin10_B	{ padding:0 10px; color:#ff0068; font-weight:bold; float:left;}
+			
+#Modalook	{ width:978px; background:#FFFFFF; border:#e7e7e7 1px solid; margin:13px 0 0 0; float:left;}
+	.ModalookImg	{ padding:0 0 0 180px; float:left;}
+	
+	
+/* 申请页面专用CSS */
+#ModaReg	{ width:978px;  background:#FFF; border:#d5d5d5 1px solid; position:relative; float:left;}
+		.ModaReg_Position_A	{ left:-1px; top:-1px; position:absolute;}
+		.ModaReg_Position_B	{ right:-1px; top:-1px; position:absolute;}
+		.ModaReg_Position_C	{ left:-1px; bottom:-1px; position:absolute;}
+		.ModaReg_Position_D	{ right:-1px; bottom:-1px;position:absolute;}
+	#ModaRegA	{ width:970px; height:24px; padding:15px 0 0 0; float:left;}
+	.ModaRegB	{ width:900px; padding:10px 0 0 73px; float:left;}
+		.ModaRegB li	{ width:900px; height:30px; padding:17px 0 0 0; overflow:hidden; float:left;}
+		.ModaRegB_Span	{ width:90px; height:30px; color:#f0037f; font-size:14px; font-weight:bold; text-align:left; line-height:30px; float:left;}
+		.ModaRegB_Spana	{ width:380px; height:30px; line-height:30px; color:#999999; padding:0 0 0 15px; float:left;}
+		.ModaRegB_Text	{ 
+				width:244px;
+				height:22px;
+				line-height:24px;
+				cursor:pointer;
+				font-size:14px;
+				padding:3px;
+				background:#f8f8f8;
+				border:#bebebe 1px solid;
+				float:left;	}
+	#ModaRegC	{ width:600px; padding:35px 0 40px 163px; float:left;}
+		.ModaRegC_Submit	{ width:236px; height:65px; border:0; background:url(../images/moda026.jpg); float:left;}
+	
+#ModaIndexVideo	{ width:978px; border:#e7e7e7 1px solid; background:#FFFFFF; margin:13px 0 0 0; float:left;}
+	#ModaIndexVideoA	{ width:489px; float:left;}
+	#ModaIndexVideoB	{ padding:5px 0 0 57px; float:left;}
+
+
+#ModaBottom	{/*页尾*/ width:958px; height:80px; margin:10px 0 0 0; background:url(../images/md006.jpg) repeat-x; float:left;}
+	#ModaBottom a	{ color:#000000; text-decoration:none;}
+	.ModaBottomA	{ padding:10px; float:left;}
+	.ModaBottomB	{ padding:10px; float:right;}
+	

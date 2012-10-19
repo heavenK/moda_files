@@ -1,0 +1,23 @@
+@charset "gb2312";
+/* CSS Document */
+
+#content							{ width:980px; margin:0 auto;}
+
+
+#main								{ border:1px solid #ececec; margin-top:12px; width:978px; float:left;}
+#main .m_showinfo					{ width:953px;margin-left:12px; _margin:0; margin-bottom:10px; float:left;}
+#main .m_showlogo					{ margin:15px 0 13px 0; _margin-left:16px;}
+#main .m_showlogo span				{ font-size:16px; float:right;}
+#main .m_showlogo span a			{  color:#ff9900; font-weight:bold; }
+.m_sort								{ width:100%; margin-bottom:10px;_margin-left:7px;_margin-bottom:10px; border:1px solid #ebebeb; background-color:#f6f6f6; float:left;}
+.m_sort span						{ margin:10px 100px 9px 19px; float:left}
+.m_sort span em						{ background:url(../../images/modamember/triangle.jpg) no-repeat; width:5px;height:8px; margin-top:3px; margin-right:8px; float:left;}
+.m_sort span a						{ color:#e4007f}
+
+#main .m_showlist					{ width:966px; height:980px;_height:990px; margin-left:-11px;_margin-left:2px;float:left; overflow:hidden;}
+#main .m_showlist .m_girlinfo		{ width:150px; height:150px; margin-left:11px;_margin-left:9px; margin-bottom:11px; float:left;}
+#main .m_showlist .m_girlinfo a		{ color:#f1037d;}
+#main .m_showlist .m_girlinfo img	{ border:1px solid #cccccc;}
+#main .m_showlist .m_girlinfo b		{ color:#f1037d; font-weight:normal; margin-left:22px; margin-top:9px; margin-bottom:5px; float:left;}
+#main .m_showlist .m_girlinfo em	{ color:#666666; margin-left:16px;}
+#main .m_showlist .m_girlinfo em i	{ color:#ff9c89}

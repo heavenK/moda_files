@@ -1,0 +1,11 @@
+/* CSS Document */
+
+.ctt	{ clear:both; border:#bfbfbf 1px solid; float:left;} 
+.MDAD	{ width:958px; clear:both;}
+.tb_	{ padding:7px 0 0 13px; float:left;} 
+.tb_ ul	{ height:24px;} 
+.tb_ li	{ width:22px; height: 22px; margin:0 4px 0 0; text-align:center; cursor:pointer; float:left;} 
+.normaltab    { background:#dad8d9; color:#676566; font-weight:bold;} 
+.hovertab     { background:#f0037f; color:#FFF; font-weight:bold;} 
+.dis	{ display:block;} 
+.undis	{ display:none;}

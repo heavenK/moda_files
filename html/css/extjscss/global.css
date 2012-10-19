@@ -1,0 +1,13 @@
+.thumb-wrap{
+    float: left;
+    margin-right: 0;
+}
+.thumb{
+    background: #dddddd;
+    padding: 3px;
+}
+.thumb img{
+    height: 60px;
+    width: 80px;
+}
+

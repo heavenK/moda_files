@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>MODA扩展设置</title>
+<!-- CSS -->
+<link href="/extadminstyle/css/transdmin.css" rel="stylesheet" type="text/css" media="screen" />
+<!--[if IE 6]><link rel="stylesheet" type="text/css" media="screen" href="/extadminstyle/css/ie6.css" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" type="text/css" media="screen" href="/extadminstyle/css/ie7.css" /><![endif]-->
+<link href="/extadminstyle/css/jquery-pop.css" rel="stylesheet" type="text/css" />
+<!-- JavaScripts-->
+<script type="text/javascript" src="/extadminstyle/js/jquery.js"></script>
+<script type="text/javascript" src="/extadminstyle/js/jNice.js"></script>
+<script type="text/javascript" src="/extadminstyle/js/jquery-latest.pack.js"></script>
+<script type="text/javascript" src="/extadminstyle/js/jquery-pop.pack.js"></script>
+
+<script>
+function setid(nu){
+	document.form1.nu.value = nu;
+}
+
+
+function serchinfo()
+{	
+	var a = document.serch.keyword.value;
+	if(a)
+		parent.window.location='/?Controller=ExtAdmin&action=OnesPices&keyword='+a;
+}
+
+</script>
+
+<style>
+
+
+#boxes #dialog {
+  padding:10px;
+}
+
+</style>
+</head>
+
+<body>
+	<div id="wrapper">
+    	<!-- h1 tag stays for the logo, you can use the a tag for linking the index page -->
+    	<h1><a href="#"><span>Transdmin Light</span></a></h1>
+        
+        <?php  require(APP_DIR . '/ExtAdminView/header.html'); ?> 
+        
+        <div id="containerHolder">
+			<div id="container">
+        		<div id="sidebar">
+                	<ul class="sideNav">
+                    	<li><a href="?Controller=ExtAdmin">首页轮换图片</a></li>
+                    	<li><a href="?Controller=ExtAdmin&action=Otherads">其他广告</a></li>
+                    	<li><a href="?Controller=ExtAdmin&action=OnesPices"  class="active">用户页面图片</a></li>
+                    </ul>
+                    <!-- // .sideNav -->
+                </div>    
+                <!-- // #sidebar -->
+                
+                <!-- h2 stays for breadcrumbs -->
+                <h2  style="font-size:14px;"><a href="#" >广告 & 图片</a> &raquo; <a href="#" class="active">用户页面图片</a></h2>
+                
+                <div id="main">
+                    	<table cellpadding="0" cellspacing="0">
+                        <form id="serch" name="serch" class="jNice">
+							<tr>
+                                <td class="action_b">姓名</td>
+                                <td class="action"><input type="text" id="keyword" name="keyword" /><a href="#" class="view" onclick="serchinfo();" >查找</a></td>
+                            </tr>  
+                        </form>    
+                
+                    <form name="form2" id="form2" action="" class="jNice" method="post">
+					<h3>用户列表</h3>
+                    
+                        <?php if($serdat){?>
+							<tr>
+                                <td class="action_b"><?php echo $serdat['truename']?></td>
+                                <td class="action"><a href="" class="view">View</a><a href="?Controller=ExtAdmin&action=OnesPicesOne&user_id=<?php echo $serdat['user_id']?>"  class="edit">Edit</a><a href="#" class="delete">Delete</a></td>
+                            </tr>  
+                        <?php }?>
+                    
+                    
+                        <?php if($rowset){foreach($rowset as $dat){?>
+							<tr>
+                                <td class="action_b"><?php echo $dat['truename']?></td>
+                                <td class="action"><a href="" class="view">View</a><a href="?Controller=ExtAdmin&action=OnesPicesOne&user_id=<?php echo $dat['user_id']?>"  class="edit">Edit</a><a href="#" class="delete">Delete</a></td>
+                            </tr>  
+                        <?php }}?>
+                                                    
+                        </table>
+					<h3><?php echo $page->pageHtml;?></h3>
+                            
+                                
+                    </form>
+                    
+                        </table>
+                </div>
+                <!-- // #main -->
+                
+                <div class="clear"></div>
+            </div>
+            <!-- // #container -->
+        </div>	
+        <!-- // #containerHolder -->
+        
+        <p id="footer">Feel free to use and customize it. <a href="http://www.perspectived.com">Credit is appreciated.</a></p>
+    </div>
+    <!-- // #wrapper -->
+    
+    
+    
+</body>
+</html>
+
+

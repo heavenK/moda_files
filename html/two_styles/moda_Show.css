@@ -1,0 +1,73 @@
+@charset "gb2312";
+/* CSS Document */
+
+/*通用背景*/
+.moda_Show_button span a,
+.moda_Show_button em a,
+.moda_Show_button i a,
+.moda_Show_button b a,
+.moda_Show_button p a,
+#moda_Show_VCR span,
+#moda_Show_Photo dl dt			{ background:url(../two_images/Show_bg_all.gif) no-repeat;}
+
+/*个人资料*/
+#moda_Show_Data		{ width:978px; padding:0 0 20px 0; background:#352331 url(../two_images/Show_data_bg.gif) no-repeat top left; border:#3d3f95 1px solid; overflow:hidden; float:left;}
+
+	/*按钮*/
+	.moda_Show_button				{ width:968px; height:48px; padding:20px 10px 0 0; position:relative; overflow:hidden; float:left;}
+	#moda_Show_button_admin			{ color:#f0037f; position:absolute; top:55px; right:20px; overflow:hidden;}
+	#moda_Show_button_admin a		{ color:#f0037f;}
+	.moda_Show_button p				{ width:129px; height:28px; overflow:hidden; float:right;}
+	.moda_Show_button p a			{ width:119px; height:28px; background-position:-189px 0; cursor:pointer; overflow:hidden; float:left;}
+	.moda_Show_button p a:hover		{ background-position:-189px -28px;}
+	.moda_Show_button span			{ width:129px; height:28px; overflow:hidden; float:right;}
+	.moda_Show_button span a		{ width:119px; height:28px; background-position:-70px -28px; overflow:hidden; float:left;}
+	.moda_Show_button span a:hover	{ background-position:-70px -84px;}
+	.moda_Show_button em			{ width:129px; height:28px; overflow:hidden; float:right;}
+	.moda_Show_button em a			{ width:119px; height:28px; background-position:-70px 0; overflow:hidden; float:left;}
+	.moda_Show_button em a:hover	{ background-position:-70px -56px;}
+	.moda_Show_button i				{ width:80px; height:28px; overflow:hidden; float:right;}
+	.moda_Show_button i a			{ width:70px; height:28px; background-position:0 -28px; overflow:hidden; float:left;}
+	.moda_Show_button i a:hover		{ background-position:0 -84px;}
+	.moda_Show_button b				{ width:80px; height:28px; overflow:hidden; float:right;}
+	.moda_Show_button b a			{ width:70px; height:28px; background-position:0 0; overflow:hidden; float:left;}
+	.moda_Show_button b a:hover		{ background-position:0 -56px;}
+	
+#moda_Show_Data pre					{ width:298px; height:198px; margin:13px 20px 0 20px; display:inline; border:#8c3055 1px solid; overflow:hidden; float:left;}
+#moda_Show_Data dl					{ width:616px; height:152px; margin:13px 0 10px 0; display:inline; background:#332029; border:#913157 1px solid; overflow:hidden; float:left;}
+#moda_Show_Data dl dt				{ width:603px; height:81px; margin:0 0 0 6px; display:inline; border-bottom:#5b3041 1px dashed; text-align:center; overflow:hidden; float:left;}
+#moda_Show_Data dl dt b				{ width:603px; height:16px; padding:11px 0 0 0; font-size:14px; color:#eac6be; overflow:hidden; float:left;}
+#moda_Show_Data dl dt em			{ width:603px; height:14px; padding:8px 0 0 0; font-style:normal; color:#624854; float:left;}
+#moda_Show_Data dl dt i				{ width:603px; height:14px; padding:8px 0 0 0; font-style:normal; color:#eec4bc; display:inline-block;}
+#moda_Show_Data dl dt i span		{ color:#f0037f;}
+#moda_Show_Data dl dd				{ width:595px; height:68px; padding:2px 0 0 12px; color:#b27894; line-height:22px; overflow:hidden; float:left;}
+
+/*个人展示页*/
+#moda_Show_Data strong				{ width:943px; margin:0 0 0 17px; display:inline; padding:0 0 20px 0; border-bottom:#5c3145 1px dashed; text-align:center; overflow:hidden; float:left;}
+#moda_Show_Data strong img			{ max-width:900px;_width:expression(this.width > 900 && this.width > this.height ? 900: auto); margin:40px auto 20px; display:block; overflow:hidden;}
+#moda_Show_Data strong em			{ width:900px; height:16px; font-size:14px; font-style:normal; font-weight:normal; color:#eac6be; overflow:hidden; display:inline-block;}
+#moda_Show_Data h6					{ width:900px; margin:0 0 0 17px; display:inline; padding:40px 0 40px 20px; border-bottom:#5c3145 1px dashed; font-size:14px; font-weight:normal; color:#eac6be; line-height:26px; overflow:hidden; float:left;}
+
+	/*转载*/
+	#moda_Show_Reprint				{ width:616px; height:34px; background:#332029; border:#5a2f50 1px solid; overflow:hidden; float:left;}
+	#moda_Show_Reprint span			{ margin:10px 0 0 27px; display:inline; color:#fdb978; float:left;}
+	#moda_Show_Reprint span b		{ font-weight:normal; color:#f0037f;}
+	#moda_Show_Reprint i			{ margin:9px 0 0 0; display:inline; overflow:hidden; float:left;}
+	#moda_Show_Reprint i img		{ overflow:hidden; float:left;}
+	#moda_Show_Reprint i a			{ margin:0 10px 0 2px; display:inline; font-style:normal; color:#eac6be; line-height:19px; text-decoration:underline; float:left;}
+	#moda_Show_Reprint i a:hover	{ text-decoration:none;}
+	
+/*MODAVCR*/
+#moda_Show_VCR		{ width:978px; height:608px; background:#000; border-left:#3d3f95 1px solid; border-right:#3d3f95 1px solid; overflow:hidden; float:left;}
+#moda_Show_VCR span					{ width:197px; height:29px; margin:20px 0 19px 392px; display:inline; background-position:0 -112px; overflow:hidden; float:left;}
+#moda_Show_VCR b					{ width:978px; height:389px; text-align:center; overflow:hidden; float:left;}
+#moda_Show_VCR i					{ width:908px; height:80px; margin:35px; display:inline; font-style:normal; color:#535353; line-height:20px; overflow:hidden; float:left;}
+
+/*图片展示*/
+#moda_Show_Photo	{ width:978px; padding:0 0 20px 0; background:#352331; border:#3d3f95 1px solid; float:left;}
+#moda_Show_Photo dl					{ width:978px; height:67px; overflow:hidden; float:left;}
+#moda_Show_Photo dl dt				{ width:300px; height:38px; margin:29px 10px 0 332px; display:inline; background-position:0 -141px; overflow:hidden; float:left;}
+#moda_Show_Photo dl dd				{ margin:52px 0 0 0; display:inline; font-weight:bold; color:#fdb978; overflow:hidden; float:left;}
+#moda_Show_Photo dl dd a			{ font-weight:bold; color:#fdb978;}
+#moda_Show_Photo p					{ width:978px; text-align:center; overflow:hidden; float:left;}
+#moda_Show_Photo p img				{ max-width:900px;_width:expression(this.width > 900 && this.width > this.height ? 900: auto); margin:29px 0 30px 0; display:inline; background:#1d151b; border:#1d151b 10px solid; overflow:hidden;}

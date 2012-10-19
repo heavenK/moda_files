@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>创建展示封面-美达&middot;大连超级美女榜-大连新青年</title>
+<meta name="keywords" content="大连，大连新闻，大连论坛，大连资讯，大连滚子游戏，大连生活，五年四班，大连博客，大连话，大连图片，大连视频，大连交友，大连问吧，大连知道，大连人物，大连团购,大连旅游，大连餐饮，大连教育，大连房产，大连汽车，大连娱乐，大连购物，大连摄影，美达美女，美女，美达，美女榜，美达美女榜，大连美女，moda，dalian，daliannews" /> 
+<meta name="description" content="大连新青年网是大连生活资讯信息最丰富的网络媒体，是大连本土化互动、娱乐网络平台，美达美女榜，大连地区拥有广大受众的美女展示平台。"/> 
+<script language="javascript" type="text/javascript" src="js/js.js"></script>
+<link href="css/ccs.css" rel="stylesheet" type="text/css" />
+<link href="css/huadongmen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+
+<script type="text/javascript" src=".js/jquery-pack.js"></script>
+<script type="text/javascript" src=".js/jquery.imgareaselect.min.js"></script>
+<script type="text/javascript" src="./js/fckeditor/fckeditor.js"></script>
+
+  <SCRIPT language=JavaScript>
+
+ function showimg()
+  {	
+
+			var img=document.form1.showFaceUpload.value;
+			
+			document.form1.imgUrl.src=img;
+
+  }
+  
+  
+  function setTypeMark(type)
+  {
+  		if(type>0)
+  			document.form2.type_mark.value=type;
+		if(type<0)
+			document.form2.mark.value=type;
+  }
+  
+  
+  
+  </SCRIPT>
+  
+<body>
+<div id="MDBoxs">
+
+	
+	<div id="MDText">
+		<?php echo $face ;?> --------<?php echo $notice ;?>
+	</div>
+	
+	<div id="MDCont">
+	
+	
+		<a href="?Controller=ShowIndex&action=index">返回首页</a>
+	
+	</div>
+	<div id="MDCont">
+	
+	创建展示：
+	<form id="form1" name="form1" method="post"  enctype="multipart/form-data" action="?Controller=ShowIndex&action=CreateShow">
+	</div>
+	<div id="MDCont">
+	
+	标题：<input type="text" id="showName" name="showName" style="border:#000000 1px solid"/>
+	
+	</div>
+	
+	<div id="MDCont">
+	
+	编辑封面：<br />
+
+	</div>
+	<div id="MDCont">
+			<img src="<?php echo $img?>"  name="imgUrl" id="imgUrl" />
+	
+	</div>
+	<div id="MDCont">
+
+			<input type="file" id="showFaceUpload" name="showFaceUpload" style="border:#000000 1px solid" onclick="showimg();"/>
+			<!--<input type="submit" value="上传" name="" />-->
+
+	</div>
+	<div id="MDCont">
+			展示介绍：<br />
+			<textarea name="content" cols="100" rows="5" id="content" style="border:#000000 1px solid"></textarea>
+	
+	</div>	
+		<div id="MDText">
+			<!--<input type="submit" value="下一步" name=""  style="border:#000000 1px solid"/>-->
+			<!--<input type="button"  value="插入模块"  style="border:#000000 1px solid" onclick=""/>-->
+			插入模块
+			
+	</div>	
+	<div id="MDCont">
+			<!--<input type="submit" value="下一步" name=""  style="border:#000000 1px solid"/>-->
+			<input type="submit"  value="发布" id="sub" name="sub" style="border:#000000 1px solid" onclick=""/>
+			<input type="submit"  value="预览" id="look" name="look" style="border:#000000 1px solid" onclick="setTypeMark(-1)"/>	
+			
+	</div>
+	</form>
+	<div id="MDCont">
+		<form id="form2" name="form2" method="post"  enctype="multipart/form-data" action="?Controller=ShowIndex&action=InsertModule">	
+		<div id="MDCont">
+		插入文本：<br />
+			<input type="hidden" name="type_mark" id="type_mark" value="0"  />
+			<input type="hidden" name="mark" id="mark" value="0"  />
+			<textarea name="textShow" cols="100" rows="5" id="textShow" style="border:#000000 1px solid"></textarea>
+			<input type="submit"  value="上传"  style="border:#000000 1px solid" onclick="setTypeMark(1)"/>	
+		</div>
+		<div id="MDCont">
+		插入图片：<br />
+			<input type="file" id="showImg" name="showImg" style="border:#000000 1px solid" onclick=""/>
+			<img src="<?php echo $img?>"  name="show_img" id="show_img" />
+			图片文本：<br />
+			<textarea name="ImgContent" cols="100" rows="2" id="ImgContent" style="border:#000000 1px solid"></textarea>	
+			<input type="submit"  value="上传"  style="border:#000000 1px solid"  onclick="setTypeMark(2)"/>	
+		</div>
+		<div id="MDCont">
+		插入视频：<br />
+			
+			<textarea name="mediaContent" cols="100" rows="5" id="mediaContent" style="border:#000000 1px solid"></textarea>	
+			<input type="submit"  value="上传"  style="border:#000000 1px solid" onclick="setTypeMark(3)"/>	
+		</div>
+	</div>
+	</form>
+
+	
+
+	
+</body>
+</html>

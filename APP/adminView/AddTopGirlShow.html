@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<link rel="stylesheet" href="css/common.css" type="text/css" />
+<title>管理区域</title>
+<style type="text/css">
+<!--
+.STYLE1 {
+	color: #3333FF;
+	font-size: 14px;
+	font-weight: bold;
+}
+.STYLE2 {font-size: 14px}
+.STYLE3 {font-weight: bold}
+.banzhurenul{ 
+	width:600px;
+	line-height:14px;
+	height:20px;
+}
+.banzhurenul li {
+	width:120px;
+	float:left;
+}
+-->
+</style>
+</head>
+	<!--<script type="text/javascript" src="./js/fckeditor/fckeditor.js"></script>-->
+	<!--<script type="text/javascript">
+	
+
+//window.onload = function()
+//{
+//	// Automatically calculates the editor base path based on the _samples directory.
+//	// This is usefull only for these samples. A real application should use something like this:
+//	// oFCKeditor.BasePath = '/fckeditor/' ;	// '/fckeditor/' is the default value.
+//	//var sBasePath = document.location.pathname.substring(0,document.location.pathname.lastIndexOf('news_manage')) ;
+//	//oFCKeditor.BasePath = '../fckeditor/' ;
+//	var oFCKeditor = new FCKeditor( 'content' ) ;
+//	oFCKeditor.BasePath	= './js/fckeditor/' ;
+//	oFCKeditor.Height	=	400;
+//	oFCKeditor.ReplaceTextarea() ;
+//}
+
+</script>-->
+<!-- 弹出框-头像-->
+  <link rel="stylesheet" href="js/general.css" type="text/css" media="screen" />
+	<script src="js/jquery.js" type="text/javascript"></script>
+	<script src="js/popup.js" type="text/javascript"></script>
+<!-- 修改头像 -->
+	<script src="js/jquery.pack.js"></script>
+		<script src="js/jquery.Jcrop.pack.js"></script>		
+		<link rel="stylesheet" href="js/jquery.Jcrop.css" type="text/css" />
+		<script language="Javascript">
+
+			$(function(){
+
+				
+			});
+			
+			function goss(){
+
+				jQuery('#cropbox').Jcrop({
+					onChange: showPreview,
+					onSelect: showPreview,
+					onSelect: updateCoords,
+					aspectRatio: 1
+				});
+
+			}
+
+			function updateCoords(c)
+			{
+				$('#x').val(c.x);
+				$('#y').val(c.y);
+				$('#w').val(c.w);
+				$('#h').val(c.h);
+			};
+
+			function checkCoords()
+			{
+				if ($('#x').val()==''){
+					alert('请先上传头像然后选择裁切头像最后进行保存！');
+					return false;
+				}
+			};
+			
+			function showPreview(coords)
+			{
+				var rx = 150 / coords.w;
+				var ry = 150 / coords.h;
+				var w2=$("#bigwidth").val();
+				var h2=$("#bigheight").val();
+				jQuery('#preview').css({
+					width: Math.round(rx * w2) + 'px',
+					height: Math.round(ry * h2) + 'px',
+					marginLeft: '-' + Math.round(rx * coords.x) + 'px',
+					marginTop: '-' + Math.round(ry * coords.y) + 'px'
+				});
+			}
+
+		</script>
+
+
+
+<body>
+<form action="?controller=Admin&action=AddUser" method="post" enctype="multipart/form-data" name="form1" id="form1">
+  <div id="man_zone">
+    <table width="99%" border="0" align="center"  cellpadding="3" cellspacing="1" class="table_style">
+	
+      <tr>
+        <td width="14%" class="left_title_1"><center>
+          添加选手
+        </center></td>
+        <td width="86%" class="left_title_1"><span class="left-title">
+          <center>
+          </center>
+        </span></td>
+      </tr>
+      <tr>
+        <td class="left_title_2"><div align="center">排行榜名称</div></td>
+        <td><label><!-- <input name="nianjimingcheng" type="hidden" id="nianjimingcheng" value="" />-->
+            <input name="rank_title" type="text" id="rank_title" />
+        </label></td>
+      </tr>
+      <tr>
+        <td class="left_title_2"><div align="center">票数</div></td>
+        <td><label>
+        <input name="ticket" type="text" id="ticket" value="0" />
+        </label></td>
+      </tr>
+      <!--<tr>
+        <td class="left_title_2"><div align="center">浏览量</div></td>
+        <td><input name="views" type="text" id="views" value="0" /></td>
+      </tr>-->
+      <tr>
+        <td class="left_title_2"><div align="center">参赛用户昵称</div></td>
+        <td><input name="nickname" type="text" id="nickname" /></td>
+      </tr>
+     <!-- <tr>
+        <td class="left_title_2"><div align="center">相关链接</div></td>
+        <td><input name="relateurl" type="text" id="relateurl" value="http://" /></td>
+      </tr>-->
+     <!-- <tr>
+	  	<td class="left_title_2"><div align="center">选手缩略图</div></td>
+		<td>
+		<div style="float:left; background:#00FFCC; width:100px; height:100px;"></div>
+         <div id="button"><input type="button" value="上传图片" /></div>	
+			<div id="popupContact">
+				<a id="popupContactClose">x</a>
+				<div id="showBig" style="width:500px;height:500px;border:2px solid #E6E0CE;padding:3px;"></div>
+					<iframe style="width:500px;height:60px;padding:0px;" src="?Controller=Admin&action=UploadPic"></iframe>
+					
+					
+					<div id="showThumb" style="width:152px;height:152px;border:1px solid #cccccc;padding:1px; overflow: hidden;"></div>
+					<div style="margin-top:20px;">
+						<form action="?Controller=Admin&action=SaveThumb" method="post" onSubmit="return checkCoords();">
+							<input type="hidden" id="bigImage" name="bigImage" />
+							<input type="hidden" id="bigwidth" name="bigwidth" />
+							<input type="hidden" id="bigheight" name="bigheight" />
+							<input type="hidden" id="x" name="x" />
+							<input type="hidden" id="y" name="y" />
+							<input type="hidden" id="w" name="w" />
+							<input type="hidden" id="h" name="h" />
+							<input type="submit" value="保存用户头像" />
+						</form>
+					</div>
+			</div>
+		<div id="backgroundPopup"></div>
+		</td>
+      </tr>-->
+<!--头像-->
+		<!--<tr>
+        <td class="left_title_2"><div align="center">选手缩略图</div></td>
+        <td><input name="picurl" type="text" id="picurl" value="<? echo $_SESSION['p'] ?>" /></td>
+      </tr>-->
+	  
+	  
+      <!--<tr>
+        <td class="left_title_2"><div align="center">选手缩略图</div></td>
+        <td><input name="file" type="file" id="file" /></td>
+      </tr>-->
+      <!--<tr>
+        <td class="left_title_2"><div align="center">第几季</div></td>
+        <td><input name="type" type="text" id="type" /></td>
+      </tr>-->
+     <!-- <tr>
+        <td class="left_title_2"><div align="center">详细内容</div></td>
+        <td><textarea name="content" cols="100" rows="30" id="content"></textarea></td>
+      </tr>-->
+      <tr>
+        <td class="left_title_2"><div align="center"></div></td>
+        <td><label>
+        <input name="submit" type="submit" id="提交" value="提交" />
+        </label>
+          <input name="reset" type="reset"  value="重置" /></td>
+		  
+		  
+      </tr>
+    </table>
+    <p>
+      <label></label>
+    </p>
+  </div>
+</form>
+<!--头像-->
+<!--<div style="float:left; background:#00FFCC; width:100px; height:100px;"><img style="width:100px; height:100px;" src="<? echo $_SESSION['p'] ?>" /></div>
+         <div id="button"><input type="button" value="上传图片" /></div>	
+			<div id="popupContact">
+				<a id="popupContactClose">x</a>
+				<div id="showBig" style="width:500px;height:500px;border:2px solid #E6E0CE;padding:3px;"></div>
+					<iframe style="width:500px;height:60px;padding:0px;" src="?Controller=Admin&action=UploadPic"></iframe>
+					
+					
+					<div id="showThumb" style="width:152px;height:152px;border:1px solid #cccccc;padding:1px; overflow: hidden;"></div>
+					<div style="margin-top:20px;">
+						<form action="?Controller=Admin&action=SaveThumb" method="post" onSubmit="return checkCoords();">
+							<input type="hidden" id="bigImage" name="bigImage" />
+							<input type="hidden" id="bigwidth" name="bigwidth" />
+							<input type="hidden" id="bigheight" name="bigheight" />
+							<input type="hidden" id="x" name="x" />
+							<input type="hidden" id="y" name="y" />
+							<input type="hidden" id="w" name="w" />
+							<input type="hidden" id="h" name="h" />
+							<input type="submit" value="保存用户头像" />
+						</form>
+					</div>
+			</div>
+		<div id="backgroundPopup"></div>-->
+
+
+</p>
+
+</body>
+
+</html>

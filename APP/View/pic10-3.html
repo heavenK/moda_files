@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>MODA美达|MODA|美达|大连美女榜|大连美女-<?php echo $row['title'];?></title>
+<link href="css/css10-3.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+function checkbox(obj){
+    var o=obj.getElementsByTagName("input")[0];
+    if(o.checked==""||!o.checked){
+        o.checked=true;
+        o.parentNode.className="checkbox_checked";
+    }else{
+        o.checked=false;
+        o.parentNode.className="checkbox"
+    }
+}
+function radio(elem,obj){
+    var oo=obj.getElementsByTagName("input")[0];
+    if(oo.checked) oo.checked=false;
+    else oo.checked=true;
+    var o=(document.getElementsByName(elem));
+    var n=o.length;
+    for (var i=0;i<n;i++){
+        var oo=o[i];
+        if(oo.checked==""||!oo.checked){
+            oo.parentNode.className="radioButton";
+        }else{
+            oo.parentNode.className="radioButton_checked";
+        }
+    }
+}
+</script>
+</head>
+
+<body>
+<div id="ModaBox"><!--容器-->
+	<div id="ModaFlash"><!--flash-->
+	  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="1100" height="515">
+        <param name="movie" value="images/modaflashbanner.swf" />
+        <param name="quality" value="high" />
+        <embed src="images/modaflashbanner.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="1100" height="515"></embed>
+      </object>
+	</div>
+	<div id="ModaHeader"><!--导航-->
+		<div id="ModaNav"><a href="http://moda.we54.com"><img src="images/moda002.jpg" alt="返回首页" width="253" height="51" border="0" /></a><a href="http://www.we54.com/dlgril/"  target="_blank"><img src="images/moda003.jpg" width="194" height="51" border="0" alt="活动介绍" /></a><a href="about.html" target="_blank"><img src="images/moda004.jpg" width="189" height="51" border="0" alt="关于美达" /></a></div>
+		<div id="ModaPicA"><img src="images/moda005.jpg" width="253" height="94" border="0" /><img src="images/moda006.jpg" width="194" height="94" border="0" /><img src="images/moda007.jpg" width="189" height="94" border="0" /></div>
+		<div id="ModaPicB"><img src="images/moda012.jpg" width="980" height="18" border="0" /></div>
+	</div>
+	<div id="ModaCont"><!--投票-->
+		<div id="ModaContNei"><?php echo $row['content'];?></div>
+ 	</div>
+	<div><img src="images/moda010.jpg" width="980" height="38" border="0" /></div>
+	<div id="ModaBottom"><img src="images/md010.jpg" width="188" height="40" border="0" class="ModaBottomA" /><span class="ModaBottomB">版权所有：<a href="#">大连方佰信息技术有限公司 www.we54.com</a> 2009 copyright</span></div>
+</div>
+</body>
+</html>

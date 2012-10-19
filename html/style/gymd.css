@@ -1,0 +1,32 @@
+
+
+
+body{ background: #1b141c url(../images/grzs_01.jpg) no-repeat top; font-family:"ËÎÌו"; font-size:12px;}
+*{ padding:0px; border:0px; margin:0px;}
+li{ list-style-type:none;}
+a:link{ text-decoration:none;}
+a:hover{ text-decoration:none;}
+a:visited{ text-decoration:none;}
+a:active{ hide-focus: expression(this.hideFocus=true); outline: none;}
+h1{ font-size:12px; font-weight:normal; color:#eec4bc; display:inline;}
+h2{ font-size:12px; font-weight:normal; color:#e4007f; display:inline;}
+h3{ font-size:14px; color:#f0037f; display:inline;}
+#full{ margin:0px auto; width:980px;}
+
+#top{ height:123px; width:980px; float:left;}
+	#top_a{ height:20px; width:980px; color:#878787; float:left; overflow:hidden; text-align:right; padding-top:10px;}
+	#top_a a{ font-size:12px; color:#878787; text-decoration:none;}
+	#top_b{ height:93px; width:980px; float:left; overflow:hidden;}
+		#top_b_a{ width:404px; height:93px; float:left; overflow:hidden;}
+		#top_b_b{ width:571px; height:93px; float:left; overflow:hidden; padding-left:5px;}
+			#top_b_b_a{ width:558px; height:18px; float:left; overflow:hidden; color:#eec4bc; text-align:right; padding-top:8px; padding-right:13px;}
+			#top_b_b_a a{ font-size:12px; color:#eec4bc; text-decoration:none;}
+			#top_b_b_b{ width:571px; height:67px; float:left;}
+					
+		
+		
+#cont{ width:875px; height:905px; float:left; background:url(../images/gymd_03.jpg) no-repeat; margin-bottom:10px; padding-top:314px;}
+	#cont ul li{ width:875px; height:auto; float:left; text-align:left; margin:0 0 27px 50px; display:inline; line-height:23px;}
+		
+		
+	

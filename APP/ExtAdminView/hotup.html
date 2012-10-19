@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>MODA扩展设置</title>
+<!-- CSS -->
+<link href="/extadminstyle/css/transdmin.css" rel="stylesheet" type="text/css" media="screen" />
+<!--[if IE 6]><link rel="stylesheet" type="text/css" media="screen" href="/extadminstyle/css/ie6.css" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" type="text/css" media="screen" href="/extadminstyle/css/ie7.css" /><![endif]-->
+<link href="/extadminstyle/css/jquery-pop.css" rel="stylesheet" type="text/css" />
+<!-- JavaScripts-->
+<script type="text/javascript" src="/extadminstyle/js/jquery.js"></script>
+<script type="text/javascript" src="/extadminstyle/js/jNice.js"></script>
+<script type="text/javascript" src="/extadminstyle/js/jquery-latest.pack.js"></script>
+<script type="text/javascript" src="/extadminstyle/js/jquery-pop.pack.js"></script>
+
+<script>
+function edititem(username,huoyuedu,status)
+{
+	document.form1.username.value = username;
+	document.form1.huoyuedu.value = huoyuedu;
+	document.form1.status.value = status;
+	
+}
+
+function serchinfo()
+{	
+	var a = document.serch.keyword.value;
+	if(a)
+		parent.window.location='/?Controller=ExtAdmin&action=Hotup&keyword='+a;
+}
+</script>
+
+<style>
+
+
+#boxes #dialog {
+  padding:10px;
+}
+
+</style>
+</head>
+
+<body>
+	<div id="wrapper">
+    	<!-- h1 tag stays for the logo, you can use the a tag for linking the index page -->
+    	<h1><a href="#"><span>Transdmin Light</span></a></h1>
+        
+        <?php  require(APP_DIR . '/ExtAdminView/header.html'); ?> 
+    
+        <div id="containerHolder">
+			<div id="container">
+        		<div id="sidebar">
+                	<ul class="sideNav">
+                    	<li><a href="?Controller=ExtAdmin">人气榜列表</a></li>
+                    </ul>
+                    <!-- // .sideNav -->
+                </div>    
+                <!-- // #sidebar -->
+                
+                <!-- h2 stays for breadcrumbs -->
+                <h2  style="font-size:14px;"><a href="#" >人气榜设置</a> &raquo; <a href="#" class="active">人气榜列表</a></h2>
+                
+                <div id="main">
+					<h3>人气榜列表</h3>
+                    	<table cellpadding="0" cellspacing="0">
+                        <form id="serch" name="serch" class="jNice">
+							<tr>
+                                <td class="action_b">姓名:&nbsp;&nbsp;&nbsp;活跃度:&nbsp;&nbsp;&nbsp;粉丝数:&nbsp;&nbsp;&nbsp;状态:</td>
+                                <td class="action">姓名<input type="text" id="keyword" name="keyword" /><a href="#" class="view" onclick="serchinfo();" >查找</a></td>
+                            </tr>  
+                        </form>    
+                    <form name="form2" id="form2" action="" class="jNice" method="post">
+                        <?php if($serdat){?>
+							<tr>
+                                <td class="action_b"><?php echo $serdat['truename']?>&nbsp;&nbsp;&nbsp;<?php echo $serdat['huoyuedu']?>&nbsp;&nbsp;&nbsp;<?php echo $serdat['fensishu']?>&nbsp;&nbsp;&nbsp;<?php echo $serdat['status']?></td>
+                                <td class="action"><a href="#dialog" name="modal" class="edit" onclick="edititem('<?php echo $serdat['username']?>','<?php echo $serdat['huoyuedu']?>','<?php echo $serdat['status']?>')">Edit</a></td>
+                            </tr>  
+                        <?php }?>
+                        
+                        
+                        <?php if($rowset){ foreach($rowset as $dat){?>
+							<tr>
+                                <td class="action_b"><?php echo $dat['truename']?>&nbsp;&nbsp;&nbsp;<?php echo $dat['huoyuedu']?>&nbsp;&nbsp;&nbsp;<?php echo $dat['fensishu']?>&nbsp;&nbsp;&nbsp;<?php echo $dat['status']?></td>
+                                <td class="action"><a href="#dialog" name="modal" class="edit" onclick="edititem('<?php echo $dat['username']?>','<?php echo $dat['huoyuedu']?>','<?php echo $dat['status']?>')">Edit</a></td>
+                            </tr>  
+                        <?php }}?>
+                    </form>
+                    
+                    
+                        </table>
+					<h3><?php echo $page->pageHtml;?></h3>
+                            
+                                
+                </div>
+                <!-- // #main -->
+                
+                <div class="clear"></div>
+            </div>
+            <!-- // #container -->
+        </div>	
+        <!-- // #containerHolder -->
+        
+        <p id="footer">Feel free to use and customize it. <a href="http://www.perspectived.com">Credit is appreciated.</a></p>
+    </div>
+    <!-- // #wrapper -->
+    
+<div id="boxes">
+        <div id="dialog" class="window">
+                        
+                        <div id="main" style="float:left; width:500px; text-align:left;">
+                            <form name="form1" id="form1" action="" class="jNice" enctype="multipart/form-data" method="post">
+                            	<input type="hidden" name="username" id="username"  />
+                            
+                                <fieldset>
+                                    <p><h3  style=" text-align:center">修改&nbsp;&nbsp;&nbsp; <a href="#"class="close"/>Close it</a></h3></p>
+                                    <p><label>活跃度:</label><input type="text" name="huoyuedu" id="huoyuedu" class="text-long" style="width:450px;"/></p>
+                                    <p><label>状态:</label><input type="text" name="status" id="status" class="text-long" style="width:450px;"/></p>
+                                    <input type="submit" value="Submit Query" />
+                                </fieldset>
+                                
+                            </form>
+                        </div>
+                        <!-- // #main -->
+        
+        </div>
+        <!-- Mask to cover the whole screen -->
+        <div id="mask"></div>
+</div>
+    
+    
+</body>
+</html>
+

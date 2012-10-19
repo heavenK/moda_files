@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<link rel="stylesheet" href="css/common.css" type="text/css" />
+<title>修改活动</title>
+<style type="text/css">
+<!--
+
+.left_title_1 {
+	background-color: #FC9;
+	color:#666;
+	font-weight:bold;
+	line-height:30px;
+	text-align:center;
+}
+.left_title_2 {
+	background-color: #fff;
+	color:#666;
+	font-weight:bold;
+	text-align:center;
+}
+#man_zone_x table{
+    background-color:#CCC;
+}
+#man_zone_x table tr{
+    background-color:#fff;
+}
+
+-->
+</style>
+</head>
+	<script type="text/javascript" src="/js/fckeditor/fckeditor.js"></script>
+	<script type="text/javascript">
+
+window.onload = function()
+{
+	var oFCKeditor = new FCKeditor( 'content' ) ;
+	oFCKeditor.BasePath	= '/js/fckeditor/' ;
+	oFCKeditor.Height	=	400;
+	oFCKeditor.ReplaceTextarea() ;
+}
+
+</script>
+<body>
+<form action="?Controller=ExtjsAdmin&action=EventEdit" method="post" enctype="multipart/form-data" name="form1" id="form1">
+  <input type="hidden" name="id" value="<? echo $news['event_id']?>" />
+  <div id="man_zone_x">
+    <table width="100%" border="0" align="center">
+      <tr>
+            <td width="10%" class="left_title_1">
+            </td>
+            <td width="90%" class="left_title_1">
+                修改美达活动/招募/X-GIRL
+            </td>
+      </tr>
+      <tr>
+        <td class="left_title_2">标题</td>
+            <td>
+                <input name="title" type="text" id="title" value="<? echo $news['title'] ?>" />
+            </td>
+      </tr>
+      
+	  <tr>
+            <td class="left_title_2">栏目类别</td>
+            <td>
+                <select id="channeltype" name="channeltype">
+                	<option value="<?php echo $news['channeltype'] ?>" ><?php echo $news['channeltype'] ?></option>
+                	<option value="0" >活动(0</option>
+                	<option value="1" >招募(1</option>
+                	<option value="2" >X-GIRL(2</option>
+                </select>(0 活动，1 招募，2 X-GIRL)
+            </td>
+      </tr>
+      
+	  <td class="left_title_2">编辑主页图片</td>
+            <td>
+                <input name="home_img" type="file" id="home_img" />
+            </td>
+      </tr>
+      <tr>   
+	  <td class="left_title_2">列表页图片</td>
+            <td>
+                <input name="index_img" type="file" id="index_img" />
+            </td>
+      </tr>
+      <tr>
+	  <td class="left_title_2">标题图片</td>
+            <td>
+                <input name="header_img" type="file" id="header_img" />
+            </td>
+      </tr>
+      
+	  <tr>
+            <td class="left_title_2">链接地址</td>
+            <td><input name="link" type="text" id="link" value="<?php echo $news['link'] ?>" />（填写后默认使用链接忽略详细内容）</td>
+      </tr>
+      
+      
+	  <tr>
+            <td class="left_title_2">详细内容</td>
+            <td><textarea name="content" cols="100" rows="30" id="content"><?php echo $news['content'] ?></textarea></td>
+      </tr>
+      <tr>
+            <td class="left_title_2"></td>
+            <td class="left_title_2">
+            <input name="submit" type="submit" id="提交" value="提交" />
+            <input name="reset" type="reset"  value="重置" />
+            </td>
+      </tr>
+    </table>
+  </div>
+  
+</form>
+
+</body>
+
+</html>

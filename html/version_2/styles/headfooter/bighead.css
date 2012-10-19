@@ -1,0 +1,38 @@
+@charset "gb2312";
+/* CSS Document */
+
+#head								{ width:980px;float:left;}
+#head .biglogo						{ background:url(../../images/modamember/big_logo.jpg) no-repeat; float:left; margin-right:20px; margin-left:180px;_margin-left:90px; margin-bottom:12px;width:646px; height:81px;}	
+#head .m_link						{ float:right; margin-top:4px; }
+#head .m_link a						{ color:#777677; float:left;}
+#head .m_link a:hover				{ text-decoration:none;}
+#head .m_link span					{ float:left;width:20px;}
+#head .m_link em					{ color:#777677; margin:0 5px; float:left;}
+
+#head .m_navigate					{ float:left;}
+#head .m_navigate li				{  height:36px;float:left; margin-left:0px; border:0px solid #F00;}
+#head .m_navigate h1 a,#head .m_navigate h2 a,#head .m_navigate h3 a,#head .m_navigate h4 a,#head .m_navigate h5 a,#head .m_navigate h6 a,#head .m_navigate em a,#head .m_navigate b a									{ background-image:url(../../images/modamember/navi.jpg); background-repeat:no-repeat; height:36px; background-color:#3a3a3a;float:left;}
+#head .m_navigate li h1 a			{ width:130px; background-position:0 0;}
+#head .m_navigate li h1 a:hover		{ background-position:0 -36px;}
+#head .m_navigate li h1 a.current	{ background-position:0 -36px;}
+#head .m_navigate li h2 a			{ width:118px;background-position:-129px 0;}
+#head .m_navigate li h2 a:hover		{ background-position:-129px -36px;}
+#head .m_navigate li h2 a.current	{ background-position:-129px -36px;}
+#head .m_navigate li h3 a			{ width:126px; background-position:-247px 0;}
+#head .m_navigate li h3 a:hover		{ background-position:-247px -36px;}
+#head .m_navigate li h3 a.current	{ background-position:-247px -36px;}
+#head .m_navigate li h4 a			{ width:118px; background-position:-373px 0;}
+#head .m_navigate li h4 a:hover		{ background-position:-373px -36px;}
+#head .m_navigate li h4 a.current	{ background-position:-373px -36px;}
+#head .m_navigate li h5 a			{ width:110px; background-position:-491px 0;}
+#head .m_navigate li h5 a:hover		{ background-position:-491px -36px;}
+#head .m_navigate li h5 a.current	{ background-position:-491px -36px;}
+#head .m_navigate li h6 a			{ width:140px; background-position:-602px 0;}
+#head .m_navigate li h6 a:hover		{ background-position:-602px -36px;}
+#head .m_navigate li h6 a.current	{ background-position:-602px -36px;}
+#head .m_navigate li em a			{ width:122px; background-position:-742px 0;}
+#head .m_navigate li em a:hover		{ background-position:-742px -36px;}
+#head .m_navigate li em a.current	{ background-position:-742px -36px;}
+#head .m_navigate li b a			{ width:116px; background-position:-865px 0;}
+#head .m_navigate li b a:hover		{ background-position:-865px -36px;}
+#head .m_navigate li b a.current	{ background-position:-865px -36px;}

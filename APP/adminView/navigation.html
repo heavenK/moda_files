@@ -1,0 +1,361 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>后台管理-导航</title>
+<script language="javascript">
+function ChangeList(changeId,titleId){
+  if(getObject(changeId).style.display == 'none'){
+     getObject(changeId).style.display = 'block';
+	 getObject(titleId).getElementsByTagName("img")[0].src = 'images/open.gif';
+	 ChangePre(preChanged,preTitleId,changeId);
+	 preChanged = changeId;
+	 preTitleId = titleId;
+  }else{
+     getObject(changeId).style.display = 'none';
+	 getObject(titleId).getElementsByTagName("img")[0].src = 'images/close.gif';
+  }
+}
+
+var preChanged = 'childTitle_1';
+var preTitleId = 'parentTitle_1';
+function ChangePre(preChanged,preTitleId,changeId){
+   if(preChanged != '' && preChanged != changeId){
+	  if(getObject(preChanged).style.display == 'block'){
+	     getObject(preChanged).style.display = 'none';
+		 getObject(preTitleId).getElementsByTagName("img")[0].src = 'images/close.gif';
+	   }
+	 }
+}
+//初始化
+function InitialShow(preTitleId,preChanged){
+  getObject(preTitleId).getElementsByTagName("img")[0].src = 'images/open.gif';
+  getObject(preChanged).style.display = 'block';
+}
+ //获取对象属性兼容方法
+ function getObject(objectId) {
+    if(document.getElementById && document.getElementById(objectId)) {
+	// W3C DOM
+	return document.getElementById(objectId);
+    } else if (document.all && document.all(objectId)) {
+	// MSIE 4 DOM
+	return document.all(objectId);
+    } else if (document.layers && document.layers[objectId]) {
+	// NN 4 DOM.. note: this won't find nested layers
+	return document.layers[objectId];
+    } else {
+	return false;
+    }
+}
+</script>
+
+<link href="css/main.css" rel="stylesheet" type="text/css" /><style type="text/css">
+<!--
+html,body {
+	background-color: #EFF8FF;
+}
+-->
+</style></head>
+
+<body onload="InitialShow(preTitleId,preChanged)">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="30" align="center" background="images/ManageIndex_r3_c2.gif"><strong>系统管理导航</strong></td>
+  </tr>
+  
+  
+  
+<!--  <tr>
+    <td bgcolor="#EFF8FF"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><div id="parentTitle_1" onclick="ChangeList('childTitle_1',id)" style="display:block;cursor:pointer;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="40" align="center"><img src="images/close.gif" width="32" height="22" /></td>
+            <td>投票管理</td>
+          </tr>
+        </table></div></td>
+      </tr>
+      <tr>
+        <td><div id="childTitle_1" style="display:none;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="50" align="right"><img src="images/nodes.gif" width="32" height="22" /></td>
+            <td class="mantitle"><a href="?Controller=Admin&action=PollList&type=1" target="mainFrame">30删改投票</a></td>
+          </tr>
+		  <tr>
+            <td width="50" align="right"><img src="images/nodes.gif" width="32" height="22" /></td>
+            <td class="mantitle"><a href="?Controller=Admin&action=PollList&type=2" target="mainFrame">10删改投票</a></td>
+          </tr>
+		  <tr>
+            <td width="50" align="right"><img src="images/nodes.gif" width="32" height="22" /></td>
+            <td class="mantitle"><a href="?Controller=Admin&action=PollList&type=3" target="mainFrame">3删改投票</a></td>
+          </tr>
+          <tr>
+            <td align="right"><img src="images/endnode.gif" width="32" height="22" /></td>
+            <td class="mantitle"><a href="?Controller=Admin&action=PollAdd" target="mainFrame">添加投票</a></td>
+          </tr>
+        </table></div></td>
+      </tr>    
+	</table>-->
+	
+	
+	
+	
+	
+	<!--<table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><div id="parentTitle_2" onclick="ChangeList('childTitle_2',id)" style="display:block;cursor:pointer;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="40" align="center"><img src="images/close.gif" width="32" height="22" /></td>
+            <td>排行榜管理</td>
+          </tr>
+        </table></div></td>
+      </tr>
+      <tr>
+        <td><div id="childTitle_2" style="display:none;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="50" align="right"><img src="images/nodes.gif" width="32" height="22" /></td>
+            <td class="mantitle"><a href="?Controller=Admin&action=LankinglistList" target="mainFrame">删改排行榜</a></td>
+          </tr>
+          <tr>
+            <td align="right"><img src="images/endnode.gif" width="32" height="22" /></td>
+            <td class="mantitle"><a href="?Controller=Admin&action=LankinglistAdd" target="mainFrame">添加排行榜</a></td>
+          </tr>
+        </table></div></td>
+      </tr>    
+	</table>-->
+	
+	
+        
+<!--		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td><div id="parentTitle_2" onclick="ChangeList('childTitle_2',id)" style="display:block;cursor:pointer;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td width="40" align="center"><img src="images/close.gif" width="32" height="22" /></td>
+                  <td>统计信息汇总</td>
+                </tr>
+            </table></div></td>
+          </tr>
+          <tr>
+            <td><div id="childTitle_2" style="display:none;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td width="50" align="right"><img src="images/nodes.gif" width="32" height="22" /></td>
+                  <td width="955" class="mantitle">
+				  <a href="index.php?controller=Admin&action=CountPersons" target="mainFrame"> </a></td>
+                </tr>
+                
+				
+            </table></div></td>
+          </tr>
+        </table>
+        
+	</td>
+  </tr>
+</table>-->
+
+		
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><div id="parentTitle_3" onclick="ChangeList('childTitle_3',id)" style="display:block;cursor:pointer;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="40" align="center"><img src="images/close.gif" width="32" height="22" /></td>
+            <td>美达注册审核</td>
+          </tr>
+        </table></div></td>
+      </tr>
+      <tr>
+        <td><div id="childTitle_3" style="display:none;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="50" align="right"><img src="images/nodes.gif" width="32" height="22" /></td>
+            <td class="mantitle"><a href="?Controller=Admin&action=ModaCk" target="mainFrame">审核美达会员注册</a></td>
+          </tr>
+		  <tr>
+            <td width="50" align="right"><img src="images/nodes.gif" width="32" height="22" /></td>
+            <td class="mantitle"><a href="?Controller=Admin&action=WaitModaCk" target="mainFrame">待审核美达会员注册</a></td>
+          </tr>
+		  <tr>
+            <td width="50" align="right"><img src="images/nodes.gif" width="32" height="22" /></td>
+            <td class="mantitle"><a href="?Controller=Admin&action=SearchAllUser" target="mainFrame">已注册美达会员</a></td>
+          </tr>
+		  <tr>
+            <td width="50" align="right"><img src="images/nodes.gif" width="32" height="22" /></td>
+            <td class="mantitle"><a href="?Controller=Admin&action=SearchUser" target="mainFrame">查询美达会员</a></td>
+          </tr>
+          <!--<tr>
+            <td align="right"><img src="images/endnode.gif" width="32" height="22" /></td>
+            <td class="mantitle"><a href="?Controller=Admin&action=SearchWaitUser" target="mainFrame">查询待审核会员</a></td>
+          </tr>-->
+        </table></div></td>
+      </tr>    
+	</table>
+
+
+
+<!--	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><div id="parentTitle_4" onclick="ChangeList('childTitle_4',id)" style="display:block;cursor:pointer;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="40" align="center"><img src="images/close.gif" width="32" height="22" /></td>
+            <td>美达排行旁管理</td>
+          </tr>
+        </table></div></td>
+      </tr>
+      <tr>
+        <td><div id="childTitle_4" style="display:none;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="50" align="right"><img src="images/nodes.gif" width="32" height="22" /></td>
+            <td class="mantitle"><a href="?Controller=Admin&action=AddRank" target="mainFrame">添加排行榜</a></td>
+          </tr>
+		   <tr>
+            <td width="50" align="right"><img src="images/nodes.gif" width="32" height="22" /></td>
+            <td class="mantitle"><a href="?Controller=Admin&action=AllRank" target="mainFrame">查询所有排行榜</a></td>
+          </tr>
+		  <tr>
+            <td width="50" align="right"><img src="images/nodes.gif" width="32" height="22" /></td>
+            <td class="mantitle"><a href="?Controller=Admin&action=SearchRank" target="mainFrame">查询排行榜</a></td>
+          </tr>
+		   <tr>
+            <td width="50" align="right"><img src="images/nodes.gif" width="32" height="22" /></td>
+            <td class="mantitle"><a href="?Controller=Admin&action=AddUser" target="mainFrame">添加排行榜成员</a></td>
+          </tr>
+		  
+		   <tr>
+            <td width="50" align="right"><img src="images/nodes.gif" width="32" height="22" /></td>
+            <td class="mantitle"><a href="?Controller=Admin&action=TouXian" target="mainFrame">添加排行榜头衔</a></td>
+          </tr>
+		   <tr>
+            <td width="50" align="right"><img src="images/nodes.gif" width="32" height="22" /></td>
+            <td class="mantitle"><a href="?Controller=Admin&action=SearchTouXian" target="mainFrame">查询排行榜头衔</a></td>
+          </tr>
+		  
+        </table></div></td>
+      </tr>    
+	</table>-->
+	
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><div id="parentTitle_4" onclick="ChangeList('childTitle_4',id)" style="display:block;cursor:pointer;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="40" align="center"><img src="images/close.gif" width="32" height="22" /></td>
+            <td>美达美女排行旁</td>
+          </tr>
+        </table></div></td>
+      </tr>
+      <tr>
+        <td><div id="childTitle_4" style="display:none;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="50" align="right"><img src="images/nodes.gif" width="32" height="22" /></td>
+            <td class="mantitle"><a href="?Controller=Admin&action=AddRank" target="mainFrame">添加美女榜</a></td>
+          </tr>
+		  <!--<tr>
+            <td width="50" align="right"><img src="images/nodes.gif" width="32" height="22" /></td>
+            <td class="mantitle"><a href="?Controller=Admin&action=AddUser" target="mainFrame">添加展示</a></td>
+          </tr>-->
+		   <tr>
+            <td width="50" align="right"><img src="images/nodes.gif" width="32" height="22" /></td>
+            <td class="mantitle"><a href="?Controller=Admin&action=AllRank" target="mainFrame">查看所有榜</a></td>
+          </tr>
+		  <!--<tr>
+            <td width="50" align="right"><img src="images/nodes.gif" width="32" height="22" /></td>
+            <td class="mantitle"><a href="?Controller=Admin&action=SearchRank" target="mainFrame">查询美女榜</a></td>
+          </tr>-->
+		   
+		  
+		<!--   <tr>
+            <td width="50" align="right"><img src="images/nodes.gif" width="32" height="22" /></td>
+            <td class="mantitle"><a href="?Controller=Admin&action=TouXian" target="mainFrame">添加排行榜头衔</a></td>
+          </tr>
+		   <tr>
+            <td width="50" align="right"><img src="images/nodes.gif" width="32" height="22" /></td>
+            <td class="mantitle"><a href="?Controller=Admin&action=SearchTouXian" target="mainFrame">查询排行榜头衔</a></td>
+          </tr>-->
+		  
+        </table></div></td>
+      </tr>    
+	</table>	
+	
+	
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><div id="parentTitle_5" onclick="ChangeList('childTitle_5',id)" style="display:block;cursor:pointer;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="40" align="center"><img src="images/close.gif" width="32" height="22" /></td>
+            <td>美达访谈</td>
+          </tr>
+        </table></div></td>
+      </tr>
+      <tr>
+        <td><div id="childTitle_5" style="display:none;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="50" align="right"><img src="images/nodes.gif" width="32" height="22" /></td>
+            <td class="mantitle"><a href="?Controller=Admin&action=ModaNews" target="mainFrame">添加访谈</a></td>
+          </tr>
+		   <tr>
+            <td width="50" align="right"><img src="images/nodes.gif" width="32" height="22" /></td>
+            <td class="mantitle"><a href="?Controller=Admin&action=AllNews" target="mainFrame">查询访谈</a></td>
+          </tr>
+
+		  <!--
+		  <tr>
+            <td width="50" align="right"><img src="images/nodes.gif" width="32" height="22" /></td>
+            <td class="mantitle"><a href="?Controller=Admin&action=SearchRank" target="mainFrame">查询排行榜</a></td>
+          </tr>
+		   <tr>
+            <td width="50" align="right"><img src="images/nodes.gif" width="32" height="22" /></td>
+            <td class="mantitle"><a href="?Controller=Admin&action=AddUser" target="mainFrame">添加排行旁成员</a></td>
+          </tr>-->
+		  
+        </table></div></td>
+      </tr>    
+	</table>
+
+
+
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><div id="parentTitle_5" onclick="ChangeList('childTitle_6',id)" style="display:block;cursor:pointer;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="40" align="center"><img src="images/close.gif" width="32" height="22" /></td>
+            <td>美达活动</td>
+          </tr>
+        </table></div></td>
+      </tr>
+      <tr>
+        <td><div id="childTitle_6" style="display:none;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="50" align="right"><img src="images/nodes.gif" width="32" height="22" /></td>
+            <td class="mantitle"><a href="?Controller=Admin&action=EventAdd" target="mainFrame">添加活动</a></td>
+          </tr>
+		   <tr>
+            <td width="50" align="right"><img src="images/nodes.gif" width="32" height="22" /></td>
+            <td class="mantitle"><a href="?Controller=Admin&action=EventSerch" target="mainFrame">查询活动</a></td>
+          </tr>
+
+		  <!--
+		  <tr>
+            <td width="50" align="right"><img src="images/nodes.gif" width="32" height="22" /></td>
+            <td class="mantitle"><a href="?Controller=Admin&action=SearchRank" target="mainFrame">查询排行榜</a></td>
+          </tr>
+		   <tr>
+            <td width="50" align="right"><img src="images/nodes.gif" width="32" height="22" /></td>
+            <td class="mantitle"><a href="?Controller=Admin&action=AddUser" target="mainFrame">添加排行旁成员</a></td>
+          </tr>-->
+		  
+        </table></div></td>
+      </tr>    
+	</table>
+
+
+
+
+
+
+
+	<td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="40" align="center"><img src="images/close.gif" width="32" height="22" /></td>
+            <td><a href="index.php?controller=Admin&action=Logout" target="_parent">退出系统</a></td>
+          </tr>
+        </table></td>
+
+</body>
+</html>

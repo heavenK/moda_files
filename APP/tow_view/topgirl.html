@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="keywords" content="大连,大连新闻,大连你好,大连论坛,大连资讯,大连滚子游戏,大连生活,五年四班,大连博客,大连话,大连图片,大连视频,大连交友,大连问吧,大连知道,大连人物,大连团购,大连旅游,大连餐饮,大连教育,大连房产,大连汽车,大连娱乐,大连购物,大连摄影,news,dalian,daliannews" />
+<title>美达美女榜——大连超级美女榜</title>
+<link href="two_styles/moda_reset.css" rel="stylesheet" type="text/css" />
+<link href="two_styles/moda_header.css" rel="stylesheet" type="text/css" />
+<link href="two_styles/moda_footer.css" rel="stylesheet" type="text/css" />
+<link href="two_styles/moda_TopGirl.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<div id="full"><!--整体-->
+
+    <?php  require(APP_DIR . '/tow_view/header_page.html'); ?> 
+    
+    <div id="moda_TopGirl_2"><!--美达大连超级美女榜-->
+    	<p><img src="two_images/moda_TopGirl_two.gif" width="551" height="121" border="0" /></p>
+        <ul>
+        
+	<?php foreach($rowset2 as $data){?>
+	<?php $ShowList=$tableModaRankShow->getTopGirlShowById($data['rank_id']); foreach($ShowList as $sldat){ $showDat = $tableModaShow->getShowByShowIdNoLimit($sldat['show_id']); ?>
+            <li>
+                <em><a href="?Controller=ShowIndex&action=ShowDetail&user_id=<?php echo $sldat['user_id'] ;?>&show_id=<?php echo $showDat['show_id'] ;?>" title="" target="_blank"><img src="<?php echo $showDat['show_img']?>" width="144" height="107" border="0" /></a></em>
+                <b><a href="?Controller=ShowIndex&action=ShowDetail&user_id=<?php echo $sldat['user_id'] ;?>&show_id=<?php echo $showDat['show_id'] ;?>" title="" target="_blank"><?php echo $sldat['title']?></a></b>
+                <i><strong><?php echo $showDat['views']?></strong> 次浏览 / <strong><?php echo $showDat['discuss_count']?></strong>评论</i>
+            </li>
+            
+	<?php }}?>
+            
+            
+        </ul>
+    </div>
+    
+    
+    <div id="moda_TopGirl"><!--美达大连超级美女榜-->
+    	<div id="lock">
+    
+    	<p><img src="two_images/moda_TopGirl_one.gif" width="551" height="121" border="0" /></p>
+        <ul>
+	<?php foreach($rowset as $data){?>
+	<?php $ShowList=$tableModaRankShow->getTopGirlShowById($data['rank_id']); foreach($ShowList as $sldat){ $showDat = $tableModaShow->getShowByShowIdNoLimit($sldat['show_id']); ?>
+            <li>
+                <em><a href="?Controller=ShowIndex&action=ShowDetail&user_id=<?php echo $sldat['user_id'] ;?>&show_id=<?php echo $showDat['show_id'] ;?>" title="" target="_blank"><img src="<?php echo $showDat['show_img']?>" width="144" height="107" border="0" /></a></em>
+                <b><a href="?Controller=ShowIndex&action=ShowDetail&user_id=<?php echo $sldat['user_id'] ;?>&show_id=<?php echo $showDat['show_id'] ;?>" title="" target="_blank"><?php echo $sldat['title']?></a></b>
+                <i><strong><?php echo $showDat['views']?></strong> 次浏览 / <strong><?php echo $showDat['discuss_count']?></strong>评论</i>
+            </li>
+            
+	<?php }}?>
+            
+        </ul>
+    </div>
+    </div>
+    <?php  require(APP_DIR . '/tow_view/footer.html'); ?> 
+
+</div>
+
+</body>
+</html>

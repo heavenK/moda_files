@@ -1,0 +1,82 @@
+/* CSS Document */
+/* 全局设定 */
+
+
+
+
+*		{ margin:0px; border:0px; padding:0px; }
+ul,li	{ list-style-type:none;}
+img		{ vertical-align:middle;}
+body	{ font-size:12px; line-height:22px; background:#FFFFFF;}
+a		{ text-decoration:none;}
+
+#MDBoxs	{ width:960px; margin:0 auto;}
+	#MDheader	{/* 头部 */ width:960px; float:left;}
+		.MDheaderA	{ float:left;}
+		.MDheaderB	{ width:100px; margin:100px 0 0 170px; font-size:14px; font-weight:bold; color:#000000; float:left;}		
+		.MDheaderC	{ width:100px; margin:100px 0 0 0; font-size:14px; font-weight:bold; color:#000000;  float:left;}
+		#MDheader span	{ width:960px; height:9px; overflow:hidden; margin-bottom:2px; background:#ef037f; float:left;}
+		
+	#MDAD	{/* 广告滑动门 */ width:958px; clear:both; float:left;}
+		.ctt	{ clear:both; border:#bfbfbf 1px solid; float:left;} 
+		.tb_	{ padding:7px 0 0 13px; float:left;} 
+		.tb_ ul	{ height:24px; float:left;} 
+		.tb_ li	{ width:22px; height: 22px; margin:0 4px 0 0; text-align:center; cursor:pointer; float:left;} 
+		.normaltab    { background:#dad8d9; color:#676566; font-weight:bold;} 
+		.hovertab     { background:#f0037f; color:#FFF; font-weight:bold;} 
+		.dis	{ display:block;} 
+		.undis	{ display:none;}
+	
+	#MDText	{/* 投票限制 */ width:950px; color:#f1037f; font-size:12px; font-weight:bold; text-align:right; float:left;}
+	
+	#MDCont	{/* 选手照片 */ width:958px; border:#bfbfbf 1px solid; float:left;}
+		#MDCont ul	{ width:958px; background:url(../images/md006.jpg); float:left;}
+		#MDCont ul li	{ width:154px; padding:0 0 20px 5px; float:left;}
+		.MDContZ img	{ border:#bfbfbf 1px solid; float:left;}		
+			.radioButton			{ padding:0 0 0 60px; width:94px; overflow:hidden; background:url(../images/md003.gif) no-repeat; background-position:39px 4px; cursor:pointer; line-height:24px; color:#fb0197; font-weight:bold;  float:left;}
+			.radioButton_checked	{ padding:0 0 0 60px; width:94px; overflow:hidden; background:url(../images/md003_1.gif) no-repeat; background-position:39px 4px;  cursor:pointer; line-height:24px; color:#fb0197; font-weight:bold;  float:left;}
+			
+			.checkbox			{ padding:0 0 0 60px; width:94px; overflow:hidden; background:url(../images/md003.gif) no-repeat; background-position:39px 4px; cursor:pointer; line-height:24px; color:#fb0197; font-weight:bold;  float:left;}
+			.checkbox_checked	{ padding:0 0 0 60px; width:94px; overflow:hidden; background:url(../images/md003_1.gif) no-repeat; background-position:39px 4px;  cursor:pointer; line-height:24px; color:#fb0197; font-weight:bold;  float:left;}
+			
+			.checkbox input,.checkbox_checked input,.radioButton input,.radioButton_checked input	{ display:none;}
+			.MDContA	{ width:154px; height:22px; color:#989898; background:url(../images/md003.jpg) no-repeat; background-position:0 3px; line-height:22px; float:left;}
+			.MDContB	{ width:36px; padding:0 0 0 21px; overflow:hidden; float:left;}
+			.MDContC	{ width:30px; padding:0 0 0 18px; color:#fb0197; overflow:hidden; float:left;}
+			.MDContD	{ width:18px; height:12px; padding:4px 10px 0 0; float:left;}
+			.MDContE	{ width:15px; height:12px; padding:4px 0 0 0; float:left;}
+		#MDContJG	{ width:958px; text-align:center; float:left;}
+			.MDContJGA	{ width:93px; height:30px; margin:0 48px 15px 0; background:url(../images/md007.jpg);}
+			.MDContJGB	{ width:93px; height:30px; margin:0 0 15px 0; background:url(../images/md008.jpg);}
+	
+	#MDContBottom	{/* 结尾 */ width:940px; height:110px; background:url(../images/md009.jpg) repeat-x; padding-right:18px; margin-top:20px; text-align:right; float:left;}
+		.MDContBottomA		{ padding:1px 0 0 0; float:left}
+		#MDContBottom span	{ padding-top:10px; float:right;}
+		#MDContBottom a		{ color:#000000; text-decoration:underline;}
+	
+/* 内页样式 */	
+	#MDPic	{ width:958px; border:#bfbfbf 1px solid; margin:15px 0 0 0; float:left;}
+		#MDPic ul	{ width:958px; float:left;}
+			#MDPic ul li	{ padding:10px 0;}
+			
+.MDheaderB_1	{ width:100px; margin:100px 0 0 70px; font-size:14px; font-weight:bold; color:#000000; float:left;}
+.MDheaderB	{ width:100px; margin:100px 0 0 0; font-size:14px; font-weight:bold; color:#000000; float:left;}
+
+
+
+.l 	{FLOAT: left;}
+.font12 { FONT-SIZE:12px; FONT-FAMILY: Verdana, "宋体", sans-serif;}
+.imgTab .text {float:left;}
+.borderOn { border:#bfbfbf 1px solid; float:left;}
+.imgNav	{ float:left; padding:7px 0 0 13px;}
+.container { WIDTH: 959px; float:left;}
+
+.imgTab DT { float:left;}
+.imgTab .imgNav IMG {DISPLAY: none;}
+
+.imgTab .imgNav A:link 		{ font-size:14px; padding:3px; display:block; width:20px; line-height:20px; margin-right:5px; text-align:center; background:#dad8d9; font-weight:bold; COLOR: #666;}
+.imgTab .imgNav A:visited 	{ font-size:14px; padding:3px; display:block; width:20px; line-height:20px; margin-right:5px; text-align:center; background:#dad8d9; font-weight:bold; COLOR: #666;}
+.imgTab .imgNav A:hover		{ font-size:14px; padding:3px; display:block; width:20px; line-height:20px; margin-right:5px; text-align:center; background:#F09; font-weight:bold; COLOR: #FFF;}
+.imgTab .imgNav A:active	{ font-size:14px; padding:3px; display:block; width:20px; line-height:20px; margin-right:5px; text-align:center; background:#dad8d9; font-weight:bold; COLOR: #666;}
+
+.imgTab .imgNav A.alive:link,.imgTab .imgNav A.alive:visited,.imgTab .imgNav A.alive:hover,.imgTab .imgNav A.alive:active	{COLOR: #FFF; background:#F09; font-size:14px;}

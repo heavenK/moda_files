@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GB2312" />
+
+<title>美达会员-美达&middot;大连超级美女榜-大连新青年</title>
+<meta name="keywords" content="大连，大连新闻，大连论坛，大连资讯，大连滚子游戏，大连生活，五年四班，大连博客，大连话，大连图片，大连视频，大连交友，大连问吧，大连知道，大连人物，大连团购,大连旅游，大连餐饮，大连教育，大连房产，大连汽车，大连娱乐，大连购物，大连摄影，美达美女，美女，美达，美女榜，美达美女榜，大连美女，moda，dalian，daliannews" /> 
+<meta name="description" content="大连新青年网是大连生活资讯信息最丰富的网络媒体，是大连本土化互动、娱乐网络平台，美达美女榜，大连地区拥有广大受众的美女展示平台。"/> 
+<link rel="stylesheet" href="css/indexgeneral.css" type="text/css"/>
+<link href="style/mdhy.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="js/indexpopup.js" type/"text/javascript"></script>
+<script language="javascript" type="text/javascript" >
+	$(document).ready(function() {
+		$("#searchimg1").click(function (){
+			window.location.href	=	"?Controller=ModaIndex&action=SearchModa&nickname="+$("#tc_j_b_b").val();	
+		});
+	});
+</script>
+
+<style>
+	#cont_d{ width:980px; height:22px; float:left; text-align:center;}
+		#botton{ width:auto; height:20px; margin:0 auto;}
+</style>
+
+<link href="two_styles/moda_reset.css" rel="stylesheet" type="text/css" />
+<link href="two_styles/moda_header.css" rel="stylesheet" type="text/css" />
+<link href="two_styles/moda_footer.css" rel="stylesheet" type="text/css" />
+
+<style>
+body{ background:none; font-family:"宋体"; font-size:12px;}
+#cont{ width:978px; height: 1040px;float:left; overflow:hidden;  background-position:-1px -1px; background-color:#29242b; border:#3d3e95 1px solid; border-top:none;}
+</style>
+
+
+
+</head>
+<body>
+
+<div id="full">
+
+    <?php  require(APP_DIR . '/tow_view/header_page.html'); ?> 
+	<div id="cont" >
+		<div id="cont_a"></div>
+		<div id="cont_b">
+			<span id="cont_b_a">
+				<ul id="cont_b_a_a">
+					<li class="cont_b_a_a_a"><img src="images/mdzs_04.gif" /> <a href="?controller=ModaIndex&action=NewAdd">最新加入</a></li>
+					<li class="cont_b_a_a_b"><img src="images/mdzs_04.gif" /> <a href="?controller=ModaIndex&action=LiuLanMore">点击最多</a></li>
+					<li class="cont_b_a_a_c"><img src="images/mdzs_04.gif" /> <a href="?controller=ModaIndex&action=ShowMore">展示最多</a></li>
+				</ul>
+			</span>
+		</div>
+		<div id="cont_c">
+			<?php foreach($rowset as $r){?>
+    <a class="box_a" href="?controller=ModaIndex&action=Person&id=<?php echo $r['user_id']?>">
+        <span class="box_a_a" style="background:url(<?php echo $r['head_img'] ?>) no-repeat;"></span>
+        <span class="box_a_b"><?php echo $r['truename']?></span>
+    </a>
+            
+            
+			<?php }?>
+		</div>
+		
+		
+		<div id="cont_d" style=" height:100px"><?php echo $page->pageHtml;?></div>
+		
+		
+	</div>
+    <?php  require(APP_DIR . '/tow_view/footer.html'); ?> 
+</div>
+<style>
+#tc_j{ width:784px; height:196px; float:left; overflow:hidden; background:url(../images/tc_17.jpg) no-repeat; border:#403842 1px solid;}
+	#tc_j_a{ width:784px; height:63px; float:left; overflow:hidden;}
+	#tc_j_b{ width:784px; height:28px; float:left; overflow:hidden; margin-bottom:5px;}
+		#tc_j_b_a{ width:188px; height:22px; float:left; overflow:hidden; text-align:right; font-size:14px; color:#ecc4ba; padding-top:6px;}
+		#tc_j_b_b{ width:347px; color:#ecc4ba; height:26px; float:left; overflow:hidden; margin-right:11px; border:#724a6c 1px solid; background-color:#291425;}
+		#tc_j_b_c{ width:236px; height:28px; float:left; overflow:hidden; text-align:left;}
+	#tc_j_c{ width:596px; height:100px; float:left; overflow:hidden; font-size:12px; color:#6e6e6e; text-align:left; padding-left:188px;}
+</style>
+<div id="popupContactyy">
+				<div id="tc_j">
+					<div id="tc_j_a"></div>
+					<div id="tc_j_b">
+						<span id="tc_j_b_a">搜索美达：</span>
+						<input id="tc_j_b_b" style=" line-height:24px;"  type="text" name="nickname"   />
+						<span id="tc_j_b_c"><img id="searchimg1" src="images/tc_18.gif" width="119" height="28" style="cursor:pointer" /></span>
+					</div>
+					<div id="tc_j_c">请输入用户昵称进行搜索</div>
+				</div>			
+		</div>
+		<div id="backgroundPopupyy"></div>
+</body>
+</html>

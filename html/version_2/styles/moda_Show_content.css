@@ -1,0 +1,86 @@
+@charset "gb2312";
+/* CSS Document */
+
+/*通用背景*/
+.moda_Show_button span a,
+.moda_Show_button em a,
+.moda_Show_button i a,
+.moda_Show_button b a,
+.moda_Show_button p a,
+#moda_Show_VCR span,
+#moda_Show_Photo dl dt			{ background:url(../two_images/Show_bg_all.gif) no-repeat;}
+
+/*个人资料*/
+#moda_Show_Data		{ width:978px; padding:0 0 20px 0;   overflow:hidden; float:left; border-left:1px #ececec solid; border-right:1px #ececec solid;; border-top:1px #ececec solid;}
+
+	/*按钮*/
+	.moda_Show_button				{ width:968px; height:75px; padding:9px 0px 0 11px; position:relative; overflow:hidden; float:left;}
+	#moda_Show_button_admin			{ color:#f0037f; position:absolute; top:55px; right:20px; overflow:hidden;}
+	#moda_Show_button_admin a		{ color:#f0037f;}
+	
+	.moda_Show_button span			{ width:102px; height:28px; overflow:hidden; float:right; margin-right:13px; margin-top:23px; display:inline;}
+	.moda_Show_button span a		{ width:102px; height:28px; background-image:url(../images/guanli.jpg); overflow:hidden; float:left;}
+	.moda_Show_button span a:hover	{}
+	.moda_Show_button em			{ width:102px; height:28px; overflow:hidden; float:right; margin-right:7px; margin-top:23px; display:inline;}
+	.moda_Show_button em a			{ width:102px; height:28px; background-image:url(../images/fanhui.jpg); overflow:hidden; float:left;}
+	.moda_Show_button em a:hover	{ }
+	.moda_Show_button i				{ width:102px; height:28px; overflow:hidden; float:right; margin-right:7px; margin-top:23px; display:inline;}
+	.moda_Show_button i a			{ width:102px; height:28px; background-image:url(../images/pinglun.jpg); overflow:hidden; float:left;}
+	.moda_Show_button i a:hover		{}
+	.moda_Show_button b				{ width:71px; height:28px; overflow:hidden; float:right; margin-right:7px; margin-top:23px; display:inline;}
+	.moda_Show_button b a			{ width:71px; height:28px; background-image:url(../images/next.jpg); overflow:hidden; float:left;}
+	.moda_Show_button b a:hover		{}
+	.moda_Show_button h1				{ width:71px; height:28px; overflow:hidden; float:right; margin-right:7px; margin-top:23px; display:inline;}
+	.moda_Show_button h1 a			{ width:71px; height:28px; background-image:url(../images/pre.jpg); overflow:hidden; float:left;}
+	.moda_Show_button h1 a:hover		{}
+
+.geren               { width:165px; height:56px; float:left; overflow:hidden;}
+
+
+.guanli_top                      { width:273px; float:left; overflow:hidden; margin-top:5px; margin-left:530px; display:inline;}
+.guanli_top a                      { color:#ff0183;}
+.moda_Show_VCR_logo                      { width:580px; height:51px; float:left; overflow:hidden; margin-top:19px; margin-left:386px; display:inline;}
+
+
+
+	
+#moda_Show_Data pre					{ width:286px; height:237px; margin:0px 15px 0 15px; display:inline; border:#dedede 1px solid; overflow:hidden; float:left;}
+#moda_Show_Data dl					{ width:643px; height:182px;  border:#dedede 1px solid; overflow:hidden; float:left; background-color:#f7f7f7;}
+#moda_Show_Data dl dt				{ width:622px; height:81px; margin:0 0 0 10px; display:inline; border-bottom:#5b3041 1px dashed; text-align:center; overflow:hidden; float:left;}
+#moda_Show_Data dl dt b				{ width:622px; height:16px; padding:11px 0 0 0; font-size:14px; color:#ff5b00; overflow:hidden; float:left;}
+#moda_Show_Data dl dt em			{ width:622px; height:14px; padding:8px 0 0 0; font-style:normal; color:#333333; float:left;}
+#moda_Show_Data dl dt i				{ width:622px; height:14px; padding:8px 0 0 0; font-style:normal; color:#666666; display:inline-block;}
+#moda_Show_Data dl dt i span		{ color:#f0037f;}
+#moda_Show_Data dl dd				{ width:595px; height:68px; padding:14px 0 0 12px; color:#ff0183; line-height:22px; overflow:hidden; float:left;}
+
+/*个人展示页*/
+#moda_Show_Data strong				{ width:943px; margin:0 0 0 17px; display:inline; padding:0 0 20px 0; border-bottom:#5c3145 1px dashed; text-align:center; overflow:hidden; float:left;}
+#moda_Show_Data strong img			{ max-width:900px;_width:expression(this.width > 900 && this.width > this.height ? 900: auto); margin:40px auto 20px; display:block; overflow:hidden;}
+#moda_Show_Data strong em			{ width:900px; height:16px; font-size:14px; font-style:normal; font-weight:normal; color:#eac6be; overflow:hidden; display:inline-block;}
+#moda_Show_Data h6					{ width:900px; margin:0 0 0 17px; display:inline; padding:40px 0 40px 20px; border-bottom:#5c3145 1px dashed; font-size:14px; font-weight:normal; color:#eac6be; line-height:26px; overflow:hidden; float:left;}
+
+	/*转载*/
+	#moda_Show_Reprint				{ width:643px; height:43px; border:#e6e6e6 1px solid; overflow:hidden; float:left; margin-top:10px; display:inline; background-color:#f7f7f7;}
+	#moda_Show_Reprint span			{ margin:15px 0 0 10px; display:inline; color:#ff5b00; float:left;}
+	#moda_Show_Reprint span b		{color:#f0037f;}
+	#moda_Show_Reprint i			{ margin:12px 0 0 0; display:inline; overflow:hidden; float:left;}
+	#moda_Show_Reprint i img		{ overflow:hidden; float:left;}
+	#moda_Show_Reprint i a			{ margin:0 10px 0 2px; display:inline; font-style:normal; color:#666666; line-height:19px; text-decoration:underline; float:left;}
+	#moda_Show_Reprint i a:hover	{ text-decoration:none;}
+	
+/*MODAVCR*/
+#moda_Show_VCR		{ width:978px; height:547px;  border:#ececec 1px solid; overflow:hidden; float:left; background-color:#f9f9f9;}
+#moda_Show_VCR span					{ width:197px; height:29px; margin:20px 0 19px 392px; display:inline; background-position:0 -112px; overflow:hidden; float:left;}
+#moda_Show_VCR b					{ width:978px; height:389px; text-align:center; overflow:hidden; float:left;}
+#moda_Show_VCR i					{ width:908px; height:80px; margin:35px; display:inline; font-style:normal; color:#535353; line-height:20px; overflow:hidden; float:left;}
+
+#moda_Show_VCR a img                     { margin-left:125px; display:inline;}
+
+/*图片展示*/
+#moda_Show_Photo	{ width:978px; padding:0 0 20px 0; border-left:#ececec 1px solid; border-right:#ececec 1px solid; border-bottom:#ececec 1px solid; float:left;}
+#moda_Show_Photo dl					{ width:978px; height:67px; overflow:hidden; float:left;}
+#moda_Show_Photo dl dt				{ width:300px; height:38px; margin:29px 10px 0 332px; display:inline; background-image:url(../images/guanfangfabu.jpg); overflow:hidden; float:left;}
+#moda_Show_Photo dl dd				{ margin:52px 0 0 0; display:inline; font-weight:bold; color:#ff5b00; overflow:hidden; float:left;}
+#moda_Show_Photo dl dd a			{ font-weight:bold; color:#ff5b00;}
+#moda_Show_Photo p					{ width:978px; text-align:center; overflow:hidden; float:left;}
+#moda_Show_Photo p img				{ max-width:900px;_width:expression(this.width > 900 && this.width > this.height ? 900: auto); margin:29px 0 30px 0; display:inline; background:#1d151b; border:#e8e8e8 10px solid; overflow:hidden;}

@@ -1,0 +1,33 @@
+@charset "gb2312";
+/* CSS Document */
+
+#main											{ width:980px; float:left;}
+#main .beauty_list								{ }
+#main .beauty_list li							{ width:978px; border:1px solid #ececec; margin-top:11px; float:left;}
+#main .beauty_list .bl_info						{ width:100%; margin-left:2px; float:left;}
+#main .beauty_list .bl_info .list_logo			{ text-align:center; margin-top:12px;}
+#main .beauty_list .bl_info .list_info			{ margin-bottom:30px;_margin-bottom:60px; float:left;}
+#main .beauty_list .bl_info .l_beautyinfo3		{ width:150px; height:180px; margin:16px 0 0 10px;  float:left;}
+#main .beauty_list .bl_info .l_beautyinfo3 a	{ width:150px; height:153px;background:url(../../images/beautylist/list_bg3.jpg) no-repeat -150px 0; float:left;}
+#main .beauty_list .bl_info .l_beautyinfo3 img	{ width:146px; height:109px; margin:23px 0 0 2px;}
+#main .beauty_list .bl_info .l_beautyinfo3 b	{ color:#f1037d; margin:10px 0 0 0; float:left;}
+#main .beauty_list .bl_info .l_beautyinfo3 em	{ color:#666; margin-top:4px; float:left;}
+#main .beauty_list .bl_info .l_beautyinfo3 i	{ color:#ff9c89;}
+#main .beauty_list .bl_info .l_beautyinfo3 a:hover{ background-position:0 0;}
+
+#main .beauty_list .bl_info .l_beautyinfo2		{ width:150px; height:180px; margin:16px 0 0 11px; float:left;}
+#main .beauty_list .bl_info .l_beautyinfo2 a	{ width:150px; height:153px;background:url(../../images/beautylist/list_bg2.jpg) no-repeat -150px 0;float:left;}
+#main .beauty_list .bl_info .l_beautyinfo2 img	{ width:146px; height:109px; margin:23px 0 0 2px;}
+#main .beauty_list .bl_info .l_beautyinfo2 b	{ color:#f1037d; margin:10px 0 0 0; float:left;}
+#main .beauty_list .bl_info .l_beautyinfo2 em	{ color:#666; margin-top:4px; float:left;}
+#main .beauty_list .bl_info .l_beautyinfo2 i	{ color:#ff9c89;}
+#main .beauty_list .bl_info .l_beautyinfo2 a:hover{ background-position:0 0;}
+
+#main .beauty_list .bl_info .l_beautyinfo		{ width:150px; height:180px; margin:16px 0 0 11px; float:left;}
+#main .beauty_list .bl_info .l_beautyinfo a		{ width:150px; height:153px;background:url(../../images/beautylist/list_bg1.jpg) no-repeat -150px 0;float:left;}
+#main .beauty_list .bl_info .l_beautyinfo img	{ width:146px; height:109px; margin:23px 0 0 2px;}
+#main .beauty_list .bl_info .l_beautyinfo b		{ color:#f1037d; margin:10px 0 0 0; float:left;}
+#main .beauty_list .bl_info .l_beautyinfo em	{ color:#666; margin-top:4px; float:left;}
+#main .beauty_list .bl_info .l_beautyinfo i		{ color:#ff9c89;}
+#main .beauty_list .bl_info .l_beautyinfo a:hover{ background-position:0 0;}
+

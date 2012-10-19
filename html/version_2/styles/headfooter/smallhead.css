@@ -1,0 +1,40 @@
+@charset "gb2312";
+/* CSS Document */
+
+.moda_nav ul li b a,
+.moda_nav ul li span a,
+.moda_nav ul li h1 a,
+.moda_nav ul li tt a,
+.moda_nav ul li i a,
+.moda_nav ul li em a									{ background:url(../../images/modapersonal/moda_geren_navbg.jpg) no-repeat;}
+
+.moda_grzs_title										{width:980px; height:99px; overflow:hidden; float:left;}
+	.moda_title											{width:498px; height:99px; overflow:hidden; float:left;}
+	.moda_daohang										{width:482px; height:24px; overflow:hidden; float:left;}
+	.moda_daohang em									{height:24px; line-height:24px; overflow:hidden; float:right; margin:0 5px; display:inline;}
+	.moda_daohang em a									{color:#777677;}
+	.moda_daohang tt									{height:24px; line-height:24px; overflow:hidden; float:right; color:#777677;}
+	.moda_youmei										{width:482px; height:39px; text-align:right; overflow:hidden; float:left;}
+	.moda_youmei h1										{ font-size:23px; color:#666; font-family:"Î¢ÈíÑÅºÚ","ºÚÌå"; font-weight:normal; margin-left:190px; }
+	.moda_youmei h1 i									{ color:#ef037f;}
+	.moda_nav											{width:482px; height:36px; overflow:hidden; float:right;}
+	.moda_nav ul										{width:482px; height:36px; overflow:hidden; float:left; background-color:#ededed;}
+	.moda_nav ul li										{width:79px; height:36px; overflow:hidden; float:left; margin-left:1px; display:inline;}
+	.moda_nav ul li em a								{width:79px; height:36px; overflow:hidden; float:left; background-position:0 0;}
+	.moda_nav ul li em a:hover							{background-position:0 -36px;}
+	.moda_nav ul li em a.current						{background-position:0 -36px;}
+	.moda_nav ul li i a									{width:79px; height:36px; overflow:hidden; float:left; background-position:-80px 0;}
+	.moda_nav ul li i a:hover							{background-position:-81px -36px;}
+	.moda_nav ul li i a.current							{background-position:-81px -36px;}
+	.moda_nav ul li tt a								{width:79px; height:36px; overflow:hidden; float:left; background-position:-160px 0;}
+	.moda_nav ul li tt a:hover							{width:79px; height:36px; overflow:hidden; float:left; background-position:-160px -36px;}
+	.moda_nav ul li tt a.current						{background-position:-160px -36px;}
+	.moda_nav ul li h1 a								{width:79px; height:36px; overflow:hidden; float:left; background-position:-240px 0;}
+	.moda_nav ul li h1 a:hover							{width:79px; height:36px; overflow:hidden; float:left; background-position:-240px -36px;}
+	.moda_nav ul li h1 a.current						{background-position:-240px -36px;}
+	.moda_nav ul li span a								{width:79px; height:36px; overflow:hidden; float:left; background-position:-320px 0;}
+	.moda_nav ul li span a:hover						{background-position:-320px -36px;}
+	.moda_nav ul li span a.current						{background-position:-320px -36px;}
+	.moda_nav ul li b a									{width:79px; height:36px; overflow:hidden; float:left; background-position:-400px 0;}
+	.moda_nav ul li b a:hover							{background-position:-400px -36px;}
+	.moda_nav ul li b a.current							{background-position:-400px -36px;}

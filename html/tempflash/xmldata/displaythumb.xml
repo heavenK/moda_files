@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<scroller>
+	<item image="tempflash/image/lathumbs/0.jpg" label="" id='0' data="1" />
+	<item image="tempflash/image/lathumbs/1.jpg" label="" id='1' data="2" />
+	<item image="tempflash/image/lathumbs/2.jpg" label="" id='2' data="3" />
+	<item image="tempflash/image/lathumbs/3.jpg" label="" id='3' data="4" />
+	<item image="tempflash/image/lathumbs/4.jpg" label="" id='4' data="5" />
+	<item image="tempflash/image/lathumbs/5.jpg" label="" id='5' data="6" />
+	<item image="tempflash/image/lathumbs/6.jpg" label="" id='6' data="7" />
+	<item image="tempflash/image/lathumbs/7.jpg" label="" id='7' data="8"  />
+	<item image="tempflash/image/lathumbs/8.jpg" label="" id='8' data="9" />
+	<item image="tempflash/image/lathumbs/9.jpg" label="" id='9' data="10" />
+	<item image="tempflash/image/lathumbs/10.jpg" label="" id='10' data="11" />
+	<item image="tempflash/image/lathumbs/11.jpg" label="" id='11' data="12" />
+	<item image="tempflash/image/lathumbs/12.jpg" label="" id='12' data="13" />
+	<item image="tempflash/image/lathumbs/13.jpg" label="" id='13' data="14"  />
+	<item image="tempflash/image/lathumbs/14.jpg" label="" id='14' data="15" />
+	<item image="tempflash/image/lathumbs/15.jpg" label="" id='15' data="16" />
+	<item image="tempflash/image/lathumbs/16.jpg" label="" id='16' data="17" />
+	<item image="tempflash/image/lathumbs/17.jpg" label="" id='17' data="18" />
+	<item image="tempflash/image/lathumbs/18.jpg" label="" id='18' data="19" />
+	<item image="tempflash/image/lathumbs/19.jpg" label="" id='19' data="20"  />
+
+	
+</scroller>

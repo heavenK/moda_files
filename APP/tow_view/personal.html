@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="keywords" content="大连,大连新闻,大连你好,大连论坛,大连资讯,大连滚子游戏,大连生活,五年四班,大连博客,大连话,大连图片,大连视频,大连交友,大连问吧,大连知道,大连人物,大连团购,大连旅游,大连餐饮,大连教育,大连房产,大连汽车,大连娱乐,大连购物,大连摄影,news,dalian,daliannews" />
+<title>个人首页——大连超级美女榜</title>
+<link href="two_styles/moda_personal_reset.css" rel="stylesheet" type="text/css" />
+<link href="two_styles/moda_personal_header.css" rel="stylesheet" type="text/css" />
+<link href="two_styles/moda_footer.css" rel="stylesheet" type="text/css" />
+<link href="two_styles/moda_index.css" rel="stylesheet" type="text/css" />
+<link href="two_styles/moda_personal_index.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<div id="full"><!--整体-->
+
+    <?php  require(APP_DIR . '/tow_view/header_loop.html'); ?> 
+
+    <div id="personal_index_left"><!--左半部分-->
+    	
+        <div id="personal_index_Data"><!--个人资料-->
+        	<span>
+            	<div id="personal_index_Data_Data">
+                    <dl>
+                        <dt><a href="?Controller=ModaIndex&action=GeRenZiLiao&id=<?php echo $result['user_id']?>" target="_blank"><img src="<?php echo $result['head_img']?>" width="138" height="138" border="0" /></a></dt>
+                        <dd>
+                        
+                            <?php if($result['pass'] == 1){?>
+                            <?php if($rankshow['rank_id'] != 7){ ?>
+                                <h3><a href="#" target="_blank"><?php echo $modauserext['xingming']?></a></h3>
+                                <strong>身 高：<?php echo $modauserext['shengao']?></strong>
+                                <strong>体 重：<?php echo $modauserext['tizhong']?></strong>
+                                <strong>三 围：<?php  echo stripslashes($modauserext['sanwei'])?></strong>
+                                <strong>星 座：<?php echo $modauserext['xingzuo']?></strong>
+                            <?php }else{?>
+                                <h3><a href="#" target="_blank"><?php echo $result['truename']?></a></h3>
+                                <strong>身 高：<?php echo stripslashes($result['height'])?></strong>
+                                <strong>体 重：<?php echo stripslashes($result['weight'])?></strong>
+                                <strong>三 围：<?php  echo stripslashes($result['chestmeasurement'])?>/<?php  echo stripslashes($result['waistline'])?>/<?php echo stripslashes($result['hip'])?></strong>
+                                <strong>星 座：<?php echo $result['starsings']?></strong>
+                            <?php }}?>
+                            <?php if($result['pass'] == 11){?>
+                            <strong>电话：<?php echo $result['some_words']?></strong>
+                            
+                            <?php }?>
+                        </dd>
+                    </dl>
+                    
+                            <?php if($rankshow['rank_id'] != 7){ ?>
+                    <em>美达寄语：<i><?php echo stripslashes($modauserext['meidajiyu'])?></i></em>
+                            <?php }else{?>
+                    <em>美达寄语：<i><?php echo stripslashes($result['announcement'])?></i></em>
+                            <?php }?>
+                    
+                    <b>+ <a href="?Controller=ModaIndex&action=GeRenZiLiao&id=<?php echo $result['user_id']?>" target="_blank">点击查看详细资料</a></b>
+                </div>
+                <ul>
+                	<li id="personal_index_Data_Hits">
+                        <b><a href="#" title="" target="_blank"><?php echo $result['truename']?></a>（总人气:<?php echo $userext['huoyuedu']+$userext['fensishu']?>）</b>
+                        <dl>
+                            <dt><i>活跃度:</i><strong><img src="two_images/index_hits_bar_a.png" width="<?php echo $userext['huoyuedupoint']?>" height="22" border="0" /><pre style="color:#c274a7;"><?php echo $userext['huoyuedu']?></pre></strong></dt>
+                            <dt><i>粉丝数:</i><strong><img src="two_images/index_hits_bar_b.png" width="<?php echo $userext['fensishupoint']?>" height="22" border="0" /><pre style="color:#8082e3;"><?php echo $userext['fensishu']?></pre></strong></dt>
+                        </dl>
+                    </li>
+                    <li id="personal_index_Data_button"><a href="?Controller=ModaIndex&action=Addfans&user_id=<?php echo $result['user_id']?>" ></a></li>
+                </ul>
+            </span>
+        </div>
+        
+        
+        <?php if($result['pass'] == 1){?>
+        
+        <div id="moda_index_VCR"><!--美达VCR-->
+        	<span>
+                <dl>
+                    <dt></dt>
+                    <dd><a href="?Controller=ModaIndex&action=AllNews" target="_blank">+ 所有美达VCR</a></dd>
+                </dl>
+                <em><a href="?Controller=ModaIndex&action=ModaNews&id=<?php echo $vcrdata['news_id']?>" title="" target="_blank"><img src="<?php echo $vcrdata['img_url']?>" width="276" height="168" border="0" /></a></em>
+                <b><a href="?Controller=ModaIndex&action=ModaNews&id=<?php echo $vcrdata['news_id']?>" title="" target="_blank"><?php echo $vcrdata['news_title']?></a></b>
+                <i>特约拍摄:新青年视频工作室</i>
+            </span>
+        </div>
+        
+        <div id="moda_index_MHKC"><!--美达贴吧-->
+        	<span>
+            	<p></p>
+                <ul>
+     
+                
+					<?php foreach($rowset as $data){ ?>
+                	<li>
+                    	<i>[<a href="?Controller=ShowIndex&action=ModaClub&user_id=841" target="_blank">美达贴吧</a>]</i><em><a href="?Controller=ShowIndex&action=ModaClubCall&user_id=<?php echo $visitUser_id?>&club_id=<?php echo $data['club_id']?>" title="" target="_blank"><?php echo $data['title']?></a></em>
+                    </li>
+					 <?php }?>	 
+                    
+                </ul>
+                <b>+ <a href="?Controller=ModaIndex&action=ModaTB" target="_blank">进入美达贴吧</a></b>
+            </span>
+        </div>
+        
+        <?php }?>
+        
+        
+    </div>
+    
+    <div id="personal_index_Show"><!--最新个人展示-->
+    	<span><a href="?Controller=ShowIndex&action=ModaHelp" target="_blank">如何发布个人展示？</a></span>
+        <ul>
+        			<?php if($mainshow){?>
+                    <li>
+                        <em><a href="?Controller=ShowIndex&action=ShowDetail&user_id=<?php echo $id;?>&show_id=<?php echo $mainshow['show_id'];?>" title="" target="_blank"><img src="<?php echo $mainshow['show_img']?>" width="298" height="198" border="0" /></a></em>
+                        <h3><a href="?Controller=ShowIndex&action=ShowDetail&user_id=<?php echo $id;?>&show_id=<?php echo $mainshow['show_id'];?>" target="_blank"><?php echo stripslashes($mainshow['title']) ?></a></h3>
+                        <i><b><?php echo $mainshow['views']?></b> 次浏览 / <b><?php echo $mainshow['discuss_count']?></b> 条评论</i>
+                    </li>
+        			<?php }?>
+        
+					<?php foreach($showData as $data){?>
+                    <li>
+                        <em><a href="?Controller=ShowIndex&action=ShowDetail&user_id=<?php echo $id;?>&show_id=<?php echo $data['show_id'];?>" title="" target="_blank"><img src="<?php echo $data['show_img']?>" width="298" height="198" border="0" /></a></em>
+                        <h3><a href="?Controller=ShowIndex&action=ShowDetail&user_id=<?php echo $id;?>&show_id=<?php echo $data['show_id'];?>" target="_blank"><?php echo stripslashes($data['title']) ?></a></h3>
+                        <i><b><?php echo $data['views']?></b> 次浏览 / <b><?php echo $data['discuss_count']?></b> 条评论</i>
+                    </li>
+                    <?php }?>
+                    
+        </ul>
+        <p><a href="?Controller=ShowIndex&action=ShowPosts&user_id=<?php echo $id;?>" target="_blank">+ 点击查看全部展示</a></p>
+    </div>
+    
+    <?php  require(APP_DIR . '/tow_view/footer.html'); ?> 
+
+</div>
+
+</body>
+</html>

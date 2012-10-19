@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<link rel="stylesheet" href="css/common.css" type="text/css" />
+<title>管理区域</title>
+<style type="text/css">
+<!--
+.STYLE1 {
+	color: #3333FF;
+	font-size: 14px;
+	font-weight: bold;
+}
+.STYLE2 {font-size: 14px}
+.STYLE3 {font-weight: bold}
+-->
+</style>
+</head>
+
+<body>
+<div id="man_zone">
+  <table width="99%" border="0" align="center"  cellpadding="3" cellspacing="1" class="table_style">
+    <tr>
+      <td width="18%" class="left_title_1">        <div align="center">标题图片</div></td>
+      
+	  <td width="12%" class="left_title_1"><div align="center">名称 </div></td>
+      <td width="23%" class="left_title_1"><div align="center">票数</div></td>
+      <td width="23%" class="left_title_1">        <center>
+          <span class="left-title"></span>
+          <div align="center">浏览量</div>
+        </center>      </td>
+      <td width="24%" class="left_title_1"><div align="center"><span class="left-title">操作 </span></div></td>
+    </tr>
+	<?php foreach($rowset as $val){?>
+    <tr>
+      <td class="left_title_2"><div align="center"><img src="<?php echo $val["thumbimg"];?>" width="80" height="60" /></div></td>
+	  <td><div align="center"><?php echo $val["title"];?></div></td>
+      <td><div align="center"><?php echo $val["votes"];?></div></td>
+      <td><div align="center"><?php echo $val["views"];?></div></td>
+      <td><div align="center">[<a href="index.php?controller=Admin&action=PollEdit&id=<?php echo $val["poll_id"];?>">修改</a>]
+      [<a href="index.php?controller=Admin&action=PollDel&id=<?php echo $val["poll_id"];?>">删除</a>] </div></td>
+    </tr>
+	<?php }?>
+  </table>
+
+  <p><?php echo $page->pageHtml;?></p>
+</div>  
+</p>
+
+</body>
+</html>

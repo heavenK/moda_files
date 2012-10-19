@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>MODA美达|MODA|美达|大连美女榜|大连美女</title>
+<link href="css/css3.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+function checkbox(obj){
+    var o=obj.getElementsByTagName("input")[0];
+    if(o.checked==""||!o.checked){
+        o.checked=true;
+        o.parentNode.className="checkbox_checked";
+    }else{
+        o.checked=false;
+        o.parentNode.className="checkbox"
+    }
+}
+function radio(elem,obj){
+    var oo=obj.getElementsByTagName("input")[0];
+    if(oo.checked) oo.checked=false;
+    else oo.checked=true;
+    var o=(document.getElementsByName(elem));
+    var n=o.length;
+    for (var i=0;i<n;i++){
+        var oo=o[i];
+        if(oo.checked==""||!oo.checked){
+            oo.parentNode.className="radioButton";
+        }else{
+            oo.parentNode.className="radioButton_checked";
+        }
+    }
+}
+</script>
+</head>
+
+<body>
+<div id="ModaBox"><!--容器-->
+	<div id="ModaLogin"><a href="http://passport.we54.com/Index/login?forward=<?php echo urlencode("http://moda.we54.com");?>" target="_blank">登录</a> | <a href="http://passport.we54.com/Index/register" target="_blank">注册</a> | <a href="?Controller=Index3&action=Register">加入美达</a></div>
+	<div id="ModaFlash"><!--flash-->
+	  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="1100" height="515">
+        <param name="movie" value="images/modaflashbanner.swf" />
+        <param name="quality" value="high" />
+        <embed src="images/modaflashbanner.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="1100" height="515"></embed>
+      </object>
+	</div>
+	<div id="ModaHeader"><!--导航-->
+		<div id="ModaNav"><a href="http://moda.we54.com"><img src="images/moda002.jpg" alt="返回首页" width="253" height="51" border="0" /></a><a href="http://www.we54.com/dlgril/"><img src="images/moda003.jpg" width="194" height="51" border="0" alt="活动介绍" /></a><a href="about.html"><img src="images/moda004.jpg" width="189" height="51" border="0" alt="关于美达" /></a><a href="?Controller=Index3&action=Register"><img src="images/moda014.jpg" width="329" height="51" border="0" alt="申请加入美达" /></a></div>
+		<div id="ModaPicA"><img src="images/moda013.jpg" width="401" height="90" border="0" class="ModaPicA_a" /><img src="images/moda021.jpg" width="355" height="47" border="0" class="ModaPicA_b" /></div>
+		<div id="ModaPicB">
+		<?php foreach($rowset3 as $val3){?>
+			<a href="?Controller=Index3&action=Content&id=<?php echo $val3['poll_id'];?>" ><img src="<?php echo $val3['thumbimg'];?>" border="0" /></a><?php }?>
+		</div>
+	</div>
+	
+		
+	<div id="Moda_10jin7">
+		<img src="images/moda018.jpg" width="525" height="61" border="0" class="Moda_10jin7_Img" />
+		<ul>
+			
+			<?php foreach($rowset as $val){?>
+			<li><a href="?Controller=Index3&action=Content&id=<?php echo $val['poll_id'];?>"><img src="<?php echo $val['thumbimg'];?>" width="150" height="225" border="0" /></a>
+				<a href="?Controller=Index3&action=Content&id=<?php echo $val['poll_id'];?>" class="Moda_10jin7_1of3"><?php echo $val['title'];?></a>
+				<a href="?Controller=Index2&action=Content&id=<?php echo $val['poll_id'];?>"><img src="images/md004.gif" width="18" height="12" border="0" class="Moda_10jin7_2of3" alt="观看视频" /></a>
+				<a href="?Controller=Index2&action=Content&id=<?php echo $val['poll_id'];?>"><img src="images/md005.jpg" width="15" height="12" border="0" class="Moda_10jin7_3of3" alt="美达展示" /></a>
+			</li>
+			<?php }?>
+			
+		</ul>
+	</div>
+	
+	
+	<div id="ModaIndexVideo"><!--美达视频-->
+		<div id="ModaIndexVideoA"><img src="images/moda027.jpg" width="489" height="313" border="0" /></div>
+		<div id="ModaIndexVideoB"><object height="300" width="400" data="http://moda.we54.com/vcastr.swf?vcastr_file=http://file.we54.com/edison/video/conglin/bjdl.flv&IsAutoPlay=0" type="application/x-shockwave-flash">
+<param name="allowFullScreen" value="true"/>
+<param name="movie" value="http://moda.we54.com/vcastr.swf?vcastr_file=http://file.we54.com/edison/video/conglin/bjdl.flv&IsAutoPlay=0"/>
+</object></div>
+	</div>
+	
+	<div id="Moda_30jin10">
+		<img src="images/moda019.jpg" width="553" height="62" border="0" class="Moda_30jin10_Img" />
+		<ul>
+			<?php foreach($rowset2 as $val){?>
+			<li><a href="?Controller=Index3&action=Content&id=<?php echo $val['poll_id'];?>"><img src="<?php echo $val['thumbimg'];?>" width="152" height="163" border="0" class="Moda_30jin10_A" /></a>
+				<a href="?Controller=Index3&action=Content&id=<?php echo $val['poll_id'];?>" class="Moda_30jin10_B"><?php echo $val['title'];?></a>
+				<a href="?Controller=Index3&action=Content&id=<?php echo $val['poll_id'];?>"><img src="images/md004.gif" width="18" height="12" border="0" class="Moda_10jin7_2of3" alt="观看视频" /></a>
+				<a href="?Controller=Index3&action=Content&id=<?php echo $val['poll_id'];?>"><img src="images/md005.jpg" width="15" height="12" border="0" class="Moda_10jin7_3of3" alt="进入论坛" /></a>
+			</li>
+			<?php }?>
+			
+		</ul>
+	</div>
+	<div id="Modalook"><a href="http://bbs.we54.com/forumdisplay.php?fid=780" target="_blank"><img src="images/moda020.jpg" width="609" height="78" border="0" class="ModalookImg" /></a></div>
+	
+	<div id="ModaBottom"><img src="images/md010.jpg" width="188" height="40" border="0" class="ModaBottomA" /><span class="ModaBottomB">版权所有：<a href="#">大连方佰信息技术有限公司 www.we54.com</a> 2009 copyright</span></div>
+</div>
+</body>
+</html>

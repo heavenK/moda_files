@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>MODA扩展设置</title>
+<!-- CSS -->
+<link href="/extadminstyle/css/transdmin.css" rel="stylesheet" type="text/css" media="screen" />
+<!--[if IE 6]><link rel="stylesheet" type="text/css" media="screen" href="/extadminstyle/css/ie6.css" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" type="text/css" media="screen" href="/extadminstyle/css/ie7.css" /><![endif]-->
+<link href="/extadminstyle/css/jquery-pop.css" rel="stylesheet" type="text/css" />
+<!-- JavaScripts-->
+<script type="text/javascript" src="/extadminstyle/js/jquery.js"></script>
+<script type="text/javascript" src="/extadminstyle/js/jNice.js"></script>
+<script type="text/javascript" src="/extadminstyle/js/jquery-latest.pack.js"></script>
+<script type="text/javascript" src="/extadminstyle/js/jquery-pop.pack.js"></script>
+
+<script>
+function setid(nu){
+	document.form1.nu.value = nu;
+}
+function setid_2(id){
+	document.form2.id.value = id;
+}
+</script>
+
+<style>
+
+
+#boxes #dialog {
+  padding:10px;
+}
+
+</style>
+</head>
+
+<body>
+	<div id="wrapper">
+    	<h1><a href="#"><span>Transdmin Light</span></a></h1>
+        
+        <?php  require(APP_DIR . '/ExtAdminView/header.html'); ?> 
+        
+        <div id="containerHolder">
+			<div id="container">
+        		<div id="sidebar">
+                	<ul class="sideNav">
+                    	<li><a href="?Controller=ExtAdmin" class="active">首页轮换图片</a></li>
+                    	<li><a href="?Controller=ExtAdmin&action=Otherads">其他广告</a></li>
+                    	<li><a href="?Controller=ExtAdmin&action=OnesPices">用户页面图片</a></li>
+                    </ul>
+                </div>    
+                
+                <h2  style="font-size:14px;"><a href="#" >广告 & 图片</a> &raquo; <a href="#" class="active">首页轮换图片</a></h2>
+                
+                <div id="main">
+					<h3>轮换图片列表</h3>
+                    	<table cellpadding="0" cellspacing="0">
+                        
+							<tr>
+                                <td class="action_b">NO.1 &nbsp;&nbsp;&nbsp;链接地址:<?php $dat = $doorDat['img1_link']; if($dat){$tmp='';if(strlen($dat)>50)$tmp='......'; echo '<a href="'.$dat.'" target="_blank" class="view">'.substr($dat,0,50).$tmp.'</a>'; }?></td>
+                                <td class="action"><a href="<?php echo $doorDat['img_1']?>" target="_blank" class="view">View</a><a href="#dialog" name="modal" class="edit" onclick="setid('1')">Edit</a><a href="#" class="delete"></a></td>
+                            </tr>  
+                        
+							<tr class="odd">
+                                <td class="action_b">NO.2 &nbsp;&nbsp;&nbsp;链接地址:<?php $dat = $doorDat['img2_link']; if($dat){$tmp='';if(strlen($dat)>50)$tmp='......'; echo '<a href="'.$dat.'" target="_blank" class="view">'.substr($dat,0,50).$tmp.'</a>'; }?></td>
+                                <td class="action"><a href="<?php echo $doorDat['img_2']?>" target="_blank" class="view">View</a><a href="#dialog" name="modal" class="edit" onclick="setid('2')">Edit</a><a href="#" class="delete"></a></td>
+                            </tr>  
+                                                    
+							<tr>
+                                <td class="action_b">NO.3 &nbsp;&nbsp;&nbsp;链接地址:<?php $dat = $doorDat['img3_link']; if($dat){$tmp='';if(strlen($dat)>50)$tmp='......'; echo '<a href="'.$dat.'" target="_blank" class="view">'.substr($dat,0,50).$tmp.'</a>'; }?></td>
+                                <td class="action"><a href="<?php echo $doorDat['img_3']?>" target="_blank" class="view">View</a><a href="#dialog" name="modal" class="edit" onclick="setid('3')">Edit</a><a href="#" class="delete"></a></td>
+                            </tr>  
+                        
+							<tr class="odd">
+                                <td class="action_b">NO.4 &nbsp;&nbsp;&nbsp;链接地址:<?php $dat = $doorDat['img4_link']; if($dat){$tmp='';if(strlen($dat)>50)$tmp='......'; echo '<a href="'.$dat.'" target="_blank" class="view">'.substr($dat,0,50).$tmp.'</a>'; }?></td>
+                                <td class="action"><a href="<?php echo $doorDat['img_4']?>" target="_blank" class="view">View</a><a href="#dialog" name="modal" class="edit" onclick="setid('4')">Edit</a><a href="#" class="delete"></a></td>
+                            </tr>  
+                                                    
+							<tr>
+                                <td class="action_b">NO.5 &nbsp;&nbsp;&nbsp;链接地址:<?php $dat = $doorDat['img5_link']; if($dat){$tmp='';if(strlen($dat)>50)$tmp='......'; echo '<a href="'.$dat.'" target="_blank" class="view">'.substr($dat,0,50).$tmp.'</a>'; }?></td>
+                                <td class="action"><a href="<?php echo $doorDat['img_5']?>" target="_blank" class="view">View</a><a href="#dialog" name="modal" class="edit" onclick="setid('5')">Edit</a><a href="#" class="delete"></a></td>
+                            </tr>  
+                        
+							<tr class="odd">
+                                <td class="action_b">NO.6 &nbsp;&nbsp;&nbsp;链接地址:<?php $dat = $doorDat['img6_link']; if($dat){$tmp='';if(strlen($dat)>50)$tmp='......'; echo '<a href="'.$dat.'" target="_blank" class="view">'.substr($dat,0,50).$tmp.'</a>'; }?></td>
+                                <td class="action"><a href="<?php echo $doorDat['img_6']?>" target="_blank" class="view">View</a><a href="#dialog" name="modal" class="edit" onclick="setid('6')">Edit</a><a href="#" class="delete"></a></td>
+                            </tr>  
+                                                    
+							<tr>
+                                <td class="action_b">左1广告 &nbsp;&nbsp;&nbsp;链接地址:<?php $dat = $doorDat['img7_link']; if($dat){$tmp='';if(strlen($dat)>50)$tmp='......'; echo '<a href="'.$dat.'" target="_blank" class="view">'.substr($dat,0,50).$tmp.'</a>'; }?></td>
+                                <td class="action"><a href="<?php echo $doorDat['img_7']?>" target="_blank" class="view">View</a><a href="#dialog" name="modal" class="edit" onclick="setid('7')">Edit</a><a href="#" class="delete"></a></td>
+                            </tr>  
+                        
+							<tr class="odd">
+                                <td class="action_b">左2广告 &nbsp;&nbsp;&nbsp;链接地址:<?php $dat = $doorDat['img8_link']; if($dat){$tmp='';if(strlen($dat)>50)$tmp='......'; echo '<a href="'.$dat.'" target="_blank" class="view">'.substr($dat,0,50).$tmp.'</a>'; }?></td>
+                                <td class="action"><a href="<?php echo $doorDat['img_8']?>" target="_blank" class="view">View</a><a href="#dialog" name="modal" class="edit" onclick="setid('8')">Edit</a><a href="#" class="delete"></a></td>
+                            </tr>  
+                                                    
+							<tr>
+                                <td class="action_b">上翻1广告 &nbsp;&nbsp;&nbsp;链接地址:<?php $dat = $ads_uproll[0]['link']; if($dat){$tmp='';if(strlen($dat)>50)$tmp='......'; echo '<a href="'.$dat.'" target="_blank" class="view">'.substr($dat,0,50).$tmp.'</a>'; }?></td>
+                                <td class="action"><a href="<?php echo $ads_uproll[0]['image']?>" target="_blank" class="view">View</a><a href="#dialog2" name="modal" class="edit" onclick="setid_2('<?php echo $ads_uproll[0]['id']?>')">Edit</a><a href="#" class="delete"></a></td>
+                            </tr>  
+                        
+							<tr class="odd">
+                                <td class="action_b">上翻2广告 &nbsp;&nbsp;&nbsp;链接地址:<?php $dat = $ads_uproll[1]['link']; if($dat){$tmp='';if(strlen($dat)>50)$tmp='......'; echo '<a href="'.$dat.'" target="_blank" class="view">'.substr($dat,0,50).$tmp.'</a>'; }?></td>
+                                <td class="action"><a href="<?php echo $ads_uproll[1]['image']?>" target="_blank" class="view">View</a><a href="#dialog2" name="modal" class="edit" onclick="setid_2('<?php echo $ads_uproll[1]['id']?>')">Edit</a><a href="#" class="delete"></a></td>
+                            </tr>  
+                                   
+							<tr>
+                                <td class="action_b">上翻3广告 &nbsp;&nbsp;&nbsp;链接地址:<?php $dat = $ads_uproll[2]['link']; if($dat){$tmp='';if(strlen($dat)>50)$tmp='......'; echo '<a href="'.$dat.'" target="_blank" class="view">'.substr($dat,0,50).$tmp.'</a>'; }?></td>
+                                <td class="action"><a href="<?php echo $ads_uproll[2]['image']?>" target="_blank" class="view">View</a><a href="#dialog2" name="modal" class="edit" onclick="setid_2('<?php echo $ads_uproll[2]['id']?>')">Edit</a><a href="#" class="delete"></a></td>
+                            </tr>  
+                        
+							<tr class="odd">
+                                <td class="action_b">上翻4广告 &nbsp;&nbsp;&nbsp;链接地址:<?php $dat = $ads_uproll[3]['link']; if($dat){$tmp='';if(strlen($dat)>50)$tmp='......'; echo '<a href="'.$dat.'" target="_blank" class="view">'.substr($dat,0,50).$tmp.'</a>'; }?></td>
+                                <td class="action"><a href="<?php echo $ads_uproll[3]['image']?>" target="_blank" class="view">View</a><a href="#dialog2" name="modal" class="edit" onclick="setid_2('<?php echo $ads_uproll[3]['id']?>')">Edit</a><a href="#" class="delete"></a></td>
+                            </tr>  
+                                   
+                                   
+                                   
+                                   
+                                   
+                                                    
+                        </table>
+					<h3>轮换设置（暂时无法使用)</h3>
+                            
+                                <fieldset>
+                                    <p><label>显示个数:</label>
+                                    <select id="status" name="status">
+                                    	<?php echo '<option value="'.$doorDat['status'].'">'.$doorDat['status'].'</option>'?>
+                                        <option value="1">Select one</option>
+                                        <option value="2">Select two</option>
+                                        <option value="3">Select tree</option>
+                                        <option value="4">Select four</option>
+                                        <option value="5">Select five</option>
+                                        <option value="6">Select six</option>
+                                        <option value="7">Select seven</option>
+                                        <option value="8">Select eight</option>
+                                    </select>
+                                    </p>
+                                    <input type="submit" value="Submit Query" />
+                                </fieldset>
+                                
+                </div>
+                
+                <div class="clear"></div>
+            </div>
+        </div>	
+        
+        <p id="footer">Feel free to use and customize it. <a href="http://www.perspectived.com">Credit is appreciated.</a></p>
+    </div>
+    
+<div id="boxes">
+        <div id="dialog" class="window">
+                        
+                        <div id="main" style="float:left; width:500px; text-align:left;">
+                            <form name="form1" id="form1" action="?Controller=ExtAdmin&action=Index" class="jNice" enctype="multipart/form-data" method="post">
+                            	<input type="hidden" name="nu" id="nu"  />
+                                <fieldset>
+                                    <p><h3  style=" text-align:center">修改 &nbsp;&nbsp;&nbsp; <a href="#"class="close"/>Close it</a></h3></p>
+                                    <p><label>上传图片:</label><input type="file" name="upload" id="upload" class="text-long" style="width:450px; height:16px;"/></p>
+                                    <p><label>链接地址:</label><input type="text" name="addr" id="addr" class="text-long" style="width:450px;"/></p>
+                                    <input type="submit" value="Submit Query" />
+                                </fieldset>
+                                
+                            </form>
+                        </div>
+        
+        </div>
+        <div id="mask"></div>
+</div>
+    
+    
+<div id="boxes">
+        <div id="dialog2" class="window">
+                        
+                        <div id="main" style="float:left; width:500px; text-align:left;">
+                            <form name="form2" id="form2" action="?Controller=ExtAdmin&action=Postads" class="jNice" enctype="multipart/form-data" method="post">
+                            	<input type="hidden" name="id" id="id"  />
+                            	<input type="hidden" name="type" value="首页A"  />
+                                <fieldset>
+                                    <p><h3  style=" text-align:center">修改 &nbsp;&nbsp;&nbsp; <a href="#"class="close"/>Close it</a></h3></p>
+                                    <p><label>上传图片:</label><input type="file" name="image" id="image" class="text-long" style="width:450px; height:16px;"/></p>
+                                    <p><label>链接地址:</label><input type="text" name="link" id="link" class="text-long" style="width:450px;"/></p>
+                                    <input type="submit" value="Submit Query" />
+                                </fieldset>
+                                
+                            </form>
+                        </div>
+        
+        </div>
+        <div id="mask"></div>
+</div>
+    
+    
+    
+</body>
+</html>
+
+

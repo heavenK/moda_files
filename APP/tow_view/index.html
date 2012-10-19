@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="keywords" content="大连,大连新闻,大连你好,大连论坛,大连资讯,大连滚子游戏,大连生活,五年四班,大连博客,大连话,大连图片,大连视频,大连交友,大连问吧,大连知道,大连人物,大连团购,大连旅游,大连餐饮,大连教育,大连房产,大连汽车,大连娱乐,大连购物,大连摄影,news,dalian,daliannews" />
+<title>美达——大连超级美女榜</title>
+<link href="two_styles/moda_reset.css" rel="stylesheet" type="text/css" />
+<link href="two_styles/moda_header.css" rel="stylesheet" type="text/css" />
+<link href="two_styles/moda_footer.css" rel="stylesheet" type="text/css" />
+<link href="two_styles/moda_index.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+<div id="full"><!--整体-->
+
+    <?php  require(APP_DIR . '/tow_view/header_list.html'); ?> 
+    
+    <div id="moda_index_left"><!--左侧部分-->
+    
+    	<div id="moda_index_poster_a"><!--第一个广告-->
+        	<a href="<?php echo $doorDat['img7_link']?>" target="_blank"><img src="<?php echo $doorDat['img_7']?>" width="310" height="251" border="0" /></a>
+        </div>
+        
+        <div id="moda_index_poster_b"><!--第二个广告-->
+        	<a href="<?php echo $doorDat['img8_link']?>" target="_blank"><img src="<?php echo $doorDat['img_8']?>" width="350" height="251" border="0" /></a>
+        </div>
+        
+        <div id="moda_index_TopGirl"><!--大连超级美女榜-->
+            <p><a href="?Controller=ModaIndex&action=ModaLank" target="_blank">+ 查看所有美达</a></p>
+            <ul>
+            
+						<?php foreach($result2 as $r2){ $showDat = $tableModaShow->getShowByShowIdNoLimit($r2['show_id']); ?>
+                        <?php if($r2['rank_id'] == 12){?>
+                            <li>
+                                <em><a class="second_season" href="?Controller=ShowIndex&action=ShowDetail&user_id=<?php echo $r2['user_id']?>&show_id=<?php echo $r2['show_id']?>" title="" target="_blank"><img src="<?php echo $r2['head_img']?>" width="150" height="98" border="0" /></a></em>
+                                <b><a href="?Controller=ShowIndex&action=ShowDetail&user_id=<?php echo $r2['user_id']?>&show_id=<?php echo $r2['show_id']?>" title="" target="_blank"><?php echo $r2['title']?></a></b>
+                                <i><strong><?php echo $showDat['views']?></strong> 次浏览 / <strong><?php echo $showDat['discuss_count']?></strong>  次评论</i>
+                            </li>
+                        <?php }else{?>    
+                            <li>
+                                <em><a class="first_season" href="?Controller=ShowIndex&action=ShowDetail&user_id=<?php echo $r2['user_id']?>&show_id=<?php echo $r2['show_id']?>" title="" target="_blank"><img src="<?php echo $r2['head_img']?>" width="150" height="98" border="0" /></a></em>
+                                <b><a href="?Controller=ShowIndex&action=ShowDetail&user_id=<?php echo $r2['user_id']?>&show_id=<?php echo $r2['show_id']?>" title="" target="_blank"><?php echo $r2['title']?></a></b>
+                                <i><strong><?php echo $showDat['views']?></strong> 次浏览 / <strong><?php echo $showDat['discuss_count']?></strong>  次评论</i>
+                            </li>
+                            
+						<?php }}?>	
+                
+            </ul>
+            <span><a href="?Controller=ModaIndex&action=ModaLank" target="_blank">+ 点击查看美达美女榜</a></span>
+        </div>
+        
+        <div id="moda_index_Show"><!--展示-->
+        	<dl>
+            	<dt></dt>
+                <dd>+ <a href="?Controller=ModaIndex&action=NewAdd" target="_blank">查看所有美达</a>！</dd>
+            </dl>
+            <ul>
+					<?php foreach($showDatass as $data){?>
+                        <li>
+                            <em><a href="?Controller=ShowIndex&action=ShowDetail&user_id=<?php echo $data['user_id'];?>&show_id=<?php echo $data['show_id'];?>" title="" target="_blank"><img src="<?php echo $data['show_img']?>" width="150" height="98" border="0" /></a></em>
+                            <b><a href="?Controller=ShowIndex&action=ShowDetail&user_id=<?php echo $data['user_id'];?>&show_id=<?php echo $data['show_id'];?>" title="" target="_blank"><?php echo $data['nickname']?>-<?php echo stripslashes($data['title'])?></a></b>
+                            <i><strong><?php echo $data['views']?></strong> 次浏览 <span>/</span> <strong><?php echo $data['discuss_count']?></strong>  评论</i>
+                        </li>
+					<?php }?>	
+            </ul>
+            <p><a href="?Controller=ModaIndex&action=NewAdd" target="_blank">+ 点击查看全部美达会员</a></p>
+        </div>
+        
+    </div>
+    
+    <div id="moda_index_right"><!--右侧部分-->
+    	
+        <div id="moda_index_poster_c"><!--第三个广告-->
+        	<img src="two_images/gg_03.jpg" width="300" height="120" border="0" usemap="#Map" />
+            <map name="Map" id="Map">
+              <area shape="rect" coords="50,82,128,103" href="?Controller=Index3&action=Register" title="" target="_blank" />
+              <area shape="rect" coords="176,82,273,105" href="http://bbs.we54.com/forumdisplay.php?fid=949" title="" target="_blank" />
+            </map>
+      </div>
+        
+        <div id="moda_index_VCR"><!--美达VCR-->
+        	<span>
+                <dl>
+                    <dt></dt>
+                    <dd><a href="?Controller=ModaIndex&action=AllNews" target="_blank">+ 所有美达VCR</a></dd>
+                </dl>
+                <em><a href="?Controller=ModaIndex&action=ModaNews&id=<?php echo $news['news_id']?>" title="" target="_blank"><img src="<?php echo $news['img_url']?>" width="276" height="168" border="0" /></a></em>
+                <b><a href="?Controller=ModaIndex&action=ModaNews&id=<?php echo $news['news_id']?>" title="" target="_blank"><?php echo $news['news_title']?></a></b>
+                <i>特约拍摄:新青年影视</i>
+            </span>
+        </div>
+        
+        <div id="moda_index_Join"><!--美达合作机构-->
+        	<span>
+            	<p></p>
+                <ul>
+                
+                
+                	<li>
+                    	<em><a href="http://macchiato.cc/" target="_blank"><img src="two_images/54work.jpg" width="60" height="60" border="0" /></a></em>
+                        <b><a href="http://macchiato.cc/" target="_blank">玛琪雅朵摄影组</a></b>
+                        <i>如同名字一样简洁。是用光线，创意，观念浇铸的一所艺术工厂...</i>
+                    </li>
+                    
+                	<li>
+                    	<em><a href="http://photo.we54.com/" target="_blank"><img src="two_images/yingshi.jpg" width="60" height="60" border="0" /></a></em>
+                        <b><a href="http://photo.we54.com/" target="_blank">新青年影视</a></b>
+                        <i>美,就那么一个字，总会从光与影的交界处偷偷溜走把真正属于你...</i>
+                    </li>
+                    
+                	<li>
+                    	<em><a href="http://weibo.com/youngfilm" target="_blank"><img src="two_images/sheying.jpg" width="60" height="60" border="0" /></a></em>
+                        <b><a href="http://weibo.com/youngfilm" target="_blank">新青年摄影</a></b>
+                        <i>时尚就像一个以时间为变量的函数公式，随着时间的推移，时尚...</i>
+                    </li>
+                    
+                    
+                    
+                </ul>
+            </span>
+        </div>
+        
+        
+        <div id="moda_index_XGirl"><!--美达X-GIRL-->
+        	<span>
+            	<strong></strong>
+                <em><a href="<?php echo $xgirldat['link']?>" title="" target="_blank"><img src="<?php echo $xgirldat['home_img']?>" width="280" height="136" border="0" /></a></em>
+                <b><a href="<?php echo $xgirldat['link']?>" title="" target="_blank">本期MODA<?php echo $xgirldat['title']?></a></b>
+                <i><?php echo $xgirldat['content']?></i>
+            </span>
+        </div>
+        
+        
+        
+        
+        <div id="moda_index_Hits"><!--美达人气榜-->
+        	<span>
+            	<p></p>
+                <ul>
+                
+                	<?php foreach($userext as $dat){?>
+                	<li>
+                    	<em><a href="?Controller=ModaIndex&action=Person&id=<?php echo $dat['user_id']?>" title="" target="_blank"><img src="<?php echo $dat['face']?>" width="70" height="70" border="0" /></a></em>
+                        <b><a href="?Controller=ModaIndex&action=Person&id=<?php echo $dat['user_id']?>" title="" target="_blank"><?php echo $dat['truename']?></a>（总人气:<?php echo  $dat['extdats']['zongshu']?>）</b>
+                        <dl>
+                        	<dt><i>活跃度:</i><strong><img src="two_images/index_hits_bar_a.png" width="<?php if($dat['extdats']['huoyuedupoint'] > 150) echo 150; else echo $dat['extdats']['huoyuedupoint']?>" height="22" border="0" /><pre style="color:#c274a7;"><?php echo $dat['extdats']['huoyuedu']?></pre></strong></dt>
+                            <dt><i>粉丝数:</i><strong><img src="two_images/index_hits_bar_b.png" width="<?php if($dat['extdats']['fensishupoint'] > 150) echo 150; else echo $dat['extdats']['fensishupoint']?>" height="22" border="0" /><pre style="color:#8082e3;"><?php echo $dat['extdats']['fensishu']?></pre></strong></dt>
+                        </dl>
+                    </li>
+                    <?php }?>
+                    
+                </ul>
+            </span>
+        </div>
+        
+        <div id="moda_index_MHKC"><!--美达贴吧-->
+        	<span>
+            	<p></p>
+                <ul>
+                
+						<?php foreach($clubDa as $data){?>
+                            <?php if($data['groupid']!=4){ ?>
+                                <li>
+                                
+                                <?php if($data['uid'] == -1){?>
+                                    <i>[<a href="?Controller=ShowIndex&action=ModaClub&user_id=<?php echo $data['uid']?>" target="_blank">美达贴吧</a>]</i>
+                                <?php }else{?>
+                                    <i>[<a href="?Controller=ShowIndex&action=ModaClub&user_id=<?php echo $data['uid']?>" target="_blank"><?php echo $data['nickname']?>吧</a>]</i>
+                                <?php }?>
+                                    <em><a href="?Controller=ShowIndex&action=ModaClubCall&user_id=<?php echo $data['uid']?>&club_id=<?php echo $data['club_id']?>" title="" target="_blank">							<?php echo $data['title']?>
+    </a></em>
+                                </li>
+                            <?php }else{?>	
+						<?php }}?>	
+                            
+                    
+                </ul>
+                <b>+ <a href="?Controller=ModaIndex&action=ModaTB" target="_blank">进入美达贴吧</a></b>
+            </span>
+        </div>
+        
+    </div>
+    
+    <?php  require(APP_DIR . '/tow_view/footer.html'); ?> 
+
+</div>
+
+</body>
+</html>

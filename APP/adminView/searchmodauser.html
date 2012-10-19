@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<link rel="stylesheet" href="css/common.css" type="text/css" />
+<title>管理区域</title>
+<style type="text/css">
+<!--
+.STYLE1 {
+	color: #3333FF;
+	font-size: 14px;
+	font-weight: bold;
+}
+.STYLE2 {font-size: 14px}
+.STYLE3 {font-weight: bold}
+.banzhurenul{ 
+	width:600px;
+	line-height:14px;
+	height:20px;
+}
+.banzhurenul li {
+	width:120px;
+	float:left;
+}
+-->
+
+
+
+</style>
+
+	
+
+</head>
+
+<body>
+<form action="?controller=Admin&action=SearchUser" method="post" enctype="multipart/form-data" name="form1" id="form1">
+  <div id="man_zone">
+    <table width="99%" border="0" align="center"  cellpadding="3" cellspacing="1" class="table_style">
+      <tr>
+        <td width="14%" class="left_title_1"><center>
+         查询美达会员
+        </center>
+        </td>
+        <td width="86%" class="left_title_1"><span class="left-title">
+          <center>
+          </center>
+        </span></td>
+      </tr>
+      <tr>
+        <td class="left_title_2"><div align="center">昵称</div></td>
+        <td><label><!-- <input name="nianjimingcheng" type="hidden" id="nianjimingcheng" value="" />-->
+            <input name="nickname" type="text" id="nickname" />
+        </label></td>
+      </tr>
+      <tr>
+        <td class="left_title_2"><div align="center"></div></td>
+        <td><label>
+        <input  type="submit" id="查找" value="查找" />
+        </label>
+          <input  type="reset"  value="重置" /></td>
+      </tr>
+    </table>
+
+	<? if($res){?>
+	<? foreach($res as $result){?>	
+	<div id="man_zone">
+	
+  <table width="99%" border="0" align="center"  cellpadding="3" cellspacing="1" class="table_style">
+  
+  	
+    <tr>
+      <td width="5%" class="left_title_1">        <div align="center">用户名</div></td>  
+	  <td width="5%" class="left_title_1"><div align="center">昵称</div></td>
+      <td width="5%" class="left_title_1"><div align="center">真实姓名</div></td>
+       <td width="5%" class="left_title_1"><div align="center">出生年月</div></td>
+	   <td width="5%" class="left_title_1"><div align="center">电    话</div></td>
+	   <td width="5%" class="left_title_1"><div align="center">上传图片1</div></td>
+	   <td width="5%" class="left_title_1"><div align="center">上传图片2</div></td>
+	   <td width="5%" class="left_title_1"><div align="center">上传图片3</div></td>
+	   <td width="5%" class="left_title_1"><div align="center">上传图片4</div></td>
+	    <td width="5%" class="left_title_1"><div align="center">用户状态</div></td>
+	   <td width="15%" class="left_title_1"><div align="center"><span class="left-title">操作 </span></div></td>
+     
+    </tr>
+	
+    <tr>	
+     <td><div align="center"><? echo $result['username'] ?></div></td>
+	  <td><div align="center"><? echo $result['nickname'] ?></div></td>
+      <td><div align="center"><? echo $result['truename'] ?></div></td>
+       <td><div align="center"><? echo $result['birthdate'] ?></div></td>
+	  <td><div align="center"><? echo $result['mobile'] ?></div></td>
+      <td><div align="center"><img src="<? echo $result['img1'] ?> " height="100" width="100" /></div></td>
+	   <td><div align="center"><img src="<? echo $result['img2'] ?>" height="100" width="100" /></div></td>
+	  <td><div align="center"><img src="<? echo $result['img3'] ?>" height="100" width="100" /></div></td>
+      <td><div align="center"><img src="<? echo $result['img4'] ?>" height="100" width="100" /></div></td>
+	  <? if($result['pass'] == 1 ){?>
+	  	<td><div align="center">已通过审核</td>
+	  <? }?>
+	  <? if($result['pass'] == 2 ){?>
+	  	<td><div align="center">待审核</div></td>
+	  <? }?>
+	  <? if($result['pass'] == 0 ){?>
+	  	<td><div align="center">申请用户</div></td>
+	  <? }?>
+	    <td><div align="center">
+		[<a href="index.php?controller=Admin&action=UXiangTu&id=<?php echo $result["user_id"];?>">详图</a>]
+		<?php if($result['pass'] == 0){?>
+			[<a href="index.php?controller=Admin&action=NoAgree&id=<?php echo $result["user_id"];?>">待审核</a>]
+			[<a href="index.php?controller=Admin&action=Agree&id=<?php echo $result["user_id"];?>">审核通过</a>]
+		
+		<?}?>
+		
+		<?php if($result['pass'] == 1){?>
+			[<a href="index.php?controller=Admin&action=NoAgree&id=<?php echo $result["user_id"];?>">待审核</a>]
+			
+		<?}?>
+		
+		<?php if($result['pass'] == 2){?>
+
+			[<a href="index.php?controller=Admin&action=Agree&id=<?php echo $result["user_id"];?>">审核通过</a>]
+		
+		<?}?>
+		
+		</div></td>
+	  
+	  
+    
+    </tr>
+
+  </table>
+
+
+</div>  
+<? }}?>
+
+
+
+    <p>
+      <label></label>
+    </p>
+  </div>
+</form>
+</p>
+
+</body>
+
+</html>

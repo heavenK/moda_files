@@ -1,0 +1,35 @@
+<dl id="all_channel_header"><!--频道通用头部-->
+    	<div class="all_channel_logo" style="width:150px; overflow:hidden; float:left;"><!--xg-->
+    		<a href="http://www.we54.com/" style=" margin:0 0 0 0px; display:inline; overflow:hidden; float:left;"><img src="version_2/images/new_logo.jpg" /></a>
+        	<em style="line-height:28px; "><a href="http://www.we54.com/" target="_blank" style="color:#999999;"> 返回首页</a></em>
+        </div>
+        <div id="all_channel_head" style="color:#9f9f9f;">
+        <?php if($_SESSION["Zend_Auth"]['storage']->username!=''){ ?>
+        	你好！<?php echo $_SESSION["Zend_Auth"]['storage']->nickname ?> | <a href="http://bbs.we54.com/pm.php" style="color:#9f9f9f;">短消息</a> <a href="http://passport.we54.com/index/logout" style="color:#9f9f9f;">退出</a> | <a href=""onclick='this.style.behavior="url(#default#homepage)";this.setHomePage("http://moda.we54.com");return false;'>设为首页</a>
+        <?php }else{?>
+        	你好！请 <a href="http://passport.we54.com/Index/login?forward=http://moda.we54.com/">登录</a> 或 <a href="http://passport.we54.com/Index/register">注册</a> | <a href=""onclick='this.style.behavior="url(#default#homepage)";this.setHomePage("http://moda.we54.com");return false;'>设为首页</a>
+        <?php }?>
+        </div>
+    </dl>
+</div>
+
+<div id="content">
+	<div class="moda_grzs_title">
+        	<div class="moda_title"><a href="/"><img src="version_2/images/modapersonal/moda_logo.jpg" width="498" height="99" border="0" /></a></div>
+            <div class="moda_daohang">
+            	<em style="margin-right:5px; margin-left:5px;"><a href="?Controller=ShowIndex&action=ModaHelp">美达帮助</a></em>
+                <tt>|</tt><em style="margin-right:5px; margin-left:5px;"><a href="?Controller=ModaIndex&action=ModaAbout">关于美达</a></em>
+<!--            	<em style="margin-right:5px; margin-left:5px;"><a href="?Controller=ModaIndex&action=Banbenqiehuan&ver=1" style="color:#000;">旧版</a></em><tt>|</tt><em style="margin-right:5px; margin-left:5px;"><a href="?Controller=ModaIndex&action=Banbenqiehuan&ver=2" style="color:#016599;">新版</a></em>
+-->            </div>
+            <div class="moda_youmei"><h1>MODA HOT GIRL—<i><?php echo stripslashes($result['truename'])?></i></h1></div>
+            <div class="moda_nav">
+            	<ul>
+                	<li><em><a href="/"></a></em></li>
+                    <li><i><a href="?Controller=ModaIndex&action=Person&id=<?php echo $visitUser_id;?>"></a></i></li>
+                    <li><tt><a href="?Controller=ModaIndex&action=GeRenZiLiao&id=<?php echo $visitUser_id;?>"></a></tt></li>
+                    <li><h1><a href="?Controller=ShowIndex&action=ShowPosts&user_id=<?php echo $visitUser_id;?>"></a></h1></li>
+                    <li><span><a href="?Controller=ShowIndex&action=Fans&user_id=<?php echo $visitUser_id;?>"></a></span></li>
+                    <li><b><a href="?Controller=ShowIndex&action=ModaClub&user_id=<?php echo $visitUser_id;?>"></a></b></li>
+                </ul>
+            </div>
+        </div>

@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<link rel="stylesheet" href="css/common.css" type="text/css" />
+<title>管理区域</title>
+<style type="text/css">
+<!--
+.STYLE1 {
+	color: #3333FF;
+	font-size: 14px;
+	font-weight: bold;
+}
+.STYLE2 {font-size: 14px}
+.STYLE3 {font-weight: bold}
+.banzhurenul{ 
+	width:600px;
+	line-height:14px;
+	height:20px;
+}
+.banzhurenul li {
+	width:120px;
+	float:left;
+}
+-->
+</style>
+</head>
+	<script type="text/javascript" src="/js/fckeditor/fckeditor.js"></script>
+	<script type="text/javascript">
+
+window.onload = function()
+{
+	// Automatically calculates the editor base path based on the _samples directory.
+	// This is usefull only for these samples. A real application should use something like this:
+	// oFCKeditor.BasePath = '/fckeditor/' ;	// '/fckeditor/' is the default value.
+	//var sBasePath = document.location.pathname.substring(0,document.location.pathname.lastIndexOf('news_manage')) ;
+	//oFCKeditor.BasePath = '../fckeditor/' ;
+	var oFCKeditor = new FCKeditor( 'content' ) ;
+	oFCKeditor.BasePath	= '/js/fckeditor/' ;
+	oFCKeditor.Height	=	400;
+	oFCKeditor.ReplaceTextarea() ;
+}
+
+</script>
+<body>
+<form action="?controller=Admin&action=EditModaNews" method="post" enctype="multipart/form-data" name="form1" id="form1">
+  <div id="man_zone">
+    <table width="99%" border="0" align="center"  cellpadding="3" cellspacing="1" class="table_style">
+      <tr>
+        <td width="14%" class="left_title_1"><center>
+          修改访谈
+        </center></td>
+        <td width="86%" class="left_title_1"><span class="left-title">
+          <center>
+          </center>
+        </span></td>
+      </tr>
+      <tr>
+        <td class="left_title_2"><div align="center">访谈标题</div></td>
+        <td><label><!-- <input name="nianjimingcheng" type="hidden" id="nianjimingcheng" value="" />-->
+            <input name="news_title" type="text" id="news_title" value="<? echo $news['news_title'] ?>" />
+        </label></td>
+      </tr>
+	   <tr>
+        <td class="left_title_2"><div align="center">访谈期数</div></td>
+        <td><label><!-- <input name="nianjimingcheng" type="hidden" id="nianjimingcheng" value="" />-->
+            <input name="news_st" type="text" id="news_st" value="<? echo $news['news_st'] ?>" />
+        </label></td>
+      </tr>
+	   <tr>
+        <td class="left_title_2"><div align="center">访谈小图片</div></td>
+        <td><label><!-- <input name="nianjimingcheng" type="hidden" id="nianjimingcheng" value="" />-->
+            <input name="img_url" type="file" id="img_url" />118*88
+        </label></td>
+      </tr>
+	  <tr>
+        <td class="left_title_2"><div align="center">标题图片地址</div></td>
+        <td> <input name="url" type="file" id="url"  />923*69</td>
+      </tr>
+	  
+	  
+      <tr>
+        <td class="left_title_2"><div align="center">访谈内容</div></td>
+        <td><label>
+        <textarea name="news_content" cols="100" rows="20" id="news_content"><? echo $news['news_content'] ?></textarea>
+        </label></td>
+      </tr>
+      <!--<tr>
+        <td class="left_title_2"><div align="center">浏览量</div></td>
+        <td><input name="views" type="text" id="views" value="0" /></td>
+      </tr>
+      <tr>
+        <td class="left_title_2"><div align="center">参赛用户名</div></td>
+        <td><input name="username" type="text" id="username" /></td>
+      </tr>
+      <tr>
+        <td class="left_title_2"><div align="center">相关链接</div></td>
+        <td><input name="relateurl" type="text" id="relateurl" value="http://" /></td>
+      </tr>
+      <tr>
+        <td class="left_title_2"><div align="center">排序</div></td>
+        <td><input name="cixu" type="text" id="cixu" value="0" />
+          数字</td>
+      </tr>
+      <tr>
+        <td class="left_title_2"><div align="center">缩略图</div></td>
+        <td><input name="thumbimg" type="file" id="thumbimg" /></td>
+      </tr>
+      <tr>
+        <td class="left_title_2"><div align="center">第几季</div></td>
+        <td><input name="type" type="text" id="type" /></td>
+      </tr>-->
+	   <tr>
+        <td class="left_title_2"><div align="center">详细内容</div></td>
+        <td><textarea name="content" cols="100" rows="30" id="content"><? echo $news['content'] ?></textarea></td>
+      </tr>
+	  <input type="hidden" name="id" value="<? echo $news['news_id']?>" />
+     
+      <tr>
+        <td class="left_title_2"><div align="center"></div></td>
+        <td><label>
+        <input name="submit" type="submit" id="提交" value="提交" />
+        </label>
+          <input name="reset" type="reset"  value="重置" /></td>
+      </tr>
+    </table>
+    <p>
+      <label></label>
+    </p>
+  </div>
+</form>
+?</p>
+
+</body>
+
+</html>

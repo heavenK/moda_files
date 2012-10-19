@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>MODA扩展设置</title>
+<!-- CSS -->
+<link href="/extadminstyle/css/transdmin.css" rel="stylesheet" type="text/css" media="screen" />
+<!--[if IE 6]><link rel="stylesheet" type="text/css" media="screen" href="/extadminstyle/css/ie6.css" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" type="text/css" media="screen" href="/extadminstyle/css/ie7.css" /><![endif]-->
+<link href="/extadminstyle/css/jquery-pop.css" rel="stylesheet" type="text/css" />
+<!-- JavaScripts-->
+<script type="text/javascript" src="/extadminstyle/js/jquery.js"></script>
+<script type="text/javascript" src="/extadminstyle/js/jNice.js"></script>
+<script type="text/javascript" src="/extadminstyle/js/jquery-latest.pack.js"></script>
+<script type="text/javascript" src="/extadminstyle/js/jquery-pop.pack.js"></script>
+
+<script>
+function setid(nu){
+	document.form1.nu.value = nu;
+}
+</script>
+
+<style>
+
+
+#boxes #dialog {
+  padding:10px;
+}
+
+</style>
+</head>
+
+<body>
+	<div id="wrapper">
+    	<!-- h1 tag stays for the logo, you can use the a tag for linking the index page -->
+    	<h1><a href="#"><span>Transdmin Light</span></a></h1>
+        
+        <?php  require(APP_DIR . '/ExtAdminView/header.html'); ?> 
+        
+        <div id="containerHolder">
+			<div id="container">
+        		<div id="sidebar">
+                	<ul class="sideNav">
+                    	<li><a href="?Controller=ExtAdmin">首页轮换图片</a></li>
+                    	<li><a href="?Controller=ExtAdmin&action=Otherads" class="active">其他广告</a></li>
+                    	<li><a href="?Controller=ExtAdmin&action=OnesPices" >用户页面图片</a></li>
+                    </ul>
+                    <!-- // .sideNav -->
+                </div>    
+                <!-- // #sidebar -->
+                
+                <!-- h2 stays for breadcrumbs -->
+                <h2  style="font-size:14px;"><a href="#" >广告 & 图片</a> &raquo; <a href="#" class="active">其他广告</a></h2>
+                
+                <div id="main">
+                    <form name="form2" id="form2" action="" class="jNice" method="post">
+					<h3>暂无</h3>
+                    	<table cellpadding="0" cellspacing="0">
+                        
+                        </table>
+                    </form>
+                </div>
+                <!-- // #main -->
+                
+                <div class="clear"></div>
+            </div>
+            <!-- // #container -->
+        </div>	
+        <!-- // #containerHolder -->
+        
+        <p id="footer">Feel free to use and customize it. <a href="http://www.perspectived.com">Credit is appreciated.</a></p>
+    </div>
+    <!-- // #wrapper -->
+    
+<div id="boxes">
+        <div id="dialog" class="window">
+                        
+                        <div id="main" style="float:left; width:500px; text-align:left;">
+                            <form name="form1" id="form1" action="" class="jNice" enctype="multipart/form-data" method="post">
+                            	<input type="hidden" name="nu" id="nu"  />
+                                <fieldset>
+                                    <p><h3  style=" text-align:center">修改 &nbsp;&nbsp;&nbsp; <a href="#"class="close"/>Close it</a></h3></p>
+                                    <p><label>上传图片:</label><input type="file" name="upload" id="upload" class="text-long" style="width:450px; height:16px;"/></p>
+                                    <p><label>链接地址:</label><input type="text" name="addr" id="addr" class="text-long" style="width:450px;"/></p>
+                                    <input type="submit" value="Submit Query" />
+                                </fieldset>
+                                
+                            </form>
+                        </div>
+                        <!-- // #main -->
+        
+        </div>
+        <!-- Mask to cover the whole screen -->
+        <div id="mask"></div>
+</div>
+    
+    
+    
+</body>
+</html>
+
+

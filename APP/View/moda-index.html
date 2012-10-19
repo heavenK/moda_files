@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>美达首页</title>
+<link rel="stylesheet" href="css/indexgeneral.css" type="text/css"/>
+<link href="css/modaindex.css" rel="stylesheet" type="text/css" />
+<style>
+.box_ab{ border:red 1px solid;  display:block; text-decoration:none;}
+.box_abb{ border: #ffffff 1px solid; background-color:#332029; display:block; text-decoration:none;}
+
+
+</style>
+
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="js/indexpopup.js" type/"text/javascript"></script>
+<script language="javascript" type="text/javascript" >
+
+	$(document).ready(function() {
+		$(".c4_2").hover( 
+		  function(){$(this).addClass("box_abb")}, 
+		  function(){$(this).removeClass("box_abb")} 
+		); 
+		$(".c2_3").hover( 
+		  function(){$(this).addClass("box_ab")}, 
+		  function(){$(this).removeClass("box_ab")} 
+		); 
+		$(".c3_left_lidiv").hover( 
+				  function(){$(this).addClass("box_ab")}, 
+				  function(){$(this).removeClass("box_ab")} 
+		); 
+		
+		$("#searchimg1").click(function (){
+			//alert($("#nickname").val());
+			//uriencode
+			window.location.href	=	"?Controller=ModaIndex&action=SearchModa&nickname="+$("#tc_j_b_b").val();	
+		
+		});
+		
+	});
+	
+	
+	
+</script>
+</head>
+
+<body>
+<!--整体-->
+<div id="moda">
+<? 			require(APP_DIR . '/showView/WidHeader.html');		?>
+	
+	
+	
+	<!--体部-->
+	<div id="content">
+		<!--体1-->
+		<div>
+			<img src="images/2/5.jpg" />
+		</div>
+		
+		<!--体2-->
+		<div class="c1">
+			<!--体1左-->
+			<div class="c1_left">
+				<!--体1左上-->
+				<div>
+					<div class="c1_left_top1"><a href="#"><img src="images/2/13.jpg" /></a></div>
+					<div class="c1_left_top2"><a href="#"><img src="images/2/14.jpg" /></a></div>
+				</div>
+				<!--体1左下-->
+				<div class="c1_left_bottom">
+					<div class="c1_left_bottom1" >
+						<div class="ab"><img src="images/2/20.jpg" /></div>
+						<div class="cd" ><a href="#">如何参加排行榜?</a></div>
+					</div>
+					<ul >
+					
+						
+						
+					<?php foreach($result2 as $r2){ $showDat = $tableModaShow->getShowByShowIdNoLimit($r2['show_id']); ?>
+						<li>
+							<div class="c4">
+
+								<div class="c4_1"><a href="?Controller=ShowIndex&action=ShowDetail&user_id=<? echo $r2['user_id']?>&show_id=<? echo $r2['show_id']?>"><img class="c4_2" width="144" height="107"  src="<? echo $r2['head_img']?>" /></a></div>
+							
+							</div>					
+							<span class="span1" style="text-align:center"><a href="?Controller=ShowIndex&action=ShowDetail&user_id=<? echo $r2['user_id']?>&show_id=<? echo $r2['show_id']?>"><? echo $r2['title']?></a></span>
+							<span class="span2" style="text-align:center"><span class="span3"><? echo $showDat['views']?></span><span class="span4">次浏览/</span><span class="span3"><?php echo $r2['ticket'] ?></span><span class="span4">票</span> </span>
+						</li>
+						<? } ?>	
+						
+					
+						
+				</ul>
+					<span class="span5">+ <a href="?controller=ModaIndex&action=ModaLank" class="ss">点击进入美达超级美女榜</a></span>
+					
+				</div>
+			</div>
+			
+			<!--体1右-->
+			<div class="c1_right">
+				<div class="c1_rignt_1">
+					<div class="c1_ritht_1_1"><img src="images/2/301.jpg" /></div>
+						<div class="c1_right_1_2">
+							<? foreach($news as $n){ ?>
+								<div class="c1_right_1_2_1"><img width="118px" height="88px" src="<? echo $n['img_url']?>" /></div>
+									<span class="c1_right_1_2_2"><a href="#" class="c1_right_1_2_2a"><? echo $n['news_title']?></a></span>
+									<span class="c1_right_1_2_3"><a href="#" class="c1_right_1_2_3a"><? echo $n['news_st']?></a></span>
+									<span  class="c1_right_1_2_4"><a href="" class="c1_right_1_2_4a"><? echo $n['news_content']?></a></span>
+									<span  class="c1_right_2">+ <span><a href="?controller=ModaIndex&action=ModaNews&id=<?php echo $n['news_id']?>" class="c1_right_2a">点击观看</a></span><span class="c1_span1"><? echo $n['created_on']?></span></span>
+								</div>
+							<? }?>
+						<? foreach($news1 as $n1){?>
+						<div class="c1_right_3">
+							<span class="c1_right_3_1"><span class="c1_rignt_3_span1"><? echo $n1['news_title']?> - </span><span class="c1_rignt_3_span2"><? echo $n1['news_st']?></span></span>
+							<span  class="c1_right_2">+ <span><a href="?controller=ModaIndex&action=ModaNews&id=<?php echo $n1['news_id']?>" class="c1_right_2a">点击观看</a></span><span class="c1_span1"><? echo $n1['created_on']?> </span></span>
+						</div>
+						<? }?>
+						
+						<span class="c1_right_3_span3">+ <a href="?controller=ModaIndex&action=AllNews">查看所有美达访谈</a></span>
+				
+				</div>
+				<div class="c1_right_bottom"><a href="#"><img src="images/2/24.jpg" /></a></div>
+			</div>
+		
+		</div>
+		
+		<!--体3-->
+		<div class="c2">
+			<!--moda展示上-->
+	<div class="c23">
+		<div class="c2_1" ><img src="images/2/100.jpg" /></div>
+		<div class="c2_2"><a href="#" >+ 我要发布展示</a></div>
+	</div>
+	<ul >
+		<?php foreach($showDatass as $data){?>
+			<li>
+				<div  class="c2_3"><a href="?Controller=ShowIndex&action=ShowDetail&user_id=<? echo $data['user_id'];?>&show_id=<? echo $data['show_id'];?>"><img class="c4_3" src="<? echo $data['show_img']?>" /></a></div>
+				<span class="c2_3_span1"><a href="?Controller=ShowIndex&action=ShowDetail&user_id=<? echo $data['user_id'];?>&show_id=<? echo $data['show_id'];?>" class="fd" ><? echo $data['title']?></a></span>
+				<span  class="c2_3_span2"><span class="c2_3_span3"><? echo $data['views']?></span><span class="c2_3_span4">次浏览</span><span class="c2_3_span5">/</span><span class="c2_3_span3"><? echo $data['discuss_count']?></span><span class="c2_3_span4">评论</span></span>
+			
+			</li>
+		<?}?>
+		
+		
+	</ul>
+	<span class="c2_span1">+ <a href="?Controller=ShowIndex&action=ModaShows" class="c2_a">点击查看所有展示</a></span>
+
+		
+		
+		</div>
+		
+		<!--体4-->
+		<div class="c3">
+
+<div class="c3_left">
+	<div class="c3_left1"><img src="images/2/108.jpg" /></div>
+	<ul>
+		<? foreach ($result as $val){ ?>
+		<li><div class="c3_left_lidiv"><a href="?controller=ModaIndex&action=Person&id=<? echo $val['user_id']?>"><img  class="c5" src="<? echo $val['head_img']?>" /></a></div></li>
+		<? }?>
+	</ul>
+	
+	<div class="c3_left_2"><a href="?Controller=Index3&action=Register"><img src="images/2/110.jpg" /></a></div>
+	
+	<span class="c3_left_span1"><a href="#" class="c3_left_a">为什么要加入美达?</a></span>
+	<span class="c3_left_span2"><a href="#" class="c3_left_a">怎样加入?</a></span>
+	<span class="c3_left_span3">+&nbsp;<a href="#" class="c3_left_span3_a" >申请加入美达会员流程图</a></span>
+	
+</div>
+
+
+
+<div  class="c3_mid">
+	<img src="images/2/121.jpg" />
+	<ul>
+	<!--没截取-->
+	<?php foreach($rowset as $data){ ?>
+		<li><span class="c3_mid_span3">[闲 聊]&nbsp;</span><span class="c3_mid_span1"><a href="?controller=ShowIndex&action=ModaClubCall&user_id=<?php echo $data['uid']?>&club_id=<?php echo $data['club_id']?>"><?php echo $data['title']?></a></span></li>
+	 <?php }?>	
+	
+	</ul>
+	
+	<span class="c3_mid_span2">+&nbsp;<a href="?controller=ModaIndex&action=ModaTB" class="c3_mid_a">点击进入美达俱乐部</a></span>
+	
+</div>
+<div style="float:left; margin:-1px 0 0 10px;"><a href="#"><img src="images/2/106.jpg" /></a></div>
+	</div>
+	<div id="bottom">
+		<? require_once(APP_DIR."/View/bottom.html")?>
+	</div>
+</div>
+
+<style>
+#tc_j{ width:784px; height:196px; float:left; overflow:hidden; background:url(../images/tc_17.jpg) no-repeat; border:#403842 1px solid;}
+	#tc_j_a{ width:784px; height:63px; float:left; overflow:hidden;}
+	#tc_j_b{ width:784px; height:28px; float:left; overflow:hidden; margin-bottom:5px;}
+		#tc_j_b_a{ width:188px; height:22px; float:left; overflow:hidden; text-align:right; font-size:14px; color:#ecc4ba; padding-top:6px;}
+		#tc_j_b_b{ width:347px; color:#ecc4ba; height:26px; float:left; overflow:hidden; margin-right:11px; border:#724a6c 1px solid; background-color:#291425;}
+		#tc_j_b_c{ width:236px; height:28px; float:left; overflow:hidden; text-align:left;}
+	#tc_j_c{ width:596px; height:100px; float:left; overflow:hidden; font-size:12px; color:#6e6e6e; text-align:left; padding-left:188px;}
+</style>
+<div id="popupContactyy">
+				<div id="tc_j">
+					<div id="tc_j_a"></div>
+					<div id="tc_j_b">
+						<span id="tc_j_b_a">搜索美达：</span>
+						<input id="tc_j_b_b" style=" line-height:24px;"  type="text" name="nickname"   />
+						<span id="tc_j_b_c"><img id="searchimg1" src="images/tc_18.gif" width="119" height="28" style="cursor:pointer" /></span>
+					</div>
+					<div id="tc_j_c">请输入用户昵称进行搜索</div>
+				</div>			
+		</div>
+		<div id="backgroundPopupyy"></div>
+
+</body>
+</html>

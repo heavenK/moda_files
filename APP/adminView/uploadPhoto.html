@@ -1,0 +1,77 @@
+<html>
+	<head>
+
+		<script src="js/jquery.pack.js"></script>
+		<script src="js/jquery.Jcrop.pack.js"></script>
+		
+		<link rel="stylesheet" href="js/jquery.Jcrop.css" type="text/css" />
+        
+		<script language="Javascript">
+
+			$(function(){
+
+				
+			});
+			
+			function goss(){
+
+				jQuery('#cropbox').Jcrop({
+					onChange: showPreview,
+					onSelect: showPreview,
+					onSelect: updateCoords,
+					aspectRatio: 1
+				});
+
+			}
+
+			function updateCoords(c)
+			{
+				$('#x').val(c.x);
+				$('#y').val(c.y);
+				$('#w').val(c.w);
+				$('#h').val(c.h);
+			};
+
+			function checkCoords()
+			{
+				if ($('#x').val()==''){
+					alert('请先上传头像然后选择裁切头像最后进行保存！');
+					return false;
+				}
+			};
+			
+			function showPreview(coords)
+			{
+				var rx = 150 / coords.w;
+				var ry = 150 / coords.h;
+				var w2=$("#bigwidth").val();
+				var h2=$("#bigheight").val();
+				jQuery('#preview').css({
+					width: Math.round(rx * w2) + 'px',
+					height: Math.round(ry * h2) + 'px',
+					marginLeft: '-' + Math.round(rx * coords.x) + 'px',
+					marginTop: '-' + Math.round(ry * coords.y) + 'px'
+				});
+			}
+
+		</script>
+
+	</head>
+
+	<body>
+<?php echo $jsstr;?>
+<div style="margin:0px;font-size:12px;">
+<FORM ACTION="" METHOD=POST enctype="multipart/form-data">
+	
+	<input type="file" name="file" id="file" />
+	
+  <input type="submit" name="button" id="button" value="提交" />
+
+  <input name="upload" type="hidden" id="upload" value="upload" /><input type="hidden" name="MAX_FILE_SIZE" value="3000000" />
+</FORM>
+</div>
+
+ 
+	</body>
+
+</html>

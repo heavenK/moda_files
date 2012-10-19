@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>美达VCR——大连超级美女榜</title>
+<link href="version_2/styles/end.css" rel="stylesheet" type="text/css"/>
+<link href="version_2/styles/reset.css" rel="stylesheet" type="text/css"/>
+<link href="version_2/styles/vcr_interview.css" rel="stylesheet" type="text/css"/>
+<link href="version_2/styles/headfooter/bighead.css" rel="stylesheet" type="text/css" />
+<link href="version_2/styles/headfooter/footer.css" rel="stylesheet" type="text/css" />
+<link href="version_2/styles/mdft.css" rel="stylesheet" type="text/css"/>
+<script language="javascript" src="js/swfobject.js"></script>
+<script language="javascript" src="js/viodedo.js"></script>
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="js/indexpopup.js" type/"text/javascript"></script>
+<script language="javascript" type="text/javascript" >
+	$(document).ready(function() {
+		$("#searchimg1").click(function (){
+			window.location.href	=	"?Controller=ModaIndex&action=SearchModa&nickname="+$("#tc_j_b_b").val();	
+		});
+	});
+</script>
+</head>
+
+<body class="mdvcr">
+    <div id="box">   
+<?php require(APP_DIR . '/version_2/index_header.html'); ?>
+        <div class="main"><!--主体-->
+        		<div id="cont" style="margin-bottom:0;">
+                        <div id="cont_a">
+                            <div id="cont_a_a"><img src="version_2/images/feature_logo.jpg" width="160" height="56"/></div>
+                            <div id="cont_a_b">
+                                <ul class="cont_a_b_a">
+                                        <li class="cont_a_b_a_c"><img src="<?php echo $news['img_url']?>" width="153" height="112"/></li>
+                                        <li class="cont_a_b_a_a" style="width:730px; border-bottom-color:#CCC;"><img src="<?php echo $news['url']?>" width="730" height="50"/></li>
+                                        <li class="cont_a_b_a_b" style=" padding-left:0; padding-top:10px;"><?php echo $news['news_content']?></li>
+                                </ul>
+                            </div>
+                                
+                
+                        </div>
+                        
+                        
+                        <div id="cont_b" style=" width:978px; padding-left:4px; padding-right:0;">
+                            <?php echo $news['content'] ?>
+                        </div>
+                        
+                        
+                        <div id="cont_c">
+                            <ul class="cont_c_a">
+                                <?php foreach($allnews as $an){?>               
+                                <li style=" height:19px;"><a href="?controller=ModaIndex&action=ModaNews&id=<?php echo $an['news_id']?>" style="display:inline;"><?php echo $an['news_title'] ?></a><h4 style="display:inline; font-weight:normal;">-<?php echo $an['news_st']?></h4></li>
+                                <?php }?>
+                            </ul>
+                        </div>
+                    </div>
+        </div>
+       <?php require(APP_DIR . '/version_2/index_footer.html'); ?>
+</div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="keywords" content="大连，大连新闻，大连论坛，大连资讯，大连滚子游戏，大连生活，五年四班，大连博客，大连话，大连图片，大连视频，大连交友，大连问吧，大连知道，大连人物，大连团购,大连旅游，大连餐饮，大连教育，大连房产，大连汽车，大连娱乐，大连购物，大连摄影，美达美女，美女，美达，美女榜，美达美女榜，大连美女，moda，dalian，daliannews" /> 
+<meta name="description" content="大连新青年网是大连生活资讯信息最丰富的网络媒体，是大连本土化互动、娱乐网络平台，美达美女榜，大连地区拥有广大受众的美女展示平台。"/> 
+<title>美达活动——大连超级美女榜</title>
+<link href="version_2/styles/end.css" rel="stylesheet" type="text/css"/>
+<link href="version_2/styles/reset.css" rel="stylesheet" type="text/css"/>
+<link href="version_2/styles/headfooter/bighead.css" rel="stylesheet" type="text/css" />
+<link href="version_2/styles/headfooter/footer.css" rel="stylesheet" type="text/css" />
+<link href="version_2/styles/moda_activity.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+<div id="box">
+<?php require(APP_DIR . '/version_2/index_header.html'); ?>
+     	<div class="zhanmu_list"><!--招募列表-->       
+      		<div class="zhaomu_logo"><img src="version_2/images/moda_activity.jpg" width="174" height="84" border="0" /></div>  
+        	<ul>
+            <?php foreach($modaEvent as $me){?>
+        		<li><a href="?Controller=ModaIndex&action=ModaEvent&event_id=<?php echo $me['event_id']?>" class="box"><img src="<?php echo $me['index_img']?>" /></a></li>
+            <?php }?>
+        	</ul>
+            
+            <!--<ol id="list_pg"> --><!--页码-->
+              <!--<?php echo $page->pageHtml;?> -->
+           <!-- </ol> -->
+  		</div>      
+    <?php require(APP_DIR . '/version_2/index_footer.html'); ?>          
+</div>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<link rel="stylesheet" href="css/common.css" type="text/css" />
+<title>管理区域</title>
+<style type="text/css">
+<!--
+.STYLE1 {
+	color: #3333FF;
+	font-size: 14px;
+	font-weight: bold;
+}
+.STYLE2 {font-size: 14px}
+.STYLE3 {font-weight: bold}
+.banzhurenul{ 
+	width:600px;
+	line-height:14px;
+	height:20px;
+}
+.banzhurenul li {
+	width:120px;
+	float:left;
+}
+-->
+</style>
+</head>
+	<script type="text/javascript" src="/js/fckeditor/fckeditor.js"></script>
+	<script type="text/javascript">
+
+window.onload = function()
+{
+	// Automatically calculates the editor base path based on the _samples directory.
+	// This is usefull only for these samples. A real application should use something like this:
+	// oFCKeditor.BasePath = '/fckeditor/' ;	// '/fckeditor/' is the default value.
+	//var sBasePath = document.location.pathname.substring(0,document.location.pathname.lastIndexOf('news_manage')) ;
+	//oFCKeditor.BasePath = '../fckeditor/' ;
+	var oFCKeditor = new FCKeditor( 'content' ) ;
+	oFCKeditor.BasePath	= '/js/fckeditor/' ;
+	oFCKeditor.Height	=	400;
+	oFCKeditor.ReplaceTextarea() ;
+}
+
+</script>
+<body>
+<form action="index.php?controller=Admin&action=EventEdit" method="post" enctype="multipart/form-data" name="form1" id="form1">
+  <div id="man_zone">
+    <table width="99%" border="0" align="center"  cellpadding="3" cellspacing="1" class="table_style">
+      <tr>
+        <td width="14%" class="left_title_1"><center>
+          修改访谈
+        </center></td>
+        <td width="86%" class="left_title_1"><span class="left-title">
+          <center>
+          </center>
+        </span></td>
+      </tr>
+      <tr>
+        <td class="left_title_2"><div align="center">活动标题</div></td>
+        <td><label><!-- <input name="nianjimingcheng" type="hidden" id="nianjimingcheng" value="" />-->
+            <input name="title" type="text" id="title" value="<? echo $news['title'] ?>" />
+        </label></td>
+      </tr>
+
+	   <tr>
+        <td class="left_title_2"><div align="center">当前主页图片</div></td>
+		 <td><label>
+           <img src="<? echo $news['home_img'] ?>" />
+        </label></td>
+      </tr>
+	  <td class="left_title_2"><div align="center">编辑主页图片</div></td>
+        <td><label><!-- <input name="nianjimingcheng" type="hidden" id="nianjimingcheng" value="" />-->
+            <input name="home_img" type="file" id="home_img" />
+        </label></td>
+      </tr>
+	  
+	  <tr>
+        <td class="left_title_2"><div align="center">当前列表图片</div></td>
+		 <td><label>
+           <img src="<? echo $news['index_img'] ?>" />
+        </label></td>
+      </tr>
+	  <td class="left_title_2"><div align="center">编辑主页图片</div></td>
+        <td><label><!-- <input name="nianjimingcheng" type="hidden" id="nianjimingcheng" value="" />-->
+            <input name="index_img" type="file" id="index_img" />
+        </label></td>
+      </tr>
+	  
+	  
+	  <tr>
+        <td class="left_title_2"><div align="center">当前主页图片</div></td>
+		 <td><label>
+           <img src="<? echo $news['header_img'] ?>" />
+        </label></td>
+      </tr>
+	  <td class="left_title_2"><div align="center">编辑主页图片</div></td>
+        <td><label><!-- <input name="nianjimingcheng" type="hidden" id="nianjimingcheng" value="" />-->
+            <input name="header_img" type="file" id="header_img" />
+        </label></td>
+      </tr>
+	  
+
+	   <tr>
+        <td class="left_title_2"><div align="center">详细内容</div></td>
+        <td><textarea name="content" cols="100" rows="30" id="content"><? echo $news['content'] ?></textarea></td>
+      </tr>
+	  <input type="hidden" name="id" value="<? echo $news['event_id']?>" />
+     
+      <tr>
+        <td class="left_title_2"><div align="center"></div></td>
+        <td><label>
+        <input name="submit" type="submit" id="提交" value="提交" />
+        </label>
+          <input name="reset" type="reset"  value="重置" /></td>
+      </tr>
+    </table>
+    <p>
+      <label></label>
+    </p>
+  </div>
+</form>
+?</p>
+
+</body>
+
+</html>

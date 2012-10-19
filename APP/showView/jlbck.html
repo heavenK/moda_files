@@ -1,0 +1,262 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GB2312" />
+
+<title>美达俱乐部-美达&middot;大连超级美女榜-大连新青年</title>
+<meta name="keywords" content="大连，大连新闻，大连论坛，大连资讯，大连滚子游戏，大连生活，五年四班，大连博客，大连话，大连图片，大连视频，大连交友，大连问吧，大连知道，大连人物，大连团购,大连旅游，大连餐饮，大连教育，大连房产，大连汽车，大连娱乐，大连购物，大连摄影，美达美女，美女，美达，美女榜，美达美女榜，大连美女，moda，dalian，daliannews" /> 
+<meta name="description" content="大连新青年网是大连生活资讯信息最丰富的网络媒体，是大连本土化互动、娱乐网络平台，美达美女榜，大连地区拥有广大受众的美女展示平台。"/> 
+<link rel="stylesheet" href="css/popWin.css" type="text/css" media="screen" />
+
+<link href="style/jlbck.css" rel="stylesheet" type="text/css" />
+
+
+	<script src="js/jquery-1.2.6.min.js" type="text/javascript"></script>
+	<script src="js/showPopup.js" type="text/javascript"></script>
+	<script type="text/javascript" src="./js/gp.js"></script>	
+
+
+<SCRIPT language=JavaScript>
+
+		function setCallId(IdNum)
+		{
+
+				document.formCall.call_id.value = IdNum;
+				
+		}
+		
+		function setCallContent(someting)
+		{
+				
+				var i = someting.length;
+				
+				var maxlimit = 9;
+				//alert(tt);
+				if(i>maxlimit)
+					document.formCall.call_content.value = someting.substring(0,maxlimit)+"........";
+				else
+					document.formCall.call_content.value = someting;
+				
+		}
+		
+		function setNickName(nickname)
+		{
+				//alert("aaa");
+				document.formCall.call_nickname.value = nickname;
+				
+		}
+
+		function popAlert()
+		{
+			
+			var tt = document.formCB.content.value.length;
+			if(tt<4)
+				{
+					alert("不能少于4个字");
+					return false;
+				}
+			else
+				return true;	
+		}
+		
+		function popAlertDVA()
+			{
+			
+			var tt = document.formCall.content.value.length;
+			if(tt<4)
+				{
+					alert("不能少于4个字");
+					return false;
+				}
+			else
+				return true;	
+		}
+		
+		function deletDec(club_id,Id,power)
+		{	
+			/*if(creater_name == <?php echo $_SESSION["Zend_Auth"]['storage']->username;?>)
+				alert("不能删除该帖");
+				else*/
+				
+
+			
+				
+			if(power)	
+			{
+				alert("不能删除该帖");
+				return false;
+				}
+			else	
+			if(confirm('真的要删除吗？删除后将无法恢复！'))
+			{
+				var url = "?Controller=ShowIndex&action=ClubCallDelete&club_id="+club_id+"&Id="+Id+"";
+
+				location=url;
+			}
+			
+			
+
+		}
+		
+		
+</SCRIPT>
+
+
+</head>
+<body>
+
+
+<div id="full">
+
+
+		<? 			require(APP_DIR . '/showView/ShowHeader.html');		?>
+     
+     
+
+     <div id="cont">
+	 	<div id="cont_a">
+			<div id="cont_a_a"></div>
+			<div id="cont_a_b">
+				<span id="cont_a_b_a"></span>
+				<span id="cont_a_b_b">俱乐部主席： 安娜</span>
+				<span id="cont_a_b_c"><a href="#"><img src="images/jlb_02.gif" width="129" height="40" /></a></span>
+			</div>
+		</div>
+		
+		
+		<div id="cont_b">
+			<div id="cont_b_a">
+				<span id="cont_b_a_a">主题：<?php echo $title?></span>
+			</div>
+			<div id="cont_b_b">
+				<ul class="box">
+				
+				
+					<?php $tmp = 0;foreach($rowset as $data){ $tmp+=1;?>
+					<li>
+						<span class="box_a"></span>
+						<?php if(!$data['call_content']){?>
+							<span class="box_b"><h1>回复：<?php echo $title?></h1></span>
+						<?}?>
+						<span class="box_c">
+						作者：<a href="#"><?php echo $data['nickname']?></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $data['dateline']?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h3>+</h3>&nbsp;
+						<h5 id="pop<?php echo $tmp?>" style="font-size:12px; color:#fdb979; display:inline; font-weight:normal;">
+						<a href="#"  onclick="inputName('pop<?php echo $tmp?>');setCallId(<?php echo $data['Id']?>);setCallContent('<?php echo $data['content']?>'); setNickName('<?php echo $data['nickname']?>');    ">回复此条留言
+						</a>
+						</h5>
+						</span>
+						
+						<?php if($data['call_content']){?>
+								<span class="box_e"><?php echo $data['call_content']?></span>
+						<?}?>
+						
+						<input type="button" onclick=" return deletDec(<?php echo $data['club_id'];?>,<?php echo $data['Id'] ;?>,<?php echo $data['power'] ;?>)" value="删除" style="border:#000000 1px solid" />
+						<span class="box_d"><?php echo $data['content']?></span>
+					</li>
+					<? }?>
+					
+					
+					
+					
+					
+					
+				</ul>
+				<div id="cont_b_b_a">
+					<span id="cont_b_b_a_a"></span>
+					<span id="cont_b_b_a_b">
+						<div id="page"><?php echo $page->pageHtml;?></div>
+					</span>
+				</div>	
+			</div>	
+		</div>
+		
+
+		
+		<form id="formCB" name="formCB" action="" method="post">
+			<input type="hidden" id="visitUser_id" name="visitUser_id" value="<?php echo $visitUser_id?>" />
+			<input type="hidden" id="club_id" name="club_id" value="<?php echo $clubId?>" />
+		<div id="cont_c">
+			<div id="cont_c_a">
+				<span id="cont_c_a_a">发表回复：</span>
+				<span id="cont_c_a_b">(评论最多限定200字,请勿发表反动、暴力、色情以及人身攻击等言论)</span>
+			</div>
+			<div id="cont_c_b">
+				<span id="cont_c_b_a"><textarea name="content" id="content" style=" " class="cont_c_b_a" ></textarea></span>
+			</div>
+			<div id="cont_c_c">
+				<span id="cont_c_c_a">
+					<input type="submit" value="" onclick="return popAlert();" style="background-image:url(images/jlbck_02.gif); width:117px; height:26px; overflow:hidden; border:0px; margin:0px; padding:0px;"/>
+				
+				</span>
+			</div>
+		</div>
+		</form>	
+			
+
+        
+
+     </div>
+     
+     
+
+<? 			require(APP_DIR . '/showView/Widbottom.html');		?>
+  
+</div>
+
+
+
+<div id="popupContactAAA" style="background-color:#FF99CC">	
+<a id="popupContactClose">x</a>  
+        <h1>回复评论</h1>  
+        <p id="contactArea">  
+					<form id="formCall" name="formCall" method="post" action="">
+				
+						<span class="box_a_a"></span>
+						<span class="box_a_b">
+							<div class="box_a_b_a"><a href="#"><img src="images/plck_02.jpg" width="138" height="138" /></a></div>
+							<div class="box_a_b_b">
+							
+								<input type="hidden" name="user_id" id="user_id" value="<?php echo $visitUser_id ;?>"  /><!--被访问主席ID-->
+								<input type="hidden" name="clubId" id="clubId" value="<?php echo $clubId ;?>"  /><!--俱乐部ID-->
+								
+								<input type="hidden" name="call_id" id="call_id"   /><!--呼叫ID-->
+								<input type="hidden" name="call_content" id="call_content"  />
+								<input type="hidden" name="call_nickname" id="call_nickname"  />
+								
+								<textarea name="content" cols="80" rows="2" id="content" style="border:#000000 1px solid" 
+								onkeyup="textCounter(this.form.content,this.form.contLen,70);" onkeydown="textCounter(this.form.content,this.form.contLen,70);"></textarea>
+								<span>剩余</span><input name="contLen" readonly="ture" type="text" style="border:#000000 1px solid"/><span>字</span>
+									
+							</div>
+						</span>
+						<span class="box_a_c">
+							<div class="box_a_c_a"></div>
+							<div class="box_a_c_b">
+								<div class="box_a_c_b_a"></div>
+								<div class="box_a_c_b_b">孙思萌</div>
+								<div class="box_a_c_b_c">2009-05-18 24:38:09
+							
+								</div>
+								<div class="box_a_c_b_d"><input type="submit" value="丢纸条" style="border:#000000 1px solid" onclick="return popAlertDVA();"/></div>
+
+							</div>
+						</span>
+						
+					</form>	
+				
+ 		 </p>  
+</div> 	
+</div>
+<div id="backgroundPopup"></div> 
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+

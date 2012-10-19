@@ -1,0 +1,63 @@
+
+
+body{ background: #1b141c url(../images/grzs_01.jpg) no-repeat top; font: "ËÎÌו"; font-size:12px;}
+*{ padding:0px; border:0px; margin:0px;}
+li{ list-style-type:none;}
+a:link{ text-decoration:none;}
+a:hover { text-decoration:underline;}
+h1{ font-size:30px; color:#ffffff; display:inline; }
+h2{ font-size:14px; color:#f0037f; display:inline;}
+h3{ font-size:14px; font-weight:normal; color:#ffffff; display:inline;}
+h4{ font-size:20px; color:#fe89d3; display:inline;}
+h5{ font-size:12px; color:#fdb979; display:inline; font-weight:normal;}
+#full{ margin:0px auto; width:980px; height:auto;}
+
+
+#top{ height:123px; width:980px; float:left;}
+	#top_a{ height:20px; width:980px; color:#878787; float:left; overflow:hidden; text-align:right; padding-top:10px;}
+	#top_a a{ font-size:12px; color:#878787; text-decoration:none;}
+	#top_b{ height:93px; width:980px; float:left; overflow:hidden;}
+		#top_b_a{ height:93px; width:301px; float:left; overflow:hidden;}
+		#top_b_b{ height:93px; width:679px; float:left; overflow:hidden;}
+			#top_b_b_a{ height:53px; width:679px; float:left; overflow:hidden;}
+				#top_b_b_a_a{ width:676px; height:14px; float:left; color:#eac6be; text-align:right; padding-top:8px; padding-right:3px;}
+				#top_b_b_a_a a{ font-size:12px; color:#eac6be; text-decoration:none;}
+				#top_b_b_a_b{ width:679px; height:31px; float:left; color:#eac6be;}
+			#top_b_b_b{ height:40px; width:164px; float:left; overflow:hidden; background:url(../images/grzs_06.jpg) no-repeat;}
+			#top_b_b_c{ height:40px; width:515px; float:left; overflow:hidden;}
+				.button{ height:40px; width:515px; float:left; overflow:hidden; text-align:right;}
+				.button li{ height:26px; width:103px; float:left; overflow:hidden; text-align:center; padding-top:14px;}
+				.button li a{ font-size:14px; color:#eec4bc; text-decoration:none;}
+				
+				
+				
+				
+#cont{ width:980px; height:709px; float:left; overflow:hidden; background:url(../images/grda_01.jpg) no-repeat; background-color:#29242b; margin-bottom:10px;}
+	#cont_a{ width:980px; height:88px; float:left; overflow:hidden;}
+	#cont_b{ width:980px; height:621px; float:left; overflow:hidden;}
+		#cont_b_a{ width:13px; height:621px; float:left; overflow:hidden;}
+		#cont_b_b{ width:140px; height:621px; float:left; overflow:hidden;}
+			#cont_b_b_a{ width:140px; height:158px; float:left; overflow:hidden;}
+				#pic{ width:138px; height:138px; float:left; overflow:hidden; border:#763b4f 1px solid; margin-bottom:18px;}
+			#cont_b_b_b{ width:138px; height:30px; float:left; overflow:hidden; font-size:12px; color:#ffffff; padding-left:2px;}
+			#cont_b_b_c{ width:138px; height:36px; float:left; overflow:hidden; font-size:12px; color:#ffffff; padding-left:2px;}
+			#cont_b_b_d{ width:103px; height:397px; float:left; overflow:hidden; font-size:12px; color:#cccccc; padding-left:37px;}
+		#cont_b_c{ width:49px; height:621px; float:left; overflow:hidden;}
+		#cont_b_d{ width:778px; height:621px; float:left; overflow:hidden;}
+			#cont_b_d_a{ width:778px; height:37px; float:left; overflow:hidden;}
+			#cont_b_d_b{ width:743px; height:238px; float:left; overflow:hidden; margin-right:35px; border-bottom:#493f4a 1px solid;}
+				#news_left{ width:215px; height:238px; float:left; overflow:hidden; margin-right:180px;}
+					.news_a{ width:215px; height:41px; float:left; overflow:hidden; border-bottom:#493f4a 1px solid;}
+						.news_title{ width:73px; height:28px; float:left; overflow:hidden; padding-top:13px; padding-left:1px; white-space:nowrap;}
+						.news_cont{ width:141px; height:28px; float:left; overflow:hidden; padding-top:13px; white-space:nowrap;}
+						.news_cont1{ width:141px; height:50px; float:left; overflow:hidden; padding-top:13px; line-height:16px;}
+					.news_b{ width:215px; height:422px; float:left; overflow:hidden; margin-bottom:28px;}
+				#news_right{ width:215px; height:238px; float:left; overflow:hidden; margin-right:133px;}
+			#cont_b_d_c{ width:778px; height:24px; float:left; overflow:hidden;}
+			#cont_b_d_d{ width:778px; height:321px; float:left; overflow:hidden;}
+				#call_board{ width:727px; height:301px; float:left; overflow:hidden; margin-right:50px; line-height:30px; padding-left:1px; padding-bottom:20px;}
+				
+				
+				
+				
+				

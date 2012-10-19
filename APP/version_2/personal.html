@@ -1,0 +1,349 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="keywords" content="大连,大连新闻,大连你好,大连论坛,大连资讯,大连滚子游戏,大连生活,五年四班,大连博客,大连话,大连图片,大连视频,大连交友,大连问吧,大连知道,大连人物,大连团购,大连旅游,大连餐饮,大连教育,大连房产,大连汽车,大连娱乐,大连购物,大连摄影,news,dalian,daliannews" />
+<title><?php echo stripslashes($result['truename'])?>的个人首页——大连超级美女榜</title>
+<link href="version_2/styles/end.css" rel="stylesheet" type="text/css"/>
+<link href="version_2/styles/reset.css" rel="stylesheet" type="text/css"/>
+<link href="version_2/styles/headfooter/smallhead.css" rel="stylesheet" type="text/css" />
+<link href="version_2/styles/headfooter/footer.css" rel="stylesheet" type="text/css" />
+<link href="version_2/styles/personal_index.css" rel="stylesheet" type="text/css"/>
+
+<LINK rel=stylesheet type=text/css href="version_2/styles/lanrentuku.css">
+<SCRIPT type=text/javascript>
+var $ = function (id) {
+	return "string" == typeof id ? document.getElementById(id) : id;
+};
+
+var Extend = function(destination, source) {
+	for (var property in source) {
+		destination[property] = source[property];
+	}
+	return destination;
+}
+
+var CurrentStyle = function(element){
+	return element.currentStyle || document.defaultView.getComputedStyle(element, null);
+}
+
+var Bind = function(object, fun) {
+	var args = Array.prototype.slice.call(arguments).slice(2);
+	return function() {
+		return fun.apply(object, args.concat(Array.prototype.slice.call(arguments)));
+	}
+}
+
+var Tween = {
+	Quart: {
+		easeOut: function(t,b,c,d){
+			return -c * ((t=t/d-1)*t*t*t - 1) + b;
+		}
+	},
+	Back: {
+		easeOut: function(t,b,c,d,s){
+			if (s == undefined) s = 1.70158;
+			return c*((t=t/d-1)*t*((s+1)*t + s) + 1) + b;
+		}
+	},
+	Bounce: {
+		easeOut: function(t,b,c,d){
+			if ((t/=d) < (1/2.75)) {
+				return c*(7.5625*t*t) + b;
+			} else if (t < (2/2.75)) {
+				return c*(7.5625*(t-=(1.5/2.75))*t + .75) + b;
+			} else if (t < (2.5/2.75)) {
+				return c*(7.5625*(t-=(2.25/2.75))*t + .9375) + b;
+			} else {
+				return c*(7.5625*(t-=(2.625/2.75))*t + .984375) + b;
+			}
+		}
+	}
+}
+
+
+//容器对象,滑动对象,切换数量
+var SlideTrans = function(container, slider, count, options) {
+	this._slider = $(slider);
+	this._container = $(container);//容器对象
+	this._timer = null;//定时器
+	this._count = Math.abs(count);//切换数量
+	this._target = 0;//目标值
+	this._t = this._b = this._c = 0;//tween参数
+	
+	this.Index = 0;//当前索引
+	
+	this.SetOptions(options);
+	
+	this.Auto = !!this.options.Auto;
+	this.Duration = Math.abs(this.options.Duration);
+	this.Time = Math.abs(this.options.Time);
+	this.Pause = Math.abs(this.options.Pause);
+	this.Tween = this.options.Tween;
+	this.onStart = this.options.onStart;
+	this.onFinish = this.options.onFinish;
+	
+	var bVertical = !!this.options.Vertical;
+	this._css = bVertical ? "top" : "left";//方向
+	
+	//样式设置
+	var p = CurrentStyle(this._container).position;
+	p == "relative" || p == "absolute" || (this._container.style.position = "relative");
+	this._container.style.overflow = "hidden";
+	this._slider.style.position = "absolute";
+	
+	this.Change = this.options.Change ? this.options.Change :
+		this._slider[bVertical ? "offsetHeight" : "offsetWidth"] / this._count;
+};
+SlideTrans.prototype = {
+  //设置默认属性
+  SetOptions: function(options) {
+	this.options = {//默认值
+		Vertical:	true,//是否垂直方向（方向不能改）
+		Auto:		true,//是否自动
+		Change:		0,//改变量
+		Duration:	50,//滑动持续时间
+		Time:		10,//滑动延时
+		Pause:		4000,//停顿时间(Auto为true时有效)
+		onStart:	function(){},//开始转换时执行
+		onFinish:	function(){},//完成转换时执行
+		Tween:		Tween.Quart.easeOut//tween算子
+	};
+	Extend(this.options, options || {});
+  },
+  //开始切换
+  Run: function(index) {
+	//修正index
+	index == undefined && (index = this.Index);
+	index < 0 && (index = this._count - 1) || index >= this._count && (index = 0);
+	//设置参数
+	this._target = -Math.abs(this.Change) * (this.Index = index);
+	this._t = 0;
+	this._b = parseInt(CurrentStyle(this._slider)[this.options.Vertical ? "top" : "left"]);
+	this._c = this._target - this._b;
+	
+	this.onStart();
+	this.Move();
+  },
+  //移动
+  Move: function() {
+	clearTimeout(this._timer);
+	//未到达目标继续移动否则进行下一次滑动
+	if (this._c && this._t < this.Duration) {
+		this.MoveTo(Math.round(this.Tween(this._t++, this._b, this._c, this.Duration)));
+		this._timer = setTimeout(Bind(this, this.Move), this.Time);
+	}else{
+		this.MoveTo(this._target);
+		this.Auto && (this._timer = setTimeout(Bind(this, this.Next), this.Pause));
+	}
+  },
+  //移动到
+  MoveTo: function(i) {
+	this._slider.style[this._css] = i + "px";
+  },
+  //下一个
+  Next: function() {
+	this.Run(++this.Index);
+  },
+  //上一个
+  Previous: function() {
+	this.Run(--this.Index);
+  },
+  //停止
+  Stop: function() {
+	clearTimeout(this._timer); this.MoveTo(this._target);
+  }
+};
+</SCRIPT>
+<style type="text/css">
+.video a{ color:#666;}
+.video a:hover{ }
+</style>
+</head>
+
+<body>
+<div id="box">   
+    <?php require(APP_DIR . '/version_2/moda_header.html'); ?>
+        <div class="main"><!--主体-->
+        		<DIV id=idContainer2 class=container>
+                <TABLE id=idSlider2 border=0 cellSpacing=0 cellPadding=0>
+                  <TBODY>
+                  <TR>
+                    <TD class=td_f><A href="<?php echo $doorDat['img1_link']?>" target="_blank"><IMG src="<?php echo $doorDat['img_1']?>" width="978" height="360"/></A></TD>
+                    <TD class=td_f><A href="<?php echo $doorDat['img2_link']?>" target="_blank"><IMG src="<?php echo $doorDat['img_2']?>" width="978" height="360"></A></TD>
+                    <TD class=td_f><A href="<?php echo $doorDat['img3_link']?>" target="_blank"><IMG src="<?php echo $doorDat['img_3']?>" width="978" height="360"></A></TD>
+                    <TD class=td_f><A href="<?php echo $doorDat['img4_link']?>" target="_blank"><IMG src="<?php echo $doorDat['img_4']?>" width="978" height="360"></A></TD>
+                   </TR></TBODY></TABLE>
+                <UL id=idNum class=num></UL>
+                </DIV>
+                <SCRIPT>
+					var forEach = function(array, callback, thisObject){
+						if(array.forEach){
+							array.forEach(callback, thisObject);
+						}else{
+							for (var i = 0, len = array.length; i < len; i++) { callback.call(thisObject, array[i], i, array); }
+						}
+					}
+					
+					var st = new SlideTrans("idContainer2", "idSlider2", 4, { Vertical: false });
+					
+					var nums = [];
+					//插入数字
+					for(var i = 0, n = st._count - 1; i <= n;){
+						(nums[i] = $("idNum").appendChild(document.createElement("li"))).innerHTML = ++i;
+					}
+					
+					forEach(nums, function(o, i){
+						o.onmouseover = function(){ o.className = "on"; st.Auto = false; st.Run(i); }
+						o.onmouseout = function(){ o.className = ""; st.Auto = true; st.Run(); }
+					})
+					
+					//设置按钮样式
+					st.onStart = function(){
+						forEach(nums, function(o, i){ o.className = st.Index == i ? "on" : ""; })
+					}
+					st.Run();
+				</SCRIPT>
+                
+                <div class="main_left">
+                		<div class="aboutme"><!--个人资料-->
+                        		<div class="aboutme_logo">
+                                            <img src="version_2/images/aboutme_logo.jpg" width="146" height="57"/>
+                                </div>
+                                
+                                <div class="aboutme_pic">
+                                		<font><a href="?Controller=ModaIndex&action=GeRenZiLiao&id=<?php echo $result['user_id']?>"><img src="<?php echo $result['head_img']?>" width="138" height="138"/></a></font>
+                                        <ul>
+                                        <?php if($result['pass'] == 1){?>
+                                        <?php if($rankshow['rank_id'] != 7){ ?>
+                                                <li style=" height:35px; font-size:20px; font-weight:bolder;"><?php echo $modauserext['xingming']?></li>
+                                                <li>身高：<?php echo $modauserext['shengao']?><li>
+                                                <li>体重：<?php echo $modauserext['tizhong']?><li>
+                                                <li>三围：<?php  echo stripslashes($modauserext['sanwei'])?><li>
+                                                <li>星座：<?php echo $modauserext['xingzuo']?><li>
+                                         <?php }else{?>
+                                        		<li style=" height:35px; font-size:20px; font-weight:bolder;"><a href="#" target="_blank"><?php echo $result['truename']?></a></li>
+                                                <li>身 高：<?php echo stripslashes($result['height'])?><li>
+                                                <li>体 重：<?php echo stripslashes($result['weight'])?><li>
+                                                <li>三 围：<?php  echo stripslashes($result['chestmeasurement'])?>/<?php  echo stripslashes($result['waistline'])?>/<?php echo stripslashes($result['hip'])?><li>
+                                                <li>星 座：<?php echo $result['starsings']?><li>
+                                       	<?php }}?>
+                                        <?php if($result['pass'] == 11){?>
+                                            <strong>电话：<?php echo $result['some_words']?></strong>
+                                            
+                                       	<?php }?>
+                                        </ul>
+                                </div>
+                                
+                                <div class="aboutme_jiyu">
+                                		<?php if($rankshow['rank_id'] != 7){ ?>
+                                        	<span><pre>美达寄语：</pre><?php echo stripslashes($modauserext['meidajiyu'])?></span>
+                                        <?php }else{?>
+                                    		<span><pre>美达寄语：</pre><?php echo stripslashes($result['announcement'])?></span>
+                                        <?php }?>
+                                </div>
+                                
+                                <div class="aboutme_all">
+                                		<a href="?Controller=ModaIndex&action=GeRenZiLiao&id=<?php echo $result['user_id']?>" target="_blank">+点击查看详细资料</a>
+                                </div>
+                                
+                                <div class="aboutme_renqi">
+                                		<div class="aboutme_renqi1">
+                                				<img src="version_2/images/renqi_logo.jpg" width="25" height="23"/>
+                                                <font><?php echo $result['truename']?></font>
+                                                <b>（总人气：<?php echo $userext['huoyuedu']+$userext['fensishu']?>）</b>
+                                        </div>
+                                        <ul>
+                                        		<li>
+                                                		<pre>活跃度：</pre>
+                                                        <span style=" background:none; position:relative; width:auto;"><img src="version_2/images/index_hits_bar_a.png" width="<?php echo $userext['huoyuedupoint']?>" height="22" border="0" /><i style="position:absolute; top:1px; right:6px;"><?php echo $userext['huoyuedu']?></i></span>
+                                                        
+                                                </li>
+                                                <li>
+                                                		<pre>粉丝数：</pre>
+                                                        <p style=" background:none; position:relative; width:auto;"><img src="version_2/images/index_hits_bar_a.png" width="<?php echo $userext['fensishupoint']?>" height="22" border="0" /><i style="position:absolute; top:2px; right:6px;"><?php echo $userext['fensishu']?></i></sp>
+                                                        
+                                                </li>
+                                        </ul>
+                                </div>
+                                
+                                <div class="join">
+                                		<a href="?Controller=ModaIndex&action=Addfans&user_id=<?php echo $result['user_id']?>" target="_blank"><img src="version_2/images/join.jpg" width="238" height="67"/></a>
+                                </div>
+                        
+                       
+                        </div><!--end个人资料-->
+                        
+                        <div class="vcr"><!--美达VCR-->
+                        		<div class="vcr_logo">
+                                		<img src="version_2/images/vcr_logo.jpg" width="145" height="54"/>
+                                        <font><a href="?Controller=ModaIndex&action=AllNews" target="_blank">+&nbsp;所有美达VCR</a></font>
+                                </div>
+                                
+                                <div class="video">
+                                		<font><a href="?Controller=ModaIndex&action=ModaNews&id=<?php echo $vcrdata['news_id']?>" target="_blank"><img src="<?php echo $vcrdata['img_url']?>" width="296" height="178"/></a></font>
+                                        <span style="text-align:center;">美达&middot;大连超级美女榜 <?php echo $modauserext['xingming']?></span>
+                                        <pre style="width:100%; text-align:center;margin:0;"><a href="?Controller=ModaIndex&action=ModaNews&id=<?php echo $vcrdata['news_id']?>" title="" target="_blank" style="color:#666;"><?php echo $vcrdata['news_title']?></a></pre>
+                                        <!--<i>2012.03.26</i> -->
+                                </div>
+                                <div class="teyue">
+                                		特约拍摄：新青年视频工作室
+                                </div>
+                        </div><!--end美达VCR-->
+                        
+                        <div class="tieba"><!--美达贴吧-->
+                        		<div class="tieba_logo">
+                                		<img src="version_2/images/tieba_logo.jpg" width="146" height="36"/>
+                                        <span>与美达美女零距离接触平台</span>
+                                </div>
+                                <ul>
+                                <?php foreach($rowset as $data){ ?>
+                               		<li>
+                                          <i><a href="?Controller=ShowIndex&action=ModaClub&user_id=841" target="_blank">[美达贴吧]</a></i>
+                                          <pre><a href="?Controller=ShowIndex&action=ModaClubCall&user_id=<?php echo $visitUser_id?>&club_id=<?php echo $data['club_id']?>" target="_blank"><?php echo $data['title']?></a></pre>
+                                 	</li>
+                                <?php }?>
+                                </ul>	
+                                <div class="more">
+                                		+&nbsp;<a href="?Controller=ModaIndex&action=ModaTB" target="_blank">进入美达贴吧</a>
+                                </div>	
+                        </div><!--end美达贴吧-->
+                        
+                        
+                </div>
+                
+                <div class="main_right"><!--最新个人展示-->
+                        		<div class="myshow_logo">
+                                		<img src="version_2/images/myshow_logo.jpg" width="220" height="52"/>
+                                        <font><a href="?Controller=ShowIndex&action=ModaHelp" target="_blank">如何参加排行榜？</a></font>
+                                </div>
+                                <ul>
+                                <?php if($mainshow){?>
+                                        <li>
+                                            <i><a href="?Controller=ShowIndex&action=ShowDetail&user_id=<?php echo $id;?>&show_id=<?php echo $mainshow['show_id'];?>" target="_blank"><img src="<?php echo $mainshow['show_img']?>" width="298" height="198"/></a></i>		
+                                            <div class="shotitle">
+                                                    <font><a href="?Controller=ShowIndex&action=ShowDetail&user_id=<?php echo $id;?>&show_id=<?php echo $mainshow['show_id'];?>" target="_blank"><?php echo stripslashes($mainshow['title']) ?></a></font>
+                                                    <span><b><?php echo $mainshow['views']?></b>&nbsp;次浏览&nbsp;/&nbsp;<b><?php echo $mainshow['discuss_count']?></b>&nbsp;评论</span>		
+                                            </div>
+                                        </li>
+                                    <?php }?>
+                                    <?php foreach($showData as $data){?>
+                                        <li>
+                                        		<i><a href="?Controller=ShowIndex&action=ShowDetail&user_id=<?php echo $id;?>&show_id=<?php echo $data['show_id'];?>" target="_blank"><img src="<?php echo $data['show_img']?>" width="298" height="198"/></a></i>		
+                                                <div class="shotitle">
+                                                		<font><a href="?Controller=ShowIndex&action=ShowDetail&user_id=<?php echo $id;?>&show_id=<?php echo $data['show_id'];?>" target="_blank"><?php echo stripslashes($data['title']) ?></a></font>
+                                        				<span><b><?php echo $data['views']?></b>&nbsp;次浏览&nbsp;/&nbsp;<b><?php echo $data['discuss_count']?></b>&nbsp;评论</span>		
+                                                </div>
+                                        </li>
+                                      <?php }?>
+                                </ul>
+                                
+                                <div class="show_all">
+                                		<span>+&nbsp;<a href="?Controller=ShowIndex&action=ShowPosts&user_id=<?php echo $id;?>" target="_blank">点击查看全部展示</a></span>
+                                </div>
+                </div>
+        </div>
+		<?php require(APP_DIR . '/version_2/index_footer.html'); ?>
+</div>
+</body>
+</html>

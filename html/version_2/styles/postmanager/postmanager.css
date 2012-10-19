@@ -1,0 +1,30 @@
+@charset "gb2312";
+/* CSS Document */
+
+#main									{ width:978px; border:1px solid #ececec;float:left;}
+#main .moda_posts						{ width:958px; margin-left:11px; margin-top:-1px;_margin-left:6px;float:left;overflow:hidden;}
+#main .moda_posts .posts_logo			{ float:left; margin-left:-2px; _margin-left:11px; margin-top:10px; }
+#main .moda_posts .posts_title			{ color:#ff0183; margin-top:45px; margin-left:24px; float:left;}
+#main .moda_posts .posts_speak			{ width:104px; height:28px; margin-top:36px; float:right; overflow:hidden;}
+#main .moda_posts .posts_speak a		{ width:104px; height:28px;background:url(../../images/postmanager/managerbtn.jpg) no-repeat; float:left;}
+#main .moda_posts .posts_speak a:hover	{ text-decoration:none;}
+
+#main .posts_list						{ width:956px;_width:950px; _margin-left:0px; margin-top:15px; border:1px solid #e0e0e0; background-color:#f3f3f3; float:left}
+#main .posts_list li.posts_info					{ width:911px; margin-left:20px; border-bottom:1px dashed #999999; line-height:40px; float:left; padding-bottom:6px;}
+#main .posts_list li.posts_info div.p_title		{ color:#666;}
+#main .posts_list li.posts_info div.p_title i		{ color:#ff6600;}
+#main .posts_list li.posts_info div.p_title em		{ margin-left:54px;}
+#main .posts_list li.posts_info div.p_title a		{ margin-left:45px; color:#ff6600;}
+#main .posts_list li.posts_info div.p_title a:hover{ text-decoration:none;}
+#main .posts_list li.posts_info div.p_content		{ color:#333; font-size:14px;}
+#main .posts_list li.posts_info div.p_opt			{ }
+#main .posts_list li.posts_info div.p_opt a		{ width:34px; height:23px; color:#333; line-height:25px; text-align:center; background-color:#e4e4e4; margin-right:8px; float:left;}
+#main .posts_list li.posts_info div.p_opt a:hover	{ text-decoration:none; color:#006fce;}
+
+#main .posts_editor						{ width:956px; margin-top:20px; margin-bottom:21px; float:left;}
+#main .posts_editor .pe_title			{ margin-bottom:10px; float:left;}
+#main .posts_editor .pe_title h1					{ font-size:14px; font-weight:bold; color:#e4007f; margin-right:230px; float:left;}
+#main .posts_editor .pe_title span				{ color:#999; float:left;}
+
+
+

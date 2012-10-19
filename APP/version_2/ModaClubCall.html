@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>美达-----大连超级美女榜</title>
+<link href="version_2/styles/end.css" rel="stylesheet" type="text/css" />
+<link href="version_2/styles/reset.css" rel="stylesheet" type="text/css"  />
+<link href="version_2/styles/headfooter/smallhead.css" rel="stylesheet" type="text/css" />
+<link href="version_2/styles/headfooter/footer.css" rel="stylesheet" type="text/css" />
+<link href="version_2/styles/postmanager/postmanager.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-1.2.6.min.js" type="text/javascript"></script>
+<script src="js/showPopup.js" type="text/javascript"></script>
+<script type="text/javascript" src="./js/gp.js"></script>	
+
+
+<script type="text/javascript" src="/ckeditor/ckeditor.js"></script>
+<script src="/ckeditor/sample.js" type="text/javascript"></script>
+<link href="/ckeditor/sample.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" href="css/indexgeneral.css" type="text/css"/>
+
+<SCRIPT language=JavaScript>
+
+		function setCallId(IdNum)
+		{
+				document.formCall.call_id.value = IdNum;
+		}
+		
+		
+		function setNickName(nickname)
+		{
+				document.formCall.call_nickname.value = nickname;
+		}
+
+		function popAlert()
+		{
+			var title = document.formCall.title;
+			if(title)
+			{
+					var tlen = title.value.length;
+					if(tlen<4||tlen>30)
+					{
+							alert("标题不能少于4个字大于30个字");
+							return false;
+						}
+				}
+			var len = CKEDITOR.instances.editor2.getData().length;
+			if(len<15)
+				{
+					alert("内容不能少于5个字");
+					return false;
+				}
+			else
+				document.formCall.submit();
+		}
+		
+		
+		function popAlertDVA()
+			{ 
+				
+				var len = CKEDITOR.instances.editor2.getData().length;
+				if(len<15)
+					{
+						alert("内容不能少于5个字");
+						return false;
+					}
+				else
+					return true;	
+		}
+		
+		
+		function deletDec(visitUser_id,club_id,Id,power)
+		{	
+			
+				
+			if(power)	
+			{
+				alert("此回复为标题贴，不能删除");
+				return false;
+				}
+			else	
+			if(confirm('真的要删除吗？删除后将无法恢复！'))
+			{
+				var url = "?Controller=ShowIndex&action=ClubCallDelete&user_id="+visitUser_id+"&club_id="+club_id+"&Id="+Id+"";
+
+				location=url;
+			}
+			
+			
+
+		}
+		
+		
+	function checkChartRight()
+		{
+
+			if(<?php echo $chatRight?>)
+			{
+
+				 inputName('popCall'); 
+				 return true;
+			}
+
+			else
+			{
+				var usname = "<?php echo $curUsername ?>"
+				
+				if(usname =='')
+				{
+					alert("请登录后操作");
+					}
+				else
+				{
+					alert("只有美达用户或认证会员有权操作");
+					}
+					
+				return false;		
+				
+			}
+		
+		}
+
+		
+</SCRIPT>
+
+<style>
+	#cont_a_b_c{ width:145px; height:51px; float:left; overflow:hidden;}
+	#popone{ width:145px; height:51px; float:left; overflow:hidden;}
+		#popCall{ width:145px; height:51px; float:left; overflow:hidden;}
+</style>
+
+<style>
+
+
+#tc_b{ width:797px; height:375px; float:left; overflow:hidden; background:url(../images/tc_03.jpg) no-repeat; border:#403842 1px solid; margin:40px 0 0 0;}
+	#tc_b_a{ width:784px; height:39px; float:left; overflow:hidden;}
+	#tc_b_b{ width:771px; height:13px; float:left; overflow:hidden; font-size:12px; color:#6e6e6e; text-align:right; padding-right:13px;}
+	#tc_b_c{ width:784px; height:323px; float:left; overflow:hidden;}
+		#tc_b_c_a{ width:151px; height:323px; float:left; overflow:hidden;}
+			#tc_b_c_a_a{ width:138px; float:left; overflow:hidden; margin-left:11px; display:inline; border:#2c3048 1px solid;}
+			#tc_b_c_a_b{ width:138px; padding:0 0 0 11px; height:48px; float:left; overflow:hidden; font-size:12px; text-align:center; color:#f0037f; padding-top:5px;}
+		#tc_b_c_b{ width:625px; height:323px; float:left; overflow:hidden; padding-left:8px;}
+			#tc_b_c_b_a{ width:42px; height:318px; float:left; overflow:hidden; font-size:14px; color:#9297af; padding-top:5px;}
+			#tc_b_c_b_b{ width:583px; height:323px; float:left; overflow:hidden;}
+				.tc_b_c_b_b_a{ width:570px; color:#FFFFFF; height:138px; float:left; overflow:hidden; border:#454757 1px solid; background-color:#29252b; margin-right:11px;}
+				#tc_b_c_b_b_b{ width:448px; height:40px; float:left; overflow:hidden; padding-left:135px; padding-top:13px;}
+
+
+#popupContactClose{ background-color:#FF0000;
+	
+	}
+</style>
+</head>
+
+<body>
+   
+<div id="box">   
+<?php require(APP_DIR . '/version_2/moda_header.html'); ?>
+	<div id="main">
+		<div class="moda_posts">
+			<div class="posts_logo">
+				<img src="version_2/images/modapersonal/posts_logo.jpg" />
+			</div>
+            <?php if($visitUser_id == -1){?>
+              <h1 class="posts_title">美达贴吧综合区</h1>
+           <?php }else{?>
+              <h1 class="posts_title"><?php echo $result['nickname']?>-的贴吧</h1>
+           <?php }?>
+			<div class="posts_speak">
+				<a href="?Controller=ShowIndex&action=ModaClubAllList"></a>
+			</div>
+			<div class="posts_list">
+				<ul >
+                	<?php $temp = 0;foreach($rowset as $data){ $temp+=1;?>
+					<li class="posts_info">
+						<div class="p_title">
+							<span>昵称：
+                            <?php if(FI_CheckAdminRoot()){ ?>
+                                <i><a href="http://bbs.we54.com/admincp.php?action=editgroups&uid=<?php echo $data['cdbmem_id']?>"><?php echo $data['nickname']?></a></i>
+                            <?php }else{?>
+                                <i><?php echo $data['nickname']?></i>
+                            <?php }?>
+                            </span><em><?php echo $data['dateline']?></em>
+                            <?php if($data['adminid']!=-1){ ?>
+                                <?php if($data['power']!=1){?>
+                                    <?php if($chatRight){?>
+                                        <a href="#" id="pop<?php echo $temp?>" onclick="inputName('pop<?php echo $temp?>');setCallId(<?php echo $data['Id']?>); setNickName('<?php echo $data['nickname']?>');">+&nbsp;引用回复</a>
+                            <?php }}}?>
+						</div>
+                        <?php if($data['groupid']!=4){ ?>
+                        	<?php if($data['call_content']){?>
+                                    	<?php echo stripslashes($data['call_content']);?>
+							<?php }?>
+               				<div class="p_content">
+                            <?php 	
+                                if ( get_magic_quotes_gpc() )
+                                   echo stripslashes( $data['content'] );
+                                else
+                                   echo $data['content'] ;
+                                ?>
+                            </div>
+						<?php }else{?>
+							<?php if(FI_CheckAdminRoot()){ ?>
+									<?php if($data['call_content']){?>
+										<?php echo stripslashes($data['call_content'])?>
+									<?php }?>
+                                    <div class="p_content">
+                                    <?php 
+                                        if ( get_magic_quotes_gpc() )
+                                           echo stripslashes( $data['content'] );
+                                        else
+                                           echo $data['content'] ;
+                                    ?>
+                                    </div>
+							<?php }?>
+							<span style="color:#FFFFFF">该用户信息已被屏蔽</span>
+						<?php }?>
+                        <div class="p_opt">
+                        <?php if($this->_GetByClubCallEditRight($data['Id'])){?>
+                                <?php if(FI_CheckAdminRoot()){ ?>
+                                        <a href="" onclick=" return deletDec(<?php echo $visitUser_id ;?>,<?php echo $data['club_id'];?>,<?php echo $data['Id'] ;?>,<?php echo $data['power'] ;?>)">删除</a>
+                                <?php }?>
+								<a href="?Controller=ShowIndex&action=ModaClubCallEdit&user_id=<?php echo $visitUser_id; ?>&club_id=<?php echo $data['club_id']; ?>&Id=<?php echo $data['Id']; ?>">编辑</a>
+
+						<?php }?>
+						</div>
+					</li>
+                    <?php }?>
+				</ul>
+				<ol id="list_pg"><!--页码-->
+                  <?php echo $page->pageHtml;?>
+             	</ol>
+			</div>
+			<div class="posts_editor" style=" overflow:hidden;">
+				<div class="pe_title" style="width:956px;">
+					<h1>发表回复</h1><span>(请勿发表反动，暴力，色情以及人身攻击等言论)</span>
+				</div>
+				<div class="pe_editor" style=" width:956px; float:left;">
+<?php if($chatRight){?>
+		
+		<form id="formCB" name="formCB" action="" method="post">
+			<input type="hidden" id="visitUser_id" name="visitUser_id" value="<?php echo $visitUser_id?>" />
+			<input type="hidden" id="club_id" name="club_id" value="<?php echo $clubId?>" />
+			
+			<input type="hidden" id="id" name="id" value="-1" />
+                            <textarea  cols="80" id="editor1" name="content" rows="10">
+                            </textarea>
+                        <script type="text/javascript">
+                            CKEDITOR.replace( 'editor1',
+                                {
+                                    extraPlugins : 'uicolor',
+                                    toolbar :
+                                    [
+                                        [ 'Bold', 'Italic', '-', 'NumberedList', 'BulletedList', '-', 'Link', 'Unlink' ,'-','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock','-','Image','Flash','Smiley','-','Styles','Format','Font','FontSize'],
+                                        
+                                    ]
+                                });
+                        </script>
+           
+			
+					<input type="submit" value="" onclick="return popAlert();" style="background-image:url(images/jlbck_02.gif); width:117px; height:26px; overflow:hidden; margin:10px 0 0 0; display:inline; cursor:pointer; background-color:#000000; float:right;" />
+				
+			
+
+		</form>	
+			
+
+<?php }?>
+				</div>
+			</div>
+		</div>
+	</div>
+	<?php require(APP_DIR . '/version_2/index_footer.html'); ?>
+</div>
+</body>
+</html>

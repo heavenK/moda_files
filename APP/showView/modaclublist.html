@@ -1,0 +1,395 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GB2312" />
+
+
+<title><?php echo stripslashes($result['truename'])?>的美达贴吧-美达&middot;大连超级美女榜-大连新青年</title>
+<meta name="keywords" content="大连，大连新闻，大连论坛，大连资讯，大连滚子游戏，大连生活，五年四班，大连博客，大连话，大连图片，大连视频，大连交友，大连问吧，大连知道，大连人物，大连团购,大连旅游，大连餐饮，大连教育，大连房产，大连汽车，大连娱乐，大连购物，大连摄影，美达美女，美女，美达，美女榜，美达美女榜，大连美女，moda，dalian，daliannews,<?php echo $result['truename']?>" /> 
+<meta name="description" content="大连新青年网是大连生活资讯信息最丰富的网络媒体，是大连本土化互动、娱乐网络平台，美达美女榜，大连地区拥有广大受众的美女展示平台。"/> 
+
+<!--<link rel="stylesheet" href="css/showGeneral.css" type="text/css" media="screen" />-->
+<link rel="stylesheet" href="css/popWin.css" type="text/css" media="screen" />
+
+<link href="style/jlblist.css" rel="stylesheet" type="text/css" />
+
+<link href="two_styles/moda_reset.css" rel="stylesheet" type="text/css" />
+<link href="two_styles/moda_header.css" rel="stylesheet" type="text/css" />
+<link href="two_styles/moda_footer.css" rel="stylesheet" type="text/css" />
+
+<script src="js/jquery-1.2.6.min.js" type="text/javascript"></script>
+<script src="js/showPopup.js" type="text/javascript"></script>
+<script type="text/javascript" src="./js/gp.js"></script>	
+
+<script type="text/javascript" src="/ckeditor/ckeditor.js"></script>
+<script src="/ckeditor/sample.js" type="text/javascript"></script>
+<link href="/ckeditor/sample.css" rel="stylesheet" type="text/css" />
+
+    
+<style>
+	#modaShowBot{ width:280px; height:21px;   margin: 0 auto; 
+}
+	#delet_Boot{ 
+	}
+</style>
+
+<link rel="stylesheet" href="css/indexgeneral.css" type="text/css"/>
+
+
+
+<SCRIPT language=JavaScript>
+
+		function setCallId(IdNum)
+		{
+				document.formCall.call_id.value = IdNum;
+		}
+		
+		function dofoucs()
+		{
+				document.serchform.serch.value = "";
+		}
+		
+
+		function popAlert()
+		{
+
+			var title = document.formCall.title;
+			if(title)
+			{
+					var tlen = title.value.length;
+					if(tlen<4||tlen>30)
+					{
+							alert("标题不能少于4个字大于30个字");
+							return false;
+						}
+				}
+			
+			var len = CKEDITOR.instances.editor1.getData().length;
+			if(len<15)
+				{
+					alert("内容不能少于5个字");
+					return false;
+				}
+			else
+				document.formCall.submit();
+
+
+
+
+
+		}
+		
+
+		
+		function deletDec(visitUser_id,club_id)
+		{	
+			if(confirm('真的要删除吗？删除后将无法恢复！'))
+			{
+				var url = "?Controller=ShowIndex&action=ClubDelete&user_id="+visitUser_id+"&club_id="+club_id+"";
+
+				location=url;
+			}
+			
+			
+
+		}
+		function noTalk(visitUser_id,club_id)
+		{	
+				
+			if(confirm('关闭帖子？'))
+			{
+				var url = "?Controller=ShowIndex&action=ClubDelete&user_id="+visitUser_id+"&club_id="+club_id+"&do="+"1";
+
+				location=url;
+			}
+			
+			
+
+		}
+		function canTalk(visitUser_id,club_id)
+		{	
+				
+			if(confirm('打开帖子？'))
+			{
+				var url = "?Controller=ShowIndex&action=ClubDelete&user_id="+visitUser_id+"&club_id="+club_id+"&do="+"2";
+
+				location=url;
+			}
+			
+			
+
+		}
+		
+		function highLight(visitUser_id,club_id,mark)
+		{	
+			//alert(mark);
+			var st = "highL_"+mark;
+			//alert(st);
+			var damio = document.getElementsById(st);
+			
+			alert("aaa");
+			
+			
+
+		}
+		
+		
+		
+		function checkChartRight()
+		{
+
+			if(<?php echo $chatRight?>)
+			{
+
+				 inputName('popCall'); 
+				 return true;
+			}
+
+			else
+			{
+				var usname = "<?php echo $curUsername ?>"
+				
+				if(usname =='')
+				{
+					alert("请登录后操作");
+					}
+				else
+				{
+					alert("只有美达用户或认证会员有权操作");
+					}
+					
+				return false;		
+				
+			}
+		
+		}
+		
+		
+</SCRIPT>
+
+
+<style>
+	#cont_d{ width:980px; height:40px; float:left; text-align:center;}
+</style>
+
+
+</head>
+<body>
+
+
+<div id="full">
+
+
+    <?php  require(APP_DIR . '/tow_view/header_page.html'); ?> 
+     
+     
+
+     <div id="cont">
+     	<div class="cont_a"></div>
+        
+        <div class="cont_b">
+        	<div id="cont_b_a"></div>
+            
+            <div id="cont_b_b">
+            
+            	<div id="cont_b_b_a">
+                
+<!--                	贴吧主席:<?php echo stripslashes($result['nickname'])?>
+-->                
+
+				<style>
+                	.we54moda_zw_01		{ width:200px; height:24px; padding:0 5px; line-height:25px; border:#8f557e 1px solid; background:#5f384b; color:#eec4bc; overflow:hidden; float:left;}
+					.we54moda_zw_02		{ width:40px; height:26px; text-align:center; margin:0 0 0 6px; display:inline; line-height:25px; border:#8f557e 1px solid; background:#5f4f59; color:#eec4bc; overflow:hidden; float:left;}
+					
+                </style>
+					<form id="serchform" name="serchform" method="post" action="">
+                        <input class="we54moda_zw_01" type="text" name="serch"  id="serch"value="填写选手姓名"  onfocus="dofoucs()" /> 
+                        <input class="we54moda_zw_02" type="submit"  value="搜索" />
+                    </form>
+
+                </div>     
+                
+                
+                <div id="cont_b_b_b">
+					<div id="popCall">
+						<a href="#" onclick="return checkChartRight();"><img src="images/jlb_02.gif" width="129" height="40" /></a>
+					</div>
+				</div>
+                
+            </div>
+            
+            <div id="cont_b_c">
+            	<ul class="list">
+                	<li class="list_a">
+                    	<span class="list_a_a">标题</span>
+                        <span class="list_a_b">点击</span>
+                        <span class="list_a_c">回复</span>
+                        <span class="list_a_d">昵称</span>
+                    </li>
+
+					<?php  foreach($rowset as $data){ $pieces = explode("^?",stripslashes($data['title'])); $data['title'] = $pieces[0] ?>
+                    
+						
+                    <?php if($data['groupid']!=4){ ?>
+                        
+						
+                    <li class="list_b" >
+                    	<span class="list_b_a">
+                                <?php if($data['adminid']!=-1){ ?>
+                                            <?php if($pieces[1]){ ?>
+                                                [<a  href="?Controller=ShowIndex&action=ModaClub&user_id=<?php echo $data['uid']?>"><span style="color:#fe89d3;font-weight:bold;"><?php echo $data['truename'] ?></span></a>]
+                                            <a style="color:<?php echo stripslashes($pieces[1])?>" href="?Controller=ShowIndex&action=ModaClubCall&user_id=<?php echo $data['uid']?>&club_id=<?php echo $data['club_id']?>"><?php echo stripslashes($data['title'])?></a>
+                                            <?php }else{?>
+                                            
+                                               [<a  href="?Controller=ShowIndex&action=ModaClub&user_id=<?php echo $data['uid']?>"><span style="color:#fe89d3 ;font-weight:bold;""><?php echo $data['truename'] ?></span></a>]
+                                                    
+                                                <a  href="?Controller=ShowIndex&action=ModaClubCall&user_id=<?php echo $data['uid']?>&club_id=<?php echo $data['club_id']?>">
+                                                    <?php echo stripslashes($pieces[0])?>
+                                                </a>
+                                    
+                                <?php }}else{?>
+                                
+                                            <?php if($this->_CheckAdminRoot()){  ?>
+                                                <?php if($pieces[1]){ ?>
+                                            
+                                                    [<a  href="?Controller=ShowIndex&action=ModaClub&user_id=<?php echo $data['uid']?>"><span style="color:#fe89d3;font-weight:bold;""><?php echo $data['truename'] ?></span></a>]
+                                                    <a style="color:<?php echo stripslashes($pieces[1])?>" href="?Controller=ShowIndex&action=ModaClubCall&user_id=<?php echo $data['uid']?>&club_id=<?php echo $data['club_id']?>"><?php echo stripslashes($data['title'])?></a>
+                                                <?php }else{?>
+                                                   [<a  href="?Controller=ShowIndex&action=ModaClub&user_id=<?php echo $data['uid']?>"><span style="color:#fe89d3;font-weight:bold;""><?php echo $data['truename'] ?></span></a>]
+                                                    <a  href="?Controller=ShowIndex&action=ModaClubCall&user_id=<?php echo $data['uid']?>&club_id=<?php echo $data['club_id']?>">
+                                                        <?php echo stripslashes($pieces[0])?>
+                                                    </a>
+                                            <?php }}?>
+                                <?php }?>
+						</span>
+						<span class="list_b_b">
+						<?php if($this->_CheckAdminRoot()){ ?>
+						<form action="?Controller=ShowIndex&action=ModaClub" method="post" id="formHigh" name="formHigh">
+							<input type="button" onclick=" return deletDec(<?php echo $data['uid']?>,<?php echo $data['club_id'];?>)" value="删除" id="delet_Boot" style="border:#000000 1px solid; float:left" />
+                            <?php if($data['status'] == 0){?>
+							<input type="button" onclick=" return noTalk(<?php echo $data['uid']?>,<?php echo $data['club_id'];?>)" value="关闭" id="notalk" style="border:#000000 1px solid; float:left" />
+                            <?php }else{?>
+							<input type="button" onclick=" return canTalk(<?php echo $data['uid']?>,<?php echo $data['club_id'];?>)" value="开放" id="cantalk" style="border:#000000 1px solid; float:left" />
+                            <?php }?>
+							<select id="highL" name="highL" style="float:left">
+							<option style="background-color:#ff0000" value="#ff0000">&nbsp;&nbsp;</option>
+							<option style="background-color:#ff6ee2" value="#ff6ee2">&nbsp;&nbsp;</option>
+							<option style="background-color:#19af00" value="#19af00">&nbsp;&nbsp;</option>
+							<option style="background-color:#049eff" value="#049eff">&nbsp;&nbsp;</option>
+							<option style="background-color:#fff000" value="#fff000">&nbsp;&nbsp;</option>
+							<option style="background-color:#eec4bc" value="#eec4bc">&nbsp;&nbsp;</option>
+							</select> 
+							<input type="hidden" name="user_id" value="<?php echo $data['uid'] ?>" />
+							<input type="hidden" name="club_id" value="<?php echo $data['club_id'] ?>" />
+							<input type="hidden" name="title" value="<?php echo stripslashes($data['title']); ?>" />
+							<input type="submit" value="高亮" style="float:left" />
+						</form>
+						<?php } ?>
+						</span>
+						
+						
+                       <span class="list_b_e"><?php echo $data['views']?></span>
+                       <span class="list_b_c"><?php echo $data['call_num']?></span>
+                       <span class="list_b_d"><?php echo $data['creaternkname']?></span>
+						
+                       
+                    </li>
+                    
+                <?php }else{?>
+                
+                
+                <?php }?>
+                    
+				<?php }?>
+                    
+                </ul>
+            </div>
+            
+           <div id="cont_d" ><?php echo $page->pageHtml;?></div>
+            
+        </div>
+        
+     </div>
+
+     
+
+<?php 			require(APP_DIR . '/showView/Widbottom.html');		?>
+  
+</div>
+<style>
+
+#tc_c{/* width:784px;*/ width:797px; height:407px; float:left; overflow:hidden; background:url(../images/tc_04.jpg) no-repeat; border:#403842 1px solid;}
+	#tc_c_a{ width:784px; height:39px; float:left; overflow:hidden;}
+	#tc_c_b{ width:771px; height:13px; float:left; overflow:hidden; font-size:12px; color:#6e6e6e; text-align:right; padding-right:13px;}
+	#tc_c_c{ width:784px; height:345px; float:left; overflow:hidden;}
+		#tc_c_c_a	{ width:151px; height:345px; float:left; overflow:hidden;}
+		#tc_c_c_a_a	{ width:138px; height:218px; float:left; overflow:hidden; margin-left:11px; border:#2c3048 1px solid;}
+		#tc_c_c_a_b	{ width:94px; height:200px; float:left; overflow:hidden; font-size:12px; color:#f0037f; padding-left:57px; padding-top:5px;}
+		#tc_c_c_b	{ width:625px; height:355px; float:left; overflow:hidden; padding-left:8px;}
+		#tc_c_c_b_a	{ width:42px; height:345px; float:left; overflow:hidden; font-size:14px; color:#9297af; line-height:28px;}
+		#tc_c_c_b_b	{ width:583px; height:345px; float:left; overflow:hidden;}
+		.tc_c_c_b_b_a{ width:370px; color:#FFFFFF; height:24px; border:#454757 1px solid; background-color:#29252b; margin:0 0 11px 11px; display:inline;}
+		.tc_c_c_b_b_b{ width:570px; color:#FFFFFF; height:257px; float:left; overflow:hidden; border:#454757 1px solid; background-color:#29252b; margin-right:11px; margin-top:6px;}
+		#tc_c_c_b_b_c{ width:443px; height:39px; float:left; overflow:hidden; padding-left:140px; padding-top:4px;}
+
+	#popupContactClose{ background-color:#FF0000;}
+</style>
+
+<div id="popupContactAAA">	
+<span id="popupContactClose" style="float:right; background-image:url(images/close.jpg); width:13px; height:13px; overflow:hidden; margin-top:20px; margin-right:20px;" ></span>
+        <p id="contactArea">  
+					<form id="formCall" name="formCall" method="post" action="?Controller=ShowIndex&action=NewClubCall">
+					<div id="tc_c">
+		<div id="tc_c_a"></div>
+		<div id="tc_c_b"><?php echo date("Y-m-d H:i:s")?></div>
+		<div id="tc_c_c">
+			<div id="tc_c_c_a">
+				<span id="tc_c_c_a_a">
+					<?php if($modaud){?>
+						<a href="#"><img src="<?php echo $modaud['head_img']?>" width="138" height="138" /></a>
+					<?php }else{?>
+						<img src="thumb_image/head.jpg" width="138" height="138" />
+					<?php }?>	
+				
+				</span>
+				<span id="tc_c_c_a_b"><?php echo $curNickname ?></span>
+			</div>
+			<div id="tc_c_c_b">
+				<div id="tc_c_c_b_a">标题：内容：</div>
+				<div id="tc_c_c_b_b">
+					<select id="chair_id" name="chair_id" style="border:1px #d1d1d1 solid; width:100px; float:left; margin-top:3px;">
+                    		<option value="-1">综合贴吧区</option>
+						<?php foreach($modauesrs as $dat){?>
+							<option value="<?php echo $dat['user_id']?>"><?php echo $dat['truename']?></option>
+						<?php }?>
+					</select>
+					<input  name="title" class="tc_c_c_b_b_a" id="title"   />
+                    <textarea  cols="80" id="editor1" name="content" rows="10"></textarea>
+                        <script type="text/javascript">
+                            CKEDITOR.replace( 'editor1',
+                                {
+                                    extraPlugins : 'uicolor',
+									toolbar :
+									[
+										[ 'Bold', 'Italic', '-', 'Link', 'Unlink' ,'-','Image','Smiley','-','Styles','Format','Font','FontSize'],
+										
+									]
+                                });
+                        </script>
+                    
+					<span id="tc_c_c_b_b_c"><a href="#" onclick="return popAlert();"><img src="images/tc_05.gif" width="119" height="28" /></a></span>
+				</div>
+			</div>
+		</div>
+	</div>
+					</form>	
+				
+ 		 </p>  
+</div> 	
+</div>
+<div id="backgroundPopup"></div> 
+
+
+
+</body>
+</html>

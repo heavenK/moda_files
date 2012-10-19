@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title><?php echo $result['truename']?>个人档案-美达&middot;大连超级美女榜-大连新青年</title>
+<meta name="keywords" content="大连，大连新闻，大连论坛，大连资讯，大连滚子游戏，大连生活，五年四班，大连博客，大连话，大连图片，大连视频，大连交友，大连问吧，大连知道，大连人物，大连团购,大连旅游，大连餐饮，大连教育，大连房产，大连汽车，大连娱乐，大连购物，大连摄影，美达美女，美女，美达，美女榜，美达美女榜，大连美女，moda，dalian，daliannews,<?php echo $result['truename']?>" /> 
+<meta name="description" content="大连新青年网是大连生活资讯信息最丰富的网络媒体，是大连本土化互动、娱乐网络平台，美达美女榜，大连地区拥有广大受众的美女展示平台。"/> 
+<link href="version_2/styles/end.css" rel="stylesheet" type="text/css"/>
+<link href="version_2/styles/reset.css" rel="stylesheet" type="text/css"/>
+<link href="version_2/styles/headfooter/smallhead.css" rel="stylesheet" type="text/css" />
+<link href="version_2/styles/headfooter/footer.css" rel="stylesheet" type="text/css" />
+<link href="version_2/styles/moda_grzl.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script src="js/indexpopup.js" type/"text/javascript"></script>
+<!--日历-->
+<!--弹出框-编辑-->
+	<script src="js/popup2.js" type/"text/javascript"></script>
+<!-- 弹出框-头像-->
+<script src="js/popup.js" type="text/javascript"></script>
+<!-- 修改头像 -->
+<script src="js/jquery.pack.js"></script>
+<script src="js/jquery.Jcrop.pack.js"></script>		
+<link rel="stylesheet" href="js/jquery.Jcrop.css" type="text/css" />
+<script language="Javascript">
+
+	$(function(){
+
+		
+	});
+	
+	function goss(){
+
+		jQuery('#cropbox').Jcrop({
+			onChange: showPreview,
+			onSelect: showPreview,
+			onSelect: updateCoords,
+			setSelect: [ 0, 0, 138, 138 ]
+			//aspectRatio: 1
+		});
+
+	}
+
+	function updateCoords(c)
+	{
+		$('#x').val(c.x);
+		$('#y').val(c.y);
+		$('#w').val(c.w);
+		$('#h').val(c.h);
+	};
+
+	function checkCoords()
+	{
+		if ($('#x').val()==''){
+			alert('请先上传头像然后选择裁切头像最后进行保存！');
+			return false;
+		}
+	};
+	
+	function showPreview(coords)
+	{
+		var rx = 138 / coords.w;
+		var ry = 138 / coords.h;
+		var w2=$("#bigwidth").val();
+		var h2=$("#bigheight").val();
+		jQuery('#preview').css({
+			width: Math.round(rx * w2) + 'px',
+			height: Math.round(ry * h2) + 'px',
+			marginLeft: '-' + Math.round(rx * coords.x) + 'px',
+			marginTop: '-' + Math.round(ry * coords.y) + 'px'
+		});
+	}
+
+</script>
+<!--变换css-->
+
+<!-- required plugins -->
+<script type="text/javascript" src="js/date.js"></script>
+<!--[if IE]><script type="text/javascript" src="/scripts/jquery.bgiframe.js"></script><![endif]-->
+
+<!-- jquery.datePicker.js -->
+<script type="text/javascript" src="js/jquery.datePicker.js"></script>
+
+<script type="text/javascript" charset="utf-8">
+		Date.format = 'yyyy-mm-dd';
+
+		$(function()
+		{
+			$('#bdate').attr("readonly", true);
+			$('#bdate').datePicker({startDate:'1908-01-01'});
+		});
+		
+		
+</script>
+<script type="text/javascript">
+function signs() {
+	var f=document.getElementById("bdate").value;
+	var a =f.split("-");
+		
+var date=a[2], month=a[1];
+with (document.getElementById("starsings")){
+if (month == 1 && date >=20 || month == 2 && date <=18) {value = "水瓶座";}
+if (month == 2 && date >=19 || month == 3 && date <=20) {value = "双鱼座";}
+if (month == 3 && date >=21 || month == 4 && date <=19) {value = "白羊座";}
+if (month == 4 && date >=20 || month == 5 && date <=20) {value = "金牛座";}
+if (month == 5 && date >=21 || month == 6 && date <=21) {value = "双子座";}
+if (month == 6 && date >=22 || month == 7 && date <=22) {value = "巨蟹座";}
+if (month == 7 && date >=23 || month == 8 && date <=22) {value = "狮子座";}
+if (month == 8 && date >=23 || month == 9 && date <=22) {value = "处女座";}
+if (month == 9 && date >=23 || month == 10 && date <=22) {value = "天秤座";}
+if (month == 10 && date >=23 || month == 11 && date <=21) {value = "天蝎座";}
+if (month == 11 && date >=22 || month == 12 && date <=21) {value = "人马座";}
+if (month == 12 && date >=22 || month == 1 && date <=19) {value = "摩羯座";}
+}
+
+
+}
+
+	
+</script>
+<script language="javascript"> 
+function copyToClipboard(theField,isalert)
+{
+
+  var obj=document.getElementById(theField);
+  if(obj!=null)
+  {
+    var clipBoardContent=obj.value+".moda.we54.com";
+
+    window.clipboardData.setData("Text",clipBoardContent); 
+    if(isalert!=false)
+      alert("复制成功。现在您可以粘贴（Ctrl+v）发送给好友了。");
+  }
+  else
+  {
+     alert("Error!");
+  }
+}
+</script>
+
+<script type="text/javascript" src="./js/gp.js"></script>	
+</head>
+
+<body>
+<div id="box">   
+    <?php require(APP_DIR . '/version_2/moda_header.html'); ?>
+    
+    <div class="moda_grzl_list">
+    	
+        <div class="grzl_title">
+        <form action="" name="formaddr" method="post">
+        	<input type="hidden" name="id" value="address" />
+			<input type="hidden" name="user_id" id="user_id" value="<?php echo $result['user_id']?>" />
+            <input type="hidden" name="dpost" value="address" />
+            <i><input value="复制" type="button" class="fuzhi"  onclick=" copyToClipboard('addr',true); " /></i>
+            <i><input value="修改" type="submit" class="xiugai" /></i>
+            <span><img src="version_2/images/moda_aboutme.jpg" width="161" height="78" border="0" /></span>
+            <em><tt>我的moda地址：</tt><input type="text" id="addr" name="addr" title="" value="<?php  echo stripslashes($result['address'])?>" class="modaads" onkeyup="value=value.replace(/[\W]/g,'') " onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))">.moda.we54.com</em>
+        </form>	
+        </div>
+        
+        <div class="grzl_left">
+            <h1><img src="<?php  echo $result['head_img']?>" width="138" height="138" border="0" /></h1>
+            <em>+ <a href="/?Controller=ShowIndex&action=AddUserImg&username=<?php  echo $result['username']?>" target="_blank" id="button">修改头像</a></em>
+            <em>+ <a href="http://bbs.we54.com/pm.php" target="_blank">查看消息</a></em>
+            <span>访问量：<?php  echo $result['liulanliang']?></span>
+        </div>
+        <div class="grzl_right">
+            <div class="grzl_right_name"><span><?php  echo $result['nickname']?></span></div>
+            <div class="grzl_right_zlone">
+                <ul>
+                    <li><em>姓&nbsp;名：</em><input type="text" class="zlone" name="truename" value="<?php  echo stripslashes($result['truename'])?>"></li>
+                    <li><em>体&nbsp;重：</em><input type="text" class="zlone" name="weight" value="<?php  echo stripslashes($result['weight'])?>"></li>
+                    <li><em>身&nbsp;高：</em><input type="text" class="zlone" name="height" value="<?php  echo stripslashes($result['height'])?>"></li>
+                    <li><em>兴&nbsp;趣：</em><input type="text" class="zlone" name="like" value="<?php  echo stripslashes($result['like'])?>"></li>
+                    <li><em>三&nbsp;围：</em><input type="text" class="zlone" name="chestmeasurement" value="<?php  echo stripslashes($result['chestmeasurement'])?> " style="width:20px; float:left;" /> <input type="text" name="waistline" id="d11" class="zlone" value="<?php  echo stripslashes($result['waistline'])?> " style="width:20px; float:left;" /> <input type="text" id="d12" name="hip" class="zlone" value="<?php  echo stripslashes($result['hip'])?> " style="width:20px; float:left;" /> <span style=" margin-top:18px; float:left;">/ CM</span></li>
+                    <li><em>血&nbsp;型：</em><input type="text" class="zlone" name="bloodtype" value="<?php  echo stripslashes($result['bloodtype'])?>"></li>
+                    <li><em>星&nbsp;座：</em><input type="text" class="zlone" name="starsings" value="<?php  echo stripslashes($result['starsings'])?>"  ></li>
+                    <li><em>偶&nbsp;像：</em><input type="text" class="zlone" name="likestar"value="<?php  echo stripslashes($result['likestar'])?>"></li>
+                    <li><em style="width:80px;">喜爱食物：</em><input style=" width:203px;" type="text" class="zlone" name="wish_hope" value="<?php  echo stripslashes($result['wish_hope'])?>"  ></li>
+                    <li><em style="width:80px;">喜爱颜色：</em><input style=" width:203px;" type="text" class="zlone" name="lovecolor" value="<?php  echo stripslashes($result['lovecolor'])?>"></li>
+                </ul>
+            </div>
+            <div class="grzl_right_zltwo" style="height:240px;">
+                <ul>
+                    <li><em>座右铭：</em><input name="motto" type="text" class="lvyou" value="<?php  echo stripslashes($result['motto'])?>"></li>
+                    <li><em>最能让你兴奋的事情：</em><input name="exct_things" type="text" class="xiyin" value="<?php  echo stripslashes($result['exct_things'])?>"></li>
+                    <li><em>无聊时大多都做些什么：</em><input name="res_do" type="text" class="leixing" value="<?php  echo stripslashes($result['res_do'])?>"></li>
+                    <li><em>觉得快乐属于什么样的人：</em><input name="my_opinion" type="text" class="taoyan" value="<?php  echo stripslashes($result['my_opinion'])?>"></li>
+                    <li><em>最想对新青年网友说的话：</em><input name="some_words" type="text" class="taoyan" value="<?php  echo stripslashes($result['some_words'])?>"></li>
+                </ul>
+            </div>
+            <div class="grzl_right_jiyu" style="height:280px;">
+                <span>美达寄语：</span>
+                <textarea class="jiyu" style="height:240px;" name="announcement" onKeyUp="if(this.value.length > 200) this.value=this.value.substr(0,200)" ><?php  echo stripslashes($result['announcement'])?></textarea>
+            </div>
+        </div>
+
+    </div>
+    <?php require(APP_DIR . '/version_2/index_footer.html'); ?>
+</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>MODA美达|大连美女评选——大连新青年网</title>
+<meta name="keywords" content="大连，大连新闻，大连论坛，大连资讯，大连滚子游戏，大连生活，五年四班，大连博客，大连话，大连图片，大连视频，大连交友，大连问吧，大连知道，大连人物，大连团购,大连旅游，大连餐饮，大连教育，大连房产，大连汽车，大连娱乐，大连购物，大连摄影，dalian，daliannews">
+<meta name="description" content="大连新青年网是大连生活资讯信息最丰富的网络媒体，是大连本土化互动、娱乐网络平台。"/>
+<script language="javascript" type="text/javascript" src="js/js.js"></script>
+<link href="css/ccs.css" rel="stylesheet" type="text/css" />
+<link href="css/huadongmen.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">
+function checkbox(obj){
+    var o=obj.getElementsByTagName("input")[0];
+    if(o.checked==""||!o.checked){
+        o.checked=true;
+        o.parentNode.className="checkbox_checked";
+    }else{
+        o.checked=false;
+        o.parentNode.className="checkbox"
+    }
+}
+function radio(elem,obj){
+    var oo=obj.getElementsByTagName("input")[0];
+    if(oo.checked) oo.checked=false;
+    else oo.checked=true;
+    var o=(document.getElementsByName(elem));
+    var n=o.length;
+    for (var i=0;i<n;i++){
+        var oo=o[i];
+        if(oo.checked==""||!oo.checked){
+            oo.parentNode.className="radioButton";
+        }else{
+            oo.parentNode.className="radioButton_checked";
+        }
+    }
+}
+</script>
+
+</head>
+
+<body>
+<div id="MDBoxs">
+	<div id="MDheader"><!--头部--><img src="images/md001.jpg" width="556" height="133" border="0" alt="MODA美达|大连美女评选" class="MDheaderA" /><a href="/" class="MDheaderB_1">返回首页</a><a href="http://cms.we54.com/dlgril/index.html" class="MDheaderB" target="_blank">活动介绍</a><a href="about.html" class="MDheaderC" target="_blank">关于美达</a><span></span></div>	
+	
+	<div id="MDAD"><!--广告滑动门-->
+	  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="958" height="296">
+          <param name="movie" value="images/switchflash.swf" />
+          <param name="quality" value="high" />
+          <embed src="images/switchflash.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="958" height="296"></embed>
+	  </object>
+	</div>
+	
+	<div id="MDPic">
+		<img src="images/md002.jpg" width="139" height="43" border="0" /><br />
+		<?php echo $row['content'];?>
+	</div>
+	
+	<div id="MDContBottom"><img src="images/md010.jpg" width="188" height="40" border="0" class="MDContBottomA" /><span>版权所有：<a href="http://we54.com">大连方佰信息技术有限公司</a> www.we54.com  2009 copyright</span></div>
+</div>
+</body>
+</html>

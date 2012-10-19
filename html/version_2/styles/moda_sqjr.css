@@ -1,0 +1,99 @@
+@charset "gb2312";
+/* CSS Document */
+
+@charset "gb2312";
+/* CSS Document */
+
+#content							{ width:980px; margin:0 auto;}
+#head								{ width:980px;float:left;}
+#head .biglogo						{ background:url(../images/big_logo.jpg) no-repeat; float:left; margin-left:180px;_margin-left:90px;width:646px; height:81px; margin-right:20px;}	
+#head .m_link						{ float:right; margin-top:4px; }
+#head .m_link a						{ color:#777677; float:left;}
+#head .m_link a:hover				{ text-decoration:none;}
+#head .m_link span					{ float:left;width:20px;}
+#head .m_link em					{ color:#777677; margin:0 5px; float:left;}
+
+#head .m_navigate					{  float:left;}
+#head .m_navigate li				{  height:36px;float:left; margin-left:0px; border:0px solid #F00;}
+#head .m_navigate h1 a,
+#head .m_navigate h2 a,
+#head .m_navigate h3 a,
+#head .m_navigate h4 a,
+#head .m_navigate h5 a,
+#head .m_navigate h6 a,
+#head .m_navigate em a,
+#head .m_navigate b a									{ background:url(../images/navi.jpg) no-repeat; height:36px; background-color:#3a3a3a;float:left;}
+
+
+
+#head .m_navigate li h1 a			{ width:130px; background-position:0 0;}
+#head .m_navigate li h1 a:hover		{ background-position:0 -36px;}
+#head .m_navigate li h1 a.current	{ background-position:0 -36px;;}
+#head .m_navigate li h2 a			{ width:118px;background-position:-129px 0;}
+#head .m_navigate li h2 a:hover		{ background-position:-129px -36px;}
+#head .m_navigate li h2 a.current	{ background-position:-129px -36px;}
+#head .m_navigate li h3 a			{ width:126px; background-position:-247px 0;}
+#head .m_navigate li h3 a:hover		{ background-position:-247px -36px;}
+#head .m_navigate li h3 a.current	{ background-position:-247px -36px;}
+#head .m_navigate li h4 a			{ width:118px; background-position:-373px 0;}
+#head .m_navigate li h4 a:hover		{ background-position:-373px -36px;}
+#head .m_navigate li h4 a.current	{ background-position:-373px -36px;}
+#head .m_navigate li h5 a			{ width:110px; background-position:-491px 0;}
+#head .m_navigate li h5 a:hover		{ background-position:-491px -36px;}
+#head .m_navigate li h5 a.current	{ background-position:-491px -36px;}
+#head .m_navigate li h6 a			{ width:140px; background-position:-602px 0;}
+#head .m_navigate li h6 a:hover		{ background-position:-602px -36px;}
+#head .m_navigate li h6 a.current	{ background-position:-602px -36px;}
+#head .m_navigate li em a			{ width:122px; background-position:-742px 0;}
+#head .m_navigate li em a:hover		{ background-position:-742px -36px;}
+#head .m_navigate li em a.current	{ background-position:-742px -36px;}
+#head .m_navigate li b a			{ width:116px; background-position:-865px 0;}
+#head .m_navigate li b a:hover		{ background-position:-865px -36px;}
+#head .m_navigate li b a.current	{ background-position:-865px -36px;}
+
+.moda_join												{ border:1px solid #ececec; margin-top:12px; width:978px; float:left; height:805px;}
+	.moda_join_title									{width:978px; height:80px; overflow:hidden; float:left;}
+	.moda_join_tianxie									{width:910px; height:65px; overflow:hidden; float:left; margin-left:51px; display:inline;}
+	.moda_join_xinxi									{width:910px; height:32px; overflow:hidden; float:left; margin-bottom:8px; margin-left:51px; display:inline;}
+	.moda_join_xinxi em									{width:98px; height:28px; overflow:hidden; float:left; line-height:28px; color:#e4007f; font-size:16px; font-weight:bold;}
+	.moda_join_xinxi em i								{width:35px; height:28px; overflow:hidden; float:left; margin-left:35px; display:inline;}
+	.moda_join_xinxi em tt								{height:28px; overflow:hidden; float:left;}
+	.moda_join_xinxi span								{line-height:23px;}
+	.moda_join_btn										{width:170px; height:56px; overflow:hidden; float:left; margin:15px 0 0 150px; display:inline;}
+	.join_btn											{width:170px; height:56px; overflow:hidden; float:left; background:url(../images/moda_join_btn.jpg) no-repeat; cursor:pointer;}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+.join_xinxi											{width:243px; height:30px; overflow:hidden; float:left; border:1px solid #dadada; background-color:#f4f4f4; line-height:30px; font-size:16px;}	
+	
+	
+	
+	
+	
+	
+	

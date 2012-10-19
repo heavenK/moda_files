@@ -1,0 +1,55 @@
+/* CSS Document */
+
+
+
+
+body{ background: #1b141c url(../images/grzs_01.jpg) no-repeat top; font-family:"ËÎÌו"; font-size:12px;}
+*{ padding:0px; border:0px; margin:0px;}
+li{ list-style-type:none;}
+a:link{ text-decoration:none;}
+a:hover{ text-decoration:underline;}
+a:visited{ text-decoration:none;}
+a:active{ hide-focus: expression(this.hideFocus=true); outline: none;}
+h1{ font-size:12px; font-weight:normal; color:#fe89d3; text-decoration:underline; display:inline;}
+h2{ font-size:12px; font-weight:normal; color:#666666; display:inline;}
+h3{ font-size:12px; font-weight:normal; color:#ffffff; display:inline;}
+h4{ font-size:12px; font-weight:normal; color:#eec4bc; display:inline;}
+h5{ font-size:12px; color:#f0037f; display:inline;}
+h6{ font-size:12px; font-weight:normal; color:#949494; display:inline;}
+#full{ margin:0px auto; width:980px; height:auto;}
+
+
+#top{ height:123px; width:980px; float:left;}
+	#top_a{ height:20px; width:980px; color:#878787; float:left; overflow:hidden; text-align:right; padding-top:10px;}
+	#top_a a{ font-size:12px; color:#878787; text-decoration:none;}
+	#top_b{ height:93px; width:980px; float:left; overflow:hidden;}
+		#top_b_a{ width:404px; height:93px; float:left; overflow:hidden;}
+		#top_b_b{ width:571px; height:93px; float:left; overflow:hidden; padding-left:5px;}
+			#top_b_b_a{ width:558px; height:18px; float:left; overflow:hidden; color:#eec4bc; text-align:right; padding-top:8px; padding-right:13px;}
+			#top_b_b_a a{ font-size:12px; color:#eec4bc; text-decoration:none;}
+			#top_b_b_b{ width:571px; height:67px; float:left;}
+					
+					
+#cont	{ width:980px; margin:0 0 10px 0; display:inline; overflow:hidden; float:left;}
+	#cont_a	{ width:980px; height:314px; background:url(../images/md_hanghai_01.jpg) no-repeat; overflow:hidden; float:left;}
+	#cont_b	{ width:980px; height:675px; background:url(../images/md_hanghai_02.jpg) no-repeat; overflow:hidden; float:left;}
+	#cont_c	{ width:978px; background:#29242b; border-left:#7e3f52 1px solid; border-right:#7e3f52 1px solid; text-align:center; overflow:hidden; float:left;}
+		#cont_c_a	{ margin:19px 0 47px 0; display:block; overflow:hidden;}
+		#cont_c_b	{ margin:0 0 83px 0; display:block; overflow:hidden;}
+		#cont_c_c	{ margin:0 0 83px 0; display:block; overflow:hidden;}
+		#cont_c_d	{ margin:0 0 50px 0; display:block; overflow:hidden;}
+	#cont_d	{ width:980px; height:76px; background:url(../images/md_hanghai_07.jpg) no-repeat; overflow:hidden; float:left;}
+	
+
+#battom{ height:191px; width:980px; float:left; overflow:hidden; background:url(../images/mdsy_34.jpg) no-repeat;}
+	#battom_a{ width:980px; height:62px; float:left; overflow:hidden;}
+	#battom_b{ width:980px; height:74px; float:left; overflow:hidden;}
+		#ad_a{ height:74px; float:left; margin-left:20px;}
+		#ad_b{ height:74px; float:left; margin-left:20px;}
+		#ad_c{ height:74px; float:left; margin-left:20px;}
+		#ad_d{ height:74px; float:left; margin-left:20px;}
+		#ad_e{ height:74px; float:left; margin-left:20px;}
+		#ad_f{ height:74px; float:left; margin-left:20px;}
+		#ad_g{ height:74px; float:left; margin-left:20px;}
+	#battom_c{ width:980px; height:35px; float:left; text-align:center; padding-top:20px; overflow:hidden;}
+

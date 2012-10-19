@@ -1,0 +1,28 @@
+/* CSS Document */
+
+#publish_pic_cont em a,
+#publish_pic_cont em a:hover	{ background:url(../images/lc_bg.png) no-repeat;}
+
+
+#publish_pic	{ width:980px; background:#efefef; float:left;}
+
+	#publish_pic_subnav	{ width:970px; height:28px; padding:0 0 0 10px; background:#000000; float:left;}
+	#publish_pic_subnav span{ height:28px; font-size:14px; color:#FFFFFF; font-weight:bold; line-height:28px; float:left;}
+	#publish_pic_subnav b	{ height:28px; font-size:14px; color:#2f92cf; font-weight:bold; line-height:28px; float:left;}
+	#publish_pic_subnav em	{ width:6px; height:28px; float:left;}
+	
+	#publish_pic_cont	{ width:980px; float:left;}
+	#publish_pic_cont_title	{ width:969px; height:51px; font-size:14px; color:#2f92cf; font-weight:bold; padding:13px 0 0 11px; float:left;}
+	
+	#publish_pic_cont dl	{ width:980px; float:left;}
+	#publish_pic_cont dl dt	{ width:884px; height:36px; padding:0 0 0 96px; float:left;}
+	.file		{ width:348px; height:22px; border:#CCCCCC 1px solid; float:left;}
+	.submit		{ width:70px; height:22px; border:#CCCCCC 1px solid; margin:0 0 0 10px; display:inline; float:left;}
+	
+	#publish_pic_cont dl dd	{ width:980px; height:302px; float:left;}
+		#publish_pic_cont_view	{ width:400px; height:300px; border:#cccccc 1px solid; margin:0 0 0 95px; display:inline; background:#FFFFFF; float:left;}
+		#publish_pic_cont_pic	{ width:220px; height:160px; border:#cccccc 1px solid; margin:70px 178px 73px 83px; display:inline; float:left;}
+		
+	#publish_pic_cont em		{ width:980px; height:145px; padding:24px 0 0 0; text-align:center; float:left;}
+	#publish_pic_cont em a		{ width:134px; height:25px; text-align:center; font-size:12px; color:#FFFFFF; font-style:normal; background-position:-20px -573px; display:inline-block;}
+	#publish_pic_cont em a:hover	{ background-position:-20px -548px; text-decoration:none;}

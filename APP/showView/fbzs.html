@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+
+<title>发布展示-美达&middot;大连超级美女榜-大连新青年</title>
+<meta name="keywords" content="大连，大连新闻，大连论坛，大连资讯，大连滚子游戏，大连生活，五年四班，大连博客，大连话，大连图片，大连视频，大连交友，大连问吧，大连知道，大连人物，大连团购,大连旅游，大连餐饮，大连教育，大连房产，大连汽车，大连娱乐，大连购物，大连摄影，美达美女，美女，美达，美女榜，美达美女榜，大连美女，moda，dalian，daliannews" /> 
+<meta name="description" content="大连新青年网是大连生活资讯信息最丰富的网络媒体，是大连本土化互动、娱乐网络平台，美达美女榜，大连地区拥有广大受众的美女展示平台。"/> 
+<script language="javascript" type="text/javascript" src="js/js.js"></script>
+<link href="css/fbzs.css" rel="stylesheet" type="text/css" />
+</head>
+<script type="text/javascript" src=".js/jquery-pack.js"></script>
+<script type="text/javascript" src=".js/jquery.imgareaselect.min.js"></script>
+<script type="text/javascript" src="./js/fckeditor/fckeditor.js"></script>
+<script type="text/javascript" src="./js/gp.js"></script>
+
+<script type="text/javascript" src="/ckeditor/ckeditor.js"></script>
+<script src="/ckeditor/sample.js" type="text/javascript"></script>
+<link href="/ckeditor/sample.css" rel="stylesheet" type="text/css" />
+
+
+  <SCRIPT language=JavaScript>
+  function testNomal()
+{
+	var len = document.formcsf.title.value.length;
+	if(len)
+	{
+		document.formcsf.submit();
+		return true;
+		}
+	else
+	{
+		alert("请输入标题");
+		return false;
+		}
+	}
+
+  </SCRIPT>
+
+
+
+<body>
+
+
+<div id="full">
+
+
+	<?php require_once(APP_DIR."/showView/ShowHeader.html")?>
+     
+     
+
+	 <form id="formcsf" name="formcsf" method="post"  enctype="multipart/form-data" action="?Controller=ShowIndex&action=CreateShowFace">
+	 	<input type="hidden" name="visitUser_id"  id="visitUser_id"  value="<?php echo $visitUser_id?>"  />
+     <div id="cont">
+	 	<div id="cont_a"></div>
+		<div id="cont_b">
+			<div id="cont_b_a"></div>
+			<div id="cont_b_b">展示标题：</div>
+			<div id="cont_b_c">
+				<!--<span id="cont_b_c_a">昨天刚拍的一组时尚大片</span>-->
+				<input type="text" id="title" class="cont_b_c_a" name="title" 
+		onkeyup="textCounter(this.form.title,this.form.dssdfsf,10);" onkeydown="textCounter(this.form.title,this.form.dssdfsf,10);"/>
+		
+			</div>
+		</div>
+		<div id="cont_c" style="height:305px; float:left; overflow:hidden;">
+			<div id="cont_c_a"></div>
+			<div id="cont_c_b">展示介绍：</div>
+			<div id="cont_c_c" style="width:583px;height:300px;  float:left; overflow:hidden;">
+			         <textarea  cols="80" id="editor1" name="text" rows="10"></textarea>
+                        <script type="text/javascript">
+                            CKEDITOR.replace( 'editor1',
+                                {
+                                    extraPlugins : 'uicolor',
+									toolbar :
+									[
+									]
+                                });
+                        </script>
+
+			</div>
+		</div>
+		<div id="cont_d"><a href="#" id="sub" name="sub" onclick="return testNomal()"><img src="images/fbzs_04.gif" width="119" height="28" /></a></div>
+	 </div>
+     </form>
+     
+
+<?php 			require(APP_DIR . '/showView/Widbottom.html');		?>
+  
+</div>
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>美达贴吧——大连超级美女榜</title>
+<link href="version_2/styles/end.css" rel="stylesheet" type="text/css" />
+<link href="version_2/styles/reset.css" rel="stylesheet" type="text/css"  />
+<link href="version_2/styles/headfooter/smallhead.css" rel="stylesheet" type="text/css" />
+<link href="version_2/styles/headfooter/footer.css" rel="stylesheet" type="text/css" />
+<link href="version_2/styles/modapersonal/modapost.css" rel="stylesheet" type="text/css"  />
+<script src="js/jquery-1.2.6.min.js" type="text/javascript"></script>
+<script src="js/showPopup.js" type="text/javascript"></script>
+<script type="text/javascript" src="./js/gp.js"></script>	
+
+<script type="text/javascript" src="/ckeditor/ckeditor.js"></script>
+<script src="/ckeditor/sample.js" type="text/javascript"></script>
+<link href="/ckeditor/sample.css" rel="stylesheet" type="text/css" />
+
+    
+<style>
+	#modaShowBot{ width:280px; height:21px;   margin: 0 auto; 
+}
+	#delet_Boot{ 
+	}
+</style>
+
+<link rel="stylesheet" href="css/indexgeneral.css" type="text/css"/>
+
+
+
+<SCRIPT language=JavaScript>
+
+		function setCallId(IdNum)
+		{
+				document.formCall.call_id.value = IdNum;
+		}
+		
+		function dofoucs()
+		{
+				document.serchform.serch.value = "";
+		}
+		
+
+		function popAlert()
+		{
+
+			var title = document.formCall.title;
+			if(title)
+			{
+					var tlen = title.value.length;
+					if(tlen<4||tlen>30)
+					{
+							alert("标题不能少于4个字大于30个字");
+							return false;
+						}
+				}
+			
+			var len = CKEDITOR.instances.editor1.getData().length;
+			if(len<15)
+				{
+					alert("内容不能少于5个字");
+					return false;
+				}
+			else
+				document.formCall.submit();
+
+
+
+
+
+		}
+		
+
+		
+		function deletDec(visitUser_id,club_id)
+		{	
+			if(confirm('真的要删除吗？删除后将无法恢复！'))
+			{
+				var url = "?Controller=ShowIndex&action=ClubDelete&user_id="+visitUser_id+"&club_id="+club_id+"";
+
+				location=url;
+			}
+			
+			
+
+		}
+		function noTalk(visitUser_id,club_id)
+		{	
+				
+			if(confirm('关闭帖子？'))
+			{
+				var url = "?Controller=ShowIndex&action=ClubDelete&user_id="+visitUser_id+"&club_id="+club_id+"&do="+"1";
+
+				location=url;
+			}
+			
+			
+
+		}
+		function canTalk(visitUser_id,club_id)
+		{	
+				
+			if(confirm('打开帖子？'))
+			{
+				var url = "?Controller=ShowIndex&action=ClubDelete&user_id="+visitUser_id+"&club_id="+club_id+"&do="+"2";
+
+				location=url;
+			}
+			
+			
+
+		}
+		
+		function highLight(visitUser_id,club_id,mark)
+		{	
+			//alert(mark);
+			var st = "highL_"+mark;
+			//alert(st);
+			var damio = document.getElementsById(st);
+			
+			alert("aaa");
+			
+			
+
+		}
+		
+		
+		
+		function checkChartRight()
+		{
+
+			if(<?php echo $chatRight?>)
+			{
+
+				 inputName('popCall'); 
+				 return true;
+			}
+
+			else
+			{
+				var usname = "<?php echo $curUsername ?>"
+				
+				if(usname =='')
+				{
+					alert("请登录后操作");
+					}
+				else
+				{
+					alert("只有美达用户或认证会员有权操作");
+					}
+					
+				return false;		
+				
+			}
+		
+		}
+		
+		
+</SCRIPT>
+
+
+<style>
+	#cont_d{ width:980px; height:40px; float:left; text-align:center;}
+</style>
+
+</head>
+
+<body>
+
+    
+<div id="box">   
+	<?php require(APP_DIR . '/version_2/moda_header.html'); ?>
+    <div id="main">
+    	<div class="moda_posts">
+        	<div class="posts_logo">
+            	<img src="version_2/images/modapersonal/posts_logo.jpg" />
+            </div>
+            <h1 class="posts_title"><?php echo stripslashes($result['truename'])?>——的贴吧</h1>
+            <div id="popCall" class="posts_speak">
+            	<a href="#" onclick="return checkChartRight();"><b>发表留言</b></a>
+            </div>
+            <div class="posts_content">
+                  <div class="content_title">
+                      <span>标题</span><em>点击</em><em>回复</em><em>昵称</em>
+                  </div>
+                 <ul class="all_content">
+                 	<?php  foreach($rowset as $data){ $pieces = explode("^?",stripslashes($data['title'])); $data['title'] = $pieces[0] ?>
+                    <li>
+                    	<?php if($data['adminid']!=-1){ ?>
+							<?php if($pieces[1]){ ?>
+                    		<a style="color:<?php echo stripslashes($pieces[1])?>" href="?controller=ShowIndex&action=ModaClubCall&user_id=<?php echo $visitUser_id?>&club_id=<?php echo $data['club_id']?>"><?php echo stripslashes($data['title'])?></a>
+                            <?php }else{?>
+                            <a href="?controller=ShowIndex&action=ModaClubCall&user_id=<?php echo $visitUser_id?>&club_id=<?php echo $data['club_id']?>"><?php echo stripslashes($pieces[0])?></a>
+                            <?php }}else{?>
+								<?php if(FI_CheckAdminRoot()){  ?>
+									<?php if($pieces[1]){ ?>
+									<a style="color:<?php echo stripslashes($pieces[1])?>" href="?controller=ShowIndex&action=ModaClubCall&user_id=<?php echo $visitUser_id?>&club_id=<?php echo $data['club_id']?>"><?php echo stripslashes($data['title'])?></a>
+                                    <?php }else{?>
+                                    <a href="?controller=ShowIndex&action=ModaClubCall&user_id=<?php echo $visitUser_id?>&club_id=<?php echo $data['club_id']?>"><?php echo stripslashes($data['title'])?></a>
+                                    <?php }}?>
+							该用户信息已被屏蔽
+						<?php }?>
+                        <em><?php echo $data['views']?></em><em><?php echo $data['call_num']?></em><em><?php echo $data['creaternkname']?></em>
+                        <form action="" method="post" id="formHigh" name="formHigh">
+						<?php if($this->_getUserAmin($visitUser_id) || FI_CheckAdminRoot()){ ?>
+						
+							<input type="button" onclick=" return deletDec(<?php echo $visitUser_id;?>,<?php echo $data['club_id'];?>)" value="删除" id="delet_Boot" style="border:#000000 1px solid; float:left; clear:left; margin:5px 5px 0 0; display:inline;" />
+							<select id="highL" name="highL" style="float:left;border:#000000 1px solid; margin:5px 5px 0 0; display:inline;">
+							<option style="background-color:#ff0000" value="#ff0000">&nbsp;&nbsp;</option>
+							<option style="background-color:#ff6ee2" value="#ff6ee2">&nbsp;&nbsp;</option>
+							<option style="background-color:#19af00" value="#19af00">&nbsp;&nbsp;</option>
+							<option style="background-color:#049eff" value="#049eff">&nbsp;&nbsp;</option>
+							<option style="background-color:#fff000" value="#fff000">&nbsp;&nbsp;</option>
+							<option style="background-color:#eec4bc" value="#eec4bc">&nbsp;&nbsp;</option>
+							</select> 
+							<input type="hidden" name="user_id" value="<?php echo $visitUser_id ?>" />
+							<input type="hidden" name="club_id" value="<?php echo $data['club_id'] ?>" />
+							<input type="hidden" name="title" value="<?php echo stripslashes($data['title']); ?>" />
+							<input type="submit" value="高亮" style="border:#000000 1px solid;float:left; margin:5px 5px 0 0; display:inline;" />
+						<?php } ?>
+						</form>
+                    </li>
+                    <?php }?>
+                </ul>
+                <ol id="list_pg"><!--页码-->
+                  <?php echo $page->pageHtml;?>
+             	</ol>
+            </div>
+        </div> 
+    </div>
+
+<?php require(APP_DIR . '/version_2/index_footer.html'); ?>
+</div>
+<div id="popupContactAAA">	
+	<span id="popupContactClose" style="float:right; background-image:url(version_2/images/modapersonal/popclose.jpg); cursor:pointer; width:16px; height:15px; overflow:hidden; margin-top:20px; margin-right:20px;"></span>
+    <p id="contactArea">
+    <form id="formCall" name="formCall" method="post" action="?Controller=ShowIndex&action=ModaClub">
+	<input type="hidden" id="user_id" name="user_id" value="<?php echo $visitUser_id?>">
+	<div id="tc_c">
+        <div id="tc_c_a"><img src="version_2/images/modapersonal/poptitle.jpg" /></div>
+        <div id="tc_c_b"><?php echo date("Y-m-d H:i:s")?></div>
+        <div id="tc_c_c">
+            <div id="tc_c_c_a">
+                <span id="tc_c_c_a_a">
+                	<?php if($modaud){?>
+                    <img src="<?php echo $modaud['head_img']?>" width="138" height="138">
+                    <?php }else{?>
+                    <img src="thumb_image/head.jpg" width="138" height="138" />
+					<?php }?>
+                </span>
+                <span id="tc_c_c_a_b" style="color:#FFF;"><?php echo $curNickname ?></span>
+            </div>
+            <div id="tc_c_c_b">
+                <div id="tc_c_c_b_a">标题：内容：</div>
+                <div id="tc_c_c_b_b">
+                    <input name="title" class="tc_c_c_b_b_a" id="title" />
+                    <textarea cols="80" id="editor1" name="content" rows="10" class="tc_c_c_b_b_b"></textarea>
+                    <span id="tc_c_c_b_b_c"><a href="#" onclick="return popAlert();"><img src="version_2/images/modapersonal/popbtn.jpg" width="124" height="32" /></a></span>
+                </div>
+            </div>
+        </div>
+	</div>
+	</form>		
+</p>  
+</div>
+</body>
+</html>

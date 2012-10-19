@@ -1,0 +1,16 @@
+@charset "gb2312";
+/* CSS Document */
+
+/*页面整体样式*/
+*			{ margin:0; padding:0; border:none;}
+html		{ background:#1b141c url(../two_images/header_bg.jpg) no-repeat top;}
+body		{ font-size:12px; font-family:"宋体";}
+ol,ul,li	{ list-style-type:none;}
+a			{ text-decoration:none;}
+a:hover		{ text-decoration:underline;}
+
+/*表单通用样式*/
+.form		{ padding:3px; font-size:12px; background:#FFF; color:#999999; border:#d6d6d6 1px solid; overflow:hidden; float:left;}
+
+/*整体*/
+#full		{ width:980px; overflow:hidden; margin:0 auto;}

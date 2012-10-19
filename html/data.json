@@ -1,0 +1,37 @@
+﻿{
+  "elements": [
+    {
+      "type": "bar_sketch",
+      "colour": "#81AC00",
+      "outline-colour": "#567300",
+      "offset": 5,
+      "values": [
+        {
+          "top": 3,
+          "tip": "Hello<br>#val#"
+        },
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        {
+          "top": 3,
+          "tip": "Hello<br>#val#"
+        },
+        {
+          "top": 3,
+          "tip": "Hello<br>#val#"
+        },
+        9,
+        10,
+        11
+      ]
+    }
+  ],
+  "title": {
+    "text": "Wed Jun 17 2009",
+    "style": "{color: #567300; font-size: 14px}"
+  }
+}

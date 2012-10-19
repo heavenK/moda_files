@@ -1,0 +1,39 @@
+
+
+body{ background: #1b141c url(../images/grzs_01.jpg) no-repeat top; font: "ËÎÌו"; font-size:12px;}
+*{ padding:0px; border:0px; margin:0px;}
+li{ list-style-type:none;}
+a:hover { text-decoration: none; }
+h1{ font: 12px normal; color:#f0037f; display:inline; }
+h2{ font-size:14px; color:#ffba79; display:inline;}
+h3{ font:12px normal; color:#fe89d3; display:inline; text-decoration:underline;}
+h4{ font-size:12px; font-weight:normal; color:#949494; display:inline;}
+#full{ margin:0px auto; width:980px; height:auto;}
+
+
+
+					
+					
+#cont { width:980px; height:auto; float:left; overflow:hidden; background-color:#29242b; margin-bottom:10px;}
+	#cont_a{ width:980px; height:62px; float:left; overflow:hidden; background:url(../images/images/ftlb_03.jpg) no-repeat;}
+	#cont_b{ width:943px; height:464px; float:left; overflow:hidden; background:url(../images/images/ftlb_05.jpg) no-repeat; padding-left:18px; padding-right:19px;}
+		.box{ width:943px; height:auto; float:left; overflow:hidden;}
+
+			
+			.box_a{ width:941px; height:104px; float:left; overflow:hidden; border:#4a2734 1px solid; background-color:#302a32; margin-top:10px; text-decoration:none;}
+			.box_ab{ border:#8a3054 1px solid; background-color:#332029; display:block; text-decoration:none;}
+			
+				#box_a_a{ width:120px; height:90px; float:left; overflow:hidden; padding:7px 17px 7px 7px;}
+					#pic{ width:118px; height:88px; float:left; overflow:hidden; border:#080506 1px solid;}
+				#box_a_b{ width:788px; height:104px; float:left; overflow:hidden; padding-right:9px; text-decoration:none;}
+					#box_a_b_a{ width:776px; height:37px; float:left; overflow:hidden; border-bottom:#5b3041 1px dashed; padding-left:12px;}
+						#box_a_b_a_a{ width:644px; height:25px; float:left; overflow:hidden; text-align:left; font-size:12px; color:#fefefe; padding-top:12px;}
+						#box_a_b_a_b{ width:132px; height:25px; float:left; overflow:hidden; font-size:12px; color:#ffbbe6; padding-top:12px;}
+					#box_a_b_b{ width:758px; height:48px; float:left; overflow:hidden; padding:10px 20px 8px 10px; font-size:12px; color:#6e6e6e; line-height:27px;}
+
+	
+	#cont_c{ width:941px; height:auto; float:left; overflow:hidden; border-left:#7e3f52 1px solid; border-right:#7e3f52 1px solid; padding-left:18px; padding-right:19px;}
+	#cont_d{ width:980px; height:10px; float:left; overflow:hidden; background:url(../images/images/ftlb_07.jpg) no-repeat;}			
+					
+					
+	

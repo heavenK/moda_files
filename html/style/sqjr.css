@@ -1,0 +1,45 @@
+
+
+body{ background: #1b141c url(../images/grzs_01.jpg) no-repeat top; font: "ËÎÌו"; font-size:12px;}
+*{ padding:0px; border:0px; margin:0px;}
+li{ list-style-type:none;}
+a:hover { text-decoration: underline; }
+h1{ font: 12px normal; color:#f0037f; display:inline; }
+h2{ font-size:12px; color:#fdb979; display:inline;}
+h3{ font:12px normal; color:#fe89d3; display:inline;}
+h4{ font-size:14px; color:#f28533; display:inline;}
+#full{ margin:0px auto; width:980px; height:auto;}
+
+
+#top{ height:123px; width:980px; float:left;}
+	#top_a{ height:20px; width:980px; color:#878787; float:left; overflow:hidden; text-align:right; padding-top:10px;}
+	#top_a a{ font-size:12px; color:#878787; text-decoration:none;}
+	#top_b{ height:93px; width:980px; float:left; overflow:hidden;}
+		#top_b_a{ width:404px; height:93px; float:left; overflow:hidden;}
+		#top_b_b{ width:576px; height:93px; float:left; overflow:hidden;}
+			#top_b_b_a{ width:563px; height:32px; float:left; overflow:hidden; color:#eec4bc; text-align:right; padding-top:8px; padding-right:13px;}
+			#top_b_b_a a{ font-size:12px; color:#eec4bc; text-decoration:none;}
+			#top_b_b_b{ width:576px; height:53px; float:left; overflow:hidden;}
+				.button{ width:576px; height:53px; float:left; overflow:hidden;}
+					.button_a{ width:77px; height:53px; float:left; overflow:hidden;}
+					.button_b{ width:98px; height:53px; float:left; overflow:hidden;}
+					.button_c{ width:106px; height:53px; float:left; overflow:hidden;}
+					
+					
+#cont{ width:980px; float:left; overflow:hidden; background:url(../images/sqjr_01.jpg) no-repeat;}
+	#cont_a{ width:980px; height:132px; float:left; overflow:hidden;}	
+	#cont_b{ width:980px; overflow:hidden; float:left; }
+		#cont_b ul li{ width:980px; height:47px; float:left; overflow:hidden;}
+			.ModaRegB_Span{ width:90px; height:40px; float:left; overflow:hidden; font-size:14px; font-weight:bold; color:#f0037f; padding-left:46px; padding-top:7px;}
+			.ModaRegB_Spanb{ width:90px; height:40px; float:left; overflow:hidden; font-size:14px; font-weight:bold; color:#f0037f; padding-top:7px;}
+			.ModaRegB_Text{ width:247px; height:22px; float:left; overflow:hidden; border:#724a6c 1px solid; background-color:#291425; margin-bottom:17px; margin-right:9px; padding-left:3px; padding-top:6px; font-size:14px; color:#fdb97a;}
+			.botton{ width:70px; height:28px; float:left; overflow:hidden; background:url(../images/bjzs_02.gif) no-repeat;}
+			.file{ width:0; height:20px;margin-left: -154px;*margin-left:-3px; filter:alpha(opacity=0);-moz-opacity:.0;opacity:0.0; cursor:pointer;}
+			.ModaRegB_Spana{ width:417px; height:47px; float:left; overflow:hidden; font-size:12px; color:#999999; text-align:right; padding-right:6px;}
+	#cont_c{ width:844px; height:102px; float:left; overflow:hidden; padding-left:136px;}			
+					
+					
+					
+					
+	
+	

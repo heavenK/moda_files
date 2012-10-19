@@ -1,0 +1,148 @@
+@charset "gb2312";
+/* CSS Document */
+
+
+
+
+#content							{ width:980px; margin:0 auto;}
+#head								{ width:980px;float:left;}
+#head .biglogo						{ background:url(../images/modamember/big_logo.jpg) no-repeat; float:left; margin-left:180px;_margin-left:100px;width:646px; height:81px;}	
+#head .m_link						{ float:right; margin-top:4px; }
+#head .m_link a						{ color:#777677; float:left;}
+#head .m_link a:hover				{ text-decoration:none;}
+#head .m_link span					{ float:left;width:20px;}
+#head .m_link em					{ color:#777677; margin:0 5px; float:left;}
+
+#head .m_navigate					{  float:left;}
+#head .m_navigate li				{  height:36px;float:left; margin-left:0px; border:0px solid #F00;}
+#head .m_navigate h1 a,#head .m_navigate h2 a,#head .m_navigate h3 a,#head .m_navigate h4 a,#head .m_navigate h5 a,#head .m_navigate h6 a,#head .m_navigate em a,#head .m_navigate b a									{ background:url(../images/modamember/navi.jpg) no-repeat; height:36px; background-color:#3a3a3a;float:left;}
+#head .m_navigate li h1 a			{ width:130px; background-position:0 0;}
+#head .m_navigate li h1 a:hover		{ background-position:0 -36px;}
+#head .m_navigate li h1 a.current	{ background-position:0 0px;}
+#head .m_navigate li h2 a			{ width:118px;background-position:-129px -36px;}
+#head .m_navigate li h2 a:hover		{ background-position:-129px -36px;}
+#head .m_navigate li h2 a.current	{ background-position:-129px -36px;}
+#head .m_navigate li h3 a			{ width:126px; background-position:-247px 0;}
+#head .m_navigate li h3 a:hover		{ background-position:-247px -36px;}
+#head .m_navigate li h3 a.current	{ background-position:-247px -36px;}
+#head .m_navigate li h4 a			{ width:118px; background-position:-373px 0;}
+#head .m_navigate li h4 a:hover		{ background-position:-373px -36px;}
+#head .m_navigate li h4 a.current	{ background-position:-373px -36px;}
+#head .m_navigate li h5 a			{ width:110px; background-position:-491px 0;}
+#head .m_navigate li h5 a:hover		{ background-position:-491px -36px;}
+#head .m_navigate li h5 a.current	{ background-position:-491px -36px;}
+#head .m_navigate li h6 a			{ width:140px; background-position:-602px 0;}
+#head .m_navigate li h6 a:hover		{ background-position:-602px -36px;}
+#head .m_navigate li h6 a.current	{ background-position:-602px -36px;}
+#head .m_navigate li em a			{ width:122px; background-position:-742px 0;}
+#head .m_navigate li em a:hover		{ background-position:-742px -36px;}
+#head .m_navigate li em a.current	{ background-position:-742px -36px;}
+#head .m_navigate li b a			{ width:116px; background-position:-865px 0;}
+#head .m_navigate li b a:hover		{ background-position:-865px -36px;}
+#head .m_navigate li b a.current	{ background-position:-865px -36px;}
+	
+
+	
+	
+	
+/*主体*/	
+	
+
+
+
+
+
+
+
+@charset "gb2312";
+/* CSS Document */
+
+/*通用背景*/
+.moda_Show_button span a,
+.moda_Show_button em a,
+.moda_Show_button i a,
+.moda_Show_button b a,
+.moda_Show_button p a,
+#moda_Show_VCR span,
+#moda_Show_Photo dl dt			{ background:url(../two_images/Show_bg_all.gif) no-repeat;}
+
+/*个人资料*/
+#moda_Show_Data		{ width:978px; padding:0 0 20px 0; margin-top:10px; display:inline; overflow:hidden; float:left; border-left:1px #ececec solid; border-right:1px #ececec solid;; border-top:1px #ececec solid;}
+
+	/*按钮*/
+	.moda_Show_button				{ width:968px; height:65px; padding:9px 0px 0 11px; position:relative; overflow:hidden; float:left;}
+	#moda_Show_button_admin			{ color:#f0037f; position:absolute; top:55px; right:20px; overflow:hidden;}
+	#moda_Show_button_admin a		{ color:#f0037f;}
+	
+	.moda_Show_button span			{ width:102px; height:28px; overflow:hidden; float:right; margin-right:13px; margin-top:23px; display:inline;}
+	.moda_Show_button span a		{ width:102px; height:28px; background-image:url(../images/guanli.jpg); overflow:hidden; float:left;}
+	.moda_Show_button span a:hover	{}
+	.moda_Show_button em			{ width:123px; height:30px; overflow:hidden; float:right; margin-right:48px; margin-top:22px; display:inline;}
+	.moda_Show_button em a			{ width:123px; height:30px; background-image:url(../images/canyutaolun.jpg); overflow:hidden; float:left;}
+	.moda_Show_button em a:hover	{ }
+	.moda_Show_button i				{ width:102px; height:28px; overflow:hidden; float:right; margin-right:7px; margin-top:23px; display:inline;}
+	.moda_Show_button i a			{ width:102px; height:28px; background-image:url(../images/pinglun.jpg); overflow:hidden; float:left;}
+	.moda_Show_button i a:hover		{}
+	.moda_Show_button b				{ width:71px; height:28px; overflow:hidden; float:right; margin-right:7px; margin-top:23px; display:inline;}
+	.moda_Show_button b a			{ width:71px; height:28px; background-image:url(../images/next.jpg); overflow:hidden; float:left;}
+	.moda_Show_button b a:hover		{}
+	.moda_Show_button h1				{ width:71px; height:28px; overflow:hidden; float:right; margin-right:7px; margin-top:23px; display:inline;}
+	.moda_Show_button h1 a			{ width:71px; height:28px; background-image:url(../images/pre.jpg); overflow:hidden; float:left;}
+	.moda_Show_button h1 a:hover		{}
+
+.geren               { width:165px; height:56px; float:left; overflow:hidden;}
+
+
+.guanli_top                      { width:273px; float:left; overflow:hidden; margin-top:5px; margin-left:530px; display:inline;}
+.guanli_top a                      { color:#ff0183;}
+.moda_Show_VCR_logo                      { width:580px; height:51px; float:left; overflow:hidden; margin-top:19px; margin-left:386px; display:inline;}
+
+
+
+	
+#moda_Show_Data pre					{ width:978px; height:169px;  overflow:hidden; float:left;}
+#moda_Show_Data dl					{ width:643px; height:182px;  border:#dedede 1px solid; overflow:hidden; float:left; background-color:#f7f7f7;}
+#moda_Show_Data dl dt				{ width:622px; height:81px; margin:0 0 0 10px; display:inline; border-bottom:#5b3041 1px dashed; text-align:center; overflow:hidden; float:left;}
+#moda_Show_Data dl dt b				{ width:622px; height:16px; padding:11px 0 0 0; font-size:14px; color:#ff5b00; overflow:hidden; float:left;}
+#moda_Show_Data dl dt em			{ width:622px; height:14px; padding:8px 0 0 0; font-style:normal; color:#333333; float:left;}
+#moda_Show_Data dl dt i				{ width:622px; height:14px; padding:8px 0 0 0; font-style:normal; color:#666666; display:inline-block;}
+#moda_Show_Data dl dt i span		{ color:#f0037f;}
+#moda_Show_Data dl dd				{ width:595px; height:68px; padding:14px 0 0 12px; color:#ff0183; line-height:22px; overflow:hidden; float:left;}
+
+/*个人展示页*/
+#moda_Show_Data strong				{ width:943px; margin:0 0 0 17px; display:inline; padding:0 0 20px 0; border-bottom:#5c3145 1px dashed; text-align:center; overflow:hidden; float:left;}
+#moda_Show_Data strong img			{ max-width:900px;_width:expression(this.width > 900 && this.width > this.height ? 900: auto); margin:40px auto 20px; display:block; overflow:hidden;}
+#moda_Show_Data strong em			{ width:900px; height:16px; font-size:14px; font-style:normal; font-weight:normal; color:#eac6be; overflow:hidden; display:inline-block;}
+#moda_Show_Data h6					{ width:900px; margin:0 0 0 17px; display:inline; padding:40px 0 40px 20px; border-bottom:#5c3145 1px dashed; font-size:14px; font-weight:normal; color:#eac6be; line-height:26px; overflow:hidden; float:left;}
+
+	/*转载*/
+	#moda_Show_Reprint				{ width:643px; height:43px; border:#e6e6e6 1px solid; overflow:hidden; float:left; margin-top:10px; display:inline; background-color:#f7f7f7;}
+	#moda_Show_Reprint span			{ margin:15px 0 0 10px; display:inline; color:#ff5b00; float:left;}
+	#moda_Show_Reprint span b		{color:#f0037f;}
+	#moda_Show_Reprint i			{ margin:12px 0 0 0; display:inline; overflow:hidden; float:left;}
+	#moda_Show_Reprint i img		{ overflow:hidden; float:left;}
+	#moda_Show_Reprint i a			{ margin:0 10px 0 2px; display:inline; font-style:normal; color:#666666; line-height:19px; text-decoration:underline; float:left;}
+	#moda_Show_Reprint i a:hover	{ text-decoration:none;}
+	
+/*MODAVCR*/
+#moda_Show_VCR		{ width:978px; height:490px; border-left:#ececec 1px solid; border-right:#ececec 1px solid; overflow:hidden; float:left; }
+#moda_Show_VCR em                  { width:946px; float:left; overflow:hidden; border-top:1px #cccccc dashed; border-bottom:1px #cccccc dashed; margin-left:14px; display:inline; padding-bottom:20px; padding-top:20px; }
+#moda_Show_VCR span					{ width:197px; height:29px; margin:20px 0 19px 392px; display:inline; background-position:0 -112px; overflow:hidden; float:left;}
+#moda_Show_VCR b					{ width:978px; height:389px; text-align:center; overflow:hidden; float:left;}
+#moda_Show_VCR i					{ width:908px; height:80px; margin:35px; display:inline; font-style:normal; color:#535353; line-height:20px; overflow:hidden; float:left;}
+
+#moda_Show_VCR a img                     { margin-left:125px; display:inline;}
+
+/*图片展示*/
+#moda_Show_Photo	{ width:978px; padding:0 0 20px 0; border-left:#ececec 1px solid; border-right:#ececec 1px solid; border-bottom:#ececec 1px solid; float:left;}
+#moda_Show_Photo dl					{ width:978px; height:67px; overflow:hidden; float:left;}
+#moda_Show_Photo dl dt				{ width:300px; height:38px; margin:29px 10px 0 332px; display:inline; background-image:url(../images/guanfangfabu.jpg); overflow:hidden; float:left;}
+#moda_Show_Photo dl dd				{ margin:52px 0 0 0; display:inline; font-weight:bold; color:#ff5b00; overflow:hidden; float:left;}
+#moda_Show_Photo dl dd a			{ font-weight:bold; color:#ff5b00;}
+#moda_Show_Photo p					{ width:978px; text-align:center; overflow:hidden; float:left;}
+#moda_Show_Photo p img				{ max-width:900px;_width:expression(this.width > 900 && this.width > this.height ? 900: auto); margin:29px 0 30px 0; display:inline; background:#1d151b; overflow:hidden;}
+
+
+
+
+

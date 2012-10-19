@@ -1,0 +1,80 @@
+@charset "gb2312";
+/* CSS Document */
+#all_channel_header					{ width:980px; line-height:16px; height:28px; float:left;}
+		#all_channel_header dt				{ height:28px; float:right;}
+		#all_channel_header dt i			{ height:15px; margin:11px 2px 0; display:inline; color:#666666; float:right;}
+		#all_channel_header dt em			{ height:15px; margin:11px 2px 0; display:inline; color:#0035a0; float:right;}
+		#all_channel_header dt a			{ height:15px; margin:11px 0 0 0; display:inline; color:#0035a0; float:right;}
+		#all_channel_header dt span			{ width:77px; height:31px; margin:5px 3px 0 0; display:inline; position:relative; float:right;}
+		#all_channel_header dt span em		{ width:65px; height:14px; margin:0; padding:0 0 0 12px; background:url(images/all_channel_header_pic.gif) no-repeat 0 5px; color:#ff7f00; position:absolute; top:6px; left:9px; z-index:3000; cursor:pointer; float:none;}
+		#all_channel_header dt span b		{ width:75px; height:30px; background:#FFF; border:#bfbfbf 1px solid; border-bottom:none; position:absolute; top:0px; left:0px; z-index:2000;}
+		#all_channel_header dt span i		{ width:366px; height:118px; background:#FFF; border:#bfbfbf 1px solid; position:absolute; top:19px; left:-2px; z-index:1000;}
+		#all_channel_header dt span ul		{ width:366px; height:107px; margin:8px 0 0 0; display:inline; background:url(images/all_channel_header_box_bg.gif); float:left;}
+		#all_channel_header dt span ul li	{ width:366px; height:25px; padding:11px 13px 0 13px; overflow:hidden; float:left;}
+		#all_channel_header dt span ul li pre{ height:15px; background:url(images/all_channel_header_pic_02.gif) no-repeat 0 3px; overflow:hidden; float:left;}
+		#all_channel_header dt span ul li a	{ margin:0 13px; display:inline; color:#0035a0; float:left;}
+		#all_channel_header dd				{ height:36px; float:right;}
+		#all_channel_header dd a			{ margin:11px 13px 0 0; display:inline; float:right;}
+		#all_channel_header dd span			{ width:77px; height:31px; margin:5px 3px 0 0; display:inline; position:relative; float:right;}
+		#all_channel_header dd span em		{ width:65px; height:14px; padding:0 0 0 12px; font-style:normal; background:url(images/all_channel_header_pic.gif) no-repeat 0 5px; color:#ff7f00; position:absolute; top:6px; left:9px; z-index:3000; cursor:pointer;}
+		#all_channel_header dd span b		{ width:75px; height:30px; background:#FFF; border:#bfbfbf 1px solid; border-bottom:none; position:absolute; top:0px; left:0px; z-index:2000;}
+		#all_channel_header dd span i		{ width:366px; height:118px; font-style:normal; background:#FFF; border:#bfbfbf 1px solid; position:absolute; top:30px; left:0; z-index:1000;}
+		#all_channel_header dd span ul		{ width:366px; height:107px; margin:8px 0 0 0; display:inline; background:url(images/all_channel_header_box_bg.gif); float:left;}
+		#all_channel_header dd span ul li	{ width:360px; height:25px; padding:11px 13px 0 13px; overflow:hidden; float:left;}
+		#all_channel_header dd span ul li pre{ height:16px; background:url(images/all_channel_header_pic_02.gif) no-repeat 0 3px; overflow:hidden; float:left;}
+		#all_channel_header dd span ul li a	{ margin:0 13px; display:inline; color:#0035a0; float:left;}
+		#all_channel_head					{ height:27px; overflow:hidden; float:right; text-align:right; line-height:27px;}
+		#all_channel_head a					{color:#016599}
+		
+#content								{ width:980px; margin:0 auto;}
+
+#list_pg {
+    color: #0156A9;
+    float: left;
+    font-size: 14px;
+    height: 27px;
+    overflow: hidden;
+    padding: 10px 0;
+    text-align: center;
+    width: 980px;
+	margin-top:40px;
+	display:inline;
+}
+	#list_pg li {
+	color:#f1037d;
+    display: inline;
+    margin: 0 3px;
+}
+	#list_pg li a {
+    background-color: #f7f7f7;
+    color: #f1037d;
+    padding: 3px 7px;
+	border:1px solid #dfdfdf;
+}
+#list_pg li a:hover {
+    background-color: #f1037d;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+	
+#list_pg li.thisclass a {
+     background-color: #f1037d;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.moda_contact					{ background:url(../../images/modapersonal/contact_bg.jpg) no-repeat; width:980px; height:108px; margin-top:11px; margin-bottom:4px;float:left;overflow:hidden; }
+.moda_contact .contact_logo	{ margin:21px 25px 25px 21px; float:left;}
+.moda_contact .contact_editor	{ margin:16px 79px 0 56px; float:left}
+.moda_contact .contact_editor	h2{ margin-bottom:18px;}
+
+.moda_contact .contact_info	{ width:155px;_width:170px; margin:16px 0 0 14px;_margin-left:0px; float:left;overflow:hidden;}
+.moda_contact .contact_info h2{ margin-bottom:12px;}
+.moda_contact .contact_info em{ margin-bottom:5px;float:left;_float:none;}
+
+.moda_contact .contact_blog	{ width:180px;margin:16px 0 0 70px; float:left;overflow:hidden;}
+.moda_contact .contact_blog h2{ margin-bottom:12px}
+.moda_contact .contact_blog em{ margin-bottom:12px; float:left;}
+
+.moda_contact .contact_editor h2,.moda_contact .contact_info h2,.moda_contact .contact_blog h2 { color:#666; font-size:12px;}
+.moda_contact .contact_editor em,.moda_contact .contact_info em,.moda_contact .contact_blog em { color:#333; font-size:12px;}

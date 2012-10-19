@@ -1,0 +1,257 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GB2312" />
+
+<title>申请加入美达-美达&middot;大连超级美女榜-大连新青年</title>
+<meta name="keywords" content="大连，大连新闻，大连论坛，大连资讯，大连滚子游戏，大连生活，五年四班，大连博客，大连话，大连图片，大连视频，大连交友，大连问吧，大连知道，大连人物，大连团购,大连旅游，大连餐饮，大连教育，大连房产，大连汽车，大连娱乐，大连购物，大连摄影，美达美女，美女，美达，美女榜，美达美女榜，大连美女，moda，dalian，daliannews" /> 
+<meta name="description" content="大连新青年网是大连生活资讯信息最丰富的网络媒体，是大连本土化互动、娱乐网络平台，美达美女榜，大连地区拥有广大受众的美女展示平台。"/> 
+
+
+<link rel="stylesheet" href="css/showGeneral.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/indexgeneral.css" type="text/css"/>
+<link href="style/sqjr.css" rel="stylesheet" type="text/css" />
+
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="js/indexpopup.js" type/"text/javascript"></script>
+
+ <script language="javascript" type="text/javascript" src="js/My97DatePicker/WdatePicker.js"></script>
+ 
+
+
+<script language="javascript">
+	function registerck(){
+
+		var truename = document.form1.truename.value;
+		alert(truename);
+		var instrper = document.form1.instrper.value;
+		var bdate = document.form1.bdate.value;
+		
+		var height = document.form1.height.value;
+		var avl=/^\d{3,3}$/;
+		var weight = document.form1.weight.value;
+		var avweight=/^\d{2,3}$/;
+		
+		var mobile = document.form1.mobile.value;
+		var partten = /^1[3,5,8]\d{9}$/;
+		var homephone=/^\d{1,11}$/;
+		
+		var qq = document.form1.qq.value;
+		var regqq=/^[0-9]{1,20}$/;
+		
+		var file1 = document.form1.file1.value;
+		var file2 = document.form1.file2.value;
+		var file3 = document.form1.file3.value;
+		var file4 = document.form1.file4.value;
+		
+		var mark = 1;
+		
+		if(instrper==""){
+			document.getElementById("instrper1111").innerHTML	=	'没有可省略';	
+		}
+		
+		if(truename==""){
+			document.getElementById("truename1111").innerHTML	=	'请输入真实姓名';	
+			makr =0;
+		}
+		else
+		{
+			document.getElementById("truename1111").innerHTML	=	'';	
+			makr =1;
+		}
+		
+		
+		
+		if(bdate==""){
+			document.getElementById("bdate1111").innerHTML	=	'请输入生日';	
+			makr =0;
+		}
+		else
+		{
+			document.getElementById("bdate1111").innerHTML	=	'';	
+			makr =1;
+		}
+		
+		
+		
+		if(height==""){
+			document.getElementById("height1111").innerHTML	=	'请输入身高';	
+			makr =0;
+		}
+		else
+		if(avl.test(height))
+		{
+			document.getElementById("height1111").innerHTML	=	'';
+			makr =1;	
+		}
+		else
+		{
+			document.getElementById("height1111").innerHTML	=	'身高格式错误';	
+		}
+		
+		
+		if(weight==""){
+			document.getElementById("weight1111").innerHTML	=	'请输入体重/KG';	
+			makr =0;
+		}
+		else
+		if(avweight.test(weight))
+		{
+			document.getElementById("weight1111").innerHTML	=	'';	
+			makr =1;
+		}
+		else
+		{
+			document.getElementById("weight1111").innerHTML	=	'体重格式错误';	
+			makr =0;
+		}
+		
+		
+		if(mobile==""){
+			document.getElementById("mobile1111").innerHTML	=	'请输入联系电话';	
+			makr =0;
+		}
+		else
+		if(partten.test(mobile)||homephone.test(mobile))
+		{
+			document.getElementById("mobile1111").innerHTML	=	'';	
+			makr =1;
+		}
+		else
+		{
+			document.getElementById("mobile1111").innerHTML	=	'请输入手机或座机';	
+			makr =0;
+		}
+		
+		
+		if(qq==""){
+			document.getElementById("qq1111").innerHTML	=	'请输入QQ';	
+			makr =0;
+		}
+		else
+		{
+			document.getElementById("qq1111").innerHTML	=	'';	
+			makr =1;
+		}
+		
+		
+		if(regqq.test(qq)){
+			document.getElementById("qq1111").innerHTML	=	'';	
+			makr =1;
+		}
+		else
+		{
+			document.getElementById("qq1111").innerHTML	=	'注意QQ格式';	
+			makr =0;
+		}
+
+
+		if(makr)
+
+			return true;
+		else
+			return false;
+		
+		
+
+
+	
+	}	
+	
+	
+	function registercksbmint(){
+		
+		if(registerck())
+		{
+				
+				document.form1.submit();
+			
+		}
+		else
+		{
+			alert("请确保资料填写完整");
+
+		}
+	}
+
+</script>
+
+
+
+</head>
+<body>
+
+
+<div id="full">
+
+<? 			require(APP_DIR . '/showView/WidHeader.html');		?>
+	<form name="form1" action="?Controller=Index3&action=Register" method="post" enctype="multipart/form-data" >
+
+	<div id="cont" style=" height:880px;">
+		<div id="cont_a"></div>
+		<div id="cont_b">
+			<ul>
+			
+			
+			
+			
+			<li><span class="ModaRegB_Span">真实姓名：</span><input type="text" name="truename" value="" class="ModaRegB_Text" onblur="registerck();"  /><span id="truename1111" class="ModaRegB_Spanb"></span></li>	
+			<li>
+			<span class="ModaRegB_Span">出生年月：</span>
+			<input type="text" id="bdate" name="bdate"  value="" class="ModaRegB_Text"  onblur="registerck();"  onFocus="WdatePicker({startDate:'1990-01-01'})"  /><span id="bdate1111" class="ModaRegB_Spanb">
+			</span>
+			</li>	
+			<li><span class="ModaRegB_Span">身　　高：</span><input type="text" name="height" value="" class="ModaRegB_Text"  onblur="registerck();"/><span id="height1111" class="ModaRegB_Spanb"></span></li>	
+			<li><span class="ModaRegB_Span">体　　重：</span><input type="text" name="weight" value="" class="ModaRegB_Text" onblur="registerck();"   /><span id="weight1111" class="ModaRegB_Spanb"></span></li>	
+			<li><span class="ModaRegB_Span">电　　话:</span><input type="text" name="mobile" value="" class="ModaRegB_Text"  onblur="registerck();"   /><span id="mobile1111" class="ModaRegB_Spanb"></span></li>	
+			<li><span class="ModaRegB_Span">QQ:</span><input type="text" name="qq" value="" class="ModaRegB_Text"  onblur="registerck();"  /><span id="qq1111" class="ModaRegB_Spanb"></span></li>	  
+			<li><span class="ModaRegB_Span">推 荐 人：</span><input type="text" name="instrper" value="" class="ModaRegB_Text"  onblur="registerck();"/><span id="instrper1111" class="ModaRegB_Spanb"></span></li>	
+
+
+ <style>
+ * input{ height:24px; width:250px;}
+ .tiem { background-color:#291425; border:1px #724a6c solid; color:#CCC}
+ 
+ </style>
+
+			<li><span class="ModaRegB_Span">个人照片1：</span>
+            <input name="img1" id="file1"   type="file" value="up" style="float:left" class="tiem">
+            <div style="color:#CCC; float:left">（温馨提示：上传照片以正脸为主，且必须包含2张素颜照片，谢绝戴墨镜和帽子的照片）</div>
+           </li>	
+				
+				
+			<li><span class="ModaRegB_Span">个人照片2：</span>
+            <input name="img2" id="file2"   type="file" value="upa" style="float:left" class="tiem">
+			</li>
+				
+				
+			<li><span class="ModaRegB_Span">个人照片3：</span>
+            <input name="img3" id="file3"  type="file" value="upc" style="float:left" class="tiem">
+            </li>
+				
+			<li><span class="ModaRegB_Span">个人照片4：</span>
+            <input name="img4" id="file4"  type="file" value="upd" style="float:left" class="tiem">
+			</li>
+				
+			<li><span class="ModaRegB_Span">个人照片5：</span>
+            <input name="img5" id="file5"  type="file" value="upd" style="float:left" class="tiem">
+			</li>
+				
+			<li><span class="ModaRegB_Span">个人照片6：</span>
+            <input name="img6" id="file6"  type="file" value="upd" style="float:left" class="tiem">
+			</li>
+            
+			</ul>
+		</div>
+		<div id="cont_c"><input type="button" value=""  onclick="registercksbmint();"  style=" width:235px; height:63px; background-image:url(images/sqjr_02.gif); background-color:#000000"/></div>
+	</div>
+	
+	
+	</form>
+	
+
+<? 			require(APP_DIR . '/showView/Widbottom.html');		?>
+  
+</div>
+</body>
+</html>

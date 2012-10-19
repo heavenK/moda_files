@@ -1,0 +1,68 @@
+@charset "gb2312";
+/* CSS Document */
+#content							{ width:980px; margin:0 auto;}
+#head								{}
+
+#main								{ float:left;}
+#main .moda_posts					{ width:978px; border:1px solid #ececec; padding:0 0 12px 0; margin-top:-1px;_margin-top:0px;float:left;overflow:hidden;}
+#main .moda_posts .posts_logo		{ float:left; margin-left:13px; margin-top:10px; }
+#main .moda_posts .posts_title		{ color:#ff0183; margin-top:45px; margin-left:24px; float:left;}
+#main .moda_posts .posts_speak		{ width:141px; height:37px; margin-top:36px; margin-right:13px; float:right; background:url(../../images/modapersonal/posts_speak.jpg) no-repeat;overflow:hidden;}
+#main .moda_posts .posts_speak a	{ color:#fff; font-size:18px; margin:7px 0 0 30px; float:left;}
+#main .moda_posts .posts_speak a:hover					{ text-decoration:none;}
+
+#main .moda_posts .posts_content						{ width:950px;_width:926px; border:1px solid #ececec; margin-left:13px; margin-top:12px; float:left;overflow:hidden; }
+#main .moda_posts .posts_content .content_title			{ border-bottom:1px solid #ececec; background-color:#f6f6f6; width:950px; height:30px; float:left;overflow:hidden;}
+#main .moda_posts .posts_content .content_title span,#main .moda_posts .posts_content .content_title em	{ font-size:14px; color:#e4007f; font-weight:bold; float:left;}
+#main .moda_posts .posts_content .content_title span	{ padding-top:7px; padding-left:18px; padding-right:424px;}
+#main .moda_posts .posts_content .content_title em		{ padding-top:7px;padding-left:92px;}
+
+#main .moda_posts .posts_content .all_content			{ font-size:14px; margin-left:18px;_margin-left:8px; margin-top:8px; float:left;}
+#main .moda_posts .posts_content .all_content li		{ border-bottom:1px dashed #cdcdcd; width:910px; padding:11px 0 11px 0; float:left;}
+#main .moda_posts .posts_content .all_content li a		{ width:452px; color:#ff5d00;float:left;overflow:hidden;}
+#main .moda_posts .posts_content .all_content li a		{}
+#main .moda_posts .posts_content .all_content li em		{ color:#666666; padding-left:103px;float:left;}
+
+#popupContactAAA										{display:none;position:fixed;_position:absolute; /* hack for internet explorer 6*/height:321px;width:787px;background:#ff0183;z-index:2;padding:12px;font-size:13px;}
+#popupContactAAA h1{
+text-align:left;
+color:#6FA5FD;
+font-size:22px;
+font-weight:700;
+border-bottom:1px dotted #D3D3D3;
+padding-bottom:2px;
+margin-bottom:20px;
+}
+
+#popupContactClose{
+font-size:14px;
+line-height:14px;
+right:6px;
+top:4px;
+position:absolute;
+color:#6fa5fd;
+font-weight:700;
+display:block;
+}
+#tc_c{ width:784px; height:317px; float:left; overflow:hidden; }
+	#tc_c_a{ width:784px; height:39px; float:left; overflow:hidden;}
+	#tc_c_b{ width:771px; height:13px; float:left; overflow:hidden; font-size:12px; color:#d2d2d2; text-align:right; padding-right:13px;}
+	#tc_c_c{ width:784px; height:265px; float:left; overflow:hidden;}
+		#tc_c_c_a{ width:151px; height:265px; float:left; overflow:hidden;}
+				#tc_c_c_a_a{ width:147px; height:147px; float:left; overflow:hidden; margin-left:11px; background:url(../../images/modapersonal/popphotobg.jpg) no-repeat;}
+				#tc_c_c_a_a img{ margin:3px 0 0 3px;}
+				#tc_c_c_a_b{ width:94px; height:120px; float:left; overflow:hidden; font-size:12px; color:#f0037f; padding-left:57px; padding-top:5px;}
+			#tc_c_c_b{ width:625px; height:265px; float:left; overflow:hidden; padding-left:8px;}
+				#tc_c_c_b_a{ width:42px; height:265px; float:left; overflow:hidden; font-size:14px; color:#fff; line-height:28px;}
+				#tc_c_c_b_b{ width:583px; height:265px; float:left; overflow:hidden;}
+					.tc_c_c_b_b_a{ width:571px; height:25px; float:left; overflow:hidden; background:url(../../images/modapersonal/poptextbg.jpg) no-repeat;margin-right:11px;}
+					.tc_c_c_b_b_b{ width:571px; height:177px; float:left; overflow:hidden; background:url(../../images/modapersonal/popareabg.jpg) no-repeat; margin-right:11px; margin-top:6px; resize:none;}
+					#tc_c_c_b_b_c{ width:443px; height:39px; float:left; overflow:hidden; padding-left:140px; padding-top:15px;}
+
+#popupContactClose{ background-color:#FF0000;
+
+
+
+
+
+

@@ -1,0 +1,205 @@
+@charset "gb2312";
+/* CSS Document */
+
+#content							{ width:980px; margin:0 auto;}
+#head								{ width:980px;float:left;}
+#head .biglogo						{ background:url(../images/big_logo.jpg) no-repeat; float:left; margin-left:180px;_margin-left:90px;width:646px; height:81px; margin-right:20px; margin-bottom:10px;}	
+#head .m_link						{ float:right; margin-top:4px; }
+#head .m_link a						{ color:#777677; float:left;}
+#head .m_link a:hover				{ text-decoration:none;}
+#head .m_link span					{ float:left;width:20px;}
+#head .m_link em					{ color:#777677; margin:0 5px; float:left;}
+
+#head .m_navigate					{  float:left;}
+#head .m_navigate li				{  height:36px;float:left; margin-left:0px; border:0px solid #F00;}
+#head .m_navigate h1 a,
+#head .m_navigate h2 a,
+#head .m_navigate h3 a,
+#head .m_navigate h4 a,
+#head .m_navigate h5 a,
+#head .m_navigate h6 a,
+#head .m_navigate em a,
+#head .m_navigate b a									{ background:url(../images/navi.jpg) no-repeat; height:36px; background-color:#3a3a3a;float:left;}
+
+
+
+#head .m_navigate li h1 a			{ width:130px; background-position:0 0;}
+#head .m_navigate li h1 a:hover		{ background-position:0 -36px;}
+
+#head .m_navigate li h2 a			{ width:118px;background-position:-129px 0;}
+#head .m_navigate li h2 a:hover		{ background-position:-129px -36px;}
+#head .m_navigate li h2 a.current	{ background-position:-129px -36px;}
+#head .m_navigate li h3 a			{ width:126px; background-position:-247px 0;}
+#head .m_navigate li h3 a:hover		{ background-position:-247px -36px;}
+#head .m_navigate li h3 a.current	{ background-position:-247px -36px;}
+#head .m_navigate li h4 a			{ width:118px; background-position:-373px 0;}
+#head .m_navigate li h4 a:hover		{ background-position:-373px -36px;}
+#head .m_navigate li h4 a.current	{ background-position:-373px -36px;}
+#head .m_navigate li h5 a			{ width:110px; background-position:-491px 0;}
+#head .m_navigate li h5 a:hover		{ background-position:-491px -36px;}
+#head .m_navigate li h5 a.current	{ background-position:-491px -36px;}
+#head .m_navigate li h6 a			{ width:140px; background-position:-602px 0;}
+#head .m_navigate li h6 a:hover		{ background-position:-602px -36px;}
+#head .m_navigate li h6 a.current	{ background-position:-602px -36px;}
+#head .m_navigate li em a			{ width:122px; background-position:-742px 0;}
+#head .m_navigate li em a:hover		{ background-position:-742px -36px;}
+#head .m_navigate li em a.current	{ background-position:-742px -36px;}
+#head .m_navigate li b a			{ width:116px; background-position:-865px 0;}
+#head .m_navigate li b a:hover		{ background-position:-865px -36px;}
+#head .m_navigate li b a.current	{ background-position:-865px -36px;}
+
+/*#moda_two_list_dingwei									{width:242px; height:193px; overflow:hidden; float:left; position:relative; }
+#moda_two_list_dingwei a h1								{width:240px; height:158px; overflow:hidden; float:left;  border:1px solid #ececec; margin-bottom:11px; display:inline;}
+#moda_two_list_dingwei em								{width:108px; height:35px;text-align:center; font-size:14px; font-weight:bold; color:#f1037d; margin-left:22px; display:inline}
+#moda_two_list_dingwei a								{width:242px; height:193px; overflow:hidden; float:left;}
+.dingwei												{width:242px; height:60px; overflow:hidden; float:left;  position:absolute; bottom:-1px; left:0px; opacity:1; background:url(../images/pink.png) no-repeat; filter:alpha(opacity=90); }
+.dingwei_a												{width:240px; height:1px;  float:left; position:relative; }
+.dingwei span											{ width:130px;height:35px; overflow:hidden; float:right; color:#999999; line-height:35px; margin-top:28px;}*/
+
+#moda_two_list_dingwei									{width:240px; height:158px; overflow:hidden; float:left;  border:1px solid #ececec; position:relative; }
+.dingwei												{width:242px; height:25px; overflow:hidden; float:left;  position:absolute; bottom:35px; left:0px; opacity:1; background-image:url(../images/pink.png); filter:alpha(opacity=90); }
+.dingwei_a												{width:240px; height:1px;  float:left; position:relative; }
+
+
+
+
+
+.moda_lunhuan												{width:980px; height:362px; overflow:hidden; float:left; margin-top:10px; display:inline;}
+
+.moda_ad													{width:978px; height:180px; overflow:hidden; float:left; margin-top:9px; display:inline; border:1px solid #ececec; }
+.moda_one													{width:980px; height:251px; overflow:hidden; float:left; margin-top:10px; display:inline;}
+	.moda_one_shenqing										{width:268px; height:261px; overflow:hidden; float:left; background:url(../images/moda_one_shenqing.jpg) no-repeat;}
+	.moda_one_shenqing em a									{width:85px; height:22px; overflow:hidden; float:left; margin:132px 0 0 144px; display:inline;}
+	.moda_one_shenqing span a								{width:105px; height:22px; overflow:hidden; float:left; margin:12px 0 0 144px; display:inline;}
+	.moda_one_kossme										{width:348px; height:249px; overflow:hidden; float:left;  margin-left:6px; display:inline;border:1px solid #ececec;} 	
+	.moda_one_right											{width:348px; height:249px; overflow:hidden; float:left; margin-left:6px; display:inline; border:1px solid #ececec;}
+	
+.moda_two													{width:980px; height:633px; overflow:hidden; float:left; margin-top:10px; display:inline; }
+	.moda_two_ad											{width:233px; height:633px; overflow:hidden; float:left; background:url(../images/moda_two_ad.jpg) no-repeat;  }
+	.moda_two_ad h1											{width:179px; height:30px; overflow:hidden; float:left; margin:533px 0 0 12px; display:inline;}
+	.moda_two_list											{width:747px; height:615px; overflow:hidden; float:left;}
+	.moda_two_list ul										{width:747px; height:614px; overflow:hidden; float:left;}
+	.moda_two_list ul li									{width:243px; height:195px; overflow:hidden; float:left; margin-left:6px; margin-bottom:10px; display:inline;}
+	.moda_two_list ul li h1									{width:240px; height:134px; float:left; overflow:hidden;}
+	.moda_two_list ul li h2									{width:242px; height:25px; overflow:hidden; float:left; opacity:1; background-image:url(../images/pink.png); filter:alpha(opacity=10); }
+	
+	.moda_two_btn											{width:747px; height:19px;float:left; position:relative;}
+	.moda_two_btn a											{position:absolute; bottom:0; right:0;}
+	
+	
+	
+	
+	.moda_two_list_jieshao									{width:242px; height:35px; overflow:hidden; float:left; line-height:35px; }
+	.moda_two_list_jieshao em								{width:86px; height:35px; overflow:hidden; float:left; text-align:center; font-size:14px; font-weight:bold; color:#f1037d; margin-left:22px; display:inline;}
+	.moda_two_list_jieshao em a								{color:#f1037d;}
+	.moda_two_list_jieshao em a:hover						{color:#f1037d;}
+	.moda_two_list_jieshao span								{height:35px; color:#999999;}
+	.moda_two_list_jieshao span i							{color:#f1037d;}
+
+.moda_three													{width:980px; height:360px; overflow:hidden; float:left; margin-top:10px; display:inline;}
+	.moda_three_vcr											{width:308px; height:358px; overflow:hidden; float:left; border:1px solid #dfdfdf; background-color:#f0f0f0; background-image:url(../images/moda_index_vcr.jpg); background-repeat:no-repeat;}
+	.moda_three_vcrbtn										{width:87px; height:20px; overflow:hidden; float:left; margin:34px 0 0 212px; display:inline;}
+	.moda_three_vcrpic										{width:292px; height:232px; overflow:hidden; float:left; background-color:#FFF; margin:20px 0 0 8px; display:inline;}
+	.moda_three_vcrpic h1									{width:286px; height:172px; overflow:hidden; float:left; margin:3px 0 0 3px; display:inline;}
+	.moda_three_vcrpic em									{width:286px; height:22px; overflow:hidden; float:left; margin-left:3px; display:inline; line-height:22px; text-indent:1em; font-size:14px; color:#ff0183; }
+	.moda_three_vcrpic span									{width:218px; height:22px; overflow:hidden; float:left; margin-left:3px; display:inline; line-height:22px; text-indent:1em; font-size:14px;}
+	.moda_three_vcrpic span a								{color:#666666;}
+	.moda_three_vcrpic tt									{width:68px; height:22px; overflow:hidden; float:left; text-align:center; line-height:22px; color:#666666;}
+	.moda_three_teyue										{width:292px; height:48px; overflow:hidden; float:left; line-height:48px; color:#666666; text-align:center;}
+	.moda_three_hezuo										{width:313px; height:358px; overflow:hidden; float:left; border:1px solid #dfdfdf; background-color:#f0f0f0; background-image:url(../images/moda_index_hezuo.jpg); background-repeat:no-repeat; margin-left:15px; display:inline;}
+	.moda_three_hezuo ul									{width:286px; height:285px; overflow:hidden; float:left; margin:73px 0 0 14px; display:inline;}
+	.moda_three_hezuo ul li									{width:286px; height:86px; overflow:hidden; float:left; background:url(../images/moda_index_hezuobg.jpg) no-repeat; margin-bottom:8px; display:inline;}
+	.moda_three_hezuo ul li a								{width:282px; height:82px; overflow:hidden; float:left; margin-left:0 3px 0 1px; display:inline;}
+	.moda_three_hot											{width:323px; height:358px; overflow:hidden; float:left; border:1px solid #dfdfdf; background-color:#f0f0f0; background-image:url(../images/moda_index_hot.jpg); background-repeat:no-repeat; margin-left:15px; display:inline;}
+	.moda_three_hot ul										{width:303px; height:281px; overflow:hidden; float:left; margin:67px 0 0 10px; display:inline;}
+	.moda_three_hot ul li									{width:303px; height:93px; overflow:hidden; float:left; border-bottom:1px dashed #999999;}
+	.moda_three_hot ul li h1								{width:97px; height:81px; overflow:hidden; float:left; margin-top:7px; display:inline; background-color:#FFF;}
+	.moda_three_hot ul li h1 a								{width:95px; height:79px; overflow:hidden; float:left; margin:1px; display:inline;}
+	.moda_three_hot ul li b									{width:201px; height:29px; overflow:hidden; float:left; margin:7px 0 0 5px; display:inline; background:url(../images/moda_index_hotbg.jpg) no-repeat;}
+	.moda_three_hot ul li b a								{height:29px; line-height:29px; font-size:21px; overflow:hidden; float:left; margin-left:35px; display:inline; color:#000;}
+	.moda_three_hot ul li b i								{height:29px; line-height:36px; font-weight:100; overflow:hidden; float:left; margin-left:2px; display:inline;}
+	.moda_three_hot dl										{width:196px; height:50px; overflow:hidden; float:left; margin:7px 0 0 10px; display:inline;}
+	.moda_three_hot dl dt									{width:196px; height:16px; overflow:hidden; float:left; margin-bottom:9px; display:inline;}
+	.moda_three_hot dl dt span								{width:50px; height:16px; overflow:hidden; float:left; line-height:16px;}
+	.moda_three_hot dl dt tt								{height:16px; overflow:hidden; float:left; position:relative;}
+	.moda_three_hot dl dt tt em								{height:16px; line-height:16px; overflow:hidden; float:left; position:absolute; top:0; right:5px; color:#fe2079;}
+
+
+
+.moda_four													{width:980px; height:695px; overflow:hidden; float:left; margin-top:10px; display:inline;}
+	.moda_four_ad											{width:234px; height:695px; overflow:hidden; float:left; background:url(../images/moda_four_ad.jpg) no-repeat;}
+	.moda_four_ad h1										{width:179px; height:30px; overflow:hidden; float:left; margin:593px 0 0 12px; display:inline;}
+	
+	.moda_four_btn											{width:744px; height:27px;float:left; overflow:hidden;}
+	.moda_four_btn a										{width:202px; height:27px; overflow:hidden; float:right;}
+	
+/*	.moda_four_top											{width:744px; height:668px; overflow:hidden; float:left; margin-left:2px; display:inline;}
+	.moda_four_top ul li									{width:181px; height:157px; overflow:hidden; float:left; margin:0 0 10px 5px; display:inline; background-color:#fff000; }
+	.moda_four_top ul li a h1								{width:179px; height:117px; overflow:hidden; float:left; border:1px solid #ececec; background-color:#ffffff; margin-bottom:4px; display:inline;}
+	.moda_four_top ul li a 									{width:182px; overflow:hidden; float:left; text-align:center; color:#034afa; line-height:16px;}.
+	.moda_four_top ul li a:hover							{color:#034afa;}
+	.moda_four_top ul li a b								{ width:182px; line-height:16px; height:20px; padding-top:4px;  font-weight:100;}
+	.dingwei_list											{width:181px; height:22px; overflow:hidden; float:left; }
+	.dingwei_list em										{width:182px; height:16px; overflow:hidden; float:left; color:#666666; text-align:center;}
+	.dingwei_list em span									{color:#fff; margin-right:5px; margin-left:5px; display:inline;}
+	
+	
+	
+	#moda_four_toplist										{width:179px; height:117px; overflow:hidden; float:left; border:1px solid #ececec;}
+	.dingwei_list b											{width:182px; height:16px; overflow:hidden; float:left; text-align:center; color:#034afa; line-height:16px; margin-top:4px; display:inline; font-weight:100;}
+	.dingwei_list b a										{color:#94b3fe;}
+	.dingwei_list b a:hover									{color:#034afa;}*/
+.moda_four_top											{width:744px; height:668px; overflow:hidden; float:left; margin-left:2px; display:inline;}
+	.moda_four_top ul li									{width:181px; height:157px; overflow:hidden; float:left; margin:0 0 10px 5px; display:inline; }
+	
+	#moda_four_toplist										{width:179px; height:117px; overflow:hidden; float:left; border:1px solid #ececec;}
+	.dingwei_list											{width:181px; height:38px; overflow:hidden; float:left;   background-color:#fff000; }
+	.dingwei_list b											{width:182px; height:16px; overflow:hidden; float:left; text-align:center; color:#034afa; line-height:16px; margin-top:4px; display:inline; font-weight:100;}
+	.dingwei_list b a										{color:#94b3fe;}
+	.dingwei_list b a:hover									{color:#034afa;}
+	.dingwei_list em										{width:182px; height:16px; overflow:hidden; float:left; color:#94b3fe; text-align:center;}
+	.dingwei_list em span									{color:#999999; margin-right:5px; margin-left:5px; display:inline;}	
+	
+
+#scrollDiv{width:978px;height:180px;min-height:25px;overflow:hidden}
+#scrollDiv li{ width:978px; height:180px; overflow:hidden; float:left;}
+#scrollDiv li a{ width:978px; height:180px; overflow:hidden; float:left;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

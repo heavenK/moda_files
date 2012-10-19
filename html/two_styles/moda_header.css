@@ -1,0 +1,15 @@
+@charset "gb2312";
+/* CSS Document */
+
+/*Í·²¿*/
+#moda_header	{ width:980px; height:169px; overflow:hidden; float:left;}
+#moda_header strong			{ width:260px; height:30px; float:left;}
+#moda_header i				{ height:30px; text-align:right; font-style:normal; color:#878787; line-height:30px; float:right;}
+#moda_header i a			{ color:#878787;}
+#moda_header span			{ width:980px; text-align:right; color:#eec4bc; line-height:26px; float:left;}
+#moda_header span a			{ color:#eec4bc;}
+	#moda_mainbav			{ width:953px; height:44px; margin:63px 0 0 0; display:inline; padding:5px 0 0 25px; background:url(../two_images/mainbav_bg.gif) repeat-x; border:#3d3f96 1px solid; overflow:hidden; float:left;}
+	#moda_mainbav a			{ font-size:16px; font-weight:bold; color:#FFF; overflow:hidden; float:left;}
+	#moda_mainbav a:hover	{ background:url(../two_images/mainbav_button.png) no-repeat; background-position:center; color:#e9abe4; text-decoration:none;}
+	.mainbav_button_s		{ padding:11px 24px 10px 24px;}
+	.mainbav_button_m		{ padding:11px 16px 10px 16px;}

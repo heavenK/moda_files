@@ -1,0 +1,32 @@
+<style>
+.mdzs .modazs h1 a{ background-position:0 -36px;}
+.mdvcr .modavcr h2 a{ background-position:-129px -36px;}
+</style>
+		<dl id="all_channel_header"><!--频道通用头部-->
+            <div class="all_channel_logo" style="width:150px; overflow:hidden; float:left;"><!--xg-->
+                <a href="http://www.we54.com/" style=" margin:0 0 0 0px; display:inline; overflow:hidden; float:left;"><img src="version_2/images/new_logo.jpg" /></a>
+                <em style="line-height:28px; "><a href="http://www.we54.com/" style="color:#999999;"> 返回首页</a></em>
+            </div>
+            <div id="all_channel_head" style="color:#9f9f9f;">
+        <?php if($_SESSION["Zend_Auth"]['storage']->username!=''){ ?>
+        	你好！<?php echo $_SESSION["Zend_Auth"]['storage']->nickname ?> | <a href="http://bbs.we54.com/pm.php" style="color:#9f9f9f;">短消息</a> <a href="http://passport.we54.com/index/logout" style="color:#9f9f9f;">退出</a> | <a href=""onclick='this.style.behavior="url(#default#homepage)";this.setHomePage("http://moda.we54.com");return false;'>设为首页</a>
+        <?php }else{?>
+        	你好！请 <a href="http://passport.we54.com/Index/login?forward=http://moda.we54.com/">登录</a> 或 <a href="http://passport.we54.com/Index/register">注册</a> | <a href=""onclick='this.style.behavior="url(#default#homepage)";this.setHomePage("http://moda.we54.com");return false;'>设为首页</a>
+        <?php }?>
+        </div>
+        </dl>
+        
+		<div id="head">
+        	<div class="m_link"><!--<a href="?Controller=ModaIndex&action=Banbenqiehuan&ver=2" style="color:#016599">新版</a><em>|</em><a href="?Controller=ModaIndex&action=Banbenqiehuan&ver=1" style="color:#000">旧版</a><span style="width:10px;">&nbsp;</span>--><a href="?controller=ModaIndex&action=ModaAbout">关于美达</a><em>|</em><a href="?Controller=ShowIndex&action=ModaHelp">美达帮助</a></div>
+        	<a href="/" class="biglogo"></a>
+			<ul class="m_navigate" style="margin:0;">
+                  <li class="modazs"><h1><a href="?Controller=ShowIndex&action=ModaShows"></a></h1></li>
+                  <li class="modavcr"><h2><a href="?Controller=ModaIndex&action=AllNews"></a></h2></li>
+                  <li class="modahd"><h3><a href="?controller=ModaIndex&action=ModaEventList"></a></h3></li>
+                  <li class="modazm"><h4><a href="?Controller=ModaIndex&action=Recruit"></a></h4></li>
+                  <li class="modaxgirl"><h5><a href="?Controller=ModaIndex&action=Xgirllist"></a></h5></li>
+                  <li class="modamvb"><h6><a href="?controller=ModaIndex&action=ModaLank"></a></h6></li>
+                  <li class="modatb"><em><a href="?controller=ShowIndex&action=ModaClubAllList"></a></em></li>
+                  <li class="modahz"><b><a href="?Controller=ModaIndex&action=Cooperations"></a></b></li>
+              </ul>
+        </div> 

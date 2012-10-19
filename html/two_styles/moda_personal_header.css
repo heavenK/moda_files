@@ -1,0 +1,19 @@
+@charset "gb2312";
+/* CSS Document */
+
+/*通用背景*/
+#moda_header ul	{ background:url(../two_images/personal_index_bg_all.gif) no-repeat;}
+
+/*头部*/
+#moda_header	{ width:980px; height:123px; position:relative; overflow:hidden; float:left;}
+#logo_transparent			{ width:341px; height:93px; position:absolute; top:31px; left:7px; overflow:hidden;}
+#moda_header strong			{ width:260px; height:30px; float:left;}
+#moda_header i				{ height:30px; text-align:right; font-style:normal; color:#878787; line-height:30px; float:right;}
+#moda_header i a			{ color:#878787;}
+#moda_header span			{ width:342px; margin:0 0 0 358px; display:inline; font-size:24px; font-family:"黑体"; color:#fe89d3; line-height:30px; float:left;}
+#moda_header em				{ width:980px; height:20px; text-align:right; font-style:normal; line-height:26px; color:#eec4bc; overflow:hidden; float:right;}
+#moda_header em a			{ color:#eec4bc;}
+#moda_header ul				{ width:517px; height:40px; margin:5px 0 0 0; display:inline; background-position:0 0; overflow:hidden; float:right;}
+#moda_header ul li			{ width:85px; height:40px; margin:0 0 0 1px; display:inline; overflow:hidden; float:left;}
+#moda_header ul li a		{ width:85px; height:28px; padding:12px 0 0 0; text-align:center; font-size:14px; font-weight:bold; color:#f0037f; overflow:hidden; float:left;}
+#moda_header ul li a:hover	{ background:url(../two_images/moda_header_mainbav_bg.png) no-repeat;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='two_images/moda_header_mainbav_bg.png');_background-image:none; text-decoration:none;}

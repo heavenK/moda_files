@@ -1,0 +1,118 @@
+@charset "gb2312";
+/* CSS Document */
+
+.moda_nav ul li b a,
+.moda_nav ul li span a,
+.moda_nav ul li h1 a,
+.moda_nav ul li tt a,
+.moda_nav ul li i a,
+.moda_nav ul li em a									{ background:url(../images/moda_geren_navbg.jpg) no-repeat;}
+
+
+
+
+.moda_grzs_title										{width:980px; height:99px; overflow:hidden; float:left;}
+	.moda_title											{width:498px; height:99px; overflow:hidden; float:left;}
+	.moda_daohang										{width:482px; height:24px; overflow:hidden; float:left;}
+	.moda_daohang em									{height:24px; line-height:24px; overflow:hidden; float:right; margin:0 10px 0 10px; display:inline;}
+	.moda_daohang em a									{color:#777677;}
+	.moda_daohang tt									{height:24px; line-height:24px; overflow:hidden; float:right; color:#777677;}
+	.moda_youmei										{width:482px; height:39px; overflow:hidden; float:left;}
+	.moda_nav											{width:482px; height:36px; overflow:hidden; float:left;}
+	.moda_nav ul										{width:482px; height:36px; overflow:hidden; float:left; background-color:#ededed;}
+	.moda_nav ul li										{width:79px; height:36px; overflow:hidden; float:left; margin-left:1px; display:inline;}
+
+	
+	.moda_nav ul li em a								{width:79px; height:36px; overflow:hidden; float:left; background-position:0 0;}
+	.moda_nav ul li em a:hover							{width:79px; height:36px; overflow:hidden; float:left; background-position:0 -36px;}
+	.moda_nav ul li i a									{width:79px; height:36px; overflow:hidden; float:left; background-position:-80px 0;}
+	.moda_nav ul li i a:hover							{width:79px; height:36px; overflow:hidden; float:left; background-position:-80px -36px;}
+	.moda_nav ul li tt a								{width:79px; height:36px; overflow:hidden; float:left; background-position:-160px -36px;}
+	.moda_nav ul li tt a:hover							{width:79px; height:36px; overflow:hidden; float:left; background-position:-160px -36px;}
+	.moda_nav ul li h1 a								{width:79px; height:36px; overflow:hidden; float:left; background-position:-240px 0px;}
+	.moda_nav ul li h1 a:hover							{width:79px; height:36px; overflow:hidden; float:left; background-position:-240px -36px;}
+	.moda_nav ul li span a								{width:79px; height:36px; overflow:hidden; float:left; background-position:-320px 0;}
+	.moda_nav ul li span a:hover						{width:79px; height:36px; overflow:hidden; float:left; background-position:-320px -36px;}
+	.moda_nav ul li b a									{width:79px; height:36px; overflow:hidden; float:left; background-position:-400px 0;}
+	.moda_nav ul li b a:hover							{width:79px; height:36px; overflow:hidden; float:left; background-position:-400px -36px;}
+
+
+.modaads												{width:72px; height:22px; overflow:hidden; border:1px solid #d6d6d6;}
+.xiugai													{width:32px; height:22px; overflow:hidden; float:right; border:1px solid #d6d6d6; background-color:#e4e4e4; line-height:22px;margin:26px 7px 0 0; display:inline; cursor:pointer; text-align:center;}
+.fuzhi													{width:32px; height:22px; overflow:hidden; float:right; border:1px solid #d6d6d6; background-color:#e4e4e4; line-height:22px; margin:26px 11px 0 0; display:inline; cursor:pointer; text-align:center;}
+.zlone													{width:235px; height:22px; overflow:hidden; float:left; border:1px solid #d6d6d6; line-height:22px; margin-top:12px; display:inline;}
+
+.lvyou													{width:621px; height:22px; overflow:hidden; float:right; border:1px solid #d6d6d6; line-height:22px; margin-top:12px; margin-right:10px; display:inline;}
+.xiyin													{width:531px; height:22px; overflow:hidden; float:right; border:1px solid #d6d6d6; line-height:22px; margin-top:12px; margin-right:10px; display:inline;}
+.leixing												{width:531px; height:22px; overflow:hidden; float:right; border:1px solid #d6d6d6; line-height:22px; margin-top:12px; margin-right:10px; display:inline;}
+.taoyan													{width:547px; height:22px; overflow:hidden; float:right; border:1px solid #d6d6d6; line-height:22px; margin-top:12px; margin-right:10px; display:inline;}
+.buwangji												{width:562px; height:22px; overflow:hidden; float:right; border:1px solid #d6d6d6; line-height:22px; margin-top:12px; margin-right:10px; display:inline;}
+.yigeren												{width:528px; height:22px; overflow:hidden; float:right; border:1px solid #d6d6d6; line-height:22px; margin-top:12px; margin-right:10px; display:inline;}
+.guancha												{width:407px; height:22px; overflow:hidden; float:right; border:1px solid #d6d6d6; line-height:22px; margin-top:12px; margin-right:10px; display:inline;}
+.xihuanmoda												{width:485px; height:22px; overflow:hidden; float:right; border:1px solid #d6d6d6; line-height:22px; margin-top:12px; margin-right:10px; display:inline;}
+
+.jiyu													{width:735px; height:106px; overflow:hidden; float:left; border:1px solid #d6d6d6;}
+
+
+.moda_grzl_list											{width:978px; height:953px; overflow:hidden; float:left; border:1px solid #ececec;}
+	.grzl_title											{width:978px; height:78px; overflow:hidden; float:left;}		
+		.grzl_title span								{width:161px; height:78px; overflow:hidden; float:left;}
+		.grzl_title em									{width:290px; height:78px; overflow:hidden; float:right;color:#034afa; margin-top:26px; display:inline; font-size:14px;}	
+		.grzl_title em tt								{color:#ff0183; font-size:14px; font-weight:bold;}						
+	.grzl_left											{width:194px; height:875px; overflow:hidden; float:left;}
+		.grzl_left h1									{width:138px; height:138px; overflow:hidden; float:left; border:1px solid #d6d6d6; margin-left:9px; display:inline;}
+		.grzl_left em									{width:70px; height:38px; overflow:hidden; float:left; color:#999999; line-height:38px; margin-left:9px; display:inline;}
+		.grzl_left em a									{color:#ff5600;}
+		.grzl_left span									{width:140px; height:14px; overflow:hidden; float:left; margin-left:9px; display:inline; line-height:14px; color:#ff108a; text-align:center;}
+	.grzl_right											{width:784px; height:875px; overflow:hidden; float:left;}
+		.grzl_right_name								{width:784px; height:37px; overflow:hidden; float:left;}
+		.grzl_right_name span							{font-size:28px; font-weight:bold; color:#ff1e91;}
+		.grzl_right_zlone								{width:784px; height:231px; overflow:hidden; float:left;}
+		.grzl_right_zlone ul							{width:784px; height:231px; overflow:hidden; float:left;}
+		.grzl_right_zlone ul li							{width:345px; height:46px; overflow:hidden; float:left; border-bottom:1px dashed #999999; margin-right:46px; display:inline;}
+		.grzl_right_zlone ul li em						{width:49px; height:46px; overflow:hidden; float:left; line-height:46px; font-size:14px; font-weight:bold; color:#ff0183;}
+		.grzl_right_zlone ul li tt						{width:235px; height:46px; overflow:hidden; float:left; line-height:46px; font-size:14px; }
+		
+		.grzl_right_zltwo								{width:784px; height:372px; overflow:hidden; float:left; margin-top:34px; display:inline;}
+		.grzl_right_zltwo ul							{width:743px; height:371px; overflow:hidden; float:left; border-top:1px solid #d6d6d6;}
+		.grzl_right_zltwo ul li							{width:743px; height:45px; overflow:hidden; float:left; border-bottom:1px solid #d6d6d6;}
+		.grzl_right_zltwo ul li em						{height:45px; overflow:hidden; float:left; line-height:46px; font-size:14px; font-weight:bold; color:#ff0183;}
+		.grzl_right_zltwo ul li tt						{height:46px; overflow:hidden; float:left; line-height:46px; font-size:14px; margin-left:10px; display:inline; }
+		
+		
+	.grzl_right_jiyu									{width:737px; height:168px; overflow:hidden; float:left; margin-top:33px; display:inline;}
+		.grzl_right_jiyu span							{width:737px; height:28px; overflow:hidden; float:left; line-height:28px; font-size:14px; font-weight:bold; color:#ff0183;}
+	
+	.grzl_left tt										{width:140px; height:21px; overflow:hidden; float:left; margin:6px 0 0 9px; display:inline; background-color:#ff108a; color:#FFF; text-align:center; line-height:23px;}
+	.grzl_left tt a										{color:#FFF;}	
+	.grzl_right_jiyu em									{width:737px;overflow:hidden; float:left; line-height:28px; font-size:14px; }
+	.grzl_right_jiyu em tt								{color:#ff0183; font-weight:bold;}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

@@ -1,0 +1,38 @@
+
+
+body{ background: #1b141c url(../images/images/grzs_01.jpg) no-repeat top; font: "ËÎÌו"; font-size:12px;}
+*{ padding:0px; border:0px; margin:0px;}
+li{ list-style-type:none;}
+a:hover { text-decoration:none;}
+h1{ font: 12px normal; color:#f0037f; display:inline; }
+h2{ font-size:14px; color:#fdb979; display:inline;}
+h3{ font:12px normal; color:#fe89d3; display:inline;}
+h4{ font-size:12px; font-weight:normal; color:#999999; display:inline;}
+#full{ margin:0px auto; width:980px; height:auto;}
+
+
+					
+					
+#cont{ width:980px; height:auto; float:left; overflow:hidden; background-color:#29242b; margin-bottom:10px;}
+	#cont_a{ width:980px; height:272px; float:left; overflow:hidden; background:url(../images/images/mdft_01.jpg) no-repeat;}
+		#cont_a_a{ width:980px; height:72px; float:left; overflow:hidden;}
+		#cont_a_b{ width:943px; height:200px; float:left; overflow:hidden; padding-left:18px; padding-right:19px;}
+			.cont_a_b_a{ width:923px; height:164px; float:left; overflow:hidden; border:#8a3054 1px solid; padding-left:9px; padding-right:9px; background-color:#332029;}
+				.cont_a_b_a_a{ width:923px; height:69px; float:left; overflow:hidden; border-bottom:#5b3041 1px dashed;}
+				.cont_a_b_a_b{ width:893px; height:78px; float:left; overflow:hidden; font-size:12px; color:#cccccc; padding-top:16px; padding-left:15px; padding-right:15px; line-height:20px;}
+	
+	
+	#cont_b{ width:927px; height:auto; float:left; overflow:hidden; border-left:#7d3e52 1px solid; border-right:#7d3e52 1px solid; padding-left:27px; padding-right:24px;}
+		.text{ width:927px; height:auto; float:left; overflow:hidden;}
+	
+	
+		
+	#cont_c{ width:980px; height:131px; float:left; overflow:hidden; background:url(../images/images/mdft_02.jpg) no-repeat; padding-left:18px; padding-right:18px;}
+		.cont_c_a{ width:942px; height:96px; float:left; overflow:hidden; border:#913157 1px solid; background-color:#332029; padding-top:15px;}
+		.cont_c_a li{ width:454px; height:12px; float:left; overflow:hidden; margin-bottom:12px; padding-left:12px; padding-right:5px;}
+		.cont_c_a li a{ font-size:12px; color:#ffffff; text-decoration:none;}
+					
+					
+					
+					
+	

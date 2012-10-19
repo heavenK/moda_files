@@ -1,0 +1,163 @@
+<html>
+	<head>
+
+		<script src="js/jquery.pack.js"></script>
+		<script src="js/jquery.Jcrop.pack.js"></script>
+		
+		<link rel="stylesheet" href="js/jquery.Jcrop.css" type="text/css" />
+        
+		<script language="Javascript">
+
+			$(function(){
+
+				
+			});
+			
+			function goss(){
+
+				jQuery('#cropbox').Jcrop({
+					onChange: showPreview,
+					onSelect: showPreview,
+					onSelect: updateCoords,
+					aspectRatio: 1
+				});
+
+			}
+
+			function updateCoords(c)
+			{
+				$('#x').val(c.x);
+				$('#y').val(c.y);
+				$('#w').val(c.w);
+				$('#h').val(c.h);
+			};
+
+			function checkCoords()
+			{
+				if ($('#x').val()==''){
+					alert('请先上传头像然后选择裁切头像最后进行保存！');
+					return false;
+				}
+			};
+			
+			function showPreview(coords)
+			{
+				var rx = 150 / coords.w;
+				var ry = 150 / coords.h;
+				var w2=$("#bigwidth").val();
+				var h2=$("#bigheight").val();
+				jQuery('#preview').css({
+					width: Math.round(rx * w2) + 'px',
+					height: Math.round(ry * h2) + 'px',
+					marginLeft: '-' + Math.round(rx * coords.x) + 'px',
+					marginTop: '-' + Math.round(ry * coords.y) + 'px'
+				});
+			}
+
+		</script>
+		
+		<script type="text/javascript">
+			function fun()	{
+						//正确判断大小
+						//alert("sdfsdf");
+						var oImg=new Image();					
+						
+						var Browser_Agent=navigator.userAgent;   
+						if(Browser_Agent.indexOf("Firefox")!=-1){
+							document.form1.submit();
+							//alert('暂不支持火狐浏览器');
+						}
+						document.form1.submit();
+						
+						
+						 oImg.src=document.form1.file.value;
+						 
+						 CheckProperty(oImg);			
+						
+							//alert(oImg.width);
+			//				alert(oImg.height);
+							//if(oImg.width<500&&oImg.height<500 && oImg.height>0 && oImg.width>0  ){
+			//					document.form1.submit();
+			//				}else{
+			//					alert("预览图片小于500*500");
+			//				
+			//				}		
+			
+			}
+			
+
+				function CheckProperty(obj)        //检测图像属性  
+				{  
+				  FileObj=obj;  
+				 
+				  if(obj.readyState!="complete")    //如果图像是未加载完成进行循环检测  
+				  {  
+					setTimeout("CheckProperty(FileObj)",500);  
+					return false;  
+				  }  
+				  
+				  //ImgFileSize=Math.round(ImgObj.fileSize/1024*100)/100;//取得图片文件的大小  
+				  ImgWidth=obj.width            //取得图片的宽度  
+				  ImgHeight=obj.height;        //取得图片的高度  
+				  //alert(ImgWidth +"|" +ImgHeight);
+					if(ImgWidth<500&&ImgHeight<500){
+						document.form1.submit();
+					}else{
+						alert("预览图片小于500*500");
+					
+					} 
+				 }
+		
+		</script>
+<style>
+#tc_i{ width:784px; height:457px; float:left; overflow:hidden; background:url(../images/tc_15.jpg) no-repeat; border:#403842 1px solid;}
+	#tc_i_a{ width:784px; height:61px; float:left; overflow:hidden;}
+	#tc_i_b{ width:784px; height:28px; float:left; overflow:hidden; margin-bottom:10px;}
+		#tc_i_b_a{ width:88px; height:21px; float:left; overflow:hidden; font-size:14px; color:#ecc4ba; text-align:right; padding-top:7px;}
+		.text{ width:344px; height:20px; float:left; overflow:hidden; border:#724a6c 1px solid; background-color:#291425; margin-right:9px; padding-left:3px; padding-top:6px; font-size:14px; color:#fdb97a;}
+		.botton{ width:70px; height:28px; float:left; overflow:hidden; background:url(../images/bjzs_02.gif) no-repeat;}
+		.file{ width:0; height:20px;margin-left: -154px;*margin-left:-3px; filter:alpha(opacity=0);-moz-opacity:.0;opacity:0.0; cursor:pointer;}
+		#tc_i_b_b{ width:257px; height:28px; float:left; overflow:hidden; text-align:left; padding-left:7px;}
+	#tc_i_c{ width:784px; height:305px; float:left; overflow:hidden; margin-bottom:12px;}
+		#tc_i_c_a{ width:581px; height:305px; float:left; overflow:hidden; padding-left:17px;}
+			#showBig{ width:579px; height:303px; float:left; overflow:hidden; border:#724a6c 1px solid; background-color:#000000;}
+		#tc_i_c_b{ width:156px; height:305px; float:left; overflow:hidden; padding-left:30px;}
+			#tc_i_c_b_a{ width:186px; height:32px; float:left; overflow:hidden;}
+			#tc_i_c_b_b{ width:186px; height:24px; float:left; overflow:hidden; font-size:14px; font-weight:bold; color:#ecc4ba;}
+			#showThumb{ width:138px; height:138px; float:left; overflow:hidden; border:#6e4969 1px solid; margin-right:16px; margin-bottom:109px;}
+	#tc_i_d{ width:784px; height:41px; float:left; overflow:hidden; text-align:center;}
+
+</style>
+	</head>
+
+	<body style="background:#3f3a41 ; border:#3f3a41">
+<?php echo $jsstr;?>
+<div style="overflow:hidden" >
+<FORM ACTION="" METHOD=POST name="form1" enctype="multipart/form-data">
+	
+	<div id="tc_i_b">
+							<span id="tc_i_b_a">浏览封面：</span>
+							<input id="texti" class="text" type="text" style="height:24"/>
+							<span class="botton"><input id="filei" class="file" name="file" type="file" value="up" hidefocus="true"/></span>
+							<script type="text/javascript"> 
+								var filei = document.getElementById("filei"); 
+								var texti = document.getElementById("texti"); 
+								filei.onchange = type; 
+								function type() 
+								{texti.value = filei.value;} 
+								</script>
+							<span id="tc_i_b_b"><img onClick="document.form1.submit();" src="images/tc_16.gif" width="70" height="28" border="0" /></span>
+							
+						</div>
+	<!--<input type="file" name="file" id="file"  />
+	
+  <input type="button" name="button" id="button" style=" background:#29242b; border:#29242b; color:#FFFFFF" onClick="fun()" value="提交" />-->
+
+  <input name="upload" type="hidden" id="upload" value="upload" /><input type="hidden" name="MAX_FILE_SIZE" value="3000000" />
+</FORM>
+</div>
+
+ 
+	</body>
+
+</html>

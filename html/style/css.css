@@ -1,0 +1,49 @@
+body{ background: #1b141c url(../images/grzs_01.jpg) no-repeat top; font: "宋体", "黑体"; font-size:12px;}
+*{ padding:0px; border:0px; margin:0px;}
+ul li{ list-style-type:none;}
+a { text-decoration:none; }
+a:hover { text-decoration: underline; }
+h1, h2, h3, h4, h5, h6 {font: 12px normal; color:#f0037f; display:inline; }
+#full{ margin:0px auto; width:980px; height:1496px; font-weight:lighter;}
+
+
+
+
+
+
+
+#cont{ height:1172px; width:980px; background:url(../images/grzs_02.jpg) #29242b no-repeat top; float:left; overflow:hidden; margin-bottom:10px;}
+	.cont_a{ height:1140px; width:980px; float:left; overflow:hidden;}
+		.cont_a_a{ height:239px; width:980px; float:left; overflow:hidden; margin-top:80px;}
+		.cont_a_b{ height:239px; width:980px; float:left; overflow:hidden; margin-top:20px;}
+		.cont_a_c{ height:239px; width:980px; float:left; overflow:hidden; margin-top:20px; margin-bottom:44px;}
+		.cont_a li{ height:237px; width:298px; float:left; overflow:hidden;}
+	.cont_b{ height:32px; width:980px; float:left; text-align:center;}
+		.box_a{ margin-left:16px; border:#9c0052 1px solid; float:left; background-color:#39303c;}
+		.box_b{ margin-left:24px; border:#9c0052 1px solid; float:left; background-color:#39303c;}
+		.box_c{ margin:0px 16px 0px 24px; border:#9c0052 1px solid; float:left; background-color:#39303c;}
+			.box_a_a{ height:198px; width:298px; float:left; overflow:hidden;}
+			.box_a_b{ height:38px; width:298px; border-top:1px #9c0052 solid; float:left; overflow:hidden; text-align:center; padding-top:4px;}
+				.box_a_b_a{ color:#eec4bc; font-size:14px; font-weight:bold; margin-bottom:7px;}
+				.box_a_b_b{ color:#eec4bc;}
+	.cont_b li{ list-style-type:none;}
+		.page_a{ height:18px; width:51px; border:#7e3f52 1px solid; background-color:#39303c; overflow:hidden;}
+		.page_b{ height:20px; width:21px; overflow:hidden;}
+
+				
+
+#battom{ height:191px; width:980px; float:left; background-color:#ffffff; overflow:hidden;}
+	#battom_a{ width:980px; height:50px; float:left; background:url(../images/grsy_19.jpg) no-repeat; overflow:hidden;}
+	#battom_b{ width:980px; height:74px; float:left; overflow:hidden;}
+	#battom_b li{ list-style-type:none;}
+		.battom_button{ width:980px; height:74px; float:left; overflow:hidden;}
+			#battom_b_a{ width:66px; height:74px; float:left; background:url(../images/grsy_20.jpg) no-repeat; overflow:hidden;}
+			#battom_b_b{ width:102px; height:53px; float:left; margin:17px 51px 4px 0px; overflow:hidden;}
+			#battom_b_c{ width:102px; height:41px; float:left; margin:22px 18px 11px 0px; overflow:hidden;}
+			#battom_b_d{ width:102px; height:27px; float:left; margin:29px 44px 18px 0px; overflow:hidden;}
+			#battom_b_e{ width:58px; height:51px; float:left; margin:16px 53px 7px 0px; overflow:hidden;}
+			#battom_b_f{ width:83px; height:74px; float:left; margin-right:50px; overflow:hidden;}
+			#battom_b_g{ width:102opx; height:35px; float:left; margin:26px 19px 13px 0px; overflow:hidden;}
+			#battom_b_h{ width:99px; height:59px; float:left; margin:13px 0px 2px 0px; overflow:hidden;}
+			#battom_b_i{ width:31px; height:74px; float:left; background:url(../images/grsy_28.jpg) no-repeat; overflow:hidden;}
+	#battom_c{ width:980px; height:40px; float:left; background:url(../images/grsy_29.jpg) no-repeat; text-align:center; padding-top:27px; overflow:hidden;}
