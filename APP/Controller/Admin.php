@@ -13,7 +13,7 @@ class Controller_Admin extends Controller_BoBase
 		if($_SESSION["Zend_Auth"]['storage']->username!='aaa' ){
 		
 			if($_SESSION["Zend_Auth"]['storage']->username!='moda' && $_SESSION["Zend_Auth"]['storage']->username!='aaa'&&$_SESSION["Zend_Auth"]['storage']->username!='小羊仔'&& $_SESSION["Zend_Auth"]['storage']->username!='浮游生物'){
-				$this->_alert("权限不够，您可能没有登录！".$_SESSION["Zend_Auth"]['storage']->username,"http://passport.we54.com/Index/login?forward=".urlencode("http://moda.we54.com/index.php?Controller=Admin"));exit();
+				$this->_alert("权限不够，您可能没有登录！","http://passport.we54.com/Index/login?forward=".urlencode("http://moda.we54.com/index.php?Controller=Admin"));exit();
 			}	
 		}
 	
