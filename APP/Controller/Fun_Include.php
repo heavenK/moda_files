@@ -214,6 +214,8 @@ function FI_CheckAdminRoot()
 			return true;
 		if($_SESSION["Zend_Auth"]['storage']->username =='小鱼快跑' )
 			return true;
+		if($_SESSION["Zend_Auth"]['storage']->username =='小羊仔' )
+			return true;
 		return false;		
 }
 /*验证是否存在展示
