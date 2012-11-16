@@ -4,13 +4,12 @@ FLEA::loadClass('Controller_BoBase');
 class Controller_InterfaceForAndroid extends Controller_BoBase
 {
 	
-
 	function Controller_InterfaceForAndroid(){
 		parent::Controller_BoBase();
-		dump(12332);
-
-	    return ;
+		echo json_encode("服务器升级中...");
+	    exit;
 	}
+
 	//轮播
     function actionLunbo(){
 
