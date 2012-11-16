@@ -3,6 +3,11 @@
 FLEA::loadClass('Controller_BoBase');
 class Controller_InterfaceForAndroid extends Controller_BoBase
 {
+
+
+	function Controller_InterfaceForAndroid(){
+	    return ;
+	}
 	//轮播
     function actionLunbo(){
 			$tableModaDoor = FLEA::getSingleton('Table_ModaDoor');	
