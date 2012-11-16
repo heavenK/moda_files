@@ -10,6 +10,8 @@ class Controller_InterfaceForAndroid extends Controller_BoBase
 	}
 	//轮播
     function actionLunbo(){
+dump(12332);
+
 			$tableModaDoor = FLEA::getSingleton('Table_ModaDoor');	
 			$doorDat = $tableModaDoor->IndexTest();
 			$data_arrary['count'] = 4;
