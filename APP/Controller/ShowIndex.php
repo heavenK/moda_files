@@ -2467,6 +2467,8 @@ function _CheckAdminRoot()
 			return true;
 		if($_SESSION["Zend_Auth"]['storage']->username =='浮游生物' )
 			return true;
+		if($_SESSION["Zend_Auth"]['storage']->username =='小羊仔' )
+			return true;
 		else
 			return false;		
 	
